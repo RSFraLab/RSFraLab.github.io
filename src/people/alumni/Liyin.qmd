@@ -1,0 +1,7 @@
+---
+title: "Liyin He"
+started: 2016
+ended: 2022
+NowAt: PostDoc at Carnegie
+subtitle: Graduate Student
+---

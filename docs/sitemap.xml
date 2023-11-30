@@ -2,14 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https:/tester/index.html</loc>
-    <lastmod>2023-11-30T20:17:48.497Z</lastmod>
+    <lastmod>2023-11-30T23:04:12.413Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/about.html</loc>
-    <lastmod>2023-11-30T03:20:26.069Z</lastmod>
+    <lastmod>2023-11-30T20:44:57.780Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/Publications.html</loc>
-    <lastmod>2023-11-30T18:25:50.178Z</lastmod>
+    <lastmod>2023-11-30T22:56:39.488Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/frankenberg/frankenberg.html</loc>
+    <lastmod>2023-11-30T21:54:46.092Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/staff/frankenberg.html</loc>
+    <lastmod>2023-11-30T22:55:14.927Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/alumni/frankenberg.html</loc>
+    <lastmod>2023-11-30T21:54:35.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people.html</loc>
+    <lastmod>2023-11-30T23:05:04.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/staff/dummy.html</loc>
+    <lastmod>2023-11-30T23:04:12.983Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/alumni/Troy.html</loc>
+    <lastmod>2023-11-30T22:11:10.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/alumni/Vincent.html</loc>
+    <lastmod>2023-11-30T22:18:16.493Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/alumni/debsunder.html</loc>
+    <lastmod>2023-11-30T22:11:11.506Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/alumni/Liyin.html</loc>
+    <lastmod>2023-11-30T22:56:09.718Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/alumni/Philipp.html</loc>
+    <lastmod>2023-11-30T22:56:14.896Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/alumni/Ying.html</loc>
+    <lastmod>2023-11-30T22:11:10.138Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/alumni/Newton.html</loc>
+    <lastmod>2023-11-30T22:18:15.710Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/alumni/Rui.html</loc>
+    <lastmod>2023-11-30T22:18:16.238Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/alumni/siraput.html</loc>
+    <lastmod>2023-11-30T22:18:15.171Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/alumni/yi.html</loc>
+    <lastmod>2023-11-30T22:18:15.983Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/staff/alexis.html</loc>
+    <lastmod>2023-11-30T23:04:13.271Z</lastmod>
   </url>
 </urlset>

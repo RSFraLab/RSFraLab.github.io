@@ -1,5 +1,27 @@
 ---
-title: "About"
+title: "Christian Frankenberg"
+about:
+  template: jolla
+  image: frankenberg.png
+  links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/chr_fronge
+    - icon: github
+      text: Github
+      href: https://github.com/cfranken/
 ---
 
-About this site
+CF is ...
+
+## Education
+
+University of Heidelberg | Heidelberg, Germany
+PhD in Environmental Physics | 2002 -  2005
+
+University of Bayreuth | Bayreuth, Germany
+Diploma in Geoecology | 1996-2002
+
+## Experience
+
+Bla Bla

@@ -1,0 +1,7 @@
+---
+title: "Rui Cheng"
+started: 2017
+ended: 2022
+NowAt: Assistant Professor at U. of Minnesota
+subtitle: Graduate Student
+---

@@ -1,0 +1,7 @@
+---
+title: "Siraput Jongaramrungruang"
+started: 2016
+ended: 2021
+NowAt: Silicon Valley Startup
+subtitle: Graduate Student
+---

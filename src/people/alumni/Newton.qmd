@@ -1,0 +1,7 @@
+---
+title: "Newton Nguyen"
+started: 2016
+ended: 2022
+NowAt: PostDoc at Stanford
+subtitle: Graduate Student
+---

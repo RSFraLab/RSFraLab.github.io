@@ -17,6 +17,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: people.qmd
+        text: People
       - href: Publications.qmd
         text: Pubs
     right:

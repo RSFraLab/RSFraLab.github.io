@@ -1,0 +1,50 @@
+---
+pagetitle: "People | Frankenberg Lab"
+toc: false
+listing:
+  - id: research-staff
+    contents: "people/staff/*.qmd"
+    type: grid
+    image-height: 225px
+    grid-columns: 3
+    fields: [image, title, subtitle]
+    grid-item-align: center
+    sort: sortby
+    field-display-names: 
+      started: "Started"
+  - id: alumni
+    contents: "people/alumni/*.qmd"
+    type: table
+    sort: sortby
+    fields: [title, subtitle, started, ended, NowAt, links]
+    sort-ui: [title, started, ended, NowAt]
+    filter-ui: [title, subtitle, started, ended, NowAt]
+    field-display-names: 
+      title: "Name"
+      subtitle: "Role"
+      started: "Started"
+      ended: "Ended"
+      NowAt: "Now at"
+      links: "Info"
+---
+
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">People</li>
+  </ol>
+</nav>
+```
+
+
+## Research Staff
+
+:::{#research-staff}
+:::
+
+
+## Alumni
+
+:::{#alumni}
+:::

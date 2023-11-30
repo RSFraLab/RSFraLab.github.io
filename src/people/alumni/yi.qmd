@@ -1,0 +1,7 @@
+---
+title: "Yi Yin"
+started: 2016
+ended: 2023
+NowAt: Associate Professor at NYU
+subtitle: Research Scientist
+---

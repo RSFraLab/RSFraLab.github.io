@@ -1,0 +1,7 @@
+---
+title: "Vincent Humphrey"
+started: 2018
+ended: 2021
+NowAt: Staff Scientist at Meteo Swiss
+subtitle: Swiss PostDoc Fellow
+---

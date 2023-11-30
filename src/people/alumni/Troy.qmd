@@ -1,0 +1,7 @@
+---
+title: "Troy Magney"
+started: 2015
+ended: 2018
+NowAt: Associate Prof. UC Davis
+subtitle: PostDoc
+---

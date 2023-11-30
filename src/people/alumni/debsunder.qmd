@@ -1,0 +1,7 @@
+---
+title: "Debsunder Dutta"
+started: 2015
+ended: 2018
+NowAt: Assistant Professor at IIS in Bangalore, India
+subtitle: PostDoc
+---

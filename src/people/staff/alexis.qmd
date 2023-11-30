@@ -1,0 +1,28 @@
+---
+title: "Alexis Renchon"
+started: "2022"
+image: pics/AlexisRenchon.png
+subtitle: "Senior PostDoc"
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/AlexisRenchon/
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/ARenchon
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=9hCDm34AAAAJ&hl=en&oi=ao
+---
+Alexandre A. Renchon is Postdoctoral Scholar Research Associate in Environmental Science and Engineering (ESE) at Caltech and works on the CliMA land surface model..
+## Education
+- [PhD in Environmental Sciences]{.fw-bold} | Western Sydney University, Australia | 2015 - 2018
+- [Master Bio-Engineer in Environmental Sciences and Technology]{.fw-bold} | Liege University, Gembloux Agro-Bio Tech, Belgium | 2011-2013  
+## Professional Experience
+- [2022-present:]{.fw-bold} Postdoctoral Scholar,  Caltech 
+- [2019-2022:]{.fw-bold}    Postdoctoral Scholar,    Argonne National Lab
+- [2014:]{.fw-bold}     Intern, Institute for Research and Development, New Caledonia 
