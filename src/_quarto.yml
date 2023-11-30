@@ -1,0 +1,42 @@
+project:
+  type: website
+  preview:
+    port: 4200
+  output-dir: ../docs/
+  resources:
+    - /publications
+
+website:
+  title: "FraLab"
+  favicon: logo.png
+  site-url: "https:/tester"
+  description: "Website for the Carbon Cycle Lab at Caltech."
+  twitter-card: true
+  open-graph: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: Publications.qmd
+        text: Pubs
+    right:
+      - icon: github
+        href: https://github.com/cfranken
+        aria-label: GitHub
+      - icon: twitter
+        href: https://twitter.com/chr_fronge
+        aria-label: Twitter
+
+
+format:
+  html:
+    page-layout: full
+    theme:
+      - flatly
+      - custom.scss
+    toc: true
+
+editor: visual
+
+
+
