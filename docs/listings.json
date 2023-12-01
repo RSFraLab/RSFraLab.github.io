@@ -3,9 +3,10 @@
     "listing": "/people.html",
     "items": [
       "/people/staff/frankenberg.html",
+      "/people/staff/yujie.html",
       "/people/staff/alexis.html",
       "/people/staff/yinon.html",
-      "/people/staff/yujie.html",
+      "/people/staff/Qiren.html",
       "/people/alumni/Liyin.html",
       "/people/alumni/Newton.html",
       "/people/alumni/Philipp.html",
@@ -16,6 +17,12 @@
       "/people/alumni/debsunder.html",
       "/people/alumni/siraput.html",
       "/people/alumni/yi.html"
+    ]
+  },
+  {
+    "listing": "/blogs.html",
+    "items": [
+      "/BlogPosts/BlogQuarto.html"
     ]
   }
 ]

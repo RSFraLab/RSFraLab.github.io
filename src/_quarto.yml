@@ -40,6 +40,8 @@ website:
         text: People
       - href: Publications.qmd
         text: Pubs
+      - href: blogs.qmd
+        text: Blog
     right:
       - icon: github
         href: https://github.com/cfranken

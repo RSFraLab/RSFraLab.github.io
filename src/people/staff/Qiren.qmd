@@ -1,0 +1,23 @@
+---
+title: "Qiren Wang"
+started: "2023"
+image: pics/QirenWang.jpg
+subtitle: "Graduate Student"
+sortby: "4"
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/qwang-5
+	  
+---
+
+
+Qiren Wang is a first year graduate student of Environmental Sciences & Engineering (ESE) at Caltech.
+
+## Education
+
+- [B.S. in Environmental Science]{.fw-bold} | Peking University, China  | 2019-2023  

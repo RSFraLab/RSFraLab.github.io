@@ -3,6 +3,7 @@ title: "Yujie Wang"
 started: "2020"
 image: pics/wyujie.jpeg
 subtitle: "Research Scientist"
+sortby: "2"
 about:
   id: hero-heading
   template: solana

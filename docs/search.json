@@ -116,7 +116,7 @@
     "href": "people.html#research-staff",
     "title": "FraLab",
     "section": "Research Staff",
-    "text": "Research Staff\n\n\n\n\n\n\n\n\n\n\nChristian Frankenberg\n\n\nGroup Leader\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlexis Renchon\n\n\nSenior PostDoc\n\n\n\n\n\n\n\n\n\n\n\n\n\nYinon Bar-On\n\n\nPostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\nYujie Wang\n\n\nResearch Scientist\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Research Staff\n\n\n\n\n\n\n\n\n\n\nChristian Frankenberg\n\n\nGroup Leader\n\n\n\n\n\n\n\n\n\n\n\n\n\nYujie Wang\n\n\nResearch Scientist\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlexis Renchon\n\n\nSenior PostDoc\n\n\n\n\n\n\n\n\n\n\n\n\n\nYinon Bar-On\n\n\nPostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\nQiren Wang\n\n\nGraduate Student\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "people.html#alumni",
@@ -250,5 +250,61 @@
     "title": "Yinon Bar-On",
     "section": "Professional Experience",
     "text": "Professional Experience\n\n2023-present: Postdoctoral fellow, Caltech"
+  },
+  {
+    "objectID": "people/staff/Qiren.html",
+    "href": "people/staff/Qiren.html",
+    "title": "Qiren Wang",
+    "section": "",
+    "text": "Qiren Wang is a first year graduate student of Environmental Sciences & Engineering (ESE) at Caltech."
+  },
+  {
+    "objectID": "people/staff/Qiren.html#education",
+    "href": "people/staff/Qiren.html#education",
+    "title": "Qiren Wang",
+    "section": "Education",
+    "text": "Education\n\nB.S. in Environmental Science | Peking University, China | 2019-2023"
+  },
+  {
+    "objectID": "blogs.html",
+    "href": "blogs.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Website Update using Quarto\n\n\n\n\n\nOur attempt to use Quarto for a better academic website\n\n\n\n\n\n\nDec 1, 2023\n\n\nChristian Frankenberg\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blogs.html#why-a-new-website",
+    "href": "blogs.html#why-a-new-website",
+    "title": "Lab Blog",
+    "section": "",
+    "text": "When I first started my faculty job, I created my own website but coded most of the tools myself, which looked fun but was incredibly hard to maintain. Unsurprisingly, I hadn’t changed my website for more than 3 years and eveything became outdated. My group members, esp. Yiwei Mao, Yinon Bar-On and Alexis Renchon showed me new tools and suggested to use Quarto. Lots of nice examples from https://affcom.ku.edu/, https://github.com/CrumpLab/CrumpLab.github.io, and https://github.com/gilmore-lab/gilmore-lab.github.io/tree/master/src were used."
+  },
+  {
+    "objectID": "BlogPosts/BlogQuarto.html",
+    "href": "BlogPosts/BlogQuarto.html",
+    "title": "Website Update using Quarto",
+    "section": "",
+    "text": "When I first started my faculty job, I created my own website but coded most of the tools myself, which looked fun but was incredibly hard to maintain. Unsurprisingly, I hadn’t changed my website for more than 3 years and eveything became outdated. My group members, esp. Yiwei Mao, Yinon Bar-On and Alexis Renchon showed me new tools and suggested to use Quarto. Lots of nice examples from Affcom Lab , Crump Lab , and Gilmore Lab showed me it could be done and will save time eventually."
+  },
+  {
+    "objectID": "BlogPosts/BlogQuarto.html#why-a-new-website",
+    "href": "BlogPosts/BlogQuarto.html#why-a-new-website",
+    "title": "Website Update using Quarto",
+    "section": "",
+    "text": "When I first started my faculty job, I created my own website but coded most of the tools myself, which looked fun but was incredibly hard to maintain. Unsurprisingly, I hadn’t changed my website for more than 3 years and eveything became outdated. My group members, esp. Yiwei Mao, Yinon Bar-On and Alexis Renchon showed me new tools and suggested to use Quarto. Lots of nice examples from Affcom Lab , Crump Lab , and Gilmore Lab showed me it could be done and will save time eventually."
+  },
+  {
+    "objectID": "BlogPosts/BlogQuarto.html#why-quarto",
+    "href": "BlogPosts/BlogQuarto.html#why-quarto",
+    "title": "Website Update using Quarto",
+    "section": "Why Quarto?",
+    "text": "Why Quarto?\nQuarto seems to be able to do many things I am interested in, not only rendering nice websites but also notebooks and code itself, esp. in Julia. What is most important to me in a website is that I can make more regular updates without changing HTML sites, change group members, keep track of alumni, provide news. The system of using MarkDown language and easy setup files looked quite appealing to me and we gave it a try."
+  },
+  {
+    "objectID": "BlogPosts/BlogQuarto.html#how-is-it-going",
+    "href": "BlogPosts/BlogQuarto.html#how-is-it-going",
+    "title": "Website Update using Quarto",
+    "section": "How is it going",
+    "text": "How is it going\nWe have made decent progress but lots more work to do. Suggestions are always welcome!"
   }
 ]

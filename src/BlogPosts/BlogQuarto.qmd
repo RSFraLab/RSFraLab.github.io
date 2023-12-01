@@ -1,0 +1,17 @@
+---
+title: "Website Update using Quarto"
+description: "Our attempt to use Quarto for a better academic website"
+author: "Christian Frankenberg"
+date: "12/01/2023"
+---
+
+## Why a new website
+
+When I first started my faculty job, I created my own website but coded most of the tools myself, which looked fun but was incredibly hard to maintain. Unsurprisingly, I hadn't changed my website for more than 3 years and eveything became outdated. My group members, esp. Yiwei Mao, Yinon Bar-On and Alexis Renchon showed me new tools and suggested to use Quarto. Lots of nice examples from *[Affcom Lab](https://affcom.ku.edu/)* , *[Crump Lab](https://github.com/CrumpLab/CrumpLab.github.io)* , and *[Gilmore Lab](https://github.com/gilmore-lab/gilmore-lab.github.io/tree/master/src)* showed me it could be done and will save time *eventually*.
+
+## Why Quarto?
+[Quarto](https://quarto.org/) seems to be able to do many things I am interested in, not only rendering nice websites but also notebooks and code itself, esp. in [Julia](https://julialang.org). What is most important to me in a website is that I can make more regular updates without changing HTML sites, change group members, keep track of alumni, provide news. The system of using MarkDown language and easy setup files looked quite appealing to me and we gave it a try.
+
+## How is it going
+We have made decent progress but lots more work to do. Suggestions are always welcome!
+

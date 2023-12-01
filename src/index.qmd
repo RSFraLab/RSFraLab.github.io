@@ -3,7 +3,7 @@ title: "Welcome to our Lab Website"
 ---
 
 ::: grid
-::: {.g-col-12 .g-col-lg-5 .top-story-text}
+::: {.g-col-12 .g-col-lg-4 .top-story-text}
 
 ### Christian Frankenberg
 Professor of Environmental Science &amp; Engineering<br>Research scientist, JPL<br>
@@ -14,8 +14,8 @@ Office: 203 Linde+Robinson (<a href="http://lindecenter.caltech.edu/about/contac
 {{< fa envelope >}} <a href="mailto:cfranken@caltech.edu">cfranken(at)caltech.edu</a><br>
 :::
 
-::: {.g-col-12 .g-col-lg-2 .top-story-img}
-<img src="/people/staff/pics/frankenberg.png" alt="Christian Frankenberg" width="200" style="box-shadow: 5px 5px 5px gray;border-radius:50%">
+::: {.g-col-12 .g-col-lg-3 .top-story-img}
+<img src="/img/FraLabLogo.png" alt="Christian Frankenberg" width="300">
 :::
 
 ::: {.g-col-12 .g-col-lg-5 .top-story-img}
@@ -23,6 +23,6 @@ Office: 203 Linde+Robinson (<a href="http://lindecenter.caltech.edu/about/contac
 :::
 :::
 
-<img src="/img/blend_v9_small.jpg" alt="Christian Frankenberg" width="1200" style="box-shadow: 5px 5px 5px gray;border-radius:70%">
+<img src="/img/blend_v9_small.jpg" alt="Christian Frankenberg" width="100%" style="box-shadow: 5px 5px 5px gray">
 
 

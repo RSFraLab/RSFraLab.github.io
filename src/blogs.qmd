@@ -1,0 +1,19 @@
+---
+title: "Blog"
+description: "Our first attempt at semi-regular blog posts."
+image: "/img/BlogBanner.jpeg"
+listing:
+  contents: BlogPosts
+  id: blog-list
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+format: 
+  html: 
+    page-layout: full
+---
+<img src="/img/BlogBanner.jpeg" alt="Christian Frankenberg" width="100%" style="box-shadow: 5px 5px 5px gray">
+
+::: {#blog-list}
+:::

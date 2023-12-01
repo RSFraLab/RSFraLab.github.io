@@ -3,6 +3,7 @@ title: "Alexis Renchon"
 started: "2022"
 image: pics/alexis.jpg
 subtitle: "Senior PostDoc"
+sortby: "3"
 about:
   id: hero-heading
   template: solana

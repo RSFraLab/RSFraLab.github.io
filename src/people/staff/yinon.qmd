@@ -3,6 +3,7 @@ title: "Yinon Bar-On"
 image: pics/YinonBarOn.jpg
 started: "2023"
 subtitle: "Postdoc"
+sortby: "3"
 about:
   id: hero-heading
   template: solana

@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Christian Frankenberg">
+<meta name="dcterms.date" content="2023-12-01">
+<meta name="description" content="Our attempt to use Quarto for a better academic website">
 
-<title>FraLab - Alexis Renchon</title>
+<title>FraLab - Website Update using Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,14 +65,12 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="FraLab - Alexis Renchon">
-<meta property="og:description" content="Senior PostDoc">
-<meta property="og:image" content="https:/tester/people/staff/pics/alexis.jpg">
+<meta property="og:title" content="FraLab - Website Update using Quarto">
+<meta property="og:description" content="Our attempt to use Quarto for a better academic website">
 <meta property="og:site-name" content="FraLab">
-<meta name="twitter:title" content="FraLab - Alexis Renchon">
-<meta name="twitter:description" content="Senior PostDoc">
-<meta name="twitter:image" content="https:/tester/people/staff/pics/alexis.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FraLab - Website Update using Quarto">
+<meta name="twitter:description" content="Our attempt to use Quarto for a better academic website">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">FraLab</span>
     </a>
   </div>
@@ -89,16 +91,20 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../people.html" rel="" target="">
+    <a class="nav-link" href="../people.html" rel="" target="">
  <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Publications.html" rel="" target="">
+    <a class="nav-link" href="../Publications.html" rel="" target="">
  <span class="menu-text">Pubs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blogs.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -126,64 +132,67 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
+   
   <ul>
-  <li><a href="#education" id="toc-education" class="nav-link active" data-scroll-target="#education">Education</a></li>
-  <li><a href="#professional-experience" id="toc-professional-experience" class="nav-link" data-scroll-target="#professional-experience">Professional Experience</a></li>
+  <li><a href="#why-a-new-website" id="toc-why-a-new-website" class="nav-link active" data-scroll-target="#why-a-new-website">Why a new website</a></li>
+  <li><a href="#why-quarto" id="toc-why-quarto" class="nav-link" data-scroll-target="#why-quarto">Why Quarto?</a></li>
+  <li><a href="#how-is-it-going" id="toc-how-is-it-going" class="nav-link" data-scroll-target="#how-is-it-going">How is it going</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<div class="quarto-about-solana column-page-left">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Alexis Renchon</h1>
-<p class="subtitle lead">Senior PostDoc</p>
+<h1 class="title">Website Update using Quarto</h1>
 </div>
+
+<div>
+  <div class="description">
+    Our attempt to use Quarto for a better academic website
+  </div>
+</div>
+
+
 <div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Christian Frankenberg </p>
+          </div>
   </div>
-</header> <div class="about-links">
-  <a href="https://github.com/AlexisRenchon/" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://twitter.com/ARenchon" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">twitter</span>
-  </a>
-  <a href="https://scholar.google.com/citations?user=9hCDm34AAAAJ&amp;hl=en&amp;oi=ao" class="about-link" rel="" target="">
-    <i class="bi bi-google"></i>
-     <span class="about-link-text">Google Scholar</span>
-  </a>
-</div>
-      <div class="about-contents"><main class="content column-page-left" id="quarto-document-content">
-
-<p>Alexandre A. Renchon is Postdoctoral Scholar Research Associate in Environmental Science and Engineering (ESE) at Caltech and works on the CliMA land surface model.</p>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<ul>
-<li><span class="fw-bold">PhD in Environmental Sciences</span> | Western Sydney University, Australia | 2015 - 2018</li>
-<li><span class="fw-bold">Master Bio-Engineer in Environmental Sciences and Technology</span> | Liege University, Gembloux Agro-Bio Tech, Belgium | 2011-2013</li>
-</ul>
-</section>
-<section id="professional-experience" class="level2">
-<h2 data-anchor-id="professional-experience">Professional Experience</h2>
-<ul>
-<li><span class="fw-bold">2022-present:</span> Postdoctoral Scholar, Caltech</li>
-<li><span class="fw-bold">2019-2022:</span> Postdoctoral Scholar, Argonne National Lab</li>
-<li><span class="fw-bold">2014:</span> Intern, Institute for Research and Development, New Caledonia</li>
-</ul>
-
-
-</section>
-</main></div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 1, 2023</p>
     </div>
-    <img src="pics/alexis.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
   </div>
-</div>
- <!-- /main -->
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="why-a-new-website" class="level2">
+<h2 class="anchored" data-anchor-id="why-a-new-website">Why a new website</h2>
+<p>When I first started my faculty job, I created my own website but coded most of the tools myself, which looked fun but was incredibly hard to maintain. Unsurprisingly, I hadn’t changed my website for more than 3 years and eveything became outdated. My group members, esp.&nbsp;Yiwei Mao, Yinon Bar-On and Alexis Renchon showed me new tools and suggested to use Quarto. Lots of nice examples from <em><a href="https://affcom.ku.edu/">Affcom Lab</a></em> , <em><a href="https://github.com/CrumpLab/CrumpLab.github.io">Crump Lab</a></em> , and <em><a href="https://github.com/gilmore-lab/gilmore-lab.github.io/tree/master/src">Gilmore Lab</a></em> showed me it could be done and will save time <em>eventually</em>.</p>
+</section>
+<section id="why-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="why-quarto">Why Quarto?</h2>
+<p><a href="https://quarto.org/">Quarto</a> seems to be able to do many things I am interested in, not only rendering nice websites but also notebooks and code itself, esp.&nbsp;in <a href="https://julialang.org">Julia</a>. What is most important to me in a website is that I can make more regular updates without changing HTML sites, change group members, keep track of alumni, provide news. The system of using MarkDown language and easy setup files looked quite appealing to me and we gave it a try.</p>
+</section>
+<section id="how-is-it-going" class="level2">
+<h2 class="anchored" data-anchor-id="how-is-it-going">How is it going</h2>
+<p>We have made decent progress but lots more work to do. Suggestions are always welcome!</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -204,6 +213,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -413,7 +429,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><a href="https://www.caltech.edu/"><img src="../../img/Caltech_Logo.png" class="img-fluid" alt="Caltech" width="65"></a></div>   
+    <div class="nav-footer-left"><a href="https://www.caltech.edu/"><img src="../img/Caltech_Logo.png" class="img-fluid" alt="Caltech" width="65"></a></div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
