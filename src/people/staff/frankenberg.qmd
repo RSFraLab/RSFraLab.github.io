@@ -20,14 +20,12 @@ about:
       href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en  
 ---
 
-
 Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.
 
 ## Education
 
 - [PhD in Environmental Physics]{.fw-bold} | University of Heidelberg, Germany | 2002 -  2005
 - [Diploma in Geoecology ]{.fw-bold} | University of Bayreuth, Germany  | 1996-2002  
-
 
 ## Professional Experience
 
