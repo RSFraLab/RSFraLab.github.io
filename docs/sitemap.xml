@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https:/tester/index.html</loc>
-    <lastmod>2023-11-30T23:20:17.207Z</lastmod>
+    <lastmod>2023-12-01T00:33:27.738Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/about.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https:/tester/people/staff/frankenberg.html</loc>
-    <lastmod>2023-12-01T00:17:23.621Z</lastmod>
+    <lastmod>2023-12-01T00:33:28.622Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/alumni/frankenberg.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https:/tester/people.html</loc>
-    <lastmod>2023-12-01T00:18:01.397Z</lastmod>
+    <lastmod>2023-12-01T00:35:26.849Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/staff/dummy.html</loc>
@@ -74,6 +74,10 @@
   </url>
   <url>
     <loc>https:/tester/people/staff/alexis.html</loc>
-    <lastmod>2023-12-01T00:18:02.873Z</lastmod>
+    <lastmod>2023-12-01T00:33:18.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/staff/yujie.html</loc>
+    <lastmod>2023-12-01T00:33:28.319Z</lastmod>
   </url>
 </urlset>

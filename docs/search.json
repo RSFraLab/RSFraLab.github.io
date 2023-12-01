@@ -116,7 +116,7 @@
     "href": "people.html#research-staff",
     "title": "FraLab",
     "section": "Research Staff",
-    "text": "Research Staff\n\n\n\n\n\n\n\n\n\n\nChristian Frankenberg\n\n\nGroup Leader\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlexis Renchon\n\n\nSenior PostDoc\n\n\n\n\n\n\n\n\n\n\n\n\n\nBlaBlaBla\n\n\nPostDoc\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Research Staff\n\n\n\n\n\n\n\n\n\n\nChristian Frankenberg\n\n\nGroup Leader\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlexis Renchon\n\n\nSenior PostDoc\n\n\n\n\n\n\n\n\n\n\n\n\n\nYujie Wang\n\n\nResearch Scientist\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "people.html#alumni",
@@ -187,5 +187,26 @@
     "title": "Alexis Renchon",
     "section": "Professional Experience",
     "text": "Professional Experience\n\n2022-present: Postdoctoral Scholar, Caltech\n2019-2022: Postdoctoral Scholar, Argonne National Lab\n2014: Intern, Institute for Research and Development, New Caledonia"
+  },
+  {
+    "objectID": "people/staff/yujie.html",
+    "href": "people/staff/yujie.html",
+    "title": "Yujie Wang",
+    "section": "",
+    "text": "Yujie is Research Scientist working on plant ecophysiology, vegetation optimality, and land surface modeling."
+  },
+  {
+    "objectID": "people/staff/yujie.html#education",
+    "href": "people/staff/yujie.html#education",
+    "title": "Yujie Wang",
+    "section": "Education",
+    "text": "Education\n\nPhD in Biology | University of Utah, USA | 2015 - 2019\nMS in Biology | University of Science and Technology of China, China | 2011 - 2013\nBS in Biology | University of Science and Technology of China, China | 2007 - 2011"
+  },
+  {
+    "objectID": "people/staff/yujie.html#professional-experience",
+    "href": "people/staff/yujie.html#professional-experience",
+    "title": "Yujie Wang",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\n2022-present: Research Scientist, Caltech\n2020-2022: Postdoctoral Fellow, Caltech"
   }
 ]

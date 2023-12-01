@@ -1,11 +1,13 @@
 ---
 pagetitle: "People | Frankenberg Lab"
 toc: false
+html:
+    page-layout: full
 listing:
   - id: research-staff
     contents: "people/staff/*.qmd"
     type: grid
-    image-height: 225px
+    image-height: 250px
     grid-columns: 3
     fields: [image, title, subtitle]
     grid-item-align: center
