@@ -18,16 +18,15 @@ listing:
     contents: "people/alumni/*.qmd"
     type: table
     sort: sortby
-    fields: [title, subtitle, started, ended, NowAt, links]
+    fields: [title, subtitle, started, ended, NowAt]
     sort-ui: [title, started, ended, NowAt]
     filter-ui: [title, subtitle, started, ended, NowAt]
     field-display-names: 
       title: "Name"
-      subtitle: "Role"
+      subtitle: "Former Role"
       started: "Started"
       ended: "Ended"
       NowAt: "Now at"
-      links: "Info"
 ---
 
 ```{=html}

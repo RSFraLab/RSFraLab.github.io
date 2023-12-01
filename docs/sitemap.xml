@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https:/tester/index.html</loc>
-    <lastmod>2023-12-01T00:51:55.682Z</lastmod>
+    <lastmod>2023-12-01T20:10:47.907Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/about.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https:/tester/Publications.html</loc>
-    <lastmod>2023-11-30T22:56:39.488Z</lastmod>
+    <lastmod>2023-12-01T19:26:32.261Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/frankenberg/frankenberg.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https:/tester/people/staff/frankenberg.html</loc>
-    <lastmod>2023-12-01T00:52:08.543Z</lastmod>
+    <lastmod>2023-12-01T19:56:23.806Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/alumni/frankenberg.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https:/tester/people.html</loc>
-    <lastmod>2023-12-01T00:51:57.660Z</lastmod>
+    <lastmod>2023-12-01T20:11:18.418Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/staff/dummy.html</loc>
@@ -42,23 +42,23 @@
   </url>
   <url>
     <loc>https:/tester/people/alumni/debsunder.html</loc>
-    <lastmod>2023-11-30T22:11:11.506Z</lastmod>
+    <lastmod>2023-12-01T19:31:14.522Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/alumni/Liyin.html</loc>
-    <lastmod>2023-11-30T22:56:09.718Z</lastmod>
+    <lastmod>2023-12-01T17:55:11.561Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/alumni/Philipp.html</loc>
-    <lastmod>2023-11-30T22:56:14.896Z</lastmod>
+    <lastmod>2023-12-01T17:56:13.502Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/alumni/Ying.html</loc>
-    <lastmod>2023-11-30T22:11:10.138Z</lastmod>
+    <lastmod>2023-12-01T19:15:51.495Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/alumni/Newton.html</loc>
-    <lastmod>2023-11-30T22:18:15.710Z</lastmod>
+    <lastmod>2023-12-01T17:55:06.709Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/alumni/Rui.html</loc>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https:/tester/people/alumni/yi.html</loc>
-    <lastmod>2023-11-30T22:18:15.983Z</lastmod>
+    <lastmod>2023-12-01T19:31:14.239Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/staff/alexis.html</loc>
@@ -78,6 +78,6 @@
   </url>
   <url>
     <loc>https:/tester/people/staff/yujie.html</loc>
-    <lastmod>2023-12-01T00:33:28.319Z</lastmod>
+    <lastmod>2023-12-01T20:11:14.272Z</lastmod>
   </url>
 </urlset>

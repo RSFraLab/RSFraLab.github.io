@@ -4,4 +4,23 @@ started: 2016
 ended: 2022
 NowAt: PostDoc at Carnegie
 subtitle: Graduate Student
+image: pics/liyin.jpg
+bibliography: ../../publications/cfranken2020.bib
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=ITMmmQIAAAAJ&hl=en&oi=ao
+    - icon: file-earmark-text
+      text: PhD Thesis
+      href: https://thesis.library.caltech.edu/15140/7/thesis_Liyin_final_v2.pdf
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0003-4427-1438
 ---
+
+Liyin He started as a graduate student in 2016. She worked on the impact of water stress on photosynthesis using a combination of remote sensing products. Her special focus was on agriculture and she was partially funded as a Resnick Fellow. Her main body of work included the tracking of water-stress modulated seasonal cycles of photosynthessi [@he2020tracking], the quantification of agricultural productivity in the corn belt [@he2020ground], the evaluation of trends in global Gross Primary productivity [@he2022remote], and the evaluation of the impact of air poluution on crop yields in China [@he2022marked].
+
+

@@ -13,6 +13,25 @@ website:
   description: "Website for the Carbon Cycle Lab at Caltech."
   twitter-card: true
   open-graph: true
+  page-footer:
+    left: |
+      [![](/img/Caltech_Logo.png){fig-alt="Caltech" width=65px}](https://www.caltech.edu/)
+    #center:
+    #  - text: "About"
+    #    href: about.qmd
+    #  - text: "FAQ"
+    #    href: docs/faq/index.qmd
+    #  - text: "License"
+    #    href: license.qmd
+    #  - text: "Trademark"
+    #    href: trademark.qmd
+    right:
+      - icon: twitter
+        href: https://twitter.com/chr_fronge
+        aria-label: PI Twitter
+      - icon: github
+        href: https://github.com/RemoteSensingTools/
+        aria-label: Quarto GitHub      
   navbar:
     left:
       - href: index.qmd
@@ -37,6 +56,10 @@ format:
       - flatly
       - custom.scss
     toc: true
+    grid:
+      sidebar-width: 0px
+      body-width: 1000px
+      margin-width: 250px
 
 editor: visual
 

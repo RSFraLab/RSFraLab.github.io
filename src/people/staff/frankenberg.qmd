@@ -15,12 +15,13 @@ about:
     - icon: twitter
       text: twitter
       href: https://twitter.com/chr_fronge
-    - icon: google
-      text: Google Scholar
+    - text: "{{< ai google-scholar >}} Google Scholar"
       href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
     - icon: mortarboard
       text: ResearchID
-      href: https://www.webofscience.com/wos/author/record/408887 
+      href: https://www.webofscience.com/wos/author/record/408887
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0002-0546-5857 
 ---
 
 Christian Frankenberg is Professor of Environmental Sciences & Engineering (ESE) at Caltech and works on the global carbon cycle.

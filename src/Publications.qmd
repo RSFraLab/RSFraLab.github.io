@@ -4,7 +4,3 @@ format: html
 bibliography: publications/cfranken2020.bib
 nocite: '@*'
 ---
-
-Here are some of my publications:
-
-- See our paper  [@WANG2020111728].

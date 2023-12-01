@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,12 +53,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/iconify-1.0.7/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -64,10 +83,16 @@ ul.task-list li input[type="checkbox"] {
 
 <meta property="og:title" content="FraLab - Newton Nguyen">
 <meta property="og:description" content="Graduate Student">
+<meta property="og:image" content="https:/tester/people/alumni/pics/newton.png">
 <meta property="og:site-name" content="FraLab">
+<meta property="og:image:height" content="221">
+<meta property="og:image:width" content="221">
 <meta name="twitter:title" content="FraLab - Newton Nguyen">
 <meta name="twitter:description" content="Graduate Student">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:/tester/people/alumni/pics/newton.png">
+<meta name="twitter:image-height" content="221">
+<meta name="twitter:image-width" content="221">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -122,34 +147,48 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-about-solana column-page">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Newton Nguyen</h1>
 <p class="subtitle lead">Graduate Student</p>
 </div>
-
-
-
 <div class="quarto-title-meta">
-
-    
-  
-    
   </div>
-  
+</header> <div class="about-links">
+  <a href="https://scholar.google.com/citations?user=AziOzdwAAAAJ&amp;hl=en&amp;oi=ao" class="about-link" rel="" target="">
+    <i class="bi bi-google"></i>
+     <span class="about-link-text">Google Scholar</span>
+  </a>
+  <a href="https://orcid.org/0000-0002-9118-8672" class="about-link" rel="" target="">
+     <span class="about-link-text"><iconify-icon inline="" icon="fa6-brands:orcid"></iconify-icon> OrcidID</span>
+  </a>
+  <a href="https://thesis.library.caltech.edu/16156/1/thesis_aug15.pdf" class="about-link" rel="" target="">
+    <i class="bi bi-file-earmark-text"></i>
+     <span class="about-link-text">PhD Thesis</span>
+  </a>
+</div>
+      <div class="about-contents"><main class="content column-page" id="quarto-document-content">
+<p>Newton started as a graduate student in 2016 with a Bachelor in Geophysics from Berkeley. He worked on the global methane cycle, using a combination of modeling tools as well as satellite and ground-based measurements <span class="citation" data-cites="nguyen2020effects">(<a href="#ref-nguyen2020effects" role="doc-biblioref">Nguyen et al. 2020</a>)</span>.</p>
+<hr>
 
-</header>
 
 
-
-
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-nguyen2020effects" class="csl-entry" role="listitem">
+Nguyen, Newton H, Alexander J Turner, Yi Yin, Michael J Prather, and Christian Frankenberg. 2020. <span>“Effects of Chemical Feedbacks on Decadal Methane Emissions Estimates.”</span> <em>Geophysical Research Letters</em> 47 (3): e2019GL085706.
+</div>
+</div></section></div></main></div>
+    </div>
+    <img src="pics/newton.png" class="about-image
+  round " style="height: 15em; width: 15em;">
+  </div>
+</div>
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -170,13 +209,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

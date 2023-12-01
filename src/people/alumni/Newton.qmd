@@ -4,4 +4,24 @@ started: 2016
 ended: 2022
 NowAt: PostDoc at Stanford
 subtitle: Graduate Student
+image: pics/newton.png
+bibliography: ../../publications/cfranken2020.bib
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=AziOzdwAAAAJ&hl=en&oi=ao 
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0002-9118-8672 
+    - icon: file-earmark-text
+      text: PhD Thesis
+      href: https://thesis.library.caltech.edu/16156/1/thesis_aug15.pdf
 ---
+
+Newton started as a graduate student in 2016 with a Bachelor in Geophysics from Berkeley. He worked on the global methane cycle, using a combination of modeling tools as well as satellite and ground-based measurements [@nguyen2020effects]. 
+
+---
+

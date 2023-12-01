@@ -4,4 +4,14 @@ started: 2015
 ended: 2018
 NowAt: Assistant Professor at IIS in Bangalore, India
 subtitle: PostDoc
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=8A8BBN4AAAAJ&hl=en&oi=ao 
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0001-5727-1045
 ---

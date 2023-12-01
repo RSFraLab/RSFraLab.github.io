@@ -1,7 +1,21 @@
 ---
-title: "Troy Magney"
-started: 2015
-ended: 2018
-NowAt: Associate Prof. UC Davis
-subtitle: PostDoc
+title: "Ying Sun"
+started: 2016
+ended: 2017
+NowAt: Associate Prof. Cornell
+subtitle: JSG/JPL Joint Postdoc Fellow
+image: pics/Ying.jpeg
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=Z0pa9M0AAAAJ&hl=en 
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/gisgter2008
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0002-9819-1241 
 ---

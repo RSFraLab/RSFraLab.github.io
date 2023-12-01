@@ -3,9 +3,15 @@ title: "Philipp Köhler"
 started: 2016
 ended: 2021
 NowAt: Scientist et Eumetsat
-links:
+subtitle: Research Scientist
+image: pics/philipp2.jpg
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
     - icon: google
       text: Google Scholar
       href: https://scholar.google.com/citations?user=Fx7Xii4AAAAJ&hl=en&oi=ao 
-subtitle: Research Scientist
+
 ---
