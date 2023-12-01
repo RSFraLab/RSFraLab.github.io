@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https:/tester/index.html</loc>
-    <lastmod>2023-12-01T22:39:01.589Z</lastmod>
+    <lastmod>2023-12-01T23:45:50.841Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/about.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https:/tester/people.html</loc>
-    <lastmod>2023-12-01T22:38:43.930Z</lastmod>
+    <lastmod>2023-12-01T23:45:52.024Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/staff/dummy.html</loc>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https:/tester/people/alumni/Newton.html</loc>
-    <lastmod>2023-12-01T17:55:06.709Z</lastmod>
+    <lastmod>2023-12-01T23:44:31.653Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/alumni/Rui.html</loc>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https:/tester/people/staff/Qiren.html</loc>
-    <lastmod>2023-12-01T21:45:04.406Z</lastmod>
+    <lastmod>2023-12-01T23:39:52.878Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/blogs.html</loc>
@@ -95,5 +95,17 @@
   <url>
     <loc>https:/tester/BlogPosts/BlogQuarto.html</loc>
     <lastmod>2023-12-01T22:38:34.101Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/staff/renato.html</loc>
+    <lastmod>2023-12-01T23:31:29.691Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/staff/yyao.html</loc>
+    <lastmod>2023-12-01T23:31:39.219Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/staff/Ke.html</loc>
+    <lastmod>2023-12-01T23:45:51.398Z</lastmod>
   </url>
 </urlset>
