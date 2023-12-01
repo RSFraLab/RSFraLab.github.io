@@ -15,6 +15,9 @@ about:
     - icon: google
       text: Google Scholar
       href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en  
+    - icon: mortarboard
+      text: ResearchID
+      href: https://www.webofscience.com/wos/author/record/408887
 ---
 
 
