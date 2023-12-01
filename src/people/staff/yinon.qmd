@@ -1,0 +1,33 @@
+---
+title: "Yinon Bar-On"
+image: pics/YinonBarOn.jpg
+started: "2023"
+subtitle: "Postdoc"
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/yinonbaron/
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/yinonbaron
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=3iE59GcAAAAJ&hl=en
+---
+
+
+Yinon Bar-On is a Schmidt Science Postdoctoral Fellow at Caltech
+
+## Education
+
+- [PhD in Biology]{.fw-bold} | Weizmann Institute of Science, Israel | 2017 - 2022
+- [MSc in Biology]{.fw-bold} | Weizmann Institute of Science, Israel | 2014 - 2017 
+- [BSc in Biology]{.fw-bold} | Tel Aviv University, Israel | 2011 - 2014
+
+## Professional Experience
+
+- [2023-present:]{.fw-bold} Postdoctoral fellow, 	Caltech 
