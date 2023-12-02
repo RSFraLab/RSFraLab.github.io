@@ -26,7 +26,15 @@
 
 <section id="why-a-new-website" class="level2">
 <h2 class="anchored" data-anchor-id="why-a-new-website">Why a new website</h2>
-<p>When I first started my faculty job, I created my own website but coded most of the tools myself, which looked fun but was incredibly hard to maintain. Unsurprisingly, I hadn’t changed my website for more than 3 years and eveything became outdated. My group members, esp.&nbsp;Yiwei Mao, Yinon Bar-On and Alexis Renchon showed me new tools and suggested to use Quarto. Lots of nice examples from <em><a href="https://affcom.ku.edu/">Affcom Lab</a></em> , <em><a href="https://github.com/CrumpLab/CrumpLab.github.io">Crump Lab</a></em> , and <em><a href="https://github.com/gilmore-lab/gilmore-lab.github.io/tree/master/src">Gilmore Lab</a></em> were used.</p>
+<p>When I first started my faculty job, I created my own website but coded most of the tools myself, which looked fun but was incredibly hard to maintain. Unsurprisingly, I hadn’t changed my website for more than 3 years and eveything became outdated. My group members, esp.&nbsp;Yiwei Mao, Yinon Bar-On and Alexis Renchon showed me new tools and suggested to use Quarto. Lots of nice examples from <em><a href="https://affcom.ku.edu/">Affcom Lab</a></em> , <em><a href="https://github.com/CrumpLab/CrumpLab.github.io">Crump Lab</a></em> , and <em><a href="https://github.com/gilmore-lab/gilmore-lab.github.io/tree/master/src">Gilmore Lab</a></em> showed me it could be done and will save time <em>eventually</em>.</p>
+</section>
+<section id="why-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="why-quarto">Why Quarto?</h2>
+<p><a href="https://quarto.org/">Quarto</a> seems to be able to do many things I am interested in, not only rendering nice websites but also notebooks and code itself, esp.&nbsp;in <a href="https://julialang.org">Julia</a>. What is most important to me in a website is that I can make more regular updates without changing HTML sites, change group members, keep track of alumni, provide news. The system of using MarkDown language and easy setup files looked quite appealing to me and we gave it a try.</p>
+</section>
+<section id="how-is-it-going" class="level2">
+<h2 class="anchored" data-anchor-id="how-is-it-going">How is it going</h2>
+<p>We have made decent progress but lots more work to do. Suggestions are always welcome!</p>
 
 
 </section>

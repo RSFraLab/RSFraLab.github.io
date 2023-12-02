@@ -13,7 +13,7 @@ format:
   html: 
     page-layout: full
 ---
-<img src="/img/BlogBanner.jpeg" alt="Christian Frankenberg" width="100%" style="box-shadow: 5px 5px 5px gray">
+<img src="/img/BlogBanner2.jpg" alt="Christian Frankenberg" width="100%" style="box-shadow: 5px 5px 5px gray">
 
 ::: {#blog-list}
 :::
