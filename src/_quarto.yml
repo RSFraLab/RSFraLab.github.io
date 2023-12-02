@@ -13,7 +13,7 @@ website:
   description: "Website for the Carbon Cycle Lab at Caltech."
   twitter-card: true
   open-graph: true
-  google-analytics: "G-BMTBGHF826"
+  google-analytics: "G-V5MKFZWK6P"
   page-footer:
     left: |
       [![](/img/Caltech_Logo.png){fig-alt="Caltech" width=65px}](https://www.caltech.edu/)
