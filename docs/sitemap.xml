@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https:/tester/index.html</loc>
-    <lastmod>2023-12-01T23:45:50.841Z</lastmod>
+    <lastmod>2023-12-02T00:36:17.072Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/about.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https:/tester/people.html</loc>
-    <lastmod>2023-12-01T23:45:52.024Z</lastmod>
+    <lastmod>2023-12-02T00:36:28.202Z</lastmod>
   </url>
   <url>
     <loc>https:/tester/people/staff/dummy.html</loc>
@@ -107,5 +107,9 @@
   <url>
     <loc>https:/tester/people/staff/Ke.html</loc>
     <lastmod>2023-12-01T23:45:51.398Z</lastmod>
+  </url>
+  <url>
+    <loc>https:/tester/people/staff/keliu.html</loc>
+    <lastmod>2023-12-02T00:36:23.169Z</lastmod>
   </url>
 </urlset>
