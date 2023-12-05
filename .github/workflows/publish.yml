@@ -17,6 +17,11 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Install Extensions
+        run: |
+          quarto install extension quarto-ext/fontawesome --no-prompt
+          quarto install extension schochastics/academicons --no-prompt
+
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
