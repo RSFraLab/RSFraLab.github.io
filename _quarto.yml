@@ -2,7 +2,6 @@ project:
   type: website
   preview:
     port: 4200
-  output-dir: ../docs/
   resources:
     - /publications
 
@@ -32,7 +31,7 @@ website:
         aria-label: PI Twitter
       - icon: github
         href: https://github.com/RemoteSensingTools/
-        aria-label: Quarto GitHub      
+        aria-label: Quarto GitHub
   navbar:
     left:
       - href: index.qmd
@@ -65,6 +64,3 @@ format:
       margin-width: 250px
 
 editor: visual
-
-
-
