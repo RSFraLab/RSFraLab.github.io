@@ -19,6 +19,7 @@ jobs:
 
       - name: Install Extensions
         run: |
+          quarto install extension mcanouil/quarto-iconify --no-prompt
           quarto install extension quarto-ext/fontawesome --no-prompt
           quarto install extension schochastics/academicons --no-prompt
 
