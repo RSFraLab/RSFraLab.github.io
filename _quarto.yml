@@ -7,7 +7,7 @@ project:
 
 website:
   title: "FraLab"
-  favicon: logo.png
+  favicon: "img/logo.png"
   site-url: "https:/tester"
   description: "Website for the Carbon Cycle Lab at Caltech."
   twitter-card: true
