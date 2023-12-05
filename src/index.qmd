@@ -2,6 +2,8 @@
 title: "Welcome to our Lab Website"
 ---
 
+What we do:
+
 ::: grid
 ::: {.g-col-12 .g-col-lg-4 .top-story-text}
 

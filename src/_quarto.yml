@@ -34,6 +34,7 @@ website:
         href: https://github.com/RemoteSensingTools/
         aria-label: Quarto GitHub      
   navbar:
+    logo: "/img/FraLabLogo.png"
     left:
       - href: index.qmd
         text: Home
