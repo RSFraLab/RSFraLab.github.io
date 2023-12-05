@@ -38,7 +38,7 @@ website:
         text: Home
       - href: people.qmd
         text: People
-      - href: Publications.qmd
+      - href: publications.qmd
         text: Pubs
       - href: blogs.qmd
         text: Blog
