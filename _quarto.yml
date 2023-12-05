@@ -1,0 +1,67 @@
+project:
+  type: website
+  preview:
+    port: 4200
+  resources:
+    - /publications
+
+website:
+  title: "FraLab"
+  favicon: "img/logo.png"
+  site-url: "https:/tester"
+  description: "Website for the Carbon Cycle Lab at Caltech."
+  twitter-card: true
+  open-graph: true
+  google-analytics: "G-V5MKFZWK6P"
+  page-footer:
+    left: |
+      [![](/img/Caltech_Logo.png){fig-alt="Caltech" width=65px}](https://www.caltech.edu/)
+    #center:
+    #  - text: "About"
+    #    href: about.qmd
+    #  - text: "FAQ"
+    #    href: docs/faq/index.qmd
+    #  - text: "License"
+    #    href: license.qmd
+    #  - text: "Trademark"
+    #    href: trademark.qmd
+    right:
+      - icon: twitter
+        href: https://twitter.com/chr_fronge
+        aria-label: PI Twitter
+      - icon: github
+        href: https://github.com/RemoteSensingTools/
+        aria-label: Quarto GitHub
+  navbar:
+    logo: "/img/FraLabLogo.png"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: people.qmd
+        text: People
+      - href: publications.qmd
+        text: Pubs
+      - href: blogs.qmd
+        text: Blog
+    right:
+      - icon: github
+        href: https://github.com/cfranken
+        aria-label: GitHub
+      - icon: twitter
+        href: https://twitter.com/chr_fronge
+        aria-label: Twitter
+
+
+format:
+  html:
+    page-layout: full
+    theme:
+      - flatly
+      - custom.scss
+    toc: true
+    grid:
+      sidebar-width: 0px
+      body-width: 1000px
+      margin-width: 250px
+
+editor: visual
