@@ -42,7 +42,7 @@ website:
       - href: people.qmd
         text: People
       - href: publications.qmd
-        text: Pubs
+        text: Publications
       - href: LabGuide.qmd
         text: Lab Guide
       - href: join.qmd

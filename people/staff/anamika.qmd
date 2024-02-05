@@ -1,0 +1,35 @@
+---
+title: "Anamika Shreevastava"
+started: "2024"
+image: pics/Anamika.jpg
+subtitle: "Postdoc"
+sortby: "3"
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/Anamika255
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/Anamika255
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=lRnptscAAAAJ&hl=en
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0002-6805-7869
+---
+
+Anamika Shreevastava is a postdoctoral researcher at Caltech and an affiliate of NASA's Jet Propulsion Laboratory. Her research focuses on the intricate interplay between cities and extreme weather events. Using a combination of numerical weather modeling, remote sensing, and complex systems science, she investigates the emergence and impacts of extreme heat in cities worldwide.
+
+## Education
+
+- [PhD in Civil and Environmental Engineering]{.fw-bold} | Purdue University, IN, USA | 2016 -  2020
+- [MS in Civil and Architectural Engineering]{.fw-bold} | Purdue University, IN, USA | 2014 -  2016
+- [BTech in Civil Engineering]{.fw-bold} | Indian Institute of Technology, Roorkee, India | 2010 -  2014
+
+## Professional Experience
+
+- [2024-present:]{.fw-bold} Postdoctoral Researcher, Caltech 
+- [2021-2023:]{.fw-bold} NASA Postdoctoral Program Fellow at NASA JPL
