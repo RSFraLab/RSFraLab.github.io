@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>FraLab - Ying Sun</title>
+<title>FraLab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,12 +34,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/iconify-1.0.8/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,16 +76,15 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
 </script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
-<meta property="og:title" content="FraLab - Ying Sun">
-<meta property="og:description" content="JSG/JPL Joint Postdoc Fellow">
-<meta property="og:image" content="https:/tester/people/alumni/pics/Ying.jpeg">
+<meta property="og:title" content="FraLab">
 <meta property="og:site_name" content="FraLab">
-<meta name="twitter:title" content="FraLab - Ying Sun">
-<meta name="twitter:description" content="JSG/JPL Joint Postdoc Fellow">
-<meta name="twitter:image" content="https:/tester/people/alumni/pics/Ying.jpeg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FraLab">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -155,41 +154,67 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
-<!-- main -->
-<div class="quarto-about-solana content column-page">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Ying Sun</h1>
-<p class="subtitle lead">JSG/JPL Joint Postdoc Fellow</p>
-</div>
-<div class="quarto-title-meta column-page">
-  </div>
-</header> <div class="about-links">
-  <a href="https://scholar.google.com/citations?user=Z0pa9M0AAAAJ&amp;hl=en" class="about-link" rel="" target="">
-    <i class="bi bi-google"></i>
-     <span class="about-link-text">Google Scholar</span>
-  </a>
-  <a href="https://twitter.com/gisgter2008" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">twitter</span>
-  </a>
-  <a href="https://orcid.org/0000-0002-9819-1241" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon inline="" icon="fa6-brands:orcid"></iconify-icon> OrcidID</span>
-  </a>
-</div>
-      <div class="about-contents"><main class="content column-page" id="quarto-document-content">
-
-
-</main></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
-    <img src="pics/Ying.jpeg" class="about-image
-  round " style="height: 15em; width: 15em;">
-  </div>
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+
+
+
+
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[OCI/Harp2/SPEXone ] --&gt; B(measurement vector y)
+  B --&gt; C{Individual Retrieval}
+  C --&gt; D[Optimized state vector x]
+  C --&gt; Z[Error covariance]
+  C --&gt; Z2[Averaging Kernel Matrix]
+  E[OCI] --&gt; F(measurement vector y)
+  I[SPEXOne] --&gt; F(measurement vector y)
+  J[HARP2] --&gt; F(measurement vector y)
+  F --&gt; G{Joint Retrieval}
+  G --&gt; H[Optimized state vector x]
+  G --&gt; W[Error covariance]
+  G --&gt; Y[Averaging Kernel Matrix]
+  id1[(Comparison)]
+  D --&gt; id1
+  Z --&gt; id1
+  Z2 --&gt; id1
+  H --&gt; id1
+  W --&gt; id1
+  Y --&gt; id1
+</pre>
 </div>
- <!-- /main -->
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sankey-beta
+
+%% source,target,value
+Electricity grid,Over generation / exports,104.453
+Electricity grid,Heating and cooling - homes,113.726
+Electricity grid,H2 conversion,27.14
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -210,6 +235,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
