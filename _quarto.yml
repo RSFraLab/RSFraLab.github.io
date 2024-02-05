@@ -26,6 +26,8 @@ website:
     #  - text: "Trademark"
     #    href: trademark.qmd
     right:
+      - text: "{{< ai google-scholar >}} Google Scholar"
+        href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
       - icon: twitter
         href: https://twitter.com/chr_fronge
         aria-label: PI Twitter
@@ -48,6 +50,9 @@ website:
       - href: blogs.qmd
         text: Blog
     right:
+      - href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en
+        text: "{{< ai google-scholar >}}"
+        aria-label: Google Scholar 
       - icon: github
         href: https://github.com/cfranken
         aria-label: GitHub
