@@ -1,11 +1,25 @@
 ---
-title: "Welcome to our Lab Website"
+title: "Welcome to our Research Group"
 ---
 
-What we do:
+::: grid
+::: {.g-col-12 .g-col-lg-3 .top-story-img}
+<img src="/img/FraLabLogo.png" alt="Christian Frankenberg" width="300">
+
+:::
+::: {.g-col-12 .g-col-lg-9 .top-story-img}
+### Our group studies the global carbon cycle using a variety of tools:
+
+- Leveraging the vantage point in space to observer the Earth globally using remote sensing of atmospheric trace gases and surface properties. We are not only using higher level satellite product (i.e. L2 and above) but also generate our own from spectral measurements. We are using data from OCO-2, TROPOMI, EMIT, ECOSTRESS, GRACE, MODIS, Landsat, Sentinel-2 ...
+- Use and develop land surface models to study global carbon cycles and the dominant drivers. We connect remote sensing and modeling such that models can directly learn from space-based data (as part of [CliMA](https://clima.caltech.edu/)).
+- Perform field and leaf level measurements, ranging from our own spectrally resolved Pulse Amplitude Modulated Chlorophyll Fluorescence measurements to PhotoSpec, a new system to measure Chlorophyll Fluorescence at Fluxtower sites.
+:::
+:::
+
+
 
 ::: grid
-::: {.g-col-12 .g-col-lg-4 .top-story-text}
+::: {.g-col-12 .g-col-lg-6 .top-story-text}
 
 ### Christian Frankenberg
 Professor of Environmental Science &amp; Engineering<br>Research scientist, JPL<br>
@@ -16,11 +30,9 @@ Office: 203 Linde+Robinson (<a href="http://lindecenter.caltech.edu/about/contac
 {{< fa envelope >}} <a href="mailto:cfranken@caltech.edu">cfranken(at)caltech.edu</a><br>
 :::
 
-::: {.g-col-12 .g-col-lg-3 .top-story-img}
-<img src="/img/FraLabLogo.png" alt="Christian Frankenberg" width="300">
-:::
 
-::: {.g-col-12 .g-col-lg-5 .top-story-img}
+
+::: {.g-col-12 .g-col-lg-6 .top-story-img}
 <a class="twitter-timeline" data-chrome="transparent nofooter noborders noheader noscrollbar" href="https://twitter.com/chr_fronge?ref_src=twsrc%5Etfw" data-height="500">Tweets by chr_fronge</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" ></script><br>
 :::
 :::

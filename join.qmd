@@ -1,0 +1,17 @@
+## Interested in joining the group?
+
+### Graduate students: 
+
+I am not always actively seeking new graduate students and my capacity to take on new students depends on many factors, ranging from my current group size to funding levels. However, outstanding graduate student applications will always have a chance at Caltech. Please note that the ESE option typically has ~120 applicants every year but admits less than 10. 
+
+**What I am looking for**
+
+- A typical graduate student should have strong quantitative skills and scientific curiosity. A background in environmental science is not required but a good foundation in Physics/Math/Chemistry is. 
+- We use computational tools frequently, so some software skills (Julia, Python, C++, ...) are required.
+- I am usually hands-off, so if you are looking for detailed guidance throughout your career, I might be a wrong fit. Consult with current and former lab members if you want to see whether we would be a good fit (this is a general recommendation!) 
+
+Please check out the ESE [website](https://ese.caltech.edu/academics/grad) for details on applications.
+
+### PostDocs:
+
+I currently have no open PhD positions but might host fellowship applicants if our research interests align.

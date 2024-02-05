@@ -1,0 +1,109 @@
+# Lab Guide and Expectations
+
+## General: 
+
+- Support others in the lab group through critical feedback, training, and collaboration.
+- Be generous with your time to support others in the group.
+- Attend and participate in lab group meeting, including presenting your research.
+- Attend Division Seminars and ESE seminars
+- Attend 1-2 conferences per year to present your research. 
+- Use Caltech writing resources and writing guides to continually improve your writing.
+- Publish your research! There is not a magic number, but on average, students and postdocs typically produce about one paper per year.
+- Meet with me regularly (every week or two), either individually or through our sub-group meetings to update me on your work and plans.
+
+
+::: {.callout-note appearance="default" collapse=true}
+
+## Lab Values
+
+**We place value on:**
+
+- Producing exciting research together as a team. 
+- Creating an environment in which we always feel free to ask for clarification/help from each other (there are no stupid questions!). 
+- Promoting effective and open communication between all lab members. 
+- Mentoring other members of the lab, and recognizing that this is an important and productive use of time. 
+- Being kind and respectful to one another. 
+- Making our lab group inclusive and welcoming.  
+- Prioritizing the physical and psychological safety of group members. 
+- Actively intervening in situations of harassment, bias, or other forms of discrimination. 
+- Communicating and setting healthy boundaries. 
+- Mistakes are an expected part of learning and are not something to be embarrassed about - be honest and open about your mistakes and learn from them.
+- Having fun doing research 
+
+:::
+
+::: {.callout-note appearance="default" collapse=true}
+
+## Communication
+
+- Please use the group slack as primary tool for communication (it is a full version, i.e. old messages are conserved). You can also use email but slack is more convenient.
+- We should meet every 1-2 weeks. The PI will establish biweekly one-on-one meetings but please remind him if he fails to do so.
+:::
+
+::: {.callout-note appearance="default" collapse=true}
+
+## Resources
+
+**Group Accessibility**
+
+- If you have any equipment that would assist you in accessing the lab or performing any functions in the lab, please do not hesitate to purchase such equipment using lab funds. If it’s under $200, you can place the order on your own. If it’s greater than $200, please let Christian know before you make your purchase. This can be anything from ladders to specialized headphones to protect you from loud noises (e.g., if you have a noise sensitivity). If there is an issue with lab accessibility, don’t hesitate to bring it up. 
+
+**Accommodations for Disabilities**
+
+- For additional accommodations for disabilities, the best resource is the Caltech Accessibility Services for Students (CASS) Office (https://cass.caltech.edu/). 
+
+**Resources for Reporting Harassment** 
+
+- For issues in the lab that you do not wish to report to an institutional office, you can report issues directly to the PI or indirectly through a colleague/friend that you trust. 
+- In serious cases of harassment, one option is to report incidents to the Equity and Title IX Office (https://titleix.caltech.edu/). There are several confidential resources on campus (https://equity.caltech.edu/reporting/reporting-options).
+
+**Resources for Diversity and Inclusion** 
+
+- The Caltech CCID is an excellent resource for questions about diversity and inclusion at the institute (http://diversity.caltech.edu/). There are also several programs through the CCID that may be of interest to students and staff. 
+- In GPS, there is an active DEI committee to which students can submit anonymous comments (https://www.gps.caltech.edu/resources/dei-gps) or students can report anonymously to the DEI Liaisons (also listed on this website). You can also read their meeting minutes at that link as well.
+
+**Computational Resources**
+
+- The lab has several dedicated servers. More details about the computational infrastructure of the lab can be found in the Group GDocs   
+- To get access to the servers, reach out to GPS Helpdesk (help-gps@caltech.edu). They might require Christians approval but they are quite responsive.
+
+:::
+
+::: {.callout-note appearance="default" collapse=true}
+
+## Expected Work Schedule and Output
+
+**Expected Work Hours** 
+
+- There are no hard expectations or rules for when/how many hours a student is expected to work each week. Feel free to work only as many hours as it takes to complete your work and prioritize progress on your PhD or project. 
+- We recognize that everyone works best at different hours, and therefore there are no expectations for which specific hours of the day you choose to work. 
+
+**Expected Work Days** 
+
+- There are no expectations for which days of the week you choose to work (although please take ~2 days off of your choice every week - whether you take your weekend on the traditional Saturday/Sunday or on other days is up to you).  
+
+**Hours of Communication** 
+
+- Feel free to email others in the lab at any time during your personal working hours. However, note that members of the lab are not obligated to return emails over the weekend, and also note that other’s working hours may differ from your own. 
+- Respect that others will return your emails during their own working hours. If there is an emergency, please dial x5000 on campus to reach Campus Security for assistance.  
+
+**Expected Work Location** 
+
+- In general, there are no hard rules about where you are required to work on non-lab tasks. Consistent with Caltech HR rules, you may be able to work in whatever location is best for your working style and productivity, whether that be in the office, at home, or at a different location. 
+
+**Expected Research Outcomes** 
+
+- Once a year, students, postdocs, and staff will each have a meeting with your advisor about their professional goals and progress towards them, in which they will go over their goals for the year, their progress to their PhD, and any other topics relevant to their research and research outcomes. A short document prepared by the students / staff in advance helps initiate this yearly conversation about progress, expectations, career development, etc. 
+
+- You may hear that students need a minimum of three papers published to graduate. This is generally the average number. Depending on your future career path, and the specifics of your project, the number of papers you publish before you graduate may vary. You’re encouraged, if you have any questions about this, to talk with Christian about your research progress. 
+
+**Vacation**
+
+- It is essential that everyone take breaks - this is an important part of maintaining one’s health and wellbeing. Under Caltech policy, all employees are guaranteed two weeks of paid holiday leave in addition to Institute holidays (the Institute holidays are listed here). If you feel that you need additional time off during the year, please take that time. 
+- If you are planning to take time off, please let Christian know at least three weeks ahead of time, and let other relevant members know with plenty of warning so that schedules can be planned accordingly. 
+
+**Personal Emergencies**
+
+- If you need time off for a personal emergency (i.e. family emergency, mental health emergency, physical health emergency), please email Christian. There is no need to explain the situation in detail or share any personal information you do not wish to share - simply let him know that you have an emergency, and let him know once the emergency has passed. 
+
+:::

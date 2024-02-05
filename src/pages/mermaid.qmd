@@ -1,0 +1,31 @@
+```{mermaid}
+flowchart LR
+  A[OCI/Harp2/SPEXone ] --> B(measurement vector y)
+  B --> C{Individual Retrieval}
+  C --> D[Optimized state vector x]
+  C --> Z[Error covariance]
+  C --> Z2[Averaging Kernel Matrix]
+  E[OCI] --> F(measurement vector y)
+  I[SPEXOne] --> F(measurement vector y)
+  J[HARP2] --> F(measurement vector y)
+  F --> G{Joint Retrieval}
+  G --> H[Optimized state vector x]
+  G --> W[Error covariance]
+  G --> Y[Averaging Kernel Matrix]
+  id1[(Comparison)]
+  D --> id1
+  Z --> id1
+  Z2 --> id1
+  H --> id1
+  W --> id1
+  Y --> id1
+```
+
+```{mermaid}
+sankey-beta
+
+%% source,target,value
+Electricity grid,Over generation / exports,104.453
+Electricity grid,Heating and cooling - homes,113.726
+Electricity grid,H2 conversion,27.14
+```

@@ -41,6 +41,10 @@ website:
         text: People
       - href: publications.qmd
         text: Pubs
+      - href: LabGuide.qmd
+        text: Lab Guide
+      - href: join.qmd
+        text: Join the Group
       - href: blogs.qmd
         text: Blog
     right:
