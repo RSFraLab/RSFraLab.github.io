@@ -11,7 +11,6 @@ title: "Welcome to our Research Group"
 ### Our group studies the global carbon cycle using a variety of tools:
 
 - We leverage the vantage point in space to globally observe the Earth, using remote sensing for atmospheric trace gases and surface properties.
-
 - Not only do we use higher-level satellite products (i.e., L2 and above), but we also generate our own data from spectral measurements.
 - Our data sources include OCO-2, TROPOMI, EMIT, ECOSTRESS, GRACE, MODIS, Landsat, Sentinel-2, among others.
 - We use and develop land surface models to study global carbon cycles and their dominant drivers.
