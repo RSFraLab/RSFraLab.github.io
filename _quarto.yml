@@ -68,6 +68,7 @@ format:
       - flatly
       - custom.scss
     toc: true
+    css: custom.css
     grid:
       sidebar-width: 0px
       body-width: 1000px
