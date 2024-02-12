@@ -1,0 +1,13 @@
+---
+title: "From the ground to space: Using solar-induced chlorophyll fluorescence to estimate crop productivity"
+author: "He, Liyin and Magney, Troy and Dutta, Debsunder and Yin, Yi and Kohler, Philipp and Grossmann, Katja and Stutz, Jochen and Dold, Christian and Hatfield, Jerry and Guan, Kaiyu and others"
+type: "article"
+year: 2020
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

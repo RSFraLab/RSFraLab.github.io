@@ -1,0 +1,13 @@
+---
+title: "Difference in seasonal peak timing of soybean far-red SIF and GPP explained by canopy structure and chlorophyll content"
+author: "Wu, Genghong and Jiang, Chongya and Kimm, Hyungsuk and Wang, Sheng and Bernacchi, Carl and Moore, Caitlin E and Suyker, Andy and Yang, Xi and Magney, Troy and Frankenberg, Christian and others"
+type: "article"
+year: 2022
+publication: "Remote sensing of environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

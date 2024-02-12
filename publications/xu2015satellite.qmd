@@ -1,0 +1,13 @@
+---
+title: "Satellite observation of tropical forest seasonality: spatial patterns of carbon exchange in Amazonia"
+author: "Xu, Liang and Saatchi, Sassan S and Yang, Yan and Myneni, Ranga B and Frankenberg, Christian and Chowdhury, Diya and Bi, Jian"
+type: "article"
+year: 2015
+publication: "Environmental Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

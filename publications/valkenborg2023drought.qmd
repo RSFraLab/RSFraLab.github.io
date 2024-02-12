@@ -1,0 +1,13 @@
+---
+title: "Drought and Waterlogging Stress Regimes in Northern Peatlands Detected Through Satellite Retrieved Solar-Induced Chlorophyll Fluorescence"
+author: "Valkenborg, Bram and De Lannoy, Gabrielle JM and Gruber, Alexander and Miralles, Diego G and Kohler, Philipp and Frankenberg, Christian and Desai, Ankur R and Humphreys, Elyn and Klatt, Janina and Lohila, Annalea and others"
+type: "article"
+year: 2023
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

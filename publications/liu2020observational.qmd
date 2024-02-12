@@ -1,0 +1,13 @@
+---
+title: "Observational constraints on the response of high-latitude northern forests to warming"
+author: "Liu, Junjie and Wennberg, Paul O and Parazoo, Nicholas C and Yin, Yi and Frankenberg, Christian"
+type: "article"
+year: 2020
+publication: "AGU Advances"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

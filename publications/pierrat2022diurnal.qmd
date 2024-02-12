@@ -1,0 +1,13 @@
+---
+title: "Diurnal and seasonal dynamics of solar-induced chlorophyll fluorescence, vegetation indices, and gross primary productivity in the boreal forest"
+author: "Pierrat, Zoe and Magney, Troy and Parazoo, Nicholas C and Grossmann, Katja and Bowling, David R and Seibt, Ulli and Johnson, Bruce and Helgason, Warren and Barr, Alan and Bortnik, Jacob and others"
+type: "article"
+year: 2022
+publication: "Journal of Geophysical Research: Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

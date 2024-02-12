@@ -1,0 +1,13 @@
+---
+title: "Mineral luminescence observed from space"
+author: "Kohler, Philipp and Fischer, Woodward W and Rossman, George R and Grotzinger, John P and Doughty, Russell and Wang, Yujie and Yin, Yi and Frankenberg, Christian"
+type: "article"
+year: 2021
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

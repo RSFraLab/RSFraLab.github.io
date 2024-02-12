@@ -1,0 +1,13 @@
+---
+title: "Detecting forest response to droughts with global observations of vegetation water content"
+author: "Konings, Alexandra G and Saatchi, Sassan S and Frankenberg, Christian and Keller, Michael and Leshyk, Victor and Anderegg, William RL and Humphrey, Vincent and Matheny, Ashley M and Trugman, Anna and Sack, Lawren and others"
+type: "article"
+year: 2021
+publication: "Global change biology"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

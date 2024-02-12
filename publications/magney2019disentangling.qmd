@@ -1,0 +1,13 @@
+---
+title: "Disentangling changes in the spectral shape of chlorophyll fluorescence: Implications for remote sensing of photosynthesis"
+author: "Magney, Troy S and Frankenberg, Christian and Kohler, Philipp and North, Gretchen and Davis, Thomas S and Dold, Christian and Dutta, Debsunder and Fisher, Joshua B and Grossmann, Katja and Harrington, Alexis and others"
+type: "article"
+year: 2019
+publication: "Journal of Geophysical Research: Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Methane emissions from underground gas storage in California"
+author: "Thorpe, Andrew K and Duren, Riley M and Conley, Stephen and Prasad, Kuldeep R and Bue, Brian D and Yadav, Vineet and Foster, Kelsey T and Rafiq, Talha and Hopkins, Francesca M and Smith, Mackenzie L and others"
+type: "article"
+year: 2020
+publication: "Environmental Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

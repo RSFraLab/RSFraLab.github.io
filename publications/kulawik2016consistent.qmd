@@ -1,0 +1,13 @@
+---
+title: "Consistent evaluation of ACOS-GOSAT, BESD-SCIAMACHY, CarbonTracker, and MACC through comparisons to TCCON"
+author: "Kulawik, Susan and Wunch, Debra and O'Dell, Christopher and Frankenberg, Christian and Reuter, Maximilian and Oda, Tomohiro and Chevallier, Frederic and Sherlock, Vanessa and Buchwitz, Michael and Osterman, Greg and others"
+type: "article"
+year: 2016
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Effects of atmospheric light scattering on spectroscopic observations of greenhouse gases from space. Part 2: Algorithm intercomparison in the GOSAT data processing for CO2 retrievals over TCCON sites"
+author: "Oshchepkov, Sergey and Bril, Andrey and Yokota, Tatsuya and Wennberg, Paul O and Deutscher, Nicholas M and Wunch, Debra and Toon, Geoffrey C and Yoshida, Yukio and O'Dell, Christopher W and Crisp, David and others"
+type: "article"
+year: 2013
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

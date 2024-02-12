@@ -1,0 +1,13 @@
+---
+title: "Interpreting seasonal changes in the carbon balance of southern Amazonia using measurements of XCO2 and chlorophyll fluorescence from GOSAT"
+author: "Parazoo, Nicholas C and Bowman, Kevin and Frankenberg, Christian and Lee, Jung-Eun and Fisher, Joshua B and Worden, John and Jones, Dylan BA and Berry, Joseph and Collatz, G James and Baker, Ian T and others"
+type: "article"
+year: 2013
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "comparative validation of GHG-CCI SCIAMACHY/ENVISAT and TANSO-FTS/GOSAT CO2 and CH4 retrieval algorithm products with measurements from the TCCON, Atmos"
+author: "Dils, B and Buchwitz, M and Reuter, M and Schneising, O and Boesch, H and Parker, R and Guerlet, S and Aben, I and Blumenstock, T and Burrows, JP and others"
+type: "article"
+year: 2014
+publication: "Meas. Tech"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

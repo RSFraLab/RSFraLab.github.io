@@ -1,0 +1,13 @@
+---
+title: "Composition and Chemistry-D02304-Satellite chartography of atmospheric methane from SCIAMACHY on board ENVISAT: 2. Evaluation based on inverse model simulations (DOI 10.1029/2006JD007268)"
+author: "Bergamaschi, P and Frankenberg, C and Meirink, JF and Krol, M and Dentener, F and Wagner, T and Platt, U and Kaplan, JO and Korner, S and Heimann, M and others"
+type: "article"
+year: 2007
+publication: "Journal of Geophysical Research-Part D-Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Drought onset mechanisms revealed by satellite solar-induced chlorophyll fluorescence: Insights from two contrasting extreme events"
+author: "Sun, Ying and Fu, Rong and Dickinson, Robert and Joiner, Joanna and Frankenberg, Christian and Gu, Lianhong and Xia, Youlong and Fernando, Nelun"
+type: "article"
+year: 2015
+publication: "Journal of Geophysical Research: Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

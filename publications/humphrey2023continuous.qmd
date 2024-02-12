@@ -1,0 +1,13 @@
+---
+title: "Continuous ground monitoring of vegetation optical depth and water content with GPS signals"
+author: "Humphrey, Vincent and Frankenberg, Christian"
+type: "article"
+year: 2023
+publication: "Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

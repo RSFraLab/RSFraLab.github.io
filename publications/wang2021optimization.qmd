@@ -1,0 +1,13 @@
+---
+title: "Optimization theory explains nighttime stomatal responses"
+author: "Wang, Yujie and Anderegg, William RL and Venturas, Martin D and Trugman, Anna T and Yu, Kailiang and Frankenberg, Christian"
+type: "article"
+year: 2021
+publication: "New Phytologist"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

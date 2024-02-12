@@ -1,0 +1,13 @@
+---
+title: "Monitoring of atmospheric trace gases, clouds, aerosols and surface properties from UV/vis/NIR satellite instruments"
+author: "Wagner, T and Beirle, S and Deutschmann, T and Eigemeier, E and Frankenberg, C and Grzegorski, M and Liu, C and Marbach, T and Platt, U and De Vries, M Penning"
+type: "article"
+year: 2008
+publication: "Journal of Optics A: Pure and Applied Optics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

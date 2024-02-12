@@ -1,0 +1,13 @@
+---
+title: "Global retrievals of solar-induced chlorophyll fluorescence at red wavelengths with TROPOMI"
+author: "Kohler, Philipp and Behrenfeld, Michael J and Landgraf, Jochen and Joiner, Joanna and Magney, Troy S and Frankenberg, Christian"
+type: "article"
+year: 2020
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

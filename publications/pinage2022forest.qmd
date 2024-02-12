@@ -1,0 +1,13 @@
+---
+title: "Forest structure and solar-induced fluorescence across intact and degraded forests in the Amazon"
+author: "Pinage, Ekena Rangel and Bell, David M and Longo, Marcos and Gao, Sicong and Keller, Michael and Silva, Carlos A and Ometto, Jean P and Kohler, Philipp and Frankenberg, Christian and Huete, Alfredo"
+type: "article"
+year: 2022
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

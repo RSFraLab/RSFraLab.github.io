@@ -1,0 +1,13 @@
+---
+title: "Accelerating methane growth rate from 2010 to 2017: leading contributions from the tropics and East Asia."
+author: "Yin, Yi and Chevallier, Frederic and Ciais, Philippe and Bousquet, Philippe and Saunois, Marielle and Zheng, Bo and Worden, John and Bloom, A Anthony and Parker, Robert and Jacob, Daniel and others"
+type: "article"
+year: 2020
+publication: "Atmospheric Chemistry & Physics Discussions"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

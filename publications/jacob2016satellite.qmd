@@ -1,0 +1,13 @@
+---
+title: "Satellite observations of atmospheric methane and their value for quantifying methane emissions"
+author: "Jacob, Daniel J and Turner, Alexander J and Maasakkers, Joannes D and Sheng, Jianxiong and Sun, Kang and Liu, Xiong and Chance, Kelly and Aben, Ilse and McKeever, Jason and Frankenberg, Christian"
+type: "article"
+year: 2016
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

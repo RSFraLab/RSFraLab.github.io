@@ -1,0 +1,13 @@
+---
+title: "Satellite chartography of atmospheric methane from SCIAMACHY on board ENVISAT: Analysis of the years 2003 and 2004"
+author: "Frankenberg, C and Meirink, JF and Bergamaschi, P and Goede, APH and Heimann, M and Korner, S and Platt, U and Van Weele, M and Wagner, T"
+type: "article"
+year: 2006
+publication: "Journal of geophysical research"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

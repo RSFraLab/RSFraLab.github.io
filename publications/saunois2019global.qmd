@@ -1,0 +1,13 @@
+---
+title: "The global methane budget 2000-2017"
+author: "Saunois, Marielle and Stavert, Ann R and Poulter, Ben and Bousquet, Philippe and Canadell, Joseph G and Jackson, Robert B and Raymond, Peter A and Dlugokencky, Edward J and Houweling, Sander and Patra, Prabir K and others"
+type: "article"
+year: 2019
+publication: "Earth System Science Data Discussions"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

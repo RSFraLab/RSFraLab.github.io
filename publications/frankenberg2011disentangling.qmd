@@ -1,0 +1,13 @@
+---
+title: "Disentangling chlorophyll fluorescence from atmospheric scattering effects in O2 A-band spectra of reflected sun-light"
+author: "Frankenberg, C and Butz, A and Toon, GC"
+type: "article"
+year: 2011
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

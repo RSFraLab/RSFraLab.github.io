@@ -1,0 +1,13 @@
+---
+title: "On the consistency between global and regional methane emissions inferred from SCIAMACHY, TANSO-FTS, IASI and surface measurements"
+author: "Cressot, C and Chevallier, F and Bousquet, P and Crevoisier, C and Dlugokencky, EJ and Fortems-Cheiney, A and Frankenberg, C and Parker, R and Pison, I and Scheepmaker, RA and others"
+type: "article"
+year: 2013
+publication: "Atmos. Chem. Phys. Discuss"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

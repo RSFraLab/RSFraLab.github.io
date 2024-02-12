@@ -1,0 +1,13 @@
+---
+title: "Synergistic use of SMAP and OCO-2 data in assessing the responses of ecosystem productivity to the 2018 US drought"
+author: "Li, Xing and Xiao, Jingfeng and Kimball, John S and Reichle, Rolf H and Scott, Russell L and Litvak, Marcy E and Bohrer, Gil and Frankenberg, Christian"
+type: "article"
+year: 2020
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

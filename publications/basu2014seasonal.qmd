@@ -1,0 +1,13 @@
+---
+title: "The seasonal variation of the CO2 flux over Tropical Asia estimated from GOSAT, CONTRAIL, and IASI"
+author: "Basu, Sourish and Krol, M and Butz, A and Clerbaux, Cathy and Sawa, Y and Machida, T and Matsueda, H and Frankenberg, C and Hasekamp, OP and Aben, I"
+type: "article"
+year: 2014
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Variations of oxygen-18 in West Siberian precipitation during the last 50 years"
+author: "Butzin, Martin and Werner, Martin and Masson-Delmotte, Valerie and Risi, Camille and Frankenberg, Christian and Gribanov, Konstantin and Jouzel, Jean and Zakharov, Vyacheslav I"
+type: "article"
+year: 2014
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

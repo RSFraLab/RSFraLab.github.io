@@ -1,0 +1,13 @@
+---
+title: "Airborne DOAS retrievals of methane, carbon dioxide, and water vapor concentrations at high spatial resolution: application to AVIRIS-NG"
+author: "Thorpe, Andrew K and Frankenberg, Christian and Thompson, David R and Duren, Riley M and Aubrey, Andrew D and Bue, Brian D and Green, Robert O and Gerilowski, Konstantin and Krings, Thomas and Borchardt, Jakob and others"
+type: "article"
+year: 2017
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

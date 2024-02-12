@@ -1,0 +1,13 @@
+---
+title: "Global satellite observations of column-averaged carbon dioxide and methane: The GHG-CCI XCO2 and XCH4 CRDP3 data set"
+author: "Buchwitz, Michael and Reuter, Maximilian and Schneising, Oliver and Hewson, Will and Detmers, Rob G and Boesch, Hartmut and Hasekamp, Otto P and Aben, Ilse and Bovensmann, Heinrich and Burrows, John P and others"
+type: "article"
+year: 2017
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

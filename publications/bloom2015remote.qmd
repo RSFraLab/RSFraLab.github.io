@@ -1,0 +1,13 @@
+---
+title: "Remote-sensing constraints on South America fire traits by Bayesian fusion of atmospheric and surface data"
+author: "Bloom, A Anthony and Worden, John and Jiang, Zhe and Worden, Helen and Kurosu, Thomas and Frankenberg, Christian and Schimel, David"
+type: "article"
+year: 2015
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

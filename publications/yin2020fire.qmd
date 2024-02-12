@@ -1,0 +1,13 @@
+---
+title: "Fire decline in dry tropical ecosystems enhances decadal land carbon sink"
+author: "Yin, Yi and Bloom, A Anthony and Worden, John and Saatchi, Sassan and Yang, Yan and Williams, Mathew and Liu, Junjie and Jiang, Zhe and Worden, Helen and Bowman, Kevin and others"
+type: "article"
+year: 2020
+publication: "Nature communications"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

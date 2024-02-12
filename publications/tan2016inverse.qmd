@@ -1,0 +1,13 @@
+---
+title: "Inverse modeling of pan-Arctic methane emissions at high spatial resolution: what can we learn from assimilating satellite retrievals and using different process-based wetland and lake biogeochemical models?"
+author: "Tan, Zeli and Zhuang, Qianlai and Henze, Daven K and Frankenberg, Christian and Dlugokencky, Ed and Sweeney, Colm and Turner, Alexander J and Sasakawa, Motoki and Machida, Toshinobu"
+type: "article"
+year: 2016
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

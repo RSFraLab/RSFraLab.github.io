@@ -1,0 +1,13 @@
+---
+title: "TROPOMI SIF reveals large uncertainty in estimating the end of plant growing season from vegetation indices data in the Tibetan Plateau"
+author: "Yang, Jilin and Xiao, Xiangming and Doughty, Russell and Zhao, Miaomiao and Zhang, Yao and Kohler, Philipp and Wu, Xiaocui and Frankenberg, Christian and Dong, Jinwei"
+type: "article"
+year: 2022
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "The Greenhouse Gas Climate Change Initiative (GHG-CCI): comparative validation of GHG-CCI SCIAMACHY/ENVISAT and TANSO-FTS/GOSAT CO 2 and CH 4 retrieval algorithm products with measurements from the TCCON"
+author: "Dils, B and Buchwitz, M and Reuter, Markus and Schneising, O and Boesch, Hartmut and Parker, Robert and Guerlet, Sandrine and Aben, Ilse and Blumenstock, Thomas and Burrows, JP and others"
+type: "article"
+year: 2014
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

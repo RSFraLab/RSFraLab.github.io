@@ -1,0 +1,13 @@
+---
+title: "OCO-3 early mission operations and initial (vEarly) XCO2 and SIF retrievals"
+author: "Taylor, Thomas E and Eldering, Annmarie and Merrelli, Aronne and Kiel, Matthaus and Somkuti, Peter and Cheng, Cecilia and Rosenberg, Robert and Fisher, Brendan and Crisp, David and Basilio, Ralph and others"
+type: "article"
+year: 2020
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

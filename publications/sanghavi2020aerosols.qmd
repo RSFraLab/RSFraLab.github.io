@@ -1,0 +1,13 @@
+---
+title: "Aerosols in OCO-2/GOSAT retrievals of XCO2: An information content and error analysis"
+author: "Sanghavi, Suniti and Nelson, Robert and Frankenberg, Christian and Gunson, Michael"
+type: "article"
+year: 2020
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

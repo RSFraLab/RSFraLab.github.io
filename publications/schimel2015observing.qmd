@@ -1,0 +1,13 @@
+---
+title: "Observing terrestrial ecosystems and the carbon cycle from space"
+author: "Schimel, David and Pavlick, Ryan and Fisher, Joshua B and Asner, Gregory P and Saatchi, Sassan and Townsend, Philip and Miller, Charles and Frankenberg, Christian and Hibbard, Kathy and Cox, Peter"
+type: "article"
+year: 2015
+publication: "Global Change Biology"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

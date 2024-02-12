@@ -1,0 +1,13 @@
+---
+title: "A physiological signal derived from sun-induced chlorophyll fluorescence quantifies crop physiological response to environmental stresses in the US Corn Belt"
+author: "Kimm, Hyungsuk and Guan, Kaiyu and Jiang, Chongya and Miao, Guofang and Wu, Genghong and Suyker, Andrew E and Ainsworth, Elizabeth A and Bernacchi, Carl J and Montes, Christopher M and Berry, Joseph A and others"
+type: "article"
+year: 2021
+publication: "Environmental Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Large-scale controls of methanogenesis inferred from methane and gravity spaceborne data"
+author: "Bloom, A Anthony and Palmer, Paul I and Fraser, Annemarie and Reay, David S and Frankenberg, Christian"
+type: "article"
+year: 2010
+publication: "Science"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

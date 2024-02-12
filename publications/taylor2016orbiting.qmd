@@ -1,0 +1,13 @@
+---
+title: "Orbiting Carbon Observatory-2 (OCO-2) cloud screening algorithms: validation against collocated MODIS and CALIOP data"
+author: "Taylor, Thomas E and O'Dell, Christopher W and Frankenberg, Christian and Partain, Philip T and Cronk, Heather Q and Savtchenko, Andrey and Nelson, Robert R and Rosenthal, Emily J and Chang, Albert Y and Fisher, Brenden and others"
+type: "article"
+year: 2016
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

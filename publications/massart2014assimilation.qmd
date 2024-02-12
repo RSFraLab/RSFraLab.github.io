@@ -1,0 +1,13 @@
+---
+title: "Assimilation of atmospheric methane products into the MACC-II system: from SCIAMACHY to TANSO and IASI"
+author: "Massart, S and Agusti-Panareda, A and Aben, I and Butz, A and Chevallier, F and Crevoisier, C and Engelen, R and Frankenberg, C and Hasekamp, O"
+type: "article"
+year: 2014
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

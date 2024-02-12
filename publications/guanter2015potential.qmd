@@ -1,0 +1,13 @@
+---
+title: "Potential of the TROPOspheric Monitoring Instrument (TROPOMI) onboard the Sentinel-5 Precursor for the monitoring of terrestrial chlorophyll fluorescence"
+author: "Guanter, Luis and Aben, Ilse and Tol, Paul and Krijger, JM and Hollstein, Andre and Kohler, Philipp and Damm, Alexander and Joiner, Joanna and Frankenberg, Christian and Landgraf, Jochen"
+type: "article"
+year: 2015
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

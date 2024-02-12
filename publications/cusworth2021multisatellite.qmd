@@ -1,0 +1,13 @@
+---
+title: "Multisatellite imaging of a gas well blowout enables quantification of total methane emissions"
+author: "Cusworth, Daniel H and Duren, Riley M and Thorpe, Andrew K and Pandey, Sudhanshu and Maasakkers, Joannes D and Aben, Ilse and Jervis, Dylan and Varon, Daniel J and Jacob, Daniel J and Randles, Cynthia A and others"
+type: "article"
+year: 2021
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

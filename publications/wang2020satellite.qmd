@@ -1,0 +1,13 @@
+---
+title: "Satellite footprint data from OCO-2 and TROPOMI reveal significant spatio-temporal and inter-vegetation type variabilities of solar-induced fluorescence yield in the US Midwest"
+author: "Wang, Cong and Guan, Kaiyu and Peng, Bin and Chen, Min and Jiang, Chongya and Zeng, Yelu and Wu, Genghong and Wang, Sheng and Wu, Jin and Yang, Xi and others"
+type: "article"
+year: 2020
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

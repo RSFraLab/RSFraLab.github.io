@@ -1,0 +1,13 @@
+---
+title: "A multi-year methane inversion using SCIAMACHY, accounting for systematic errors using TCCON measurements"
+author: "Houweling, Sander and Krol, M and Bergamaschi, Peter and Frankenberg, Christian and Dlugokencky, EJ and Morino, I and Notholt, Justus and Sherlock, V and Wunch, D and Beck, Veronika and others"
+type: "article"
+year: 2014
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

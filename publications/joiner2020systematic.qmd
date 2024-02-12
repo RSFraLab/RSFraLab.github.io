@@ -1,0 +1,13 @@
+---
+title: "Systematic orbital geometry-dependent variations in satellite solar-induced fluorescence (SIF) retrievals"
+author: "Joiner, Joanna and Yoshida, Yasuko and Koehler, Philipp and Campbell, Petya and Frankenberg, Christian and van der Tol, Christiaan and Yang, Peiqi and Parazoo, Nicholas and Guanter, Luis and Sun, Ying"
+type: "article"
+year: 2020
+publication: "Remote sensing"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

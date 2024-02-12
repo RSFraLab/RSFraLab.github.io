@@ -1,0 +1,13 @@
+---
+title: "Remote sensing of solar-induced chlorophyll fluorescence (SIF) in vegetation: 50 years of progress"
+author: "Mohammed, Gina H and Colombo, Roberto and Middleton, Elizabeth M and Rascher, Uwe and van der Tol, Christiaan and Nedbal, Ladislav and Goulas, Yves and Perez-Priego, Oscar and Damm, Alexander and Meroni, Michele and others"
+type: "article"
+year: 2019
+publication: "Remote sensing of environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

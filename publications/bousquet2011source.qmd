@@ -1,0 +1,13 @@
+---
+title: "Source attribution of the changes in atmospheric methane for 2006-2008"
+author: "Bousquet, Philippe and Ringeval, Bruno and Pison, I and Dlugokencky, EJ and Brunke, E-G and Carouge, Claire and Chevallier, F and Fortems-Cheiney, A and Frankenberg, C and Hauglustaine, DA and others"
+type: "article"
+year: 2011
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

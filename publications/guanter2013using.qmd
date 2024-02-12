@@ -1,0 +1,13 @@
+---
+title: "Using field spectroscopy to assess the potential of statistical approaches for the retrieval of sun-induced chlorophyll fluorescence from ground and space"
+author: "Guanter, Luis and Rossini, Micol and Colombo, Roberto and Meroni, Michele and Frankenberg, Christian and Lee, Jung-Eun and Joiner, Joanna"
+type: "article"
+year: 2013
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

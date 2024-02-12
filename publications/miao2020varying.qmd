@@ -1,0 +1,13 @@
+---
+title: "Varying contributions of drivers to the relationship between canopy photosynthesis and far-red Sun-induced fluorescence for two maize sites at different temporal scales"
+author: "Miao, Guofang and Guan, Kaiyu and Suyker, Andrew E and Yang, Xi and Arkebauer, Timothy J and Walter-Shea, Elizabeth A and Kimm, Hyungsuk and Hmimina, Gabriel Y and Gamon, John A and Franz, Trenton E and others"
+type: "article"
+year: 2020
+publication: "Journal of Geophysical Research: Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

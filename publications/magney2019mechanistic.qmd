@@ -1,0 +1,13 @@
+---
+title: "Mechanistic evidence for tracking the seasonality of photosynthesis with solar-induced fluorescence"
+author: "Magney, Troy S and Bowling, David R and Logan, Barry A and Grossmann, Katja and Stutz, Jochen and Blanken, Peter D and Burns, Sean P and Cheng, Rui and Garcia, Maria A and Kӧhler, Philipp and others"
+type: "article"
+year: 2019
+publication: "Proceedings of the National Academy of Sciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

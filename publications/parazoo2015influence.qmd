@@ -1,0 +1,13 @@
+---
+title: "Influence of ENSO and the NAO on terrestrial carbon uptake in the Texas-northern Mexico region"
+author: "Parazoo, Nicholas C and Barnes, Elizabeth and Worden, John and Harper, Anna B and Bowman, Kevin B and Frankenberg, Christian and Wolf, Sebastian and Litvak, Marcy and Keenan, Trevor F"
+type: "article"
+year: 2015
+publication: "Global Biogeochemical Cycles"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

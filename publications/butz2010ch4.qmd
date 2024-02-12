@@ -1,0 +1,13 @@
+---
+title: "CH4 retrievals from space-based solar backscatter measurements: Performance evaluation against simulated aerosol and cirrus loaded scenes"
+author: "Butz, A and Hasekamp, OP and Frankenberg, C and Vidot, J and Aben, I"
+type: "article"
+year: 2010
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

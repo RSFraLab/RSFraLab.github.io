@@ -1,0 +1,13 @@
+---
+title: "CH 4 and CO distributions over tropical fires during October 2006 as observed by the Aura TES satellite instrument and modeled by GEOS-Chem"
+author: "Worden, J and Wecht, K and Frankenberg, C and Alvarado, M and Bowman, K and Kort, E and Kulawik, S and Lee, M and Payne, V and Worden, H"
+type: "article"
+year: 2013
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

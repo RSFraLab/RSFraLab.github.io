@@ -1,0 +1,13 @@
+---
+title: "Investigating the usefulness of satellite-derived fluorescence data in inferring gross primary productivity within the carbon cycle data assimilation system"
+author: "Koffi, EN and Rayner, PJ and Norton, AJ and Frankenberg, C and Scholze, Marko"
+type: "article"
+year: 2015
+publication: "Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

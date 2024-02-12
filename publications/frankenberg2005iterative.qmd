@@ -1,0 +1,13 @@
+---
+title: "Iterative maximum a posteriori (IMAP)-DOAS for retrieval of strongly absorbing trace gases: Model studies for CH 4 and CO 2 retrieval from near infrared spectra of SCIAMACHY onboard ENVISAT"
+author: "Frankenberg, Christian and Platt, U and Wagner, T"
+type: "article"
+year: 2005
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Potential of next-generation imaging spectrometers to detect and quantify methane point sources from space"
+author: "Cusworth, Daniel H and Jacob, Daniel J and Varon, Daniel J and Chan Miller, Christopher and Liu, Xiong and Chance, Kelly and Thorpe, Andrew K and Duren, Riley M and Miller, Charles E and Thompson, David R and others"
+type: "article"
+year: 2019
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Widespread and complex drought effects on vegetation physiology inferred from space"
+author: "Li, Wantong and Pacheco-Labrador, Javier and Migliavacca, Mirco and Miralles, Diego and Hoek van Dijke, Anne and Reichstein, Markus and Forkel, Matthias and Zhang, Weijie and Frankenberg, Christian and Panwar, Annu and others"
+type: "article"
+year: 2023
+publication: "Nature Communications"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

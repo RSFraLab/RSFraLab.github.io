@@ -1,0 +1,13 @@
+---
+title: "Forests for forests: combining vegetation indices with solar-induced chlorophyll fluorescence in random forest models improves gross primary productivity prediction in the boreal forest"
+author: "Pierrat, Zoe Amie and Bortnik, Jacob and Johnson, Bruce and Barr, Alan and Magney, Troy and Bowling, David R and Parazoo, Nicholas and Frankenberg, Christian and Seibt, Ulli and Stutz, Jochen"
+type: "article"
+year: 2022
+publication: "Environmental Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

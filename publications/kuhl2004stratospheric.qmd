@@ -1,0 +1,13 @@
+---
+title: "Stratospheric chlorine activation in the Arctic winters 1995/96-2001/02 derived from GOME OClO measurements"
+author: "Kuhl, S and Wilms-Grabe, W and Beirle, S and Frankenberg, C and Grzegorski, M and Hollwedel, J and Khokhar, F and Kraus, S and Platt, U and Sanghavi, S and others"
+type: "article"
+year: 2004
+publication: "Advances in Space Research"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

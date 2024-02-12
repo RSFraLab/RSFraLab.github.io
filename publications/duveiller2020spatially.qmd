@@ -1,0 +1,13 @@
+---
+title: "A spatially downscaled sun-induced fluorescence global product for enhanced monitoring of vegetation productivity"
+author: "Duveiller, Gregory and Filipponi, Federico and Walther, Sophia and Kohler, Philipp and Frankenberg, Christian and Guanter, Luis and Cescatti, Alessandro"
+type: "article"
+year: 2020
+publication: "Earth System Science Data"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

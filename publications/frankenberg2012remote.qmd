@@ -1,0 +1,13 @@
+---
+title: "Remote sensing of near-infrared chlorophyll fluorescence from space in scattering atmospheres: implications for its retrieval and interferences with atmospheric CO2 retrievals"
+author: "Frankenberg, C and O'Dell, C and Guanter, L and McDuffie, J"
+type: "article"
+year: 2012
+publication: "Meas. Tech"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

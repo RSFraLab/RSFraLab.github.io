@@ -1,0 +1,13 @@
+---
+title: "Gross primary production (GPP) and red solar induced fluorescence (SIF) respond differently to light and seasonal environmental conditions in a subalpine conifer forest"
+author: "Yang, Julia C and Magney, Troy S and Albert, Loren P and Richardson, Andrew D and Frankenberg, Christian and Stutz, Jochen and Grossmann, Katja and Burns, Sean P and Seyednasrollah, Bijan and Blanken, Peter D and others"
+type: "article"
+year: 2022
+publication: "Agricultural and Forest Meteorology"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

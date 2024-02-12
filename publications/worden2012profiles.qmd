@@ -1,0 +1,13 @@
+---
+title: "Profiles of CH 4, HDO, H 2 O, and N 2 O with improved lower tropospheric vertical resolution from Aura TES radiances"
+author: "Worden, J and Kulawik, S and Frankenberg, C and Payne, V and Bowman, K and Cady-Peirara, K and Wecht, K and Lee, J-E and Noone, D"
+type: "article"
+year: 2012
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

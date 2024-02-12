@@ -1,0 +1,13 @@
+---
+title: "Evaluating the effects of surface properties on methane retrievals using a synthetic airborne visible/infrared imaging spectrometer next generation (AVIRIS-NG) image"
+author: "Ayasse, Alana K and Thorpe, Andrew K and Roberts, Dar A and Funk, Christopher C and Dennison, Philip E and Frankenberg, Christian and Steffke, Andrea and Aubrey, Andrew D"
+type: "article"
+year: 2018
+publication: "Remote sensing of environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

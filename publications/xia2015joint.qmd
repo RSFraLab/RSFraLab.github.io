@@ -1,0 +1,13 @@
+---
+title: "Joint control of terrestrial gross primary productivity by plant phenology and physiology"
+author: "Xia, Jianyang and Niu, Shuli and Ciais, Philippe and Janssens, Ivan A and Chen, Jiquan and Ammann, Christof and Arain, Altaf and Blanken, Peter D and Cescatti, Alessandro and Bonal, Damien and others"
+type: "article"
+year: 2015
+publication: "Proceedings of the National Academy of Sciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

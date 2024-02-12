@@ -1,0 +1,13 @@
+---
+title: "Methane retrievals from Greenhouse Gases Observing Satellite (GOSAT) shortwave infrared measurements: Performance comparison of proxy and physics retrieval algorithms"
+author: "Schepers, D and Guerlet, S and Butz, A and Landgraf, J and Frankenberg, C and Hasekamp, O and Blavier, J-F and Deutscher, NM and Griffith, DWT and Hase, F and others"
+type: "article"
+year: 2012
+publication: "Journal of Geophysical Research"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

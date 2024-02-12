@@ -1,0 +1,13 @@
+---
+title: "PhotoSpec: A new instrument to measure spatially distributed red and far-red Solar-Induced Chlorophyll Fluorescence"
+author: "Grossmann, Katja and Frankenberg, Christian and Magney, Troy S and Hurlock, Stephen C and Seibt, Ulrike and Stutz, Jochen"
+type: "article"
+year: 2018
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

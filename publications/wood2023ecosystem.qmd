@@ -1,0 +1,13 @@
+---
+title: "The ecosystem wilting point defines drought response and recovery of a Quercus-Carya forest"
+author: "Wood, Jeffrey D and Gu, Lianhong and Hanson, Paul J and Frankenberg, Christian and Sack, Lawren"
+type: "article"
+year: 2023
+publication: "Global Change Biology"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

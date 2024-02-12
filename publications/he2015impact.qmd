@@ -1,0 +1,13 @@
+---
+title: "Impact of atmospheric convection on south Tibet summer precipitation isotopologue composition using a combination of in situ measurements, satellite data, and atmospheric general circulation modeling"
+author: "He, You and Risi, Camille and Gao, Jing and Masson-Delmotte, Valerie and Yao, Tandong and Lai, Chun-Ta and Ding, Yongjian and Worden, John and Frankenberg, Christian and Chepfer, Helene and others"
+type: "article"
+year: 2015
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

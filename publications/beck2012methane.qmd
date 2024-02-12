@@ -1,0 +1,13 @@
+---
+title: "Methane airborne measurements and comparison to global models during BARCA"
+author: "Beck, Veronika and Chen, Huilin and Gerbig, Christoph and Bergamaschi, Peter and Bruhwiler, Lori and Houweling, Sander and Rockmann, Thomas and Kolle, Olaf and Steinbach, Julia and Koch, Thomas and others"
+type: "article"
+year: 2012
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

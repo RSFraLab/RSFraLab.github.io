@@ -1,0 +1,13 @@
+---
+title: "MERLIN: A French-German space lidar mission dedicated to atmospheric methane"
+author: "Ehret, Gerhard and Bousquet, Philippe and Pierangelo, Clemence and Alpers, Matthias and Millet, Bruno and Abshire, James B and Bovensmann, Heinrich and Burrows, John P and Chevallier, Frederic and Ciais, Philippe and others"
+type: "article"
+year: 2017
+publication: "Remote Sensing"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

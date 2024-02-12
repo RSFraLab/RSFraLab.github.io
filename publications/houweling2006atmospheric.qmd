@@ -1,0 +1,13 @@
+---
+title: "Atmospheric constraints on global emissions of methane from plants"
+author: "Houweling, Sea and Rockmann, T and Aben, I and Keppler, F and Krol, Michael and Meirink, JF and Dlugokencky, EJ and Frankenberg, C"
+type: "article"
+year: 2006
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

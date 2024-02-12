@@ -1,0 +1,13 @@
+---
+title: "Satellite-based survey of extreme methane emissions in the Permian basin"
+author: "Irakulis-Loitxate, Itziar and Guanter, Luis and Liu, Yin-Nian and Varon, Daniel J and Maasakkers, Joannes D and Zhang, Yuzhong and Chulakadabba, Apisada and Wofsy, Steven C and Thorpe, Andrew K and Duren, Riley M and others"
+type: "article"
+year: 2021
+publication: "Science Advances"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

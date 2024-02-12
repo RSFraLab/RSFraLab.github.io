@@ -1,0 +1,13 @@
+---
+title: "Methane emissions decline from reduced oil, natural gas, and refinery production during COVID-19"
+author: "Thorpe, Andrew K and Kort, Eric A and Cusworth, DH and Ayasse, AK and Bue, Brian D and Yadav, Vineet and Thompson, David R and Frankenberg, Christian and Herner, Jorn and Falk, Matthias and others"
+type: "article"
+year: 2023
+publication: "Environmental Research Communications"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

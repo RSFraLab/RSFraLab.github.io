@@ -1,0 +1,13 @@
+---
+title: "The geostationary carbon process mapper"
+author: "Key, Richard and Sander, Stanley and Eldering, Annmarie and Miller, Charles and Frankenberg, Christian and Natraj, Vijay and Rider, David and Blavier, Jean-Francois and Bekker, Dmitriy and Wu, Yen-Hung"
+type: "article"
+year: 2012
+publication: ""
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

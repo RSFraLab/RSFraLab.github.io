@@ -1,0 +1,13 @@
+---
+title: "Wide discrepancies in the magnitude and direction of modeled solar-induced chlorophyll fluorescence in response to light conditions"
+author: "Parazoo, Nicholas C and Magney, Troy and Norton, Alex and Raczka, Brett and Bacour, Cedric and Maignan, Fabienne and Baker, Ian and Zhang, Yongguang and Qiu, Bo and Shi, Mingjie and others"
+type: "article"
+year: 2020
+publication: "Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

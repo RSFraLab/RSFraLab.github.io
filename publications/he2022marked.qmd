@@ -1,0 +1,13 @@
+---
+title: "Marked impacts of pollution mitigation on crop yields in China"
+author: "He, Liyin and Wei, Jing and Wang, Yuan and Shang, Quanbiao and Liu, Junjie and Yin, Yi and Frankenberg, Christian and Jiang, Jonathan H and Li, Zhanqing and Yung, Yuk L"
+type: "article"
+year: 2022
+publication: "Earth's Future"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Assessing methane emissions from global space-borne observations"
+author: "Frankenberg, C and Meirink, JF and van Weele, Michael and Platt, U and Wagner, T"
+type: "article"
+year: 2005
+publication: "Science"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

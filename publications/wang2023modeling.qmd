@@ -1,0 +1,13 @@
+---
+title: "Modeling global vegetation gross primary productivity, transpiration and hyperspectral canopy radiative transfer simultaneously using a next generation land surface model—CliMA Land"
+author: "Wang, Y and Braghiere, RK and Longo, M and Norton, AJ and Kohler, P and Doughty, R and Yin, Y and Bloom, AA and Frankenberg, C"
+type: "article"
+year: 2023
+publication: "Journal of Advances in Modeling Earth Systems"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

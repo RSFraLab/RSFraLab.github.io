@@ -1,0 +1,13 @@
+---
+title: "Using airborne HIAPER Pole-to-Pole Observations (HIPPO) to evaluate model and remote sensing estimates of atmospheric carbon dioxide"
+author: "Frankenberg, Christian and Kulawik, Susan S and Wofsy, Steven C and Chevallier, Frederic and Daube, Bruce and Kort, Eric A and O'dell, Christopher and Olsen, Edward T and Osterman, Gregory"
+type: "article"
+year: 2016
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

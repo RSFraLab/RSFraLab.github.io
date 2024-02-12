@@ -1,0 +1,13 @@
+---
+title: "Global and time-resolved monitoring of crop photosynthesis with chlorophyll fluorescence"
+author: "Guanter, Luis and Zhang, Yongguang and Jung, Martin and Joiner, Joanna and Voigt, Maximilian and Berry, Joseph A and Frankenberg, Christian and Huete, Alfredo R and Zarco-Tejada, Pablo and Lee, Jung-Eun and others"
+type: "article"
+year: 2014
+publication: "Proceedings of the National Academy of Sciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

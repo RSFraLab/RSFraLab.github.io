@@ -1,0 +1,13 @@
+---
+title: "Satellite validation of column-averaged methane on global scale: ground-based data from 15 FTIR stations versus last generation ENVISAT/SCIAMACHY retrievals"
+author: "Sussmann, Ralf and Foster, Frank and Borsdorff, Tobias and De Maziere, Martine and Dils, Bart and Vigouroux, Corinne and Blumenstock, Thomas and Buchwitz, Michael and Burrows, John and Demoulin, Philippe and others"
+type: "article"
+year: 2008
+publication: ""
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Capturing complete spatial context in satellite observations of greenhouse gases"
+author: "Miller, Charles E and Frankenberg, Christian and Kuhnert, Andreas C and Spiers, Gary D and Eldering, Annmarie and Rud, Mayer and Pagano, Thomas S and Wilson, Daniel W and Brooks, Cynthia and Jaffe, Daniel T"
+type: "article"
+year: 2016
+publication: ""
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

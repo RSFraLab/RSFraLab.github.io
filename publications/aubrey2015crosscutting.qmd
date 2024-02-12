@@ -1,0 +1,13 @@
+---
+title: "Crosscutting airborne remote sensing technologies for oil and gas and Earth science applications"
+author: "Aubrey, AD and Frankenberg, C and Green, RO and Eastwood, ML and Thompson, DR and Thorpe, AK"
+type: "article"
+year: 2015
+publication: ""
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

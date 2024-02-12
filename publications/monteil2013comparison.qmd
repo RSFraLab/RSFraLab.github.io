@@ -1,0 +1,13 @@
+---
+title: "Comparison of CH4 inversions based on 15 months of GOSAT and SCIAMACHY observations"
+author: "Monteil, Guillaume and Houweling, Sander and Butz, Andre and Guerlet, Sandrine and Schepers, Dinand and Hasekamp, Otto and Frankenberg, Christian and Scheepmaker, Remco and Aben, Ilse and Rockmann, Thomas"
+type: "article"
+year: 2013
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Improving estimates of gross primary productivity by assimilating solar-induced fluorescence satellite retrievals in a terrestrial biosphere model using a process-based SIF model"
+author: "Bacour, Cedric and Maignan, Fabienne and MacBean, Natasha and Porcar-Castell, Albert and Flexas, Jaume and Frankenberg, Christian and Peylin, Philippe and Chevallier, F and Vuichard, N and Bastrikov, Vladislav"
+type: "article"
+year: 2019
+publication: "Journal of Geophysical Research: Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

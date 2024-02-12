@@ -1,0 +1,13 @@
+---
+title: "A unified approach to estimate land and water reflectances with uncertainties for coastal imaging spectroscopy"
+author: "Thompson, David R and Cawse-Nicholson, Kerry and Erickson, Zachary and Fichot, Cedric G and Frankenberg, Christian and Gao, Bo-Cai and Gierach, Michelle M and Green, Robert O and Jensen, Daniel and Natraj, Vijay and others"
+type: "article"
+year: 2019
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

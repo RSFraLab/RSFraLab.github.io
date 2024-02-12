@@ -1,0 +1,13 @@
+---
+title: "GriddingMachine, a database and software for Earth system modeling at global and regional scales"
+author: "Wang, Yujie and Kohler, Philipp and Braghiere, Renato K and Longo, Marcos and Doughty, Russell and Bloom, A Anthony and Frankenberg, Christian"
+type: "article"
+year: 2022
+publication: "Scientific data"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

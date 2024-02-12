@@ -1,0 +1,13 @@
+---
+title: "Multiscale analyses of solar-induced florescence and gross primary production"
+author: "Wood, Jeffrey D and Griffis, Timothy J and Baker, John M and Frankenberg, Christian and Verma, Manish and Yuen, Karen"
+type: "article"
+year: 2017
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

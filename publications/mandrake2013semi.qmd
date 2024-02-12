@@ -1,0 +1,13 @@
+---
+title: "Semi-autonomous sounding selection for OCO-2"
+author: "Mandrake, L and Frankenberg, C and O'Dell, CW and Osterman, G and Wennberg, P and Wunch, D"
+type: "article"
+year: 2013
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+
