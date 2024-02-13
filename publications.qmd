@@ -11,7 +11,7 @@ listing:
       - "title"
     sort-ui: [title,author,publication,year]
     filter-ui: [title,author,publication,year]
-    page-size: 10
+    page-size: 50
     field-display-names: 
       publication: "Publication"
       year: "Year"
