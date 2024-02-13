@@ -3,8 +3,10 @@
 <ul class="pub-list list">
 <% for (const item of items) { %>
   <li <%= metadataAttrs(item) %>>
-    <span style="color:orange;font-weight:bold"><%= item.title %></span> <span style="font-family:Verdana,sans-serif;"><%= item.author %></span> <span style="font-family:Verdana,sans-serif;font-style:italic;"><%= item.publication %></span>
-    <span style="font-weight:bold">(<%= item.year %>)</span> 
+    <span class="listing-title lead" style="color:orange;font-weight:bold"><%= item.title %></span><br />
+    <span class="listing-author"><%= item.author %></span>
+    <span class="listing-publication fst-italic "><%= item.publication %></span>
+    <span class="listing-year">(<%= item.year %>)</span>
     <% if (item.doi) { %>
     <a href="https://doi.org/<%- item.doi %>">
       DOI
