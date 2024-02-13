@@ -4,7 +4,7 @@ author: "Sun, Kang and Liu, Xiong and Nowlan, Caroline R and Cai, Zhaonan and Ch
 type: "article"
 year: 2017
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-2016-335-rc2"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Holtzman, Nataniel and Wang, Yujie and Wood, Jeffrey D and Frankenberg,
 type: "article"
 year: 2023
 publication: "Water Resources Research"
-doi: ""
+doi: "10.22541/essoar.168652288.81621833/v1"
 materials: ""
 toc: false
 ---

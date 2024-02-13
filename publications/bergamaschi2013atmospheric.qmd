@@ -4,7 +4,7 @@ author: "Bergamaschi, Peter and Houweling, Sander and Segers, Arjo and Krol, M a
 type: "article"
 year: 2013
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1002/jgrd.50480"
 materials: ""
 toc: false
 ---

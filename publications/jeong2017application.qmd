@@ -4,7 +4,7 @@ author: "Jeong, Su-Jong and Schimel, David and Frankenberg, Christian and Drewry
 type: "article"
 year: 2017
 publication: "Remote sensing of Environment"
-doi: ""
+doi: "10.1016/j.rse.2016.11.021"
 materials: ""
 toc: false
 ---

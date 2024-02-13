@@ -4,7 +4,7 @@ author: "Lin, Changjie and Gentine, Pierre and Frankenberg, Christian and Zhou, 
 type: "article"
 year: 2019
 publication: "Agricultural and Forest Meteorology"
-doi: ""
+doi: "10.1016/j.agrformet.2019.107642"
 materials: ""
 toc: false
 ---

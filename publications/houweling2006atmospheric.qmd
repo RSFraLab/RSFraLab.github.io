@@ -4,7 +4,7 @@ author: "Houweling, Sea and Rockmann, T and Aben, I and Keppler, F and Krol, Mic
 type: "article"
 year: 2006
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1029/2006gl026162"
 materials: ""
 toc: false
 ---

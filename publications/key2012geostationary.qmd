@@ -4,7 +4,7 @@ author: "Key, Richard and Sander, Stanley and Eldering, Annmarie and Miller, Cha
 type: "article"
 year: 2012
 publication: ""
-doi: ""
+doi: "10.1109/aero.2012.6187029"
 materials: ""
 toc: false
 ---

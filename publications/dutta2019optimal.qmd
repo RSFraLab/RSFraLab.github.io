@@ -4,7 +4,7 @@ author: "Dutta, Debsunder and Schimel, David S and Sun, Ying and Van Der Tol, Ch
 type: "article"
 year: 2019
 publication: "Biogeosciences"
-doi: ""
+doi: "10.5194/bg-16-77-2019"
 materials: ""
 toc: false
 ---

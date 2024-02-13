@@ -4,7 +4,7 @@ author: "Worden, J and Kulawik, S and Frankenberg, C and Payne, V and Bowman, K 
 type: "article"
 year: 2012
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-5-397-2012"
 materials: ""
 toc: false
 ---

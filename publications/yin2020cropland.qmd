@@ -4,7 +4,7 @@ author: "Yin, Yi and Byrne, Brendan and Liu, Junjie and Wennberg, Paul O and Dav
 type: "article"
 year: 2020
 publication: "AGU Advances"
-doi: ""
+doi: "10.5194/egusphere-egu2020-12141"
 materials: ""
 toc: false
 ---

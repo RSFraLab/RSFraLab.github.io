@@ -4,7 +4,7 @@ author: "Tadic, Jovan M and Loewenstein, Max and Frankenberg, Christian and Butz
 type: "article"
 year: 2014
 publication: "IEEE Transactions on Geoscience and Remote Sensing"
-doi: ""
+doi: "10.5194/amtd-5-5641-2012"
 materials: ""
 toc: false
 ---

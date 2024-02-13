@@ -4,7 +4,7 @@ author: "Wunch, D and Wennberg, PO and Toon, GC and Connor, BJ and Fisher, B and
 type: "article"
 year: 2011
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-11-12317-2011"
 materials: ""
 toc: false
 ---

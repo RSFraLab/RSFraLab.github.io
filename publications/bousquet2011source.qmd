@@ -4,7 +4,7 @@ author: "Bousquet, Philippe and Ringeval, Bruno and Pison, I and Dlugokencky, EJ
 type: "article"
 year: 2011
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-11-3689-2011"
 materials: ""
 toc: false
 ---

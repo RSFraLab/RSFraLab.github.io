@@ -4,7 +4,7 @@ author: "Kuhl, S and Wilms-Grabe, W and Beirle, S and Frankenberg, C and Grzegor
 type: "article"
 year: 2004
 publication: "Advances in Space Research"
-doi: ""
+doi: "10.1016/s0273-1177(04)00472-7"
 materials: ""
 toc: false
 ---

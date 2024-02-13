@@ -4,7 +4,7 @@ author: "He, Liyin and Zeng, Zhao-Cheng and Pongetti, Thomas J and Wong, Clare a
 type: "article"
 year: 2019
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1029/2019gl083400"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Xia, Jianyang and Niu, Shuli and Ciais, Philippe and Janssens, Ivan A a
 type: "article"
 year: 2015
 publication: "Proceedings of the National Academy of Sciences"
-doi: ""
+doi: "10.1016/b978-012505290-0/50005-3"
 materials: ""
 toc: false
 ---

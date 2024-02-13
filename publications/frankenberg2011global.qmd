@@ -4,7 +4,7 @@ author: "Frankenberg, Christian and Aben, IPBJDE and Bergamaschi, P and Dlugoken
 type: "article"
 year: 2011
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1029/2010jd014849"
 materials: ""
 toc: false
 ---

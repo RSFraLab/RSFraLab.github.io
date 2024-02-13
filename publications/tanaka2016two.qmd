@@ -4,7 +4,7 @@ author: "Tanaka, Tomoaki and Yates, Emma and Iraci, Laura T and Johnson, Matthew
 type: "article"
 year: 2016
 publication: "IEEE Transactions on Geoscience and Remote Sensing"
-doi: ""
+doi: "10.1109/tgrs.2016.2539973"
 materials: ""
 toc: false
 ---

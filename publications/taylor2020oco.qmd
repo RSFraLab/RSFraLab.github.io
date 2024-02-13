@@ -4,7 +4,7 @@ author: "Taylor, Thomas E and Eldering, Annmarie and Merrelli, Aronne and Kiel, 
 type: "article"
 year: 2020
 publication: "Remote Sensing of Environment"
-doi: ""
+doi: "10.1016/j.rse.2020.112032"
 materials: ""
 toc: false
 ---

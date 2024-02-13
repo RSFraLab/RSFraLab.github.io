@@ -4,7 +4,7 @@ author: "Schimel, David and Pavlick, Ryan and Fisher, Joshua B and Asner, Gregor
 type: "article"
 year: 2015
 publication: "Global Change Biology"
-doi: ""
+doi: "10.1111/gcb.12822"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Wang, Yuan and Liu, Junjie and Wennberg, Paul O and He, Liyin and Bonal
 type: "article"
 year: 2023
 publication: "Global Change Biology"
-doi: ""
+doi: "10.1111/gcb.16837"
 materials: ""
 toc: false
 ---

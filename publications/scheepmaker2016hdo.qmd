@@ -4,7 +4,7 @@ author: "Scheepmaker, Remco A and Hu, Haili and Borsdorff, Tobias and Frankenber
 type: "article"
 year: 2016
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-9-4955-2016"
 materials: ""
 toc: false
 ---

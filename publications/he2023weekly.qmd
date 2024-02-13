@@ -4,7 +4,7 @@ author: "He, Liyin and Rosa, Lorenzo and Lobell, David B and Wang, Yuan and Yin,
 type: "article"
 year: 2023
 publication: "Proceedings of the National Academy of Sciences"
-doi: ""
+doi: "10.1073/pnas.2306507120"
 materials: ""
 toc: false
 ---

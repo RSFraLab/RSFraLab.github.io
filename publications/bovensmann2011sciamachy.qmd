@@ -4,7 +4,7 @@ author: "Bovensmann, H and Aben, I and Van Roozendael, M and Kuhl, S and Gottwal
 type: "article"
 year: 2011
 publication: "SCIAMACHY-Exploring the Changing Earth’s Atmosphere"
-doi: ""
+doi: "10.1007/978-90-481-9896-2_10"
 materials: ""
 toc: false
 ---

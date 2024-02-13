@@ -4,7 +4,7 @@ author: "Risi, Camille and Noone, David and Frankenberg, Christian and Worden, J
 type: "article"
 year: 2013
 publication: "Water Resources Research"
-doi: ""
+doi: "10.1002/wrcr.20312"
 materials: ""
 toc: false
 ---

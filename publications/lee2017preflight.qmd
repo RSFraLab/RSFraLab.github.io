@@ -4,7 +4,7 @@ author: "Lee, Richard AM and O’Dell, Christopher W and Wunch, Debra and Roehl,
 type: "article"
 year: 2017
 publication: "IEEE Transactions on Geoscience and Remote Sensing"
-doi: ""
+doi: "10.1109/tgrs.2011.2107745"
 materials: ""
 toc: false
 ---

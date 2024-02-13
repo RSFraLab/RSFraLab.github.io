@@ -4,7 +4,7 @@ author: "Crisp, David and Fischer, Brendan and O’C, Dell and Frankenberg, Chri
 type: "article"
 year: 2011
 publication: "Atmos Meas Tech Discus"
-doi: ""
+doi: "10.1016/j.atmosenv.2023.119933"
 materials: ""
 toc: false
 ---

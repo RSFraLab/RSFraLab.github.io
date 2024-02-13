@@ -4,7 +4,7 @@ author: "Cusworth, Daniel H and Duren, Riley M and Thorpe, Andrew K and Eastwood
 type: "article"
 year: 2021
 publication: "AGU Advances"
-doi: ""
+doi: "10.1029/2020av000350"
 materials: ""
 toc: false
 ---

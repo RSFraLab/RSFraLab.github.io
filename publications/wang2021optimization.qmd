@@ -4,7 +4,7 @@ author: "Wang, Yujie and Anderegg, William RL and Venturas, Martin D and Trugman
 type: "article"
 year: 2021
 publication: "New Phytologist"
-doi: ""
+doi: "10.1111/nph.17267"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Schepers, D and Guerlet, S and Butz, A and Landgraf, J and Frankenberg,
 type: "article"
 year: 2012
 publication: "Journal of Geophysical Research"
-doi: ""
+doi: "10.1029/2012jd017549"
 materials: ""
 toc: false
 ---

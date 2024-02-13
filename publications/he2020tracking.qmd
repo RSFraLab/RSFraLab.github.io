@@ -4,7 +4,7 @@ author: "He, Liyin and Wood, Jeffrey D and Sun, Ying and Magney, Troy and Dutta,
 type: "article"
 year: 2020
 publication: "Journal of Geophysical Research: Biogeosciences"
-doi: ""
+doi: "10.1029/2018jg005002"
 materials: ""
 toc: false
 ---

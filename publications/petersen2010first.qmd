@@ -4,7 +4,7 @@ author: "Petersen, AK and Warneke, Thorsten and Frankenberg, C and Bergamaschi, 
 type: "article"
 year: 2010
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-10-7231-2010"
 materials: ""
 toc: false
 ---

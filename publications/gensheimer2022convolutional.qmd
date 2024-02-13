@@ -4,7 +4,7 @@ author: "Gensheimer, Johannes and Turner, Alexander J and Kohler, Philipp and Fr
 type: "article"
 year: 2022
 publication: "Biogeosciences"
-doi: ""
+doi: "10.5194/bg-2021-348-supplement"
 materials: ""
 toc: false
 ---

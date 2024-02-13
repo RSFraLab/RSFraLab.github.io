@@ -4,7 +4,7 @@ author: "He, Liyin and Wei, Jing and Wang, Yuan and Shang, Quanbiao and Liu, Jun
 type: "article"
 year: 2022
 publication: "Earth's Future"
-doi: ""
+doi: "10.1029/2022ef002936"
 materials: ""
 toc: false
 ---

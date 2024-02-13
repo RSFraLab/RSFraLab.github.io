@@ -4,7 +4,7 @@ author: "Jacob, Daniel J and Varon, Daniel J and Cusworth, Daniel H and Dennison
 type: "article"
 year: 2022
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-22-9617-2022"
 materials: ""
 toc: false
 ---

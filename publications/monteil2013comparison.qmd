@@ -4,7 +4,7 @@ author: "Monteil, Guillaume and Houweling, Sander and Butz, Andre and Guerlet, S
 type: "article"
 year: 2013
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1002/2013jd019760"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Zeng, Yelu and Hao, Dalei and Huete, Alfredo and Dechant, Benjamin and 
 type: "article"
 year: 2022
 publication: "Nature Reviews Earth & Environment"
-doi: ""
+doi: "10.1038/s43017-022-00298-5"
 materials: ""
 toc: false
 ---

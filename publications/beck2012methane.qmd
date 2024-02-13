@@ -4,7 +4,7 @@ author: "Beck, Veronika and Chen, Huilin and Gerbig, Christoph and Bergamaschi, 
 type: "article"
 year: 2012
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1029/2011jd017345"
 materials: ""
 toc: false
 ---

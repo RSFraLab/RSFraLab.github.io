@@ -4,7 +4,7 @@ author: "Wood, Jeffrey D and Gu, Lianhong and Hanson, Paul J and Frankenberg, Ch
 type: "article"
 year: 2023
 publication: "Global Change Biology"
-doi: ""
+doi: "10.3410/f.742480493.793597504"
 materials: ""
 toc: false
 ---

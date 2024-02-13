@@ -4,7 +4,7 @@ author: "Kuai, Le and Worden, John and Kulawik, Susan and Bowman, Kevin and Lee,
 type: "article"
 year: 2013
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-6-63-2013"
 materials: ""
 toc: false
 ---

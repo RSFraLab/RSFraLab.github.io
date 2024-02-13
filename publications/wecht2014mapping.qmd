@@ -4,7 +4,7 @@ author: "Wecht, Kevin J and Jacob, Daniel J and Frankenberg, Christian and Jiang
 type: "article"
 year: 2014
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1002/2014jd021551"
 materials: ""
 toc: false
 ---

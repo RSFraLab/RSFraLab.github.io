@@ -4,7 +4,7 @@ author: "Buchwitz, Michael and Reuter, Maximilian and Schneising, Oliver and Hew
 type: "article"
 year: 2017
 publication: "Remote Sensing of Environment"
-doi: ""
+doi: "10.1016/j.rse.2016.12.027"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Verma, Manish and Schimel, David and Evans, Bradley and Frankenberg, Ch
 type: "article"
 year: 2017
 publication: "Journal of Geophysical Research: Biogeosciences"
-doi: ""
+doi: "10.1002/2016jg003580"
 materials: ""
 toc: false
 ---

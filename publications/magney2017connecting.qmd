@@ -4,7 +4,7 @@ author: "Magney, Troy S and Frankenberg, Christian and Fisher, Joshua B and Sun,
 type: "article"
 year: 2017
 publication: "New phytologist"
-doi: ""
+doi: "10.1111/nph.14662"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Sun, Ying and Fu, Rong and Dickinson, Robert E and Joiner, Joanna and F
 type: "article"
 year: 2015
 publication: ""
-doi: ""
+doi: "10.1002/2015jg003150"
 materials: ""
 toc: false
 ---

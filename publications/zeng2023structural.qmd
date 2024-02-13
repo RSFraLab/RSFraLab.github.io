@@ -4,7 +4,7 @@ author: "Zeng, Yelu and Hao, Dalei and Park, Taejin and Zhu, Peng and Huete, Alf
 type: "article"
 year: 2023
 publication: "Nature Ecology & Evolution"
-doi: ""
+doi: "10.1038/s41559-023-02187-6"
 materials: ""
 toc: false
 ---

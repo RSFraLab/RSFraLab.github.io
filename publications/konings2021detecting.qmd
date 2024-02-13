@@ -4,7 +4,7 @@ author: "Konings, Alexandra G and Saatchi, Sassan S and Frankenberg, Christian a
 type: "article"
 year: 2021
 publication: "Global change biology"
-doi: ""
+doi: "10.1111/gcb.15872"
 materials: ""
 toc: false
 ---

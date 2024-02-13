@@ -4,7 +4,7 @@ author: "Pierrat, Zoe Amie and Bortnik, Jacob and Johnson, Bruce and Barr, Alan 
 type: "article"
 year: 2022
 publication: "Environmental Research Letters"
-doi: ""
+doi: "10.1088/1748-9326/aca5a0"
 materials: ""
 toc: false
 ---

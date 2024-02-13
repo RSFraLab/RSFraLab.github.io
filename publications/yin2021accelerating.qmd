@@ -4,7 +4,7 @@ author: "Yin, Yi and Chevallier, Frederic and Ciais, Philippe and Bousquet, Phil
 type: "article"
 year: 2021
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-21-12631-2021"
 materials: ""
 toc: false
 ---

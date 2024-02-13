@@ -4,7 +4,7 @@ author: "Frankenberg, Christian and Platt, U and Wagner, T"
 type: "article"
 year: 2005
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-5-9-2005"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Whelan, Mary E and Anderegg, Leander DL and Badgley, Grayson and Campbe
 type: "article"
 year: 2020
 publication: "Bulletin of the American Meteorological Society"
-doi: ""
+doi: "10.1175/bams-d-19-0306.1"
 materials: ""
 toc: false
 ---

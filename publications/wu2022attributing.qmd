@@ -4,7 +4,7 @@ author: "Wu, Genghong and Guan, Kaiyu and Jiang, Chongya and Kimm, Hyungsuk and 
 type: "article"
 year: 2022
 publication: "Agricultural and Forest Meteorology"
-doi: ""
+doi: "10.1016/j.agrformet.2022.109046"
 materials: ""
 toc: false
 ---

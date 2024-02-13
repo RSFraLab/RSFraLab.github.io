@@ -4,7 +4,7 @@ author: "Porcar-Castell, Albert and Tyystjarvi, Esa and Atherton, Jon and Van de
 type: "article"
 year: 2014
 publication: "Journal of experimental botany"
-doi: ""
+doi: "10.1093/jxb/eru191"
 materials: ""
 toc: false
 ---

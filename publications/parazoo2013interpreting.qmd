@@ -4,7 +4,7 @@ author: "Parazoo, Nicholas C and Bowman, Kevin and Frankenberg, Christian and Le
 type: "article"
 year: 2013
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1002/grl.50452"
 materials: ""
 toc: false
 ---

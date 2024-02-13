@@ -4,7 +4,7 @@ author: "Maguire, Andrew J and Eitel, Jan UH and Magney, Troy S and Frankenberg,
 type: "article"
 year: 2021
 publication: "Environmental Research Letters"
-doi: ""
+doi: "10.1088/1748-9326/ac188a"
 materials: ""
 toc: false
 ---

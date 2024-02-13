@@ -4,7 +4,7 @@ author: "Doughty, Russell and Kurosu, Thomas and Parazoo, Nicholas and Kohler, P
 type: "article"
 year: 2021
 publication: "Earth System Science Data Discussions"
-doi: ""
+doi: "10.5194/essd-2021-237-supplement"
 materials: ""
 toc: false
 ---

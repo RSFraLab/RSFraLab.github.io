@@ -4,7 +4,7 @@ author: "Humphrey, Vincent and Frankenberg, Christian"
 type: "article"
 year: 2022
 publication: "Biogeosciences Discussions"
-doi: ""
+doi: "10.5194/bg-2022-84-supplement"
 materials: ""
 toc: false
 ---

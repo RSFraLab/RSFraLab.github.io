@@ -4,7 +4,7 @@ author: "Lee, Jung-Eun and Risi, Camille and Fung, Inez and Worden, John and Sch
 type: "article"
 year: 2012
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1029/2011jd017133"
 materials: ""
 toc: false
 ---

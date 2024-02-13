@@ -4,7 +4,7 @@ author: "Jongaramrungruang, Siraput and Frankenberg, Christian and Matheou, Geor
 type: "article"
 year: 2019
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-12-6667-2019"
 materials: ""
 toc: false
 ---

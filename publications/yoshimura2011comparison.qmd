@@ -4,7 +4,7 @@ author: "Yoshimura, Kei and Frankenberg, Christian and Lee, Jeonghoon and Kanami
 type: "article"
 year: 2011
 publication: "J. Geophys. Res."
-doi: ""
+doi: "10.1029/2011jd016035"
 materials: ""
 toc: false
 ---

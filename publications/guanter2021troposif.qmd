@@ -4,7 +4,7 @@ author: "Guanter, Luis and Bacour, Cedric and Schneider, Andreas and Aben, Ilse 
 type: "article"
 year: 2021
 publication: "Earth System Science Data"
-doi: ""
+doi: "10.5194/essd-13-5423-2021"
 materials: ""
 toc: false
 ---

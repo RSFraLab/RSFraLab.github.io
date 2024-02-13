@@ -4,7 +4,7 @@ author: "Lee, Jeonghoon and Worden, John and Noone, David and Chae, Jung Hyo and
 type: "article"
 year: 2015
 publication: "Tellus B: Chemical and Physical Meteorology"
-doi: ""
+doi: "10.3402/tellusb.v67.26177"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Basu, Sourish and Krol, M and Butz, A and Clerbaux, Cathy and Sawa, Y a
 type: "article"
 year: 2014
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1002/2013gl059105"
 materials: ""
 toc: false
 ---

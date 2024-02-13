@@ -4,7 +4,7 @@ author: "Parazoo, Nicholas C and Barnes, Elizabeth and Worden, John and Harper, 
 type: "article"
 year: 2015
 publication: "Global Biogeochemical Cycles"
-doi: ""
+doi: "10.1002/2015gb005125"
 materials: ""
 toc: false
 ---

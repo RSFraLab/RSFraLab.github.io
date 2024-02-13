@@ -4,7 +4,7 @@ author: "Bergamaschi, Peter and Frankenberg, C and Meirink, Jan Fokke and Krol, 
 type: "article"
 year: 2007
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1029/2006jd007268"
 materials: ""
 toc: false
 ---

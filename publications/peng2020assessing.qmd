@@ -4,7 +4,7 @@ author: "Peng, Bin and Guan, Kaiyu and Zhou, Wang and Jiang, Chongya and Franken
 type: "article"
 year: 2020
 publication: "International Journal of Applied Earth Observation and Geoinformation"
-doi: ""
+doi: "10.1016/j.jag.2020.102126"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Liu, C and Beirle, S and Butler, T and Liu, J and Hoor, P and Jockel, P
 type: "article"
 year: 2011
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-11-6083-2011"
 materials: ""
 toc: false
 ---

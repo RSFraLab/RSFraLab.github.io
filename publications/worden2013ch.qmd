@@ -4,7 +4,7 @@ author: "Worden, J and Wecht, K and Frankenberg, C and Alvarado, M and Bowman, K
 type: "article"
 year: 2013
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-13-3679-2013"
 materials: ""
 toc: false
 ---

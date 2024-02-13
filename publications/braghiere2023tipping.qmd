@@ -4,7 +4,7 @@ author: "Braghiere, Renato K and Fisher, Joshua B and Miner, Kimberley R and Mil
 type: "article"
 year: 2023
 publication: "Environmental Research Letters"
-doi: ""
+doi: "10.1088/1748-9326/acb226"
 materials: ""
 toc: false
 ---

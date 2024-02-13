@@ -4,7 +4,7 @@ author: "Wu, Genghong and Jiang, Chongya and Kimm, Hyungsuk and Wang, Sheng and 
 type: "article"
 year: 2022
 publication: "Remote sensing of environment"
-doi: ""
+doi: "10.1016/j.rse.2022.113104"
 materials: ""
 toc: false
 ---

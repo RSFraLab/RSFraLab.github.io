@@ -4,7 +4,7 @@ author: "Mohammed, Gina H and Colombo, Roberto and Middleton, Elizabeth M and Ra
 type: "article"
 year: 2019
 publication: "Remote sensing of environment"
-doi: ""
+doi: "10.23880/oajar-16000291"
 materials: ""
 toc: false
 ---

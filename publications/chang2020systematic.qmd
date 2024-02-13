@@ -4,7 +4,7 @@ author: "Chang, Christine Y and Guanter, Luis and Frankenberg, Christian and Koh
 type: "article"
 year: 2020
 publication: "Journal of Geophysical Research: Biogeosciences"
-doi: ""
+doi: "10.1029/2019jg005533"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Saunois, Marielle and Stavert, Ann R and Poulter, Ben and Bousquet, Phi
 type: "article"
 year: 2019
 publication: "Earth System Science Data Discussions"
-doi: ""
+doi: "10.5194/essd-2016-25-rc2"
 materials: ""
 toc: false
 ---

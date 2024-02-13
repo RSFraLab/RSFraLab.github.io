@@ -4,7 +4,7 @@ author: "Parazoo, Nicholas C and Magney, Troy and Norton, Alex and Raczka, Brett
 type: "article"
 year: 2020
 publication: "Biogeosciences"
-doi: ""
+doi: "10.5194/bg-17-3733-2020"
 materials: ""
 toc: false
 ---

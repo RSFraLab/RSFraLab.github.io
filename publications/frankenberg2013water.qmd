@@ -4,7 +4,7 @@ author: "Frankenberg, C and Wunch, D and Toon, G and Risi, C and Scheepmaker, R 
 type: "article"
 year: 2013
 publication: ""
-doi: ""
+doi: "10.5194/amt-6-263-2013"
 materials: ""
 toc: false
 ---

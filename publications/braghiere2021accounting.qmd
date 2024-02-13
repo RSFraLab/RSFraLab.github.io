@@ -4,7 +4,7 @@ author: "Braghiere, Renato K and Wang, Yujie and Doughty, Russell and Sousa, Dan
 type: "article"
 year: 2021
 publication: "Remote Sensing of Environment"
-doi: ""
+doi: "10.1016/j.rse.2021.112497"
 materials: ""
 toc: false
 ---

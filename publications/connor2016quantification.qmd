@@ -4,7 +4,7 @@ author: "Connor, Brian and Bosch, Hartmut and McDuffie, James and Taylor, Tommy 
 type: "article"
 year: 2016
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-9-5227-2016"
 materials: ""
 toc: false
 ---
