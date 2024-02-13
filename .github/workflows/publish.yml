@@ -22,6 +22,7 @@ jobs:
           quarto install extension mcanouil/quarto-iconify --no-prompt
           quarto install extension quarto-ext/fontawesome --no-prompt
           quarto install extension schochastics/academicons --no-prompt
+          quarto install extension quarto-ext/lightbox --no-prompt
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
