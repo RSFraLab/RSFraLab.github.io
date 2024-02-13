@@ -1,0 +1,13 @@
+---
+title: "SCIAMACHY’s view of the changing Earth’s environment"
+author: "Bovensmann, H and Aben, I and Van Roozendael, M and Kuhl, S and Gottwald, M and Von Savigny, C and Buchwitz, M and Richter, A and Frankenberg, C and Stammes, P and others"
+type: "article"
+year: 2011
+publication: "SCIAMACHY-Exploring the Changing Earth’s Atmosphere"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+
