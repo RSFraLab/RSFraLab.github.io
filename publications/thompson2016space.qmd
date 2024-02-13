@@ -1,0 +1,13 @@
+---
+title: "Space-based remote imaging spectroscopy of the Aliso Canyon CH4 superemitter"
+author: "Thompson, DR and Thorpe, AK and Frankenberg, C and Green, RO and Duren, R and Guanter, Luis and Hollstein, Andre and Middleton, E and Ong, L and Ungar, S"
+type: "article"
+year: 2016
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

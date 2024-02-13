@@ -1,0 +1,13 @@
+---
+title: "Unequal exposure to heatwaves in Los Angeles: Impact of uneven green spaces"
+author: "Yin, Yi and He, Liyin and Wennberg, Paul O and Frankenberg, Christian"
+type: "article"
+year: 2023
+publication: "Science Advances"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

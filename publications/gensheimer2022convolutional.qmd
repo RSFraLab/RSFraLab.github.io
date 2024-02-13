@@ -1,0 +1,13 @@
+---
+title: "A convolutional neural network for spatial downscaling of satellite-based solar-induced chlorophyll fluorescence (SIFnet)"
+author: "Gensheimer, Johannes and Turner, Alexander J and Kohler, Philipp and Frankenberg, Christian and Chen, Jia"
+type: "article"
+year: 2022
+publication: "Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

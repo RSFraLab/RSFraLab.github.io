@@ -1,0 +1,13 @@
+---
+title: "Constraining global methane emissions and uptake by ecosystems"
+author: "Spahni, Renato and Wania, R and Neef, L and Van Weele, M and Pison, I and Bousquet, P and Frankenberg, C and Foster, PN and Joos, Fortunat and Prentice, IC and others"
+type: "article"
+year: 2011
+publication: "Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "African tropical rainforest net carbon dioxide fluxes in the twentieth century"
+author: "Fisher, Joshua B and Sikka, Munish and Sitch, Stephen and Ciais, Philippe and Poulter, Benjamin and Galbraith, David and Lee, Jung-Eun and Huntingford, Chris and Viovy, Nicolas and Zeng, Ning and others"
+type: "article"
+year: 2013
+publication: "Philosophical Transactions of the Royal Society B: Biological Sciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

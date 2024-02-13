@@ -1,0 +1,13 @@
+---
+title: "A comparison of in situ aircraft measurements of carbon dioxide and methane to GOSAT data measured over railroad Valley Playa, Nevada, USA"
+author: "Tadic, Jovan M and Loewenstein, Max and Frankenberg, Christian and Butz, Andre and Roby, Matthew and Iraci, Laura T and Yates, Emma L and Gore, Warren and Kuze, Akihiko"
+type: "article"
+year: 2014
+publication: "IEEE Transactions on Geoscience and Remote Sensing"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

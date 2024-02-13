@@ -1,0 +1,13 @@
+---
+title: "Optimal inverse estimation of ecosystem parameters from observations of carbon and energy fluxes"
+author: "Dutta, Debsunder and Schimel, David S and Sun, Ying and Van Der Tol, Christiaan and Frankenberg, Christian"
+type: "article"
+year: 2019
+publication: "Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

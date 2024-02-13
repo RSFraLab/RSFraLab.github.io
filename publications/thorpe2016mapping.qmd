@@ -1,0 +1,13 @@
+---
+title: "Mapping methane concentrations from a controlled release experiment using the next generation airborne visible/infrared imaging spectrometer (AVIRIS-NG)"
+author: "Thorpe, Andrew K and Frankenberg, Christian and Aubrey, AD and Roberts, DA and Nottrott, AA and Rahn, TA and Sauer, JA and Dubey, MK and Costigan, KR and Arata, C and others"
+type: "article"
+year: 2016
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

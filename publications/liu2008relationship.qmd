@@ -1,0 +1,13 @@
+---
+title: "Relationship between ATSR fire counts and CO vertical column densities retrieved from SCIAMACHY onboard ENVISAT"
+author: "Liu, C and De Vries, M Penning and Beirle, S and Hoor, P and Marbach, T and Frankenberg, C and Platt, U and Wagner, T"
+type: "article"
+year: 2008
+publication: ""
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

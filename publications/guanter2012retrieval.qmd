@@ -1,0 +1,13 @@
+---
+title: "Retrieval and global assessment of terrestrial chlorophyll fluorescence from GOSAT space measurements"
+author: "Guanter, Luis and Frankenberg, Christian and Dudhia, Anu and Lewis, Philip E and Gomez-Dans, Jose and Kuze, Akihiko and Suto, Hiroshi and Grainger, Roy G"
+type: "article"
+year: 2012
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

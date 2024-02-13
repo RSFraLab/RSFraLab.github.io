@@ -1,0 +1,13 @@
+---
+title: "Real-time remote detection and measurement for airborne imaging spectroscopy: a case study with methane"
+author: "Thompson, DR and Leifer, I and Bovensmann, H and Eastwood, M and Fladeland, M and Frankenberg, C and Gerilowski, K and Green, RO and Kratwurst, S and Krings, T and others"
+type: "article"
+year: 2015
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

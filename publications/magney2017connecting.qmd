@@ -1,0 +1,13 @@
+---
+title: "Connecting active to passive fluorescence with photosynthesis: a method for evaluating remote sensing measurements of Chl fluorescence"
+author: "Magney, Troy S and Frankenberg, Christian and Fisher, Joshua B and Sun, Ying and North, Gretchen B and Davis, Thomas S and Kornfeld, Ari and Siebke, Katharina"
+type: "article"
+year: 2017
+publication: "New phytologist"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

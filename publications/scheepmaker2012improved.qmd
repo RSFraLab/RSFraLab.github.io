@@ -1,0 +1,13 @@
+---
+title: "Improved water vapour spectroscopy in the 4174-4300 cm-1 region and its impact on SCIAMACHY HDO/H 2 O measurements"
+author: "Scheepmaker, RA and Frankenberg, Christian and Galli, Ana and Butz, Andre and Schrijver, Hans and Deutscher, NM and Wunch, D and Warneke, Thorsten and Fally, Sophie and Aben, Ilse"
+type: "article"
+year: 2012
+publication: "Atmospheric Measurement Techniques Discussions"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Accounting for canopy structure improves hyperspectral radiative transfer and sun-induced chlorophyll fluorescence representations in a new generation Earth System model"
+author: "Braghiere, Renato K and Wang, Yujie and Doughty, Russell and Sousa, Daniel and Magney, Troy and Widlowski, Jean-Luc and Longo, Marcos and Bloom, A Anthony and Worden, John and Gentine, Pierre and others"
+type: "article"
+year: 2021
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "To what extent could water isotopic measurements help us understand model biases in the water cycle over Western Siberia"
+author: "Gryazin, V and Risi, C and Jouzel, J and Kurita, N and Worden, J and Frankenberg, C and Bastrikov, V and Gribanov, K and Stukova, O"
+type: "article"
+year: 2014
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

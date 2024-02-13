@@ -1,0 +1,13 @@
+---
+title: "HDO and H 2 O total column retrievals from TROPOMI shortwave infrared measurements"
+author: "Scheepmaker, Remco A and Hu, Haili and Borsdorff, Tobias and Frankenberg, Christian and Risi, Camille and Hasekamp, Otto and Aben, Ilse and Landgraf, Jochen and others"
+type: "article"
+year: 2016
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

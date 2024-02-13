@@ -1,0 +1,13 @@
+---
+title: "Satellite constraints on the latitudinal distribution and temperature sensitivity of wetland methane emissions"
+author: "Ma, Shuang and Worden, John R and Bloom, A Anthony and Zhang, Yuzhong and Poulter, Benjamin and Cusworth, Daniel H and Yin, Yi and Pandey, Sudhanshu and Maasakkers, Joannes D and Lu, Xiao and others"
+type: "article"
+year: 2021
+publication: "Agu Advances"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

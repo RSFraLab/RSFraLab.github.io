@@ -1,0 +1,13 @@
+---
+title: "Satellite Remote Sensing of Atmospheric SO_2: Volcanic Eruptions and Anthropogenic Emissions"
+author: "Khokhar, Muhammad Fahim and Frankenberg, C and Hollwedel, J and Beirle, S and Kuhl, S and Grzegorski, M and Wilms-Grabe, W and Platt, U and Wagner, Thomas"
+type: "article"
+year: 2005
+publication: ""
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

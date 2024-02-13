@@ -1,0 +1,13 @@
+---
+title: "Quantifying global power plant carbon dioxide emissions with imaging spectroscopy"
+author: "Cusworth, Daniel H and Duren, Riley M and Thorpe, Andrew K and Eastwood, Michael L and Green, Robert O and Dennison, Philip E and Frankenberg, Christian and Heckler, Joseph W and Asner, Gregory P and Miller, Charles E"
+type: "article"
+year: 2021
+publication: "AGU Advances"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

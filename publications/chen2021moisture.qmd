@@ -1,0 +1,13 @@
+---
+title: "Moisture availability mediates the relationship between terrestrial gross primary production and solar-induced chlorophyll fluorescence: Insights from global-scale variations"
+author: "Chen, Anping and Mao, Jiafu and Ricciuto, Daniel and Xiao, Jingfeng and Frankenberg, Christian and Li, Xing and Thornton, Peter E and Gu, Lianhong and Knapp, Alan K"
+type: "article"
+year: 2021
+publication: "Global Change Biology"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

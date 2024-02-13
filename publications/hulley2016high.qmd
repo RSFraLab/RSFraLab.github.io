@@ -1,0 +1,13 @@
+---
+title: "High spatial resolution imaging of methane and other trace gases with the airborne Hyperspectral Thermal Emission Spectrometer (HyTES)"
+author: "Hulley, Glynn C and Duren, Riley M and Hopkins, Francesca M and Hook, Simon J and Vance, Nick and Guillevic, Pierre and Johnson, William R and Eng, Bjorn T and Mihaly, Jonathan M and Jovanovic, Veljko M and others"
+type: "article"
+year: 2016
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

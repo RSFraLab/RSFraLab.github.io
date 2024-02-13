@@ -1,0 +1,13 @@
+---
+title: "Methane growth rate estimation and its causes in western Canada using satellite observations"
+author: "Islam, SM Nazrul and Jackson, Peter L and Sweeney, Colm and McKain, Kathryn and Frankenberg, Christian and Aben, Ilse and Parker, Robert J and Boesch, Hartmut and Wunch, Debra"
+type: "article"
+year: 2021
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

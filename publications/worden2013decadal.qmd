@@ -1,0 +1,13 @@
+---
+title: "Decadal record of satellite carbon monoxide observations"
+author: "Worden, HM and Deeter, MN and Frankenberg, Christian and George, Maya and Nichitiu, Florian and Worden, John and Aben, Ilse and Bowman, KW and Clerbaux, Cathy and Coheur, Pierre-Francois and others"
+type: "article"
+year: 2013
+publication: "Atmos. Chem. Phys"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

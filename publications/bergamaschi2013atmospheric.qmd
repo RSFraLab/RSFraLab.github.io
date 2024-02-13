@@ -1,0 +1,13 @@
+---
+title: "Atmospheric CH4 in the first decade of the 21st century: Inverse modeling analysis using SCIAMACHY satellite retrievals and NOAA surface measurements"
+author: "Bergamaschi, Peter and Houweling, Sander and Segers, Arjo and Krol, M and Frankenberg, Christian and Scheepmaker, RA and Dlugokencky, Edward and Wofsy, Steven C and Kort, EA and Sweeney, Colm and others"
+type: "article"
+year: 2013
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

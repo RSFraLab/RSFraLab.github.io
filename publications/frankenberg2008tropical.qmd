@@ -1,0 +1,13 @@
+---
+title: "Tropical methane emissions: A revised view from SCIAMACHY onboard ENVISAT"
+author: "Frankenberg, Christian and Bergamaschi, Peter and Butz, Andre and Houweling, Sander and Meirink, Jan Fokke and Notholt, Justus and Petersen, Anna Katinka and Schrijver, Hans and Warneke, Thorsten and Aben, Ilse"
+type: "article"
+year: 2008
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

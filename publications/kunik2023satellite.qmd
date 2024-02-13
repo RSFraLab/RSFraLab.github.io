@@ -1,0 +1,13 @@
+---
+title: "Satellite-based solar-induced fluorescence tracks seasonal and elevational patterns of photosynthesis in California’s Sierra Nevada mountains"
+author: "Kunik, Lewis and Bowling, David R and Raczka, Brett and Frankenberg, Christian and Kohler, Philipp and Cheng, Rui and Smith, Kenneth R and Goulden, Michael and Jung, Martin and Lin, John C"
+type: "article"
+year: 2023
+publication: "Environmental Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

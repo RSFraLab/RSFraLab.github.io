@@ -1,0 +1,13 @@
+---
+title: "Mapping of North American methane emissions with high spatial resolution by inversion of SCIAMACHY satellite data"
+author: "Wecht, Kevin J and Jacob, Daniel J and Frankenberg, Christian and Jiang, Zhe and Blake, Donald R"
+type: "article"
+year: 2014
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

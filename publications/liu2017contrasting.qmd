@@ -1,0 +1,13 @@
+---
+title: "Contrasting carbon cycle responses of the tropical continents to the 2015-2016 El Ni~no"
+author: "Liu, Junjie and Bowman, Kevin W and Schimel, David S and Parazoo, Nicolas C and Jiang, Zhe and Lee, Meemong and Bloom, A Anthony and Wunch, Debra and Frankenberg, Christian and Sun, Ying and others"
+type: "article"
+year: 2017
+publication: "Science"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

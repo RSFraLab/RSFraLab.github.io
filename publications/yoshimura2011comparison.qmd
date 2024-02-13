@@ -1,0 +1,13 @@
+---
+title: "Comparison of an isotopic AGCM with new quasi global satellite measurements of water vapor isotopologues"
+author: "Yoshimura, Kei and Frankenberg, Christian and Lee, Jeonghoon and Kanamitsu, Masao and Worden, John and Rockmann, Thomas and Yoshimura, Kei"
+type: "article"
+year: 2011
+publication: "J. Geophys. Res."
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

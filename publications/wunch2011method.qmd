@@ -1,0 +1,13 @@
+---
+title: "A method for evaluating bias in global measurements of CO 2 total columns from space"
+author: "Wunch, D and Wennberg, PO and Toon, GC and Connor, BJ and Fisher, B and Osterman, GB and Frankenberg, C and Mandrake, L and O'Dell, C and Ahonen, P and others"
+type: "article"
+year: 2011
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

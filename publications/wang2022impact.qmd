@@ -1,0 +1,13 @@
+---
+title: "On the impact of canopy model complexity on simulated carbon, water, and solar-induced chlorophyll fluorescence fluxes"
+author: "Wang, Yujie and Frankenberg, Christian"
+type: "article"
+year: 2022
+publication: "Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

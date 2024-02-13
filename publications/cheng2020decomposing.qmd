@@ -1,0 +1,13 @@
+---
+title: "Decomposing reflectance spectra to track gross primary production in a subalpine evergreen forest"
+author: "Cheng, Rui and Magney, Troy S and Dutta, Debsunder and Bowling, David R and Logan, Barry A and Burns, Sean P and Blanken, Peter D and Grossmann, Katja and Lopez, Sophia and Richardson, Andrew D and others"
+type: "article"
+year: 2020
+publication: "Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

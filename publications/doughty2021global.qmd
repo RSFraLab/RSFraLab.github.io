@@ -1,0 +1,13 @@
+---
+title: "Global GOSAT, OCO-2 and OCO-3 solar induced chlorophyll fluorescence datasets"
+author: "Doughty, Russell and Kurosu, Thomas and Parazoo, Nicholas and Kohler, Philipp and Wang, Yujie and Sun, Ying and Frankenberg, Christian"
+type: "article"
+year: 2021
+publication: "Earth System Science Data Discussions"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

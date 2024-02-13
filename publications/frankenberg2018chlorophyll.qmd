@@ -1,0 +1,13 @@
+---
+title: "The Chlorophyll Fluorescence Imaging Spectrometer (CFIS), mapping far red fluorescence from aircraft"
+author: "Frankenberg, Christian and Kohler, Philipp and Magney, Troy S and Geier, Sven and Lawson, Peter and Schwochert, Mark and McDuffie, James and Drewry, Darren T and Pavlick, Ryan and Kuhnert, Andreas"
+type: "article"
+year: 2018
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

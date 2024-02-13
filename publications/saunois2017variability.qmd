@@ -1,0 +1,13 @@
+---
+title: "Variability and quasi-decadal changes in the methane budget over the period 2000-2012"
+author: "Saunois, Marielle and Bousquet, Philippe and Poulter, Ben and Peregon, Anna and Ciais, Philippe and Canadell, Josep G and Dlugokencky, Edward J and Etiope, Giuseppe and Bastviken, David and Houweling, Sander and others"
+type: "article"
+year: 2017
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

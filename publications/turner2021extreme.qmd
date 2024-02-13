@@ -1,0 +1,13 @@
+---
+title: "Extreme events driving year-to-year differences in gross primary productivity across the US"
+author: "Turner, Alexander J and Kohler, Philipp and Magney, Troy S and Frankenberg, Christian and Fung, Inez and Cohen, Ronald C"
+type: "article"
+year: 2021
+publication: "Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

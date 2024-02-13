@@ -1,0 +1,13 @@
+---
+title: "Forest productivity and water stress in Amazonia: Observations from GOSAT chlorophyll fluorescence"
+author: "Lee, Jung-Eun and Frankenberg, Christian and van der Tol, Christiaan and Berry, Joseph A and Guanter, Luis and Boyce, C Kevin and Fisher, Joshua B and Morrow, Eric and Worden, John R and Asefi, Salvi and others"
+type: "article"
+year: 2013
+publication: "Proceedings of the Royal Society B: Biological Sciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

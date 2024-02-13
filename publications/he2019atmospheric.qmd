@@ -1,0 +1,13 @@
+---
+title: "Atmospheric methane emissions correlate with natural gas consumption from residential and commercial sectors in Los Angeles"
+author: "He, Liyin and Zeng, Zhao-Cheng and Pongetti, Thomas J and Wong, Clare and Liang, Jianming and Gurney, Kevin R and Newman, Sally and Yadav, Vineet and Verhulst, Kristal and Miller, Charles E and others"
+type: "article"
+year: 2019
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

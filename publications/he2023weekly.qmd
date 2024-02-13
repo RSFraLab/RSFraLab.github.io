@@ -1,0 +1,13 @@
+---
+title: "The weekly cycle of photosynthesis in Europe reveals the negative impact of particulate pollution on ecosystem productivity"
+author: "He, Liyin and Rosa, Lorenzo and Lobell, David B and Wang, Yuan and Yin, Yi and Doughty, Russell and Yao, Yitong and Berry, Joseph A and Frankenberg, Christian"
+type: "article"
+year: 2023
+publication: "Proceedings of the National Academy of Sciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

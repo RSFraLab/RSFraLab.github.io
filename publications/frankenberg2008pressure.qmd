@@ -1,0 +1,13 @@
+---
+title: "Pressure broadening in the 2$u$ 3 band of methane and its implication on atmospheric retrievals"
+author: "Frankenberg, Christian and Warneke, Thorsten and Butz, Andre and Aben, Ilse and Hase, Frank and Spietz, Peter and Brown, Linda R"
+type: "article"
+year: 2008
+publication: "Atmospheric chemistry and physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

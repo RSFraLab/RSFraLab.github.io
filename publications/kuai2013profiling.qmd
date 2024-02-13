@@ -1,0 +1,13 @@
+---
+title: "Profiling tropospheric CO2 using Aura TES and TCCON instruments"
+author: "Kuai, Le and Worden, John and Kulawik, Susan and Bowman, Kevin and Lee, Meemong and Biraud, Sebastien C and Abshire, James B and Wofsy, Steven C and Natraj, Vijay and Frankenberg, Christian and others"
+type: "article"
+year: 2013
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

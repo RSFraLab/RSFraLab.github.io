@@ -1,0 +1,13 @@
+---
+title: "Four-dimensional variational data assimilation for inverse modeling of atmospheric methane emissions: Analysis of SCIAMACHY observations"
+author: "Meirink, Jan Fokke and Bergamaschi, Peter and Frankenberg, Christian and d'Amelio, Monica TS and Dlugokencky, Edward J and Gatti, Luciana V and Houweling, Sander and Miller, John B and Rockmann, Thomas and Villani, M Gabriella and others"
+type: "article"
+year: 2008
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

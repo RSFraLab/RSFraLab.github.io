@@ -1,0 +1,13 @@
+---
+title: "Satellite solar-induced chlorophyll fluorescence and near-infrared reflectance capture complementary aspects of dryland vegetation productivity dynamics"
+author: "Wang, Xian and Biederman, Joel A and Knowles, John F and Scott, Russell L and Turner, Alexander J and Dannenberg, Matthew P and Kohler, Philipp and Frankenberg, Christian and Litvak, Marcy E and Flerchinger, Gerald N and others"
+type: "article"
+year: 2022
+publication: "Remote sensing of environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

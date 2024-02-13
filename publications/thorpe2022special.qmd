@@ -1,0 +1,13 @@
+---
+title: "Special issue on remote sensing of greenhouse gas emissions"
+author: "Thorpe, Andrew K and Dennison, Philip E and Guanter, Luis and Frankenberg, Christian and Aben, Ilse"
+type: "article"
+year: 2022
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

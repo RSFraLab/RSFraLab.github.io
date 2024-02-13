@@ -1,0 +1,13 @@
+---
+title: "The potential of satellite FPAR product for GPP estimation: An indirect evaluation using solar-induced chlorophyll fluorescence"
+author: "Zhang, Zhaoying and Zhang, Yongguang and Zhang, Yao and Gobron, Nadine and Frankenberg, Christian and Wang, Songhan and Li, Zhaohui"
+type: "article"
+year: 2020
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

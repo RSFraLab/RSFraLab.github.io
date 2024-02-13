@@ -1,0 +1,13 @@
+---
+title: "Four corners: The largest US methane anomaly viewed from space"
+author: "Kort, Eric A and Frankenberg, Christian and Costigan, Keeley R and Lindenmaier, Rodica and Dubey, Manvendra K and Wunch, Debra"
+type: "article"
+year: 2014
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Remote sensing of terrestrial chlorophyll fluorescence from space"
+author: "Frankenberg, Christian and Berry, Joseph and Guanter, Luis and Joiner, Joanna"
+type: "article"
+year: 2013
+publication: "SPIE Newsroom"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

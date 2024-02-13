@@ -1,0 +1,13 @@
+---
+title: "Quantifying lower tropospheric methane concentrations using GOSAT near-IR and TES thermal IR measurements"
+author: "Worden, JR and Turner, AJ and Bloom, Anthony and Kulawik, SS and Liu, J and Lee, M and Weidner, R and Bowman, K and Frankenberg, C and Parker, RJAMT and others"
+type: "article"
+year: 2015
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Interpreting contemporary trends in atmospheric methane"
+author: "Turner, Alexander J and Frankenberg, Christian and Kort, Eric A"
+type: "article"
+year: 2019
+publication: "Proceedings of the National Academy of Sciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Towards a harmonized long-term spaceborne record of far-red solar-induced fluorescence"
+author: "Parazoo, Nicholas C and Frankenberg, Christian and Kohler, Philipp and Joiner, Joanna and Yoshida, Yasuko and Magney, Troy and Sun, Ying and Yadav, Vineet"
+type: "article"
+year: 2019
+publication: "Journal of Geophysical Research: Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

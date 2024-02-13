@@ -1,0 +1,13 @@
+---
+title: "Inverse modeling of global and regional CH4 emissions using SCIAMACHY satellite retrievals"
+author: "Bergamaschi, Peter and Frankenberg, Christian and Meirink, Jan Fokke and Krol, Maarten and Villani, M Gabriella and Houweling, Sander and Dentener, Frank and Dlugokencky, Edward J and Miller, John B and Gatti, Luciana V and others"
+type: "article"
+year: 2009
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

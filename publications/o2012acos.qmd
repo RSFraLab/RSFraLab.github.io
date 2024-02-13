@@ -1,0 +1,13 @@
+---
+title: "The ACOS CO 2 retrieval algorithm-Part 1: Description and validation against synthetic observations"
+author: "O'Dell, CW and Connor, B and Bosch, H and O'Brien, D and Frankenberg, C and Castano, R and Christi, M and Eldering, D and Fisher, B and Gunson, M and others"
+type: "article"
+year: 2012
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

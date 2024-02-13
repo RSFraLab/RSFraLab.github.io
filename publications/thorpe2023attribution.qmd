@@ -1,0 +1,13 @@
+---
+title: "Attribution of individual methane and carbon dioxide emission sources using EMIT observations from space"
+author: "Thorpe, Andrew K and Green, Robert O and Thompson, David R and Brodrick, Philip G and Chapman, John W and Elder, Clayton D and Irakulis-Loitxate, Itziar and Cusworth, Daniel H and Ayasse, Alana K and Duren, Riley M and others"
+type: "article"
+year: 2023
+publication: "Science advances"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

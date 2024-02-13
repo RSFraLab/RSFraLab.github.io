@@ -1,0 +1,13 @@
+---
+title: "Linking chlorophyll a fluorescence to photosynthesis for remote sensing applications: mechanisms and challenges"
+author: "Porcar-Castell, Albert and Tyystjarvi, Esa and Atherton, Jon and Van der Tol, Christiaan and Flexas, Jaume and Pfundel, Erhard E and Moreno, Jose and Frankenberg, Christian and Berry, Joseph A"
+type: "article"
+year: 2014
+publication: "Journal of experimental botany"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

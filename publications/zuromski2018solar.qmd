@@ -1,0 +1,13 @@
+---
+title: "Solar-induced fluorescence detects interannual variation in gross primary production of coniferous forests in the Western United States"
+author: "Zuromski, Lauren M and Bowling, David R and Kohler, Philipp and Frankenberg, Christian and Goulden, Michael L and Blanken, Peter D and Lin, John C"
+type: "article"
+year: 2018
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Aerosol information content analysis of multi-angle high spectral resolution measurements and its benefit for high accuracy greenhouse gas retrievals"
+author: "Frankenberg, C and Hasekamp, O and O'Dell, C and Sanghavi, S and Butz, A and Worden, J"
+type: "article"
+year: 2012
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

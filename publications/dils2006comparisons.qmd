@@ -1,0 +1,13 @@
+---
+title: "Comparisons between SCIAMACHY and ground-based FTIR data for total columns of CO, CH 4, CO 2 and N 2 O"
+author: "Dils, Bart and De Maziere, Martine and Muller, JF and Blumenstock, Thomas and Buchwitz, M and De Beek, R and Demoulin, Philippe and Duchatelet, Pierre and Fast, Hans and Frankenberg, Christian and others"
+type: "article"
+year: 2006
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

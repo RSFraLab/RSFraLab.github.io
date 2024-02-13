@@ -1,0 +1,13 @@
+---
+title: "Simulations of chlorophyll fluorescence incorporated into the C ommunity L and M odel version 4"
+author: "Lee, Jung-Eun and Berry, Joseph A and van der Tol, Christiaan and Yang, Xi and Guanter, Luis and Damm, Alexander and Baker, Ian and Frankenberg, Christian"
+type: "article"
+year: 2015
+publication: "Global change biology"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

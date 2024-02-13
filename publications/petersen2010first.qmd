@@ -1,0 +1,13 @@
+---
+title: "First ground-based FTIR observations of methane in the inner tropics over several years"
+author: "Petersen, AK and Warneke, Thorsten and Frankenberg, C and Bergamaschi, P and Gerbig, C and Notholt, Justus and Buchwitz, M and Schneising, O and Schrems, Otto"
+type: "article"
+year: 2010
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

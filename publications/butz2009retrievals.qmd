@@ -1,0 +1,13 @@
+---
+title: "Retrievals of atmospheric CO 2 from simulated space-borne measurements of backscattered near-infrared sunlight: accounting for aerosol effects"
+author: "Butz, Andre and Hasekamp, Otto P and Frankenberg, Christian and Aben, Ilse"
+type: "article"
+year: 2009
+publication: "Applied optics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

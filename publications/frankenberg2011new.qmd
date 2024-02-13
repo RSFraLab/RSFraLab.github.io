@@ -1,0 +1,13 @@
+---
+title: "New global observations of the terrestrial carbon cycle from GOSAT: Patterns of plant fluorescence with gross primary productivity"
+author: "Frankenberg, Christian and Fisher, Joshua B and Worden, John and Badgley, Grayson and Saatchi, Sassan S and Lee, Jung-Eun and Toon, Geoffrey C and Butz, Andre and Jung, Martin and Kuze, Akihiko and others"
+type: "article"
+year: 2011
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "The TROPOSIF global sun-induced fluorescence dataset from the Sentinel-5P TROPOMI mission"
+author: "Guanter, Luis and Bacour, Cedric and Schneider, Andreas and Aben, Ilse and van Kempen, Tim A and Maignan, Fabienne and Retscher, Christian and Kohler, Philipp and Frankenberg, Christian and Joiner, Joanna and others"
+type: "article"
+year: 2021
+publication: "Earth System Science Data"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

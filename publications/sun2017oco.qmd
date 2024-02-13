@@ -1,0 +1,13 @@
+---
+title: "OCO-2 advances photosynthesis observation from space via solar-induced chlorophyll fluorescence"
+author: "Sun, Ying and Frankenberg, Christian and Wood, Jeffery D and Schimel, DS and Jung, Martin and Guanter, Luis and Drewry, DT and Verma, Manish and Porcar-Castell, Albert and Griffis, Timothy J and others"
+type: "article"
+year: 2017
+publication: "Science"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

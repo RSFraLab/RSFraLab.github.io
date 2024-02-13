@@ -1,0 +1,13 @@
+---
+title: "El Ni~no, the 2006 Indonesian peat fires, and the distribution of atmospheric methane"
+author: "Worden, John and Jiang, Zhe and Jones, Dylan BA and Alvarado, Matthew and Bowman, Kevin and Frankenberg, Christian and Kort, Eric A and Kulawik, Susan S and Lee, Meemong and Liu, Junjie and others"
+type: "article"
+year: 2013
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

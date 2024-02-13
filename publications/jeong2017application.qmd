@@ -1,0 +1,13 @@
+---
+title: "Application of satellite solar-induced chlorophyll fluorescence to understanding large-scale variations in vegetation phenology and function over northern high latitude forests"
+author: "Jeong, Su-Jong and Schimel, David and Frankenberg, Christian and Drewry, Darren T and Fisher, Joshua B and Verma, Manish and Berry, Joseph A and Lee, Jung-Eun and Joiner, Joanna"
+type: "article"
+year: 2017
+publication: "Remote sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

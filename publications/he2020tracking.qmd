@@ -1,0 +1,13 @@
+---
+title: "Tracking seasonal and interannual variability in photosynthetic downregulation in response to water stress at a temperate deciduous forest"
+author: "He, Liyin and Wood, Jeffrey D and Sun, Ying and Magney, Troy and Dutta, Debsunder and Kohler, Philipp and Zhang, Yongguang and Yin, Yi and Frankenberg, Christian"
+type: "article"
+year: 2020
+publication: "Journal of Geophysical Research: Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

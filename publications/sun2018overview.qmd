@@ -1,0 +1,13 @@
+---
+title: "Overview of Solar-Induced chlorophyll Fluorescence (SIF) from the Orbiting Carbon Observatory-2: Retrieval, cross-mission comparison, and global monitoring for GPP"
+author: "Sun, Ying and Frankenberg, Christian and Jung, Martin and Joiner, Joanna and Guanter, Luis and Kohler, Philipp and Magney, Troy"
+type: "article"
+year: 2018
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

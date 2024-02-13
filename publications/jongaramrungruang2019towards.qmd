@@ -1,0 +1,13 @@
+---
+title: "Towards accurate methane point-source quantification from high-resolution 2-D plume imagery"
+author: "Jongaramrungruang, Siraput and Frankenberg, Christian and Matheou, Georgios and Thorpe, Andrew K and Thompson, David R and Kuai, Le and Duren, Riley M"
+type: "article"
+year: 2019
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

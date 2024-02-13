@@ -1,0 +1,13 @@
+---
+title: "Characterization of the OCO-2 instrument line shape functions using on-orbit solar measurements"
+author: "Sun, Kang and Liu, Xiong and Nowlan, Caroline R and Cai, Zhaonan and Chance, Kelly and Frankenberg, Christian and Lee, Richard AM and Pollock, Randy and Rosenberg, Robert and Crisp, David"
+type: "article"
+year: 2017
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

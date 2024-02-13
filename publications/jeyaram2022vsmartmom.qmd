@@ -1,0 +1,13 @@
+---
+title: "vSmartMOM. jl: an Open-Source Julia Package for Atmospheric Radiative Transfer and Remote Sensing Tools"
+author: "Jeyaram, Rupesh and Sanghavi, Suniti and Frankenberg, Christian"
+type: "article"
+year: 2022
+publication: "Journal of Open Source Software"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

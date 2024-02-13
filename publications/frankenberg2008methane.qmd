@@ -1,0 +1,13 @@
+---
+title: "Methane spectroscopy in the near infrared and its implication on atmospheric retrievals"
+author: "Frankenberg, Christian and Warneke, T and Butz, A and Aben, I and Hase, F and Spietz, P and Brown, LR"
+type: "article"
+year: 2008
+publication: "Atmospheric Chemistry and Physics Discussions"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

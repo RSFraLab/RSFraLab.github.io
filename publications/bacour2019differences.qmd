@@ -1,0 +1,13 @@
+---
+title: "Differences between OCO-2 and GOME-2 SIF products from a model-data fusion perspective"
+author: "Bacour, Cedric and Maignan, Fabienne and Peylin, Philippe and Macbean, Natasha and Bastrikov, Vladislav and Joiner, Joanna and Kohler, Philipp and Guanter, Luis and Frankenberg, Christian"
+type: "article"
+year: 2019
+publication: "Journal of Geophysical Research: Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

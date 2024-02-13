@@ -1,0 +1,13 @@
+---
+title: "Soil moisture-atmosphere feedback dominates land carbon uptake variability"
+author: "Humphrey, Vincent and Berg, Alexis and Ciais, Philippe and Gentine, Pierre and Jung, Martin and Reichstein, Markus and Seneviratne, Sonia I and Frankenberg, Christian"
+type: "article"
+year: 2021
+publication: "Nature"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

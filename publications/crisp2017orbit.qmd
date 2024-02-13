@@ -1,0 +1,13 @@
+---
+title: "The on-orbit performance of the Orbiting Carbon Observatory-2 (OCO-2) instrument and its radiometrically calibrated products"
+author: "Crisp, David and Pollock, Harold R and Rosenberg, Robert and Chapsky, Lars and Lee, Richard AM and Oyafuso, Fabiano A and Frankenberg, Christian and O'Dell, Christopher W and Bruegge, Carol J and Doran, Gary B and others"
+type: "article"
+year: 2017
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

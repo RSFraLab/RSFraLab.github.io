@@ -1,0 +1,13 @@
+---
+title: "Effects of chemical feedbacks on decadal methane emissions estimates"
+author: "Nguyen, Newton H and Turner, Alexander J and Yin, Yi and Prather, Michael J and Frankenberg, Christian"
+type: "article"
+year: 2020
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

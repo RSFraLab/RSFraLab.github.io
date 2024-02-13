@@ -1,0 +1,13 @@
+---
+title: "Satellite chartography of atmospheric methane from SCIAMACHY on board ENVISAT: 2. Evaluation based on inverse model simulations"
+author: "Bergamaschi, Peter and Frankenberg, C and Meirink, Jan Fokke and Krol, M and Dentener, Franciscus and Wagner, T and Platt, U and Kaplan, Jed O and Korner, Stefan and Heimann, Martin and others"
+type: "article"
+year: 2007
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

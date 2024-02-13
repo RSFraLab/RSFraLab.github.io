@@ -1,0 +1,13 @@
+---
+title: "Airborne methane remote measurements reveal heavy-tail flux distribution in Four Corners region"
+author: "Frankenberg, Christian and Thorpe, Andrew K and Thompson, David R and Hulley, Glynn and Kort, Eric Adam and Vance, Nick and Borchardt, Jakob and Krings, Thomas and Gerilowski, Konstantin and Sweeney, Colm and others"
+type: "article"
+year: 2016
+publication: "Proceedings of the national academy of sciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

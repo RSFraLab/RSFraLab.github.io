@@ -1,0 +1,13 @@
+---
+title: "MethaNet-An AI-driven approach to quantifying methane point-source emission from high-resolution 2-D plume imagery"
+author: "Jongaramrungruang, Siraput and Thorpe, Andrew K and Matheou, Georgios and Frankenberg, Christian"
+type: "article"
+year: 2022
+publication: "Remote Sensing of Environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

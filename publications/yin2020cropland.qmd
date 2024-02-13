@@ -1,0 +1,13 @@
+---
+title: "Cropland carbon uptake delayed and reduced by 2019 Midwest floods"
+author: "Yin, Yi and Byrne, Brendan and Liu, Junjie and Wennberg, Paul O and Davis, Kenneth J and Magney, Troy and Kohler, Philipp and He, Liyin and Jeyaram, Rupesh and Humphrey, Vincent and others"
+type: "article"
+year: 2020
+publication: "AGU Advances"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Global retrievals of solar-induced chlorophyll fluorescence with TROPOMI: First results and intersensor comparison to OCO-2"
+author: "Kohler, Philipp and Frankenberg, Christian and Magney, Troy S and Guanter, Luis and Joiner, Joanna and Landgraf, Jochen"
+type: "article"
+year: 2018
+publication: "Geophysical Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Understanding the Sahelian water budget through the isotopic composition of water vapor and precipitation"
+author: "Risi, Camille and Bony, Sandrine and Vimeux, Franccoise and Frankenberg, Christian and Noone, David and Worden, John"
+type: "article"
+year: 2010
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

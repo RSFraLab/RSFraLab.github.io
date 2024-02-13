@@ -1,0 +1,13 @@
+---
+title: "Effect of environmental conditions on the relationship between solar-induced fluorescence and gross primary productivity at an OzFlux grassland site"
+author: "Verma, Manish and Schimel, David and Evans, Bradley and Frankenberg, Christian and Beringer, Jason and Drewry, Darren T and Magney, Troy and Marang, Ian and Hutley, Lindsay and Moore, Caitlin and others"
+type: "article"
+year: 2017
+publication: "Journal of Geophysical Research: Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

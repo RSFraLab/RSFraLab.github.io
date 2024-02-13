@@ -1,0 +1,13 @@
+---
+title: "Spatial covariation between solar-induced fluorescence and vegetation indices from Arctic-Boreal landscapes"
+author: "Maguire, Andrew J and Eitel, Jan UH and Magney, Troy S and Frankenberg, Christian and Kohler, Philipp and Orcutt, Erica L and Parazoo, Nicholas C and Pavlick, Ryan and Pierrat, Zoe A"
+type: "article"
+year: 2021
+publication: "Environmental Research Letters"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

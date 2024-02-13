@@ -1,0 +1,13 @@
+---
+title: "The Orbiting Carbon Observatory (OCO-2): spectrometer performance evaluation using pre-launch direct sun measurements"
+author: "Frankenberg, C and Pollock, R and Lee, RAM and Rosenberg, R and Blavier, J-F and Crisp, D and O'Dell, CW and Osterman, GB and Roehl, C and Wennberg, PO and others"
+type: "article"
+year: 2015
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

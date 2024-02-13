@@ -1,0 +1,13 @@
+---
+title: "Satellite-derived methane hotspot emission estimates using a fast data-driven method"
+author: "Buchwitz, Michael and Schneising, Oliver and Reuter, Maximilian and Heymann, Jens and Krautwurst, Sven and Bovensmann, Heinrich and Burrows, John P and Boesch, Hartmut and Parker, Robert J and Somkuti, Peter and others"
+type: "article"
+year: 2017
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

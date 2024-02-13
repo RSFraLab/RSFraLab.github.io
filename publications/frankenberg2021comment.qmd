@@ -1,0 +1,13 @@
+---
+title: "Comment on “Recent global decline of CO2 fertilization effects on vegetation photosynthesis”"
+author: "Frankenberg, Christian and Yin, Yi and Byrne, Brendan and He, Liyin and Gentine, Pierre"
+type: "article"
+year: 2021
+publication: "Science"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

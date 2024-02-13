@@ -1,0 +1,13 @@
+---
+title: "Validation of sciamachy HDO/H 2 O measurements using the TCCON and NDACC-MUSICA networks"
+author: "Scheepmaker, RA and Frankenberg, Christian and Deutscher, Nicholas M and Schneider, Matthias and Barthlott, Sabine and Blumenstock, Thomas and Garcia, Omar E and Hase, Frank and Jones, Nicholas and Mahieu, Emmanuel and others"
+type: "article"
+year: 2015
+publication: "Atmospheric Measurement Techniques"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

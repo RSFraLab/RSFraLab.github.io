@@ -1,0 +1,13 @@
+---
+title: "Algae blooms on the Greenland Ice Sheet detected through solar-induced fluorescence"
+author: "Gerlein-Safdi, Cynthia and Kohler, Philipp and Wang, Shujie and Flanner, Mark and Keppel-Aleks, Gretchen and Frankenberg, Christian"
+type: "article"
+year: 2023
+publication: "IEEE Transactions on Geoscience and Remote Sensing"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,13 @@
+---
+title: "Inverse modelling of CH 4 emissions for 2010-2011 using different satellite retrieval products from GOSAT and SCIAMACHY"
+author: "Alexe, Mihai and Bergamaschi, Peter and Segers, Arjo and Detmers, Rob and Butz, Andre and Hasekamp, Otto and Guerlet, S and Parker, Robert and Boesch, Hartmut and Frankenberg, CJAC and others"
+type: "article"
+year: 2015
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

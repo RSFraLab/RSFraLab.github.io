@@ -1,0 +1,13 @@
+---
+title: "Methane concentrations over Monsoon Asia as observed by SCIAMACHY: Signals of methane emission from rice cultivation"
+author: "Hayashida, S and Ono, A and Yoshizaki, S and Frankenberg, C and Takeuchi, W and Yan, X"
+type: "article"
+year: 2013
+publication: "Remote sensing of environment"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

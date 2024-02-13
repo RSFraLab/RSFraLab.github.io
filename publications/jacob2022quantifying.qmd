@@ -1,0 +1,13 @@
+---
+title: "Quantifying methane emissions from the global scale down to point sources using satellite observations of atmospheric methane"
+author: "Jacob, Daniel J and Varon, Daniel J and Cusworth, Daniel H and Dennison, Philip E and Frankenberg, Christian and Gautam, Ritesh and Guanter, Luis and Kelley, John and McKeever, Jason and Ott, Lesley E and others"
+type: "article"
+year: 2022
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

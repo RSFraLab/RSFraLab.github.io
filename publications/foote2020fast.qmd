@@ -1,0 +1,13 @@
+---
+title: "Fast and accurate retrieval of methane concentration from imaging spectrometer data using sparsity prior"
+author: "Foote, Markus D and Dennison, Philip E and Thorpe, Andrew K and Thompson, David R and Jongaramrungruang, Siraput and Frankenberg, Christian and Joshi, Sarang C"
+type: "article"
+year: 2020
+publication: "IEEE Transactions on Geoscience and Remote Sensing"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

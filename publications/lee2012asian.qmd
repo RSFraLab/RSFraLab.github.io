@@ -1,0 +1,13 @@
+---
+title: "Asian monsoon hydrometeorology from TES and SCIAMACHY water vapor isotope measurements and LMDZ simulations: Implications for speleothem climate record interpretation"
+author: "Lee, Jung-Eun and Risi, Camille and Fung, Inez and Worden, John and Scheepmaker, Remco A and Lintner, Benjamin and Frankenberg, Christian"
+type: "article"
+year: 2012
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

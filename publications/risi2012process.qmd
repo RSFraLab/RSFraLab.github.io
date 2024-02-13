@@ -1,0 +1,13 @@
+---
+title: "Process-evaluation of tropospheric humidity simulated by general circulation models using water vapor isotopologues: 1. Comparison between models and observations"
+author: "Risi, Camille and Noone, David and Worden, John and Frankenberg, Christian and Stiller, Gabriele and Kiefer, Michael and Funke, Bernd and Walker, Kaley and Bernath, Peter and Schneider, Matthias and others"
+type: "article"
+year: 2012
+publication: "Journal of Geophysical Research: Atmospheres"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

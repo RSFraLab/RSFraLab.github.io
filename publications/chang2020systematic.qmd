@@ -1,0 +1,13 @@
+---
+title: "Systematic assessment of retrieval methods for canopy far-red solar-induced chlorophyll fluorescence using high-frequency automated field spectroscopy"
+author: "Chang, Christine Y and Guanter, Luis and Frankenberg, Christian and Kohler, Philipp and Gu, Lianhong and Magney, Troy S and Grossmann, Katja and Sun, Ying"
+type: "article"
+year: 2020
+publication: "Journal of Geophysical Research: Biogeosciences"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

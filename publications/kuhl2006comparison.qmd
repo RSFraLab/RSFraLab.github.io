@@ -1,0 +1,13 @@
+---
+title: "Comparison of OClO nadir measurements from SCIAMACHY and GOME"
+author: "Kuhl, Sven and Wilms-Grabe, Walburga and Frankenberg, Christian and Grzegorski, Michael and Platt, Ulrich and Wagner, Thomas"
+type: "article"
+year: 2006
+publication: "Advances in Space Research"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+

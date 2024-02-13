@@ -1,0 +1,13 @@
+---
+title: "Profile information on CO from SCIAMACHY observations using cloud slicing and comparison with model simulations"
+author: "Liu, Cheng and Beirle, S and Butler, T and Hoor, P and Frankenberg, C and Jockel, Patrick and Penning de Vries, M and Platt, U and Pozzer, A and Lawrence, Mark G and others"
+type: "article"
+year: 2014
+publication: "Atmospheric Chemistry and Physics"
+doi: ""
+materials: ""
+toc: false
+---
+
+## Abstract
+
