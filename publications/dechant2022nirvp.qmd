@@ -4,7 +4,7 @@ author: "Dechant, Benjamin and Ryu, Youngryel and Badgley, Grayson and Kohler, P
 type: "article"
 year: 2022
 publication: "Remote Sensing of Environment"
-doi: ""
+doi: "10.31223/x5zs35"
 materials: ""
 toc: false
 ---

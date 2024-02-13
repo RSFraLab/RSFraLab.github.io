@@ -4,7 +4,7 @@ author: "Koffi, EN and Rayner, PJ and Norton, AJ and Frankenberg, C and Scholze,
 type: "article"
 year: 2015
 publication: "Biogeosciences"
-doi: ""
+doi: "10.5194/bg-12-4067-2015"
 materials: ""
 toc: false
 ---

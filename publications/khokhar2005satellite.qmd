@@ -4,7 +4,7 @@ author: "Khokhar, Muhammad Fahim and Frankenberg, C and Hollwedel, J and Beirle,
 type: "article"
 year: 2005
 publication: ""
-doi: ""
+doi: "10.37099/mtu.dc.etd-restricted/35"
 materials: ""
 toc: false
 ---

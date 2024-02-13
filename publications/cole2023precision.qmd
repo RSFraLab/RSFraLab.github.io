@@ -4,7 +4,7 @@ author: "Cole, Ryan K and Fredrick, Connor and Nguyen, Newton H and Frankenberg,
 type: "article"
 year: 2023
 publication: ""
-doi: ""
+doi: "10.1364/es.2023.etu5e.5"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Joiner, J and Guanter, Luis and Lindstrot, R and Voigt, M and Vasilkov,
 type: "article"
 year: 2013
 publication: "Atmospheric Measurement Techniques Discussions"
-doi: ""
+doi: "10.5194/amt-6-2803-2013"
 materials: ""
 toc: false
 ---

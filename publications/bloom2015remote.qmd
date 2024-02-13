@@ -4,7 +4,7 @@ author: "Bloom, A Anthony and Worden, John and Jiang, Zhe and Worden, Helen and 
 type: "article"
 year: 2015
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1002/2014gl062584"
 materials: ""
 toc: false
 ---

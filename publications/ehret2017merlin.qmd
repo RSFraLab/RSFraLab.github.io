@@ -4,7 +4,7 @@ author: "Ehret, Gerhard and Bousquet, Philippe and Pierangelo, Clemence and Alpe
 type: "article"
 year: 2017
 publication: "Remote Sensing"
-doi: ""
+doi: "10.3390/rs9101052"
 materials: ""
 toc: false
 ---

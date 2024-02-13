@@ -4,7 +4,7 @@ author: "Wood, Jeffrey D and Griffis, Timothy J and Baker, John M and Frankenber
 type: "article"
 year: 2017
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1002/2016gl070775"
 materials: ""
 toc: false
 ---

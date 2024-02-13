@@ -4,7 +4,7 @@ author: "Frankenberg, Christian and Drewry, D and Geier, Sven and Verma, Manish 
 type: "article"
 year: 2016
 publication: ""
-doi: ""
+doi: "10.1109/igarss.2016.7729436"
 materials: ""
 toc: false
 ---

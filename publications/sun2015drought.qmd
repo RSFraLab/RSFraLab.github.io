@@ -4,7 +4,7 @@ author: "Sun, Ying and Fu, Rong and Dickinson, Robert and Joiner, Joanna and Fra
 type: "article"
 year: 2015
 publication: "Journal of Geophysical Research: Biogeosciences"
-doi: ""
+doi: "10.1002/2015jg003150"
 materials: ""
 toc: false
 ---

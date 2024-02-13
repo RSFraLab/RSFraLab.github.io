@@ -4,7 +4,7 @@ author: "Taylor, Thomas E and O'Dell, Christopher W and Frankenberg, Christian a
 type: "article"
 year: 2016
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-9-973-2016"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Parazoo, Nicholas C and Bowman, Kevin and Fisher, Joshua B and Frankenb
 type: "article"
 year: 2014
 publication: "Global change biology"
-doi: ""
+doi: "10.3410/f.718444931.793499712"
 materials: ""
 toc: false
 ---

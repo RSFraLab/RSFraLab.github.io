@@ -4,7 +4,7 @@ author: "Frankenberg, Christian and Warneke, T and Butz, A and Aben, I and Hase,
 type: "article"
 year: 2008
 publication: "Atmospheric Chemistry and Physics Discussions"
-doi: ""
+doi: "10.5194/acp-8-5061-2008"
 materials: ""
 toc: false
 ---

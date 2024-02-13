@@ -4,7 +4,7 @@ author: "Kohler, Philipp and Behrenfeld, Michael J and Landgraf, Jochen and Join
 type: "article"
 year: 2020
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1029/2020gl087541"
 materials: ""
 toc: false
 ---

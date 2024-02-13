@@ -4,7 +4,7 @@ author: "Gerlein-Safdi, Cynthia and Kohler, Philipp and Wang, Shujie and Flanner
 type: "article"
 year: 2023
 publication: "IEEE Transactions on Geoscience and Remote Sensing"
-doi: ""
+doi: "10.1109/tgrs.2023.3305194/mm1"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Frankenberg, Christian and Thorpe, Andrew K and Thompson, David R and H
 type: "article"
 year: 2016
 publication: "Proceedings of the national academy of sciences"
-doi: ""
+doi: "10.1073/pnas.1605617113"
 materials: ""
 toc: false
 ---

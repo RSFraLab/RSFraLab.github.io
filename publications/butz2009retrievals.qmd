@@ -4,7 +4,7 @@ author: "Butz, Andre and Hasekamp, Otto P and Frankenberg, Christian and Aben, I
 type: "article"
 year: 2009
 publication: "Applied optics"
-doi: ""
+doi: "10.1364/ao.48.003322"
 materials: ""
 toc: false
 ---

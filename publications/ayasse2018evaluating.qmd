@@ -4,7 +4,7 @@ author: "Ayasse, Alana K and Thorpe, Andrew K and Roberts, Dar A and Funk, Chris
 type: "article"
 year: 2018
 publication: "Remote sensing of environment"
-doi: ""
+doi: "10.1016/j.rse.2018.06.018"
 materials: ""
 toc: false
 ---

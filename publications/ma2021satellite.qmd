@@ -4,7 +4,7 @@ author: "Ma, Shuang and Worden, John R and Bloom, A Anthony and Zhang, Yuzhong a
 type: "article"
 year: 2021
 publication: "Agu Advances"
-doi: ""
+doi: "10.1029/2021av000408"
 materials: ""
 toc: false
 ---

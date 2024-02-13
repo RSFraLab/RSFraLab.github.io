@@ -4,7 +4,7 @@ author: "Butzin, Martin and Werner, Martin and Masson-Delmotte, Valerie and Risi
 type: "article"
 year: 2014
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-14-5853-2014"
 materials: ""
 toc: false
 ---

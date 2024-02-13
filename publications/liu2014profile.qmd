@@ -4,7 +4,7 @@ author: "Liu, Cheng and Beirle, S and Butler, T and Hoor, P and Frankenberg, C a
 type: "article"
 year: 2014
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-14-1717-2014"
 materials: ""
 toc: false
 ---

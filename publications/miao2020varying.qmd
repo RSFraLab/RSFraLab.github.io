@@ -4,7 +4,7 @@ author: "Miao, Guofang and Guan, Kaiyu and Suyker, Andrew E and Yang, Xi and Ark
 type: "article"
 year: 2020
 publication: "Journal of Geophysical Research: Biogeosciences"
-doi: ""
+doi: "10.1029/2019jg005051"
 materials: ""
 toc: false
 ---

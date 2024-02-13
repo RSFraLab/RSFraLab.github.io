@@ -4,7 +4,7 @@ author: "Turner, Alexander J and Kohler, Philipp and Magney, Troy S and Frankenb
 type: "article"
 year: 2021
 publication: "Biogeosciences"
-doi: ""
+doi: "10.5194/bg-18-6579-2021"
 materials: ""
 toc: false
 ---

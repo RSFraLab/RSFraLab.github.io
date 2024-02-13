@@ -4,7 +4,7 @@ author: "Cheng, Rui and Magney, Troy S and Dutta, Debsunder and Bowling, David R
 type: "article"
 year: 2020
 publication: "Biogeosciences"
-doi: ""
+doi: "10.5194/bg-2020-41-rc2"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Scheepmaker, RA and Frankenberg, Christian and Galli, Andre and Butz, A
 type: "article"
 year: 2013
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-6-879-2013"
 materials: ""
 toc: false
 ---

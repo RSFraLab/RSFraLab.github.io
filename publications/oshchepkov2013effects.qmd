@@ -4,7 +4,7 @@ author: "Oshchepkov, Sergey and Bril, Andrey and Yokota, Tatsuya and Wennberg, P
 type: "article"
 year: 2013
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1002/jgrd.50146"
 materials: ""
 toc: false
 ---

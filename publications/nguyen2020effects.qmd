@@ -4,7 +4,7 @@ author: "Nguyen, Newton H and Turner, Alexander J and Yin, Yi and Prather, Micha
 type: "article"
 year: 2020
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1029/2019gl085706"
 materials: ""
 toc: false
 ---

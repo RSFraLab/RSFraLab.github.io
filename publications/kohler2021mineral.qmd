@@ -4,7 +4,7 @@ author: "Kohler, Philipp and Fischer, Woodward W and Rossman, George R and Grotz
 type: "article"
 year: 2021
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1029/2021gl095227"
 materials: ""
 toc: false
 ---

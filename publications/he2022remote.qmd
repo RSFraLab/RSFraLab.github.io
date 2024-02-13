@@ -4,7 +4,7 @@ author: "He, Liyin and Byrne, Brendan and Yin, Yi and Liu, Junjie and Frankenber
 type: "article"
 year: 2022
 publication: "Global Biogeochemical Cycles"
-doi: ""
+doi: "10.1029/2021gb007220"
 materials: ""
 toc: false
 ---

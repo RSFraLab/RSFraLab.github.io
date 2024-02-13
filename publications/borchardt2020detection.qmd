@@ -4,7 +4,7 @@ author: "Borchardt, Jakob and Gerilowski, Konstantin and Krautwurst, Sven and Bo
 type: "article"
 year: 2020
 publication: "Atmospheric Measurement Techniques Discussions"
-doi: ""
+doi: "10.5194/amt-14-1267-2021"
 materials: ""
 toc: false
 ---

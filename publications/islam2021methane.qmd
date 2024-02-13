@@ -4,7 +4,7 @@ author: "Islam, SM Nazrul and Jackson, Peter L and Sweeney, Colm and McKain, Kat
 type: "article"
 year: 2021
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1029/2020jd033948"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Butz, A and Hasekamp, OP and Frankenberg, C and Vidot, J and Aben, I"
 type: "article"
 year: 2010
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1029/2010jd014514"
 materials: ""
 toc: false
 ---

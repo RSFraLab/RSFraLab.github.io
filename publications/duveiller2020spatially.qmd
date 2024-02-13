@@ -4,7 +4,7 @@ author: "Duveiller, Gregory and Filipponi, Federico and Walther, Sophia and Kohl
 type: "article"
 year: 2020
 publication: "Earth System Science Data"
-doi: ""
+doi: "10.5194/essd-12-1101-2020"
 materials: ""
 toc: false
 ---

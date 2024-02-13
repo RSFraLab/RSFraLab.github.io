@@ -4,7 +4,7 @@ author: "Bergamaschi, P and Frankenberg, C and Meirink, JF and Krol, M and Dente
 type: "article"
 year: 2007
 publication: "Journal of Geophysical Research-Part D-Atmospheres"
-doi: ""
+doi: "10.1029/2006jd007268"
 materials: ""
 toc: false
 ---

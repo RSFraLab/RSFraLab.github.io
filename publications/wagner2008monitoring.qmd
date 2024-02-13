@@ -4,7 +4,7 @@ author: "Wagner, T and Beirle, S and Deutschmann, T and Eigemeier, E and Franken
 type: "article"
 year: 2008
 publication: "Journal of Optics A: Pure and Applied Optics"
-doi: ""
+doi: "10.1088/1464-4258/10/10/104019"
 materials: ""
 toc: false
 ---

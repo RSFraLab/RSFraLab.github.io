@@ -4,7 +4,7 @@ author: "Kimm, Hyungsuk and Guan, Kaiyu and Jiang, Chongya and Miao, Guofang and
 type: "article"
 year: 2021
 publication: "Environmental Research Letters"
-doi: ""
+doi: "10.1088/1748-9326/ac3b16"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Lee, Jung-Eun and Berry, Joseph A and van der Tol, Christiaan and Yang,
 type: "article"
 year: 2015
 publication: "Global change biology"
-doi: ""
+doi: "10.1111/gcb.12948"
 materials: ""
 toc: false
 ---

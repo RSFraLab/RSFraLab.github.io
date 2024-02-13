@@ -4,7 +4,7 @@ author: "Cusworth, Daniel H and Jacob, Daniel J and Varon, Daniel J and Chan Mil
 type: "article"
 year: 2019
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-2019-202-rc2"
 materials: ""
 toc: false
 ---

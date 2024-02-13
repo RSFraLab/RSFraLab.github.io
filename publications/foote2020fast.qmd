@@ -4,7 +4,7 @@ author: "Foote, Markus D and Dennison, Philip E and Thorpe, Andrew K and Thompso
 type: "article"
 year: 2020
 publication: "IEEE Transactions on Geoscience and Remote Sensing"
-doi: ""
+doi: "10.1109/tgrs.2020.2976888"
 materials: ""
 toc: false
 ---

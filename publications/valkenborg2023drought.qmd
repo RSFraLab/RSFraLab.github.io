@@ -4,7 +4,7 @@ author: "Valkenborg, Bram and De Lannoy, Gabrielle JM and Gruber, Alexander and 
 type: "article"
 year: 2023
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1029/2023gl105205"
 materials: ""
 toc: false
 ---

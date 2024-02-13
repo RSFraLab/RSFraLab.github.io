@@ -4,7 +4,7 @@ author: "Kort, Eric A and Frankenberg, Christian and Miller, Charles E and Oda, 
 type: "article"
 year: 2012
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1029/2012gl052738"
 materials: ""
 toc: false
 ---

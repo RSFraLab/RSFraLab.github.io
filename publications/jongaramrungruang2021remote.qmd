@@ -4,7 +4,7 @@ author: "Jongaramrungruang, Siraput and Matheou, Georgios and Thorpe, Andrew K a
 type: "article"
 year: 2021
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-14-7999-2021"
 materials: ""
 toc: false
 ---

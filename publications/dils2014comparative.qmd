@@ -4,7 +4,7 @@ author: "Dils, B and Buchwitz, M and Reuter, M and Schneising, O and Boesch, H a
 type: "article"
 year: 2014
 publication: "Meas. Tech"
-doi: ""
+doi: "10.5194/amt-7-1723-2014"
 materials: ""
 toc: false
 ---

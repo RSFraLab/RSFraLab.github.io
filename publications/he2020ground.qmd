@@ -4,7 +4,7 @@ author: "He, Liyin and Magney, Troy and Dutta, Debsunder and Yin, Yi and Kohler,
 type: "article"
 year: 2020
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1029/2020gl087474"
 materials: ""
 toc: false
 ---

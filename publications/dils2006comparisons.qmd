@@ -4,7 +4,7 @@ author: "Dils, Bart and De Maziere, Martine and Muller, JF and Blumenstock, Thom
 type: "article"
 year: 2006
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-6-1953-2006"
 materials: ""
 toc: false
 ---

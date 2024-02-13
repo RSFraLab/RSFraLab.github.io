@@ -4,7 +4,7 @@ author: "Worden, HM and Deeter, MN and Frankenberg, Christian and George, Maya a
 type: "article"
 year: 2013
 publication: "Atmos. Chem. Phys"
-doi: ""
+doi: "10.5194/acp-13-837-2013"
 materials: ""
 toc: false
 ---

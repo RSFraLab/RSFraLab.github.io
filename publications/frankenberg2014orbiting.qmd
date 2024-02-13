@@ -4,7 +4,7 @@ author: "Frankenberg, C and Pollock, R and Lee, RAM and Rosenberg, R and Blavier
 type: "article"
 year: 2014
 publication: "Atmospheric Measurement Techniques Discussions"
-doi: ""
+doi: "10.5194/amt-8-301-2015"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Pierrat, Zoe and Magney, Troy and Parazoo, Nicholas C and Grossmann, Ka
 type: "article"
 year: 2022
 publication: "Journal of Geophysical Research: Biogeosciences"
-doi: ""
+doi: "10.1029/2021jg006588"
 materials: ""
 toc: false
 ---

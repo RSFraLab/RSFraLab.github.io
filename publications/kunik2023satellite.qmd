@@ -4,7 +4,7 @@ author: "Kunik, Lewis and Bowling, David R and Raczka, Brett and Frankenberg, Ch
 type: "article"
 year: 2023
 publication: "Environmental Research Letters"
-doi: ""
+doi: "10.1088/1748-9326/ad07b4"
 materials: ""
 toc: false
 ---

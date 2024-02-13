@@ -4,7 +4,7 @@ author: "Thorpe, Andrew K and Kort, Eric A and Cusworth, DH and Ayasse, AK and B
 type: "article"
 year: 2023
 publication: "Environmental Research Communications"
-doi: ""
+doi: "10.1088/2515-7620/acb5e5"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Thorpe, Andrew K and Duren, Riley M and Conley, Stephen and Prasad, Kul
 type: "article"
 year: 2020
 publication: "Environmental Research Letters"
-doi: ""
+doi: "10.1088/1748-9326/ab751d"
 materials: ""
 toc: false
 ---

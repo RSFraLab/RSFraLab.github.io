@@ -4,7 +4,7 @@ author: "Cheng, Rui and Magney, Troy S and Orcutt, Erica L and Pierrat, Zoe and 
 type: "article"
 year: 2022
 publication: "Environmental Research Letters"
-doi: ""
+doi: "10.1088/1748-9326/ac9dae"
 materials: ""
 toc: false
 ---

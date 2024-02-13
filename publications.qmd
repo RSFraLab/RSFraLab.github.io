@@ -8,10 +8,9 @@ listing:
     categories: true
     sort:
       - "year desc"
-      - "title"
-    sort-ui: [title,author,publication,year]
-    filter-ui: [title,author,publication,year]
-    page-size: 50
+    sort-ui: [author,year]
+    filter-ui: [title,year]
+    page-size: 80
     field-display-names: 
       publication: "Publication"
       year: "Year"

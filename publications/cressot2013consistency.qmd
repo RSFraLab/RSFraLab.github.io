@@ -4,7 +4,7 @@ author: "Cressot, C and Chevallier, F and Bousquet, P and Crevoisier, C and Dlug
 type: "article"
 year: 2013
 publication: "Atmos. Chem. Phys. Discuss"
-doi: ""
+doi: "10.5194/acp-14-577-2014"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Wang, Yujie and Kohler, Philipp and Braghiere, Renato K and Longo, Marc
 type: "article"
 year: 2022
 publication: "Scientific data"
-doi: ""
+doi: "10.1038/s41597-022-01346-x"
 materials: ""
 toc: false
 ---

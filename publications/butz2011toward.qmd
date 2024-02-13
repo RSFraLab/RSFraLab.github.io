@@ -4,7 +4,7 @@ author: "Butz, Andre and Guerlet, S and Hasekamp, O and Schepers, D and Galli, A
 type: "article"
 year: 2011
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.5194/egusphere-egu2020-3576"
 materials: ""
 toc: false
 ---

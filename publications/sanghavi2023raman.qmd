@@ -4,7 +4,7 @@ author: "Sanghavi, Suniti and Frankenberg, Christian"
 type: "article"
 year: 2023
 publication: "Journal of Quantitative Spectroscopy and Radiative Transfer"
-doi: ""
+doi: "10.1016/j.jqsrt.2023.108791"
 materials: ""
 toc: false
 ---

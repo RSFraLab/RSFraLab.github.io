@@ -1,9 +1,14 @@
 ---
 title: "Welcome to our Research Group"
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
 ---
 
 ::: grid
 ::: {.g-col-12 .g-col-lg-3 .top-story-img}
+
 <img src="/img/FraLabLogo.png" alt="Christian Frankenberg" width="300">
 
 :::
@@ -41,6 +46,6 @@ Office: 203 Linde+Robinson (<a href="http://lindecenter.caltech.edu/about/contac
 :::
 :::
 
-<img src="/img/blend_v9_small.jpg" alt="Christian Frankenberg" width="100%" style="box-shadow: 5px 5px 5px gray">
+![TROPOMI Fluorescence](/img/blend_v9_small.jpg){.lightbox}
 
 

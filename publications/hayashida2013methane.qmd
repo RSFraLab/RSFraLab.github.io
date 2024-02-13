@@ -4,7 +4,7 @@ author: "Hayashida, S and Ono, A and Yoshizaki, S and Frankenberg, C and Takeuch
 type: "article"
 year: 2013
 publication: "Remote sensing of environment"
-doi: ""
+doi: "10.1016/j.rse.2013.08.008"
 materials: ""
 toc: false
 ---

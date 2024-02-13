@@ -4,7 +4,7 @@ author: "Magney, Troy S and Bowling, David R and Logan, Barry A and Grossmann, K
 type: "article"
 year: 2019
 publication: "Proceedings of the National Academy of Sciences"
-doi: ""
+doi: "10.1073/pnas.1900278116"
 materials: ""
 toc: false
 ---

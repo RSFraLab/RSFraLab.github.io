@@ -4,7 +4,7 @@ author: "Liu, Junjie and Bowman, Kevin W and Schimel, David S and Parazoo, Nicol
 type: "article"
 year: 2017
 publication: "Science"
-doi: ""
+doi: "10.1126/science.aar5432"
 materials: ""
 toc: false
 ---

@@ -6,7 +6,7 @@
     <span style="color:orange;font-weight:bold"><%= item.title %></span> <span style="font-family:Verdana,sans-serif;"><%= item.author %></span> <span style="font-family:Verdana,sans-serif;font-style:italic;"><%= item.publication %></span>
     <span style="font-weight:bold">(<%= item.year %>)</span> 
     <% if (item.doi) { %>
-    <a href="<%- item.doi %>" target="_blank" rel="noopener noreferrer">
+    <a href="https://doi.org/<%- item.doi %>">
       DOI
     </a>
     <% } %>

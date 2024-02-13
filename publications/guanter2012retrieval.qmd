@@ -4,7 +4,7 @@ author: "Guanter, Luis and Frankenberg, Christian and Dudhia, Anu and Lewis, Phi
 type: "article"
 year: 2012
 publication: "Remote Sensing of Environment"
-doi: ""
+doi: "10.1016/j.rse.2012.02.006"
 materials: ""
 toc: false
 ---

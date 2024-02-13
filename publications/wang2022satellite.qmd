@@ -4,7 +4,7 @@ author: "Wang, Xian and Biederman, Joel A and Knowles, John F and Scott, Russell
 type: "article"
 year: 2022
 publication: "Remote sensing of environment"
-doi: ""
+doi: "10.1016/j.rse.2021.112858"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Turner, Alexander J and Frankenberg, Christian and Kort, Eric A"
 type: "article"
 year: 2019
 publication: "Proceedings of the National Academy of Sciences"
-doi: ""
+doi: "10.1073/pnas.1814297116"
 materials: ""
 toc: false
 ---

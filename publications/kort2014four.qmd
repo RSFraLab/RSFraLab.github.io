@@ -4,7 +4,7 @@ author: "Kort, Eric A and Frankenberg, Christian and Costigan, Keeley R and Lind
 type: "article"
 year: 2014
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1002/2014gl061503"
 materials: ""
 toc: false
 ---

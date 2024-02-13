@@ -4,7 +4,7 @@ author: "Kohler, Philipp and Guanter, Luis and Frankenberg, Christian"
 type: "article"
 year: 2015
 publication: "IEEE Geoscience and Remote Sensing Letters"
-doi: ""
+doi: "10.1109/lgrs.2015.2407051"
 materials: ""
 toc: false
 ---

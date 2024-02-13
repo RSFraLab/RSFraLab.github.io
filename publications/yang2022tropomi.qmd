@@ -4,7 +4,7 @@ author: "Yang, Jilin and Xiao, Xiangming and Doughty, Russell and Zhao, Miaomiao
 type: "article"
 year: 2022
 publication: "Remote Sensing of Environment"
-doi: ""
+doi: "10.1016/j.rse.2022.113209"
 materials: ""
 toc: false
 ---

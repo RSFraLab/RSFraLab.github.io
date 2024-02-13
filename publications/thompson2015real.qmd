@@ -4,7 +4,7 @@ author: "Thompson, DR and Leifer, I and Bovensmann, H and Eastwood, M and Fladel
 type: "article"
 year: 2015
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-8-4383-2015"
 materials: ""
 toc: false
 ---

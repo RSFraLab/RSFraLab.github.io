@@ -4,7 +4,7 @@ author: "Cusworth, Daniel H and Duren, Riley M and Thorpe, Andrew K and Pandey, 
 type: "article"
 year: 2021
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1029/2020gl090864"
 materials: ""
 toc: false
 ---

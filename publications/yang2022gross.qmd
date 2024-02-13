@@ -4,7 +4,7 @@ author: "Yang, Julia C and Magney, Troy S and Albert, Loren P and Richardson, An
 type: "article"
 year: 2022
 publication: "Agricultural and Forest Meteorology"
-doi: ""
+doi: "10.1016/j.agrformet.2022.108904"
 materials: ""
 toc: false
 ---

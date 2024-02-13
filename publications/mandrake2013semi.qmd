@@ -4,7 +4,7 @@ author: "Mandrake, L and Frankenberg, C and O'Dell, CW and Osterman, G and Wennb
 type: "article"
 year: 2013
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-6-2851-2013"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Bacour, Cedric and Maignan, Fabienne and MacBean, Natasha and Porcar-Ca
 type: "article"
 year: 2019
 publication: "Journal of Geophysical Research: Biogeosciences"
-doi: ""
+doi: "10.1029/2019jg005040"
 materials: ""
 toc: false
 ---

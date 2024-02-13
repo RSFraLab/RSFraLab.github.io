@@ -4,7 +4,7 @@ author: "Zhang, Zhaoying and Zhang, Yongguang and Zhang, Yao and Gobron, Nadine 
 type: "article"
 year: 2020
 publication: "Remote Sensing of Environment"
-doi: ""
+doi: "10.1016/j.rse.2020.111686"
 materials: ""
 toc: false
 ---

@@ -1,6 +1,9 @@
 ---
 pagetitle: "People | Frankenberg Lab"
 toc: false
+lightbox:
+  match: auto
+  effect: fade
 html:
     page-layout: full
 listing:

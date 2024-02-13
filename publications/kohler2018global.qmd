@@ -4,7 +4,7 @@ author: "Kohler, Philipp and Frankenberg, Christian and Magney, Troy S and Guant
 type: "article"
 year: 2018
 publication: "Geophysical Research Letters"
-doi: ""
+doi: "10.1029/2018gl079031"
 materials: ""
 toc: false
 ---

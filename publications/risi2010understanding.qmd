@@ -4,7 +4,7 @@ author: "Risi, Camille and Bony, Sandrine and Vimeux, Franccoise and Frankenberg
 type: "article"
 year: 2010
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1029/2010jd014690"
 materials: ""
 toc: false
 ---

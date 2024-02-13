@@ -4,7 +4,7 @@ author: "Joiner, Joanna and Yoshida, Yasuko and Koehler, Philipp and Campbell, P
 type: "article"
 year: 2020
 publication: "Remote sensing"
-doi: ""
+doi: "10.3390/rs12152346"
 materials: ""
 toc: false
 ---

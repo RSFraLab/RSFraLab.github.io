@@ -4,7 +4,7 @@ author: "Wang, Y and Braghiere, RK and Longo, M and Norton, AJ and Kohler, P and
 type: "article"
 year: 2023
 publication: "Journal of Advances in Modeling Earth Systems"
-doi: ""
+doi: "10.1029/2021ms002964"
 materials: ""
 toc: false
 ---

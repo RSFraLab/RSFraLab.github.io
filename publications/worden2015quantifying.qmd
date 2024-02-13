@@ -4,7 +4,7 @@ author: "Worden, JR and Turner, AJ and Bloom, Anthony and Kulawik, SS and Liu, J
 type: "article"
 year: 2015
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-8-3433-2015"
 materials: ""
 toc: false
 ---

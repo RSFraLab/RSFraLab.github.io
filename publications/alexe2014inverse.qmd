@@ -4,7 +4,7 @@ author: "Alexe, M and Bergamaschi, P and Segers, A and Detmers, R and Butz, A an
 type: "article"
 year: 2014
 publication: "Atmos. Chem. Phys. Discuss"
-doi: ""
+doi: "10.5194/acp-15-113-2015"
 materials: ""
 toc: false
 ---

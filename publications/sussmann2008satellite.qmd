@@ -4,7 +4,7 @@ author: "Sussmann, Ralf and Foster, Frank and Borsdorff, Tobias and De Maziere, 
 type: "article"
 year: 2008
 publication: ""
-doi: ""
+doi: "10.5194/acp-5-1497-2005"
 materials: ""
 toc: false
 ---

@@ -4,7 +4,7 @@ author: "Parazoo, Nicholas C and Frankenberg, Christian and Kohler, Philipp and 
 type: "article"
 year: 2019
 publication: "Journal of Geophysical Research: Biogeosciences"
-doi: ""
+doi: "10.1029/2019jg005289"
 materials: ""
 toc: false
 ---

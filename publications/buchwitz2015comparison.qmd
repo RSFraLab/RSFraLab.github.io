@@ -4,7 +4,7 @@ author: "Buchwitz, Michael and Reuter, Markus and Schneising, O and Boesch, Hart
 type: "article"
 year: 2015
 publication: "Remote Sens. Environ"
-doi: ""
+doi: "10.5194/dach2022-71"
 materials: ""
 toc: false
 ---

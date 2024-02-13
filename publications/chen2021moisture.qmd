@@ -4,7 +4,7 @@ author: "Chen, Anping and Mao, Jiafu and Ricciuto, Daniel and Xiao, Jingfeng and
 type: "article"
 year: 2021
 publication: "Global Change Biology"
-doi: ""
+doi: "10.1111/gcb.15373"
 materials: ""
 toc: false
 ---

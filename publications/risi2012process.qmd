@@ -4,7 +4,7 @@ author: "Risi, Camille and Noone, David and Worden, John and Frankenberg, Christ
 type: "article"
 year: 2012
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1029/2011jd016621"
 materials: ""
 toc: false
 ---

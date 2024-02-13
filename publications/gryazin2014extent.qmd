@@ -4,7 +4,7 @@ author: "Gryazin, V and Risi, C and Jouzel, J and Kurita, N and Worden, J and Fr
 type: "article"
 year: 2014
 publication: "Atmospheric Chemistry and Physics"
-doi: ""
+doi: "10.5194/acp-14-9807-2014"
 materials: ""
 toc: false
 ---

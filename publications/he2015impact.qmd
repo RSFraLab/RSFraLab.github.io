@@ -4,7 +4,7 @@ author: "He, You and Risi, Camille and Gao, Jing and Masson-Delmotte, Valerie an
 type: "article"
 year: 2015
 publication: "Journal of Geophysical Research: Atmospheres"
-doi: ""
+doi: "10.1002/2014jd022180"
 materials: ""
 toc: false
 ---

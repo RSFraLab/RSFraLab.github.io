@@ -4,7 +4,7 @@ author: "Thorpe, Andrew K and Frankenberg, Christian and Aubrey, AD and Roberts,
 type: "article"
 year: 2016
 publication: "Remote Sensing of Environment"
-doi: ""
+doi: "10.1016/j.rse.2018.06.018"
 materials: ""
 toc: false
 ---

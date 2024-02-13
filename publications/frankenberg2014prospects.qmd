@@ -4,7 +4,7 @@ author: "Frankenberg, Christian and O'Dell, Chris and Berry, Joseph and Guanter,
 type: "article"
 year: 2014
 publication: "Remote Sensing of Environment"
-doi: ""
+doi: "10.1016/j.rse.2014.02.007"
 materials: ""
 toc: false
 ---

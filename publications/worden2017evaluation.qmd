@@ -4,7 +4,7 @@ author: "Worden, John R and Doran, Gary and Kulawik, Susan and Eldering, Annmari
 type: "article"
 year: 2017
 publication: "Atmospheric Measurement Techniques"
-doi: ""
+doi: "10.5194/amt-2016-175-rc1"
 materials: ""
 toc: false
 ---

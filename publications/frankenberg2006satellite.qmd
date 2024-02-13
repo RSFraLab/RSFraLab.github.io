@@ -4,7 +4,7 @@ author: "Frankenberg, C and Meirink, JF and Bergamaschi, P and Goede, APH and He
 type: "article"
 year: 2006
 publication: "Journal of geophysical research"
-doi: ""
+doi: "10.1029/2005jd006235"
 materials: ""
 toc: false
 ---

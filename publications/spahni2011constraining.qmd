@@ -4,7 +4,7 @@ author: "Spahni, Renato and Wania, R and Neef, L and Van Weele, M and Pison, I a
 type: "article"
 year: 2011
 publication: "Biogeosciences"
-doi: ""
+doi: "10.5194/bg-8-1643-2011"
 materials: ""
 toc: false
 ---

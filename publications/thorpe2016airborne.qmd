@@ -4,7 +4,7 @@ author: "Thorpe, Andrew K and Frankenberg, Christian and Green, Robert O and Tho
 type: "article"
 year: 2016
 publication: ""
-doi: ""
+doi: "10.1109/aero.2016.7500756"
 materials: ""
 toc: false
 ---
