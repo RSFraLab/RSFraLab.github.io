@@ -65,8 +65,8 @@ format:
   html:
     page-layout: full
     theme:
-      - flatly
-      - custom.scss
+      light: [flatly, custom.scss]
+      dark: [darkly, custom.scss]
     toc: true
     css: custom.css
     grid:
