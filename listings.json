@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/blogs.html",
+    "items": [
+      "/BlogPosts/Carbon-I.html",
+      "/BlogPosts/BlogQuarto.html"
+    ]
+  },
+  {
     "listing": "/publications.html",
     "items": [
       "/publications/braghiere2023tipping.html",
@@ -283,12 +290,6 @@
       "/people/alumni/debsunder.html",
       "/people/alumni/siraput.html",
       "/people/alumni/yi.html"
-    ]
-  },
-  {
-    "listing": "/blogs.html",
-    "items": [
-      "/BlogPosts/BlogQuarto.html"
     ]
   }
 ]

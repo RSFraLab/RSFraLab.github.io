@@ -10,12 +10,51 @@
 <atom:link href="https:/tester/blogs.xml" rel="self" type="application/rss+xml"/>
 <description>Our first attempt at semi-regular blog posts.</description>
 <image>
-<url>https:/tester/img/BlogBanner.jpeg</url>
+<url>https:/tester/img/BlogBanner2.jpeg</url>
 <title>FraLab</title>
 <link>https:/tester/blogs.html</link>
 </image>
-<generator>quarto-1.4.549</generator>
-<lastBuildDate>Fri, 01 Dec 2023 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.551</generator>
+<lastBuildDate>Wed, 06 Mar 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Carbon-I proposal to NASA’s ESE call</title>
+  <dc:creator>Christian Frankenberg</dc:creator>
+  <link>https:/tester/BlogPosts/Carbon-I.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="nasas-ese-call" class="level2">
+<h2 class="anchored" data-anchor-id="nasas-ese-call">NASA’s ESE call</h2>
+<p>NASA’s <a href="https://explorers.larc.nasa.gov/2023ESE/">Earth System Explorer</a> call solicits Principal Investigator (PI)-led space science investigations as recommended by The National Academies of Sciences, Engineering, and Medicine 2017 Decadal Survey for Earth Science and Applications from Space. Greenhouse gases were specifically mentioned a high priority. Thus, we put a proposal into the ring again, following years of work on high-spatial resolution greenhouse gas mapping, a journey that started with initial AVIRIS-NG measurements, the first ever controlled release experiments using aircrafts, large-scale mapping of the anomalous CH<sub>4</sub> enhancements in the Four-Corners region, and now with the success of EMIT.</p>
+</section>
+<section id="carbon-i" class="level2">
+<h2 class="anchored" data-anchor-id="carbon-i">Carbon-I</h2>
+<p><img src="https://carbon-i.github.io/img/Logo-Black2.png" class="img-fluid"></p>
+<p><a href="https://carbon-i.github.io/">Carbon-I</a> is our response to NASA’s ESE call, it can be considered a merger of the philosophies behind the original OCO mission and the high resolution mapping approaches that are now followed by EMIT, GHGSat, CarbonMapper, MethaneSat and others. We are eagerly awaiting a decision from NASA in April and are ready to hit the ground running. What could Carbon-I bring to the table? The combination of high spatial resolution and high enough spectral resolution for trace gas mapping solves two problems:</p>
+<ol type="I">
+<li>We will obtain enough data in the tropics, which has been a major problem for OCO-2, TROPOMI and other missions, mostly because shallow cumulus clouds have cloud gaps that are much smaller than the footprint size of current greenhouse gas sensors. This leads to periods of <strong>data drought</strong> in the humid tropics <a href="https://essopenarchive.org/users/528524/articles/717473-data-drought-in-the-humid-tropics-how-to-overcome-the-cloud-barrier-in-greenhouse-gas-remote-sensing">Pre-print paper</a>: <img src="https:/tester/img/blogs/clouds.jpeg" class="img-fluid"></li>
+<li>It will avoid surface interferences, that plagues high-spatial-resolution mappers with coarse spectral resolution.</li>
+</ol>
+<p>We have a great team and are doing something <strong>different</strong> with Carbon-I. The greenhouse gas remote sensing field is getting crowded, both on the agency side targetting high accuracy for flux inversions (OCO-2, OCO-3, GOSAT, GOSAT-2, GOSAT-GW, TROPOMI, Sentinel-5, CO2M, etc) as well as the plume mapping side to provide actionable results (EMIT, GHGSat, MethaneSat, CarbonMapper). Carbon-I aims to tackle the issue those missions can’t resolve by merging their advantages…</p>
+</section>
+<section id="a-carbon-i-website" class="level2">
+<h2 class="anchored" data-anchor-id="a-carbon-i-website">A Carbon-I website…</h2>
+<p>Why create a website for something that isn’t even funded yet? Honestly, Quarto makes this a lot more fun and provides an ideal system for scientists to run their own website, and describe science in fun interactive ways. <a href="https://carbon-i.github.io/">Carbon-I</a> is still very rudimentary but creating some interactive graphics with ObservableJS has been fun, even though I <strong>dislike</strong> java script syntax. So it has been absolutely worth it and we learned a lot along the way…</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Greenhouse Gases</category>
+  <category>Spectroscopy</category>
+  <category>Satellite mission</category>
+  <category>Remote Sensing</category>
+  <guid>https:/tester/BlogPosts/Carbon-I.html</guid>
+  <pubDate>Wed, 06 Mar 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://carbon-i.github.io/img/Logo-Black2.png" medium="image" type="image/png"/>
+</item>
 <item>
   <title>Website Update using Quarto</title>
   <dc:creator>Christian Frankenberg</dc:creator>
