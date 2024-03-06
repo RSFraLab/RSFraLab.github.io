@@ -1,7 +1,8 @@
 ---
 title: "Blog"
+author: ""
 description: "Our first attempt at semi-regular blog posts."
-image: "/img/BlogBanner.jpeg"
+image: "/img/BlogBanner2.jpeg"
 listing:
   contents: BlogPosts
   id: blog-list
@@ -9,11 +10,17 @@ listing:
   type: default
   categories: true
   feed: true
-format: 
-  html: 
-    page-layout: full
+
+page-layout: full
+toc-title: Year
+toc-location: right
+date-format: "MMMM D, YYYY"
+code-tools: false
+comments: false
+freeze: false
 ---
 <img src="/img/BlogBanner2.jpg" alt="Christian Frankenberg" width="100%" style="box-shadow: 5px 5px 5px gray">
+
 
 ::: {#blog-list}
 :::
