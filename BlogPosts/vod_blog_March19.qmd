@@ -2,7 +2,7 @@
 title: "Monitoring Forest Water Content Using GPS Signals"
 author: "Yitong Yao"
 date: "03/19/2024"
-image: "figures/Figure2_small.png"
+image: "figures/Figure2_small.jpg"
 comments: false
 page-layout: full
 format:
@@ -34,7 +34,7 @@ Given the strong positive relationship between daily maximum VOD and predawn lea
 
 
 ```{ojs}
-data = FileAttachment("gnss_data_2021.csv").csv({ typed: true })
+data = FileAttachment("data/gnss_data_2021.csv").csv({ typed: true })
 ```
 
 ```{ojs}
