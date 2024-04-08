@@ -1,26 +1,11 @@
 [
   {
-    "listing": "/people.html",
+    "listing": "/blogs.html",
     "items": [
-      "/people/staff/frankenberg.html",
-      "/people/staff/renato.html",
-      "/people/staff/yujie.html",
-      "/people/staff/alexis.html",
-      "/people/staff/anamika.html",
-      "/people/staff/yinon.html",
-      "/people/staff/yyao.html",
-      "/people/staff/Qiren.html",
-      "/people/staff/keliu.html",
-      "/people/alumni/Liyin.html",
-      "/people/alumni/Newton.html",
-      "/people/alumni/Philipp.html",
-      "/people/alumni/Rui.html",
-      "/people/alumni/Troy.html",
-      "/people/alumni/Vincent.html",
-      "/people/alumni/Ying.html",
-      "/people/alumni/debsunder.html",
-      "/people/alumni/siraput.html",
-      "/people/alumni/yi.html"
+      "/BlogPosts/MoveHyperspectral.html",
+      "/BlogPosts/vod_blog_March19.html",
+      "/BlogPosts/Carbon-I.html",
+      "/BlogPosts/BlogQuarto.html"
     ]
   },
   {
@@ -286,11 +271,27 @@
     ]
   },
   {
-    "listing": "/blogs.html",
+    "listing": "/people.html",
     "items": [
-      "/BlogPosts/vod_blog_March19.html",
-      "/BlogPosts/Carbon-I.html",
-      "/BlogPosts/BlogQuarto.html"
+      "/people/staff/frankenberg.html",
+      "/people/staff/renato.html",
+      "/people/staff/yujie.html",
+      "/people/staff/alexis.html",
+      "/people/staff/anamika.html",
+      "/people/staff/yinon.html",
+      "/people/staff/yyao.html",
+      "/people/staff/Qiren.html",
+      "/people/staff/keliu.html",
+      "/people/alumni/Liyin.html",
+      "/people/alumni/Newton.html",
+      "/people/alumni/Philipp.html",
+      "/people/alumni/Rui.html",
+      "/people/alumni/Troy.html",
+      "/people/alumni/Vincent.html",
+      "/people/alumni/Ying.html",
+      "/people/alumni/debsunder.html",
+      "/people/alumni/siraput.html",
+      "/people/alumni/yi.html"
     ]
   }
 ]

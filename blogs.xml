@@ -14,8 +14,63 @@
 <title>FraLab</title>
 <link>https:/tester/blogs.html</link>
 </image>
-<generator>quarto-1.4.551</generator>
-<lastBuildDate>Tue, 19 Mar 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.553</generator>
+<lastBuildDate>Sun, 07 Apr 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Improve canopy radiative transfer and electron transport modeling</title>
+  <dc:creator>Yujie Wang</dc:creator>
+  <link>https:/tester/BlogPosts/MoveHyperspectral.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Quantifying canopy radiative transfer (RT) is crucial for modeling all the subsequent processes, such as canopy energy balance and leaf photosynthesis. The most widely used canopy RT schemes in current vegetation and land surface models are the two-stream scheme reported by Sellers and the scheme described by Campbell and Norman, both of which dated back to the 1980s (maybe even earlier). These schemes use two broad bands to represent the continuous solar radiation spectra: photosynthetically active radiation (PAR, some also use visible light) and near-infrared radiation (NIR). As plants generally absorb more PAR than NIR (even the green light absorption is higher than NIR), using a constant approximation for PAR seems okay in the old days given the limitation in computation resources and lack of knowledge on how plant traits impact the absorption ratio.</p>
+<p>Nevertheless, there are some well-recognized problems in the broadband models, particularly for natural radiation:</p>
+<ul>
+<li>Light source difference along the vertical canopy. For example, plants absorb more red and blue light compared to green light; as a result, the red and blue light fraction would decrease in the lower canopy, and the effective absorption ratio should decrease in the lower canopy.</li>
+<li>Light partitioning within the leaf. Not all PAR absorbed by leaf contributes to photosynthesis, as water, leaf biomass, and pigments other than chlorophyll also absorb PAR photons (Fig. 1). Therefore, only the photons absorbed by chlorophyll and some carotenoid should be counted as PPAR (PAR that goes to photosystems; Fig. 1).</li>
+<li>Photon partitioning in the photosystems. Photons in the photosystems have four fates: heat dissipation, non-photochemical quenching, photochemical quenching, and fluorescence. A rate coefficient is associated with each fate, namely Kd, Kn, Kp, and Kf. These rate coefficients might also be temperature-dependent.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https:/tester/BlogPosts/figures/spectra-trait.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 1 Absorption coefficients of main leaf constitutes and chlorophyll content’s impact on <img src="https://latex.codecogs.com/png.latex?f_%5Ctext%7BAPAR%7D%20%5Ccdot%20f_%5Ctext%7BAPAR%7D">.</figcaption>
+</figure>
+</div>
+<p>If we consider the photon absorption and electron transport as a series of partitioning problems, we have <img src="https://latex.codecogs.com/png.latex?%0AJ_%5Ctext%7BPSII%7D%20=%20%5Ctext%7BPAR%7D%20%5Ccdot%20f_%5Ctext%7BAPAR%7D%20%5Ccdot%20f_%5Ctext%7BPPAR%7D%20%5Ccdot%20%5Cfrac%7B1%7D%7B2%7D%20%5Ccdot%20%5Cfrac%7BK_%5Ctext%7Bpmax%7D%7D%7BK_%5Ctext%7Bd%7D%20+%20K_%5Ctext%7Bn%7D%20+%20K_%5Ctext%7Bpmax%7D%20+%20K_%5Ctext%7Bf%7D%7D,%0A"> where</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?J_%5Ctext%7BPSII%7D">: maximum photons that go to photosystem II,</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPAR%7D">: Incoming PAR in photons;</li>
+<li><img src="https://latex.codecogs.com/png.latex?f_%5Ctext%7BAPAR%7D">: Fraction of PAR absorbed by the leaf (<img src="https://latex.codecogs.com/png.latex?%5Ctext%7BAPAR%7D%20=%20%5Ctext%7BPAR%7D%20%5Ccdot%20f_%5Ctext%7BAPAR%7D">);</li>
+<li><img src="https://latex.codecogs.com/png.latex?f_%5Ctext%7BPPAR%7D">: Fraction of APAR absorbed by chlorophyll (and some carotenoid; <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BPPAR%7D%20=%20%5Ctext%7BAPAR%7D%20%5Ccdot%20f_%5Ctext%7BPPAR%7D">);</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B2%7D">: Fraction of PPAR that goes to photosystem II;</li>
+<li><img src="https://latex.codecogs.com/png.latex?K_%5Ctext%7Bpmax%7D">: Maximum rate constant for photochemical quenching;</li>
+<li><img src="https://latex.codecogs.com/png.latex?K_%5Ctext%7Bd%7D">: Rate constant for heat dissipation;</li>
+<li><img src="https://latex.codecogs.com/png.latex?K_%5Ctext%7Bn%7D">: Non-photochemical quenching (NPQ) rate constant (default is 0 unless sustained NPQ exists);</li>
+<li><img src="https://latex.codecogs.com/png.latex?K_%5Ctext%7Bf%7D">: Rate constant for fluorescence;</li>
+</ul>
+<p>In this simplified equation,</p>
+<ul>
+<li>PAR varies along the vertical canopy, and changes with canopy structure and leaf traits;</li>
+<li><img src="https://latex.codecogs.com/png.latex?f_%5Ctext%7BAPAR%7D"> is plant trait-dependent, such as chlorophyll content;</li>
+<li><img src="https://latex.codecogs.com/png.latex?f_%5Ctext%7BPPAR%7D"> is also trait-dependent, such as chlorophyll content;</li>
+<li><img src="https://latex.codecogs.com/png.latex?K_%5Ctext%7Bd%7D"> is likely temperature-dependent;</li>
+<li>Sustained NPQ and thus residual <img src="https://latex.codecogs.com/png.latex?K_%5Ctext%7Bn%7D"> are temperature-dependent.</li>
+</ul>
+<p>However, none of these has been explicitly accounted for in the traditional land surface models, which adopt broadband RT schemes. As we now have more complicated and powerful RT models and an increasing amount of plant trait data, it would be a good opportunity to move forward and use the more accurate hyperspectral canopy RT scheme in future modeling practice. When examining how the use of hyperspectral and broadband RT schemes may impact global simulation results, we found that the globally integrated GPP may differ by 8% while the grid level difference may be &gt; 20%. For a thorough analysis, please refer to <a href="https://doi.org/10.1029/2023MS003992">the published paper</a>.</p>
+<p>Given the substantial impacts, we highly recommend other land surface models use a hyperspectral RT scheme in their future model versions. Or at least some corrections need to be made to account for the plant traits- and light source-related changes in <img src="https://latex.codecogs.com/png.latex?f_%5Ctext%7BAPAR%7D"> and <img src="https://latex.codecogs.com/png.latex?f_%5Ctext%7BPPAR%7D">. Please refer to <a href="https://doi.org/10.1029/2023MS003992">our published paper</a> for the correction methods we proposed in the Journal of Advances in Modeling Earth Systems.</p>
+
+
+
+ ]]></description>
+  <category>LSM</category>
+  <category>Paper Alert</category>
+  <category>Radiative Transfer</category>
+  <guid>https:/tester/BlogPosts/MoveHyperspectral.html</guid>
+  <pubDate>Sun, 07 Apr 2024 00:00:00 GMT</pubDate>
+  <media:content url="https:/tester/BlogPosts/figures/wang2024toward.png" medium="image" type="image/png" height="105" width="144"/>
+</item>
 <item>
   <title>Monitoring Forest Water Content Using GPS Signals</title>
   <dc:creator>Yitong Yao</dc:creator>
