@@ -9,15 +9,21 @@ about:
   template: solana
   image-shape: round
   links:
-    - icon: github
-      text: Github
-      href: https://github.com/Yujie-W/
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com/wyujie666
-    - icon: google
-      text: Google Scholar
+    - text: "{{< ai google-scholar >}} Google Scholar"
       href: https://scholar.google.com/citations?user=jl95bUAAAAAJ&hl=en
+    - icon: github
+      text: GitHub
+      href: https://github.com/Yujie-W/
+    - icon: mortarboard
+      text: ResearchID
+      href: https://www.webofscience.com/wos/author/record/2464162
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0002-3729-2743
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/wyujie666
+    - text: "{{< iconify fa6-brands chrome >}} Website"
+      href: https://silicormosia.github.io/
 ---
 
 
@@ -35,3 +41,50 @@ Yujie is Research Scientist working on plant ecophysiology, vegetation optimalit
 
 - [2022-present:]{.fw-bold} Research Scientist, Caltech
 - [2020-2022:]{.fw-bold} Postdoctoral Fellow, Caltech
+
+
+## Featured Publications
+
+- Y. Wang, R. K. Braghiere, M. Longo, A. J. Norton, P. Köhler, R. Doughty, Y. Yin, A. A. Bloom, and C. Frankenberg (2023).
+  Modeling global vegetation gross primary productivity, transpiration and hyperspectral canopy radiative transfer simultaneously using a next generation land surface model—CliMA Land.
+  Journal of Advances in Modeling Earth Systems 15(3): e2021MS002964.
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/bibtex/wang2023modeling.bib">BIBTEX</a>
+  <a href="http://dx.doi.org/10.1029/2021MS002964">DOI</a>
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/papers/wang2023modeling.pdf">PDF</a>
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/papers/wang2023modeling-si.pdf">SI</a>
+  <a href="https://github.com/Yujie-WANG/Published-Codes-Yujie-WANG">CODE</a>
+
+- Y. Wang, P. Köhler, R. K. Braghiere, M. Longo, R. Doughty, A. A. Bloom, and C. Frankenberg (2022).
+  GriddingMachine, a database and software for Earth system modeling at global and regional scales.
+  Scientific Data 9: 258.
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/bibtex/wang2022griddingmachine.bib">BIBTEX</a>
+  <a href="https://doi.org/10.1038/s41597-022-01346-x">DOI</a>
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/papers/wang2022griddingmachine.pdf">PDF</a>
+  <a href="https://github.com/Yujie-WANG/Published-Codes-Yujie-WANG">CODE</a>
+
+- Y. Wang, P. Köhler, L. He, R. K. Braghiere, R. Doughty, J. Wood, and C. Frankenberg (2021).
+  Testing stomatal models at the stand level in deciduous angiosperm and evergreen gymnosperm forests using CliMA Land (v0.1).
+  Geoscientific Model Development 14(11): 6741-6763.
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/bibtex/wang2021testing.bib">BIBTEX</a>
+  <a href="https://doi.org/10.5194/gmd-14-6741-2021">DOI</a>
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/papers/wang2021testing.pdf">PDF</a>
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/papers/wang2021testing-si.pdf">SI</a>
+  <a href="https://github.com/Yujie-WANG/Published-Codes-Yujie-WANG">CODE</a>
+
+- Y. Wang, W. R. L. Anderegg, M. D. Venturas, A. T. Trugman, K. Yu, and C. Frankenberg (2021).
+  Optimization theory explains nighttime stomatal responses.
+  New Phytologist 230(4): 1550-1561.
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/bibtex/wang2021optimization.bib">BIBTEX</a>
+  <a href="https://doi.org/10.1111/nph.17267">DOI</a>
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/papers/wang2021optimization.pdf">PDF</a>
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/papers/wang2021optimization-si.pdf">SI</a>
+  <a href="https://github.com/Yujie-WANG/Published-Codes-Yujie-WANG">CODE</a>
+
+- Y. Wang, J. S. Sperry, W. R. L. Anderegg, M. D. Venturas, and A. T. Trugman (2020).
+  Tansley Review: A theoretical and empirical assessment of stomatal optimization modeling.
+  New Phytologist 227(2): 311–325.
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/bibtex/wang2020theoretical.bib">BIBTEX</a>
+  <a href="https://doi.org/10.1111/nph.16572">DOI</a>
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/papers/wang2020theoretical.pdf">PDF</a>
+  <a href="https://github.com/silicormosia/silicormosia.github.io/raw/main/papers/wang2020theoretical-si.pdf">SI</a>
+  <a href="https://github.com/Yujie-WANG/Published-Codes-Yujie-WANG">CODE</a>
