@@ -1,0 +1,19 @@
+---
+title: "Alexandre Alexis Renchon"
+started: 2022
+ended: 2024
+NowAt: CliMA, Caltech
+subtitle: Research Software Engineer, Associate
+image: pics/alexis.png
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=9hCDm34AAAAJ&hl=en&oi=ao
+    - icon: github
+      text: Github
+      href: https://github.com/AlexisRenchon/
+---
