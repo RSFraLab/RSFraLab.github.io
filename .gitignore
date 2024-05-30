@@ -5,3 +5,7 @@ _extensions
 _site
 
 /.quarto/
+
+# vim
+*~
+*swp
