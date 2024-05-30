@@ -2,8 +2,8 @@
 title: "Alexandre Alexis Renchon"
 started: 2022
 ended: 2024
-NowAt: Research Software Engineer, Associate at CliMA, Caltech
-subtitle: Postdoc
+NowAt: Research Software Engineer, Associate, at CliMA, Caltech
+subtitle: CZI PostDoc
 image: pics/alexis.png
 about:
   id: hero-heading
