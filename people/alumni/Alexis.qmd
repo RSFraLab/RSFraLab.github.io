@@ -2,9 +2,9 @@
 title: "Alexandre Alexis Renchon"
 started: 2022
 ended: 2024
-NowAt: Research Software Engineer, Associate, at CliMA, Caltech
-subtitle: CZI PostDoc
-image: pics/alexis.png
+NowAt: Research Software Engineer at CliMA, Caltech
+subtitle: PostDoc
+image: pics/alexis.jpg
 about:
   id: hero-heading
   template: solana
@@ -16,4 +16,8 @@ about:
     - icon: github
       text: Github
       href: https://github.com/AlexisRenchon/
+---
+
+Alexis started as a CZI PostDoc in 2022. He worked on implementing a model of soil organic carbon decomposition in the CliMA land surface model. Alexis is working with CZI as a collaborator from CliMA. 
+
 ---
