@@ -15,7 +15,47 @@
 <link>https:/tester/blogs.html</link>
 </image>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Sun, 07 Apr 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 27 May 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Accounting for ultraviolet and far-red radiation in land surface modeling</title>
+  <dc:creator>Yujie Wang</dc:creator>
+  <link>https:/tester/BlogPosts/BeyondVisible.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Following my <a href="https://rsfralab.github.io/BlogPosts/MoveHyperspectral.html">last blog</a>, canopy energy balance and leaf photosynthesis are crucial for land surface models (LSMs). Thus, the upstream canopy radiative transfer is of great importance. However, LSMs typically use broadband models, simply separating photosynthetically active radiation (PAR, some also use visible light) from near-infrared radiation (NIR). While this approach is computationally more efficient, it has the following downsides:</p>
+<ul>
+<li>Plants and soil have a higher absorption ratio for ultraviolet (UV; 300-400 nm) radiation, but it is not separated from PAR in the broadband model;</li>
+<li>UV is mostly absorbed by protective materials rather than chlorophyll, but the broadband models treat the UV absorption as PAR;</li>
+<li>Far-red (FR; 700-750 nm) radiation could boost photosynthesis when supplementing to PAR, but broadband models treat it as NIR, so FR in broadband models has no photosynthetic effects;</li>
+<li>FR alone cannot trigger photosynthesis, so treating FR as PAR is also problematic.</li>
+</ul>
+<p>On average, the Earth’s surface receives 45.5 W m⁻² UV and 60.1 W m⁻² FR (Fig. 1). Therefore, implementing UV and FR explicitly in LSMs would impact not only the canopy energy budget but also photosynthesis. The best way would be to use the hyperspectral radiative transfer model. In <a href="https://doi.org/10.1111/gcb.17346">our recently published paper</a>, we did the following to improve the UV and FR representations:</p>
+<ul>
+<li>Extend the absorption features of the key constitutes of the leaf, including chlorophyll, carotenoid, leaf biomass, and water;</li>
+<li>Counting the FR absorption by chlorophyll as PPAR (photons absorbed by chlorophyll and used for photosynthesis);</li>
+<li>Distincting FR photons from UV and PAR photons in the photosynthesis model, to not overestimate FR’s contribution to photosynthesis.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https:/tester/BlogPosts/figures/wang2024beyond-highlight.jpg" class="img-fluid figure-img"></p>
+<figcaption>Fig. 1 LSMs do not model UV explicitly, thus tend to overestimate UV albedo. LSMs do not account for FR’s contribution to photosynthesis, thus tend to underestimate plant productivity.</figcaption>
+</figure>
+</div>
+<p>We tested our UV implementation using data from the flux tower observations, and FR implementation using data collected from plants with different combinations of PAR+FR LED. We also ran the CliMA Land model at the global scale to assess the impact on modeled gross primary productivity (GPP). Our model results suggest that (1) GPP may increase by more than 8%, particularly in the tropics with the highest LAI, and that (2) UV albedo may be underestimated by more than 0.05, particularly in the boreal vegetated regions. For more details, please refer to <a href="https://doi.org/10.1111/gcb.17346">our recently published paper</a>.</p>
+
+
+
+ ]]></description>
+  <category>LSM</category>
+  <category>Paper Alert</category>
+  <category>Radiative Transfer</category>
+  <guid>https:/tester/BlogPosts/BeyondVisible.html</guid>
+  <pubDate>Mon, 27 May 2024 00:00:00 GMT</pubDate>
+  <media:content url="https:/tester/BlogPosts/figures/wang2024beyond.png" medium="image" type="image/png" height="95" width="144"/>
+</item>
 <item>
   <title>Improve canopy radiative transfer and electron transport modeling</title>
   <dc:creator>Yujie Wang</dc:creator>
