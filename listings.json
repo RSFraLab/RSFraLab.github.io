@@ -1,19 +1,8 @@
 [
   {
-    "listing": "/blogs.html",
-    "items": [
-      "/BlogPosts/BeyondVisible.html",
-      "/BlogPosts/MoveHyperspectral.html",
-      "/BlogPosts/vod_blog_March19.html",
-      "/BlogPosts/Carbon-I.html",
-      "/BlogPosts/BlogQuarto.html"
-    ]
-  },
-  {
     "listing": "/people.html",
     "items": [
       "/people/staff/frankenberg.html",
-      "/people/staff/renato.html",
       "/people/staff/yujie.html",
       "/people/staff/anamika.html",
       "/people/staff/yinon.html",
@@ -31,6 +20,16 @@
       "/people/alumni/debsunder.html",
       "/people/alumni/siraput.html",
       "/people/alumni/yi.html"
+    ]
+  },
+  {
+    "listing": "/blogs.html",
+    "items": [
+      "/BlogPosts/BeyondVisible.html",
+      "/BlogPosts/MoveHyperspectral.html",
+      "/BlogPosts/vod_blog_March19.html",
+      "/BlogPosts/Carbon-I.html",
+      "/BlogPosts/BlogQuarto.html"
     ]
   },
   {

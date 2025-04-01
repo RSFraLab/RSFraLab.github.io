@@ -14,7 +14,7 @@
 <title>FraLab</title>
 <link>https:/tester/blogs.html</link>
 </image>
-<generator>quarto-1.4.554</generator>
+<generator>quarto-1.6.42</generator>
 <lastBuildDate>Mon, 27 May 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Accounting for ultraviolet and far-red radiation in land surface modeling</title>
@@ -141,6 +141,7 @@ font-style: inherit;">typed</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">true</span> })</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
@@ -153,6 +154,7 @@ font-style: inherit;">true</span> })</span></code></pre></div>
 background-color: null;
 font-style: inherit;">=</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">new</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">Date</span>(<span class="dv" style="color: #AD0000;
@@ -166,6 +168,7 @@ font-style: inherit;">4</span>)</span>
 background-color: null;
 font-style: inherit;">=</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">new</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">Date</span>(<span class="dv" style="color: #AD0000;
@@ -237,6 +240,7 @@ font-style: inherit;">format</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">formatDate</span>(d3<span class="op" style="color: #5E5E5E;
@@ -321,9 +325,11 @@ font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">filter</span>(<span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(s2) {</span>
 <span id="cb5-61">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">return</span> s2<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -391,6 +397,7 @@ font-style: inherit;">min</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -410,6 +417,7 @@ font-style: inherit;">max</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -435,6 +443,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 <div class="cell">
 <div class="sourceCode cell-code hidden" id="cb9" data-startfrom="82" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 81;"><span id="cb9-82"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">adjustTextPosition</span>(plotDomain<span class="op" style="color: #5E5E5E;
@@ -444,6 +453,7 @@ background-color: null;
 font-style: inherit;">,</span> defaultPosition) {</span>
 <span id="cb9-83">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (fixedDate <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;</span> plotDomain[<span class="dv" style="color: #AD0000;
@@ -463,6 +473,7 @@ background-color: null;
 font-style: inherit;">// For example, set it to the start or end of the domain</span></span>
 <span id="cb9-86">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">return</span> plotDomain[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>]<span class="op" style="color: #5E5E5E;
@@ -473,6 +484,7 @@ font-style: inherit;">// or plotDomain[1]</span></span>
 <span id="cb9-87">  }</span>
 <span id="cb9-88">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">return</span> defaultPosition<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
@@ -530,6 +542,7 @@ font-style: inherit;">grid</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">true</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
@@ -565,6 +578,7 @@ font-style: inherit;">grid</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">true</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
@@ -598,6 +612,7 @@ font-style: inherit;">min</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -612,6 +627,7 @@ font-style: inherit;">max</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -632,6 +648,7 @@ font-style: inherit;">legend</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">true</span> }<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
@@ -668,6 +685,7 @@ font-style: inherit;">x1</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">new</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">Date</span>(<span class="st" style="color: #20794D;
@@ -683,6 +701,7 @@ font-style: inherit;">x2</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">new</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">Date</span>(<span class="st" style="color: #20794D;
@@ -756,6 +775,7 @@ font-style: inherit;">title</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> (d) <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span></span>
 <span id="cb10-122">        <span class="vs" style="color: #20794D;
 background-color: null;
@@ -819,6 +839,7 @@ font-style: inherit;">min</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -838,6 +859,7 @@ font-style: inherit;">max</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -898,6 +920,7 @@ font-style: inherit;">grid</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">true</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
@@ -950,6 +973,7 @@ font-style: inherit;">grid</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">true</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
@@ -974,6 +998,7 @@ font-style: inherit;">min</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -988,6 +1013,7 @@ font-style: inherit;">max</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -1008,6 +1034,7 @@ font-style: inherit;">legend</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">true</span> }<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
@@ -1044,6 +1071,7 @@ font-style: inherit;">x1</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">new</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">Date</span>(<span class="st" style="color: #20794D;
@@ -1059,6 +1087,7 @@ font-style: inherit;">x2</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">new</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">Date</span>(<span class="st" style="color: #20794D;
@@ -1132,6 +1161,7 @@ font-style: inherit;">title</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> (d) <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span></span>
 <span id="cb12-164">        <span class="vs" style="color: #20794D;
 background-color: null;
@@ -1195,6 +1225,7 @@ font-style: inherit;">min</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -1214,6 +1245,7 @@ font-style: inherit;">max</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -1274,6 +1306,7 @@ font-style: inherit;">grid</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">true</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
@@ -1312,6 +1345,7 @@ font-style: inherit;">grid</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">true</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
@@ -1336,6 +1370,7 @@ font-style: inherit;">min</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -1350,6 +1385,7 @@ font-style: inherit;">max</span>(filtered<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> d <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span> d<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="at" style="color: #657422;
@@ -1393,6 +1429,7 @@ font-style: inherit;">x1</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">new</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">Date</span>(<span class="st" style="color: #20794D;
@@ -1408,6 +1445,7 @@ font-style: inherit;">x2</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">new</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">Date</span>(<span class="st" style="color: #20794D;
@@ -1481,6 +1519,7 @@ font-style: inherit;">title</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> (d) <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">=&gt;</span></span>
 <span id="cb14-205">        <span class="vs" style="color: #20794D;
 background-color: null;
