@@ -1,6 +1,8 @@
 ---
 title: "Yitong Yao"
 started: "2022"
+ended: "2025"
+NowAt: Columbia
 image: pics/yitongyao.jpg
 subtitle: "Postdoc"
 sortby: "3"
