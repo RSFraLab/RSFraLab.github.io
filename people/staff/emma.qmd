@@ -16,8 +16,7 @@ about:
       href: https://github.com/egreich
     - text: Linkedin
       href: https://www.linkedin.com/in/emma-reich-85238216b/
-    - icon: twitter
-      text: Bluesky
+    - text: Bluesky
       href: https://bsky.app/profile/ecophysism.bsky.social
     - text: "{{< iconify fa6-brands chrome >}} Website"
       href: https://egreich.github.io/
@@ -42,4 +41,4 @@ Emma is a Postdoc working to combine foundational plant ecophysiology concepts w
     <a href="https://doi.org/10.1111/gcb.70327">DOI</a>
 
 - Reich, E., Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. 2024. A semi-mechanistic model for partitioning evapotranspiration reveals transpiration dominates the water flux in drylands. JGR Biogeosciences.
-    <a href="https://doi.org/10.1029/2023JG007914.">DOI</a>
+    <a href="https://doi.org/10.1029/2023JG007914">DOI</a>
