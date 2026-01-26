@@ -1,0 +1,45 @@
+---
+title: "Emma Reich"
+started: "2025"
+image: pics/emmareich.jpg
+subtitle: "Postdoc"
+sortby: "5"
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=jOz-qW0AAAAJ&hl=en&oi=sra
+    - icon: github
+      text: GitHub
+      href: https://github.com/egreich
+    - text: Linkedin
+      href: https://www.linkedin.com/in/emma-reich-85238216b/
+    - icon: twitter
+      text: Bluesky
+      href: https://bsky.app/profile/ecophysism.bsky.social
+    - text: "{{< iconify fa6-brands chrome >}} Website"
+      href: https://egreich.github.io/
+---
+
+
+Emma is a Postdoc working to combine foundational plant ecophysiology concepts with remote sensing methods, mathematical and statistical models, and computational methods to address global change related questions.
+
+
+## Education
+
+- [PhD in Informatics and Computing- Ecological and Environmental Informatics]{.fw-bold} | Northern Arizona University, USA | 2020 -  2025
+- [MS in Informatics]{.fw-bold} | Northern Arizona University, USA
+- [BS in Molecular Environmental Biology- Ecology concentration]{.fw-bold} | University of California, Berkeley, USA | 2015 -  2019
+
+## Featured Publications
+
+- Reich, E., Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. 2026. Beyond Optimality: Dryland ecosystems infrequently use water efficiently for carbon gain. Agricultural and Forest Meteorology.
+  <a href="https://doi.org/10.1016/j.agrformet.2025.110996">DOI</a>
+
+- Reich, E. and Guo, J., Peltier, D., Palmquist, E., Samuels-Crow, K. E., Boone, R., and K. Ogle. 2025. Precipitation pulse dynamics are not ubiquitous: A global meta-analysis of plant and ecosystem carbon- and water-related pulse responses. Global Change Biology.
+    <a href="https://doi.org/10.1111/gcb.70327">DOI</a>
+
+- Reich, E., Samuels-Crow, K. E., Braford, J., Litvak, M. E., Schlaepfer, D., and K. Ogle. 2024. A semi-mechanistic model for partitioning evapotranspiration reveals transpiration dominates the water flux in drylands. JGR Biogeosciences.
+    <a href="https://doi.org/10.1029/2023JG007914.">DOI</a>
