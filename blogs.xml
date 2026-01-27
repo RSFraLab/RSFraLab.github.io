@@ -14,13 +14,14 @@
 <title>FraLab</title>
 <link>https:/tester/blogs.html</link>
 </image>
-<generator>quarto-1.6.42</generator>
+<generator>quarto-1.8.27</generator>
 <lastBuildDate>Mon, 27 May 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Accounting for ultraviolet and far-red radiation in land surface modeling</title>
   <dc:creator>Yujie Wang</dc:creator>
   <link>https:/tester/BlogPosts/BeyondVisible.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -61,6 +62,7 @@
   <dc:creator>Yujie Wang</dc:creator>
   <link>https:/tester/BlogPosts/MoveHyperspectral.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -120,12 +122,13 @@
 
 
 
+
 <p>Forests play a crucial role in mitigating climate change by absorbing more than 20% of the anthropogenic carbon dioxide emission. However, such an absorption is constrained by forest water content, owing to the carbon-water nexus. Continuous monitoring of forest water content is important as it changes dramatically across diurnal to seasonal scales, which is not feasible with traditional labor-intensive approaches. Spaceborne satellite products of Vegetation Optical Depth (VOD), an emerging plant water content metric, only offer observations at two times of the day, which still fails to capture the variations of water content over the course of the day. To address this issue, we recently developed a new method of monitoring plant water content with a sub-hourly resolution using the Global Navigation Satellite System (GNSS). It measures the signal attenuation of GNSS L-band microwave signals by water in the forest canopy by deploying a pair of signal receivers above and below the trees, which is similar to the differential positioning technique. For the first time, we can capture the diurnal variation of plant water content, and it does not require any expensive instruments. This technology offers a low-cost, robust, and high-temporally resolved solution of obtaining plant water dynamics, which potentially has implications for agriculture, ecology, and environmental science, and is particularly significant to the pursuit of carbon neutrality goals. This work has been published in the Geophysical Research Letters (<a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023GL107121">doi: 10.1029/2023GL107121</a>).</p>
 <section id="seasonal-variations" class="level2">
 <h2 class="anchored" data-anchor-id="seasonal-variations">Seasonal variations</h2>
 <p>VOD seasonal variations reflect the phenology of leaf flushing and leaf shedding. During the soil drydown period, the VOD decrease aligns with soil drying (yellow shading area). Rainfall pulses can be inferred from VOD spikes. Given the strong positive relationship between daily maximum VOD and predawn leaf water potential, using GNSS VOD as a proxy for monitoring leaf water potential offers a promising avenue that requires less labor-intensive methods.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="36" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 35;"><span id="cb1-36">data <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="36" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 35;"><span id="cb1-36">data <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -142,7 +145,7 @@ background-color: null;
 font-style: inherit;">:</span> <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">true</span> })</span></code></pre></div>
+font-style: inherit;">true</span> })</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -150,7 +153,7 @@ font-style: inherit;">true</span> })</span></code></pre></div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="41" data-source-offset="-0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 40;"><span id="cb2-41">start <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="41" data-source-offset="-0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 40;"><span id="cb2-41">start <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="kw" style="color: #003B4F;
 background-color: null;
@@ -177,7 +180,7 @@ font-style: inherit;">2021</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">12</span>)</span></code></pre></div>
+font-style: inherit;">12</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -194,7 +197,7 @@ font-style: inherit;">12</span>)</span></code></pre></div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="45" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 44;"><span id="cb3-45">viewof slider <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="45" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 44;"><span id="cb3-45">viewof slider <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -263,7 +266,7 @@ background-color: null;
 font-style: inherit;">:</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'Pick a date range'</span></span>
-<span id="cb3-51">})</span></code></pre></div>
+<span id="cb3-51">})</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
@@ -271,7 +274,7 @@ font-style: inherit;">'Pick a date range'</span></span>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="56" data-source-offset="-0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 55;"><span id="cb4-56">startDate <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="56" data-source-offset="-0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 55;"><span id="cb4-56">startDate <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> d3<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -300,7 +303,7 @@ font-style: inherit;">offset</span>(start<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span> slider[<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1</span>])</span></code></pre></div>
+font-style: inherit;">1</span>])</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-4-1" data-nodetype="declaration">
@@ -317,7 +320,7 @@ font-style: inherit;">1</span>])</span></code></pre></div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="60" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 59;"><span id="cb5-60">filtered <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="60" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 59;"><span id="cb5-60">filtered <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> data<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -347,7 +350,7 @@ background-color: null;
 font-style: inherit;">&lt;=</span> stopDate<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
-<span id="cb5-62">})</span></code></pre></div>
+<span id="cb5-62">})</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-5" data-nodetype="declaration">
 
@@ -355,7 +358,7 @@ font-style: inherit;">;</span></span>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="66" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 65;"><span id="cb6-66"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="66" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 65;"><span id="cb6-66"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> { rangeSlider <span class="im" style="color: #00769E;
 background-color: null;
@@ -363,7 +366,7 @@ font-style: inherit;">as</span> rangeSlider } <span class="im" style="color: #00
 background-color: null;
 font-style: inherit;">from</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'@mootari/range-slider'</span></span></code></pre></div>
+font-style: inherit;">'@mootari/range-slider'</span></span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-6" data-nodetype="declaration">
 
@@ -371,7 +374,7 @@ font-style: inherit;">'@mootari/range-slider'</span></span></code></pre></div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="70" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 69;"><span id="cb7-70">formatDate <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb7" data-startfrom="70" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 69;"><span id="cb7-70">formatDate <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> d3<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -379,7 +382,7 @@ font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">timeFormat</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"%Y-%m-%d"</span>)</span></code></pre></div>
+font-style: inherit;">"%Y-%m-%d"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-7" data-nodetype="declaration">
 
@@ -387,7 +390,7 @@ font-style: inherit;">"%Y-%m-%d"</span>)</span></code></pre></div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="78" data-source-offset="-39" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 77;"><span id="cb8-78">yMin <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb8" data-startfrom="78" data-source-offset="-39" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 77;"><span id="cb8-78">yMin <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> d3<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -424,7 +427,7 @@ font-style: inherit;">.</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">mean_vod</span>)<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
+font-style: inherit;">;</span></span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-8-1" data-nodetype="declaration">
@@ -441,7 +444,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="82" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 81;"><span id="cb9-82"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb9" data-startfrom="82" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 81;"><span id="cb9-82"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span> <span class="fu" style="color: #4758AB;
@@ -488,7 +491,7 @@ font-weight: bold;
 font-style: inherit;">return</span> defaultPosition<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
-<span id="cb9-89">}</span></code></pre></div>
+<span id="cb9-89">}</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-9" data-nodetype="declaration">
 
@@ -496,7 +499,7 @@ font-style: inherit;">;</span></span>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb10" data-startfrom="93" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 92;"><span id="cb10-93">Plot<span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb10" data-startfrom="93" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 92;"><span id="cb10-93">Plot<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -820,7 +823,7 @@ font-style: inherit;">"red"</span>})<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
 <span id="cb10-124">  ]</span>
-<span id="cb10-125">})</span></code></pre></div>
+<span id="cb10-125">})</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-10" data-nodetype="expression">
 
@@ -829,7 +832,7 @@ font-style: inherit;">,</span></span>
 </div>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="132" data-source-offset="-39" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 131;"><span id="cb11-132">yMin_2 <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb11" data-startfrom="132" data-source-offset="-39" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 131;"><span id="cb11-132">yMin_2 <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> d3<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -866,7 +869,7 @@ font-style: inherit;">.</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">moisture</span>)<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
+font-style: inherit;">;</span></span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-11-1" data-nodetype="declaration">
@@ -883,7 +886,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb12" data-startfrom="136" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 135;"><span id="cb12-136">Plot<span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb12" data-startfrom="136" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 135;"><span id="cb12-136">Plot<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1206,7 +1209,7 @@ font-style: inherit;">"red"</span>})<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
 <span id="cb12-166">  ]</span>
-<span id="cb12-167">})</span></code></pre></div>
+<span id="cb12-167">})</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-12" data-nodetype="expression">
 
@@ -1215,7 +1218,7 @@ font-style: inherit;">,</span></span>
 </div>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb13" data-startfrom="174" data-source-offset="-39" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 173;"><span id="cb13-174">yMin_3 <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb13" data-startfrom="174" data-source-offset="-39" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 173;"><span id="cb13-174">yMin_3 <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> d3<span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -1252,7 +1255,7 @@ font-style: inherit;">.</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">rain</span>)<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span></span></code></pre></div>
+font-style: inherit;">;</span></span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-13-1" data-nodetype="declaration">
@@ -1269,7 +1272,7 @@ font-style: inherit;">;</span></span></code></pre></div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb14" data-startfrom="178" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 177;"><span id="cb14-178">Plot<span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb14" data-startfrom="178" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 177;"><span id="cb14-178">Plot<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1564,7 +1567,7 @@ font-style: inherit;">"red"</span>})<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
 <span id="cb14-207">  ]</span>
-<span id="cb14-208">})</span></code></pre></div>
+<span id="cb14-208">})</span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-14" data-nodetype="expression">
 
@@ -1572,13 +1575,13 @@ font-style: inherit;">,</span></span>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb15" data-startfrom="212" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 211;"><span id="cb15-212"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb15" data-startfrom="212" data-source-offset="0" style="background: #f1f3f5;"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 211;"><span id="cb15-212"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> {Plot} <span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"@mkfreeman/plot-tooltip"</span></span></code></pre></div>
+font-style: inherit;">"@mkfreeman/plot-tooltip"</span></span></code></pre></div></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-15" data-nodetype="declaration">
 
@@ -1622,6 +1625,7 @@ font-style: inherit;">"@mkfreeman/plot-tooltip"</span></span></code></pre></div>
 
 
 
+
 <section id="nasas-ese-call" class="level2">
 <h2 class="anchored" data-anchor-id="nasas-ese-call">NASA’s ESE call</h2>
 <p>NASA’s <a href="https://explorers.larc.nasa.gov/2023ESE/">Earth System Explorer</a> call solicits Principal Investigator (PI)-led space science investigations as recommended by The National Academies of Sciences, Engineering, and Medicine 2017 Decadal Survey for Earth Science and Applications from Space. Greenhouse gases were specifically mentioned a high priority. Thus, we put a proposal into the ring again, following years of work on high-spatial resolution greenhouse gas mapping, a journey that started with initial AVIRIS-NG measurements, the first ever controlled release experiments using aircrafts, large-scale mapping of the anomalous CH<sub>4</sub> enhancements in the Four-Corners region, and now with the success of EMIT.</p>
@@ -1657,6 +1661,7 @@ font-style: inherit;">"@mkfreeman/plot-tooltip"</span></span></code></pre></div>
   <dc:creator>Christian Frankenberg</dc:creator>
   <link>https:/tester/BlogPosts/BlogQuarto.html</link>
   <description><![CDATA[ 
+
 
 
 
