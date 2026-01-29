@@ -2,6 +2,6 @@
 title: "Rui Cheng"
 started: 2017
 ended: 2022
-NowAt: Assistant Professor at U. of Minnesota
+NowAt: Assistant Professor at Claremont McKenna College
 subtitle: Graduate Student
 ---

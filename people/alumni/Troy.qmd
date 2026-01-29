@@ -2,6 +2,6 @@
 title: "Troy Magney"
 started: 2015
 ended: 2018
-NowAt: Associate Prof. UC Davis
+NowAt: Prof. U of Montana
 subtitle: PostDoc
 ---
