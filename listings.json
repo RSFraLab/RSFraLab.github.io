@@ -276,13 +276,9 @@
     "items": [
       "/people/staff/frankenberg.html",
       "/people/staff/Eva.html",
-      "/people/staff/yujie.html",
-      "/people/staff/anamika.html",
-      "/people/staff/yinon.html",
       "/people/staff/Qiren.html",
       "/people/staff/keliu.html",
       "/people/staff/emma.html",
-      "/people/alumni/yyao.html",
       "/people/alumni/Alexis.html",
       "/people/alumni/Liyin.html",
       "/people/alumni/Newton.html",
@@ -291,9 +287,13 @@
       "/people/alumni/Troy.html",
       "/people/alumni/Vincent.html",
       "/people/alumni/Ying.html",
+      "/people/alumni/anamika.html",
       "/people/alumni/debsunder.html",
       "/people/alumni/siraput.html",
-      "/people/alumni/yi.html"
+      "/people/alumni/yi.html",
+      "/people/alumni/yinon.html",
+      "/people/alumni/yujie.html",
+      "/people/alumni/yyao.html"
     ]
   }
 ]
