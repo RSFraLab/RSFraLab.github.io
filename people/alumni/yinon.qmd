@@ -1,0 +1,8 @@
+---
+title: "Yinon Bar-On"
+image: pics/YinonBarOn.jpg
+started: 2023
+ended: 2025
+NowAt: Group Leader at Weizmann 
+subtitle: Former Schmidt PostDoc
+---

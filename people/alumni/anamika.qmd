@@ -1,0 +1,7 @@
+---
+title: "Anamika Shreevastava"
+started: 2024
+ended: 2025
+NowAt: Assistant Prof. NYU
+subtitle: Former PostDoc
+---

@@ -1,0 +1,7 @@
+---
+title: "Yujie Wang"
+started: 2020
+ended: 2025
+NowAt: Research Professor; School of Earth and Space Sciences; University of Science and Technology of China (USTC)
+subtitle: Former Research Scientist
+---

@@ -2,7 +2,7 @@
 title: "Christian Frankenberg"
 started: "2015"
 image: pics/frankenberg.png
-subtitle: "Group Leader"
+subtitle: "Professor"
 sortby: "1"
 about:
   id: hero-heading
