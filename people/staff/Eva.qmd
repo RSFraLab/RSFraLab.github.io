@@ -1,0 +1,64 @@
+---
+title: "Eva-Marie Metz"
+started: "2025"
+image: pics/emetz.jpeg
+subtitle: "Postdoc"
+sortby: "2"
+about:
+  id: hero-heading
+  template: solana
+  image-shape: round
+  links:
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=lskO0BMAAAAJ&hl=de&oi=ao
+    - text: "{{< iconify fa6-brands orcid >}} OrcidID"
+      href: https://orcid.org/0000-0002-8862-0831
+    - text: "{{< iconify fa6-brands chrome >}} LinkedIn"
+      href: https://www.linkedin.com/in/eva-marie-metz-24401126b/
+---
+
+Eva is a Postdoc working on soil respiration with land surface models and on continental-scale ecosystem dynamics using satellite-based solar-induced fluorescence (SIF).
+
+
+## Education
+
+- [PhD in Physics]{.fw-bold} | Heidelberg University, Germany | 2021 -  2025
+- [MS in Physics]{.fw-bold} | Heidelberg University, Germany | 2019 -  2021
+- [BS in Physics]{.fw-bold} | University of Marburg, Germany | 2015 -  2019
+- [BS in Geography]{.fw-bold} | University of Marburg, Germany | 2015 -  2018
+
+
+## Featured Publications
+
+- Metz, E.-M., Vardag, S. N., Basu, S., Jung, M., Ahrens, B., El-Madany, T., Sitch, S., Arora, V. K., Briggs, P. R., Friedlingstein, P., Goll, D. S., Jain, A. K., Kato, E., Lombardozzi, D., Nabel, Julia E. M. S., Poulter, B., Séférian, R., Tian, H., Wiltshire, A., Yuan, W., Yue, X., Zaehle, S., Deutscher, N. M., Griffith, D. W. T., and Butz, A. (2023). 
+  Soil respiration-driven CO2 pulses dominate Australia’s flux variability. 
+  Science, 379(6639):1332–1335. 
+  <a href="https://doi.org/10.1126/science.add7833">DOI</a>
+
+- Metz, E.-M., Vardag, S. N., Basu, S., Jung, M., and Butz, A. (2025). 
+  Seasonal and interannual variability in CO2 fluxes in southern Africa seen by GOSAT.
+  Biogeosciences, 22(2):555–584. 
+  <a href="https://doi.org/10.5194/bg-22-555-2025">DOI</a>
+
+- Metz, E.-M., Vardag, S. N., Feldman, A. F., Poulter, B., Colligan, T., Fischer-Femal, B. J., and Butz, A. (2025).
+  Responses of terrestrial ecosystem respiration to soil moisture across Australia.
+  Environ. Res. Lett. 20 104052.
+  <a href="https://doi.org/10.1088/1748-9326/ae0051">DOI</a>
+
+- Vardag, S. N., Metz, E.-M., Artelt, L., Basu, S., and Butz, A. (2025). 
+  CO2 release during soil rewetting shapes the seasonal carbon dynamics in South American Temperate region.
+  Geophysical Research Letters, 52(8):e2024GL111725. 
+  <a href="https://doi.org/10.1029/2024GL111725">DOI</a>
+
+- Villalobos, Y., Canadell, J. G., Keller, E. D., Briggs, P. R., Bukosa, B., Giltrap, D. L., Harman, I., Hilton, T. W., Kirschbaum, M. U. F., Lauerwald, R., Liang, L.L., Maavara, T., Mikaloff-Fletcher, S. E., Rayner, P. J., Resplandy, L., Rosentreter, J., Metz, E. M., Serrano, O., Smith, B. (2023)
+  A comprehensive assessment of anthropogenic and natural sources and sinks of Australasia's carbon budget.
+  Global biogeochemical cycles 37.12, e2023GB007845.
+  <a href="https://doi.org/10.1029/2023GB007845">DOI</a>
+
+See full publication list on <a href="https://scholar.google.com/citations?user=lskO0BMAAAAJ&hl=de&oi=ao">Google Scholar</a>
+
+## Public Talks
+
+- Metz, E. M. "How satellites render greenhouse gas emissions visible and support climate change research"
+  (German public lecture in the Ruperto Carola lecture series, Heidelberg University, 22.01.2024, <a href="https://www.youtube.com/watch?v=sr0S-CM6ESk&pp=ygUOZXZhLW1hcmllIG1ldHo%3D YouTube video">Youtube video</a>)
+
