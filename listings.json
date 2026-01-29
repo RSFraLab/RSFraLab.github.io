@@ -1,5 +1,15 @@
 [
   {
+    "listing": "/blogs.html",
+    "items": [
+      "/BlogPosts/BeyondVisible.html",
+      "/BlogPosts/MoveHyperspectral.html",
+      "/BlogPosts/vod_blog_March19.html",
+      "/BlogPosts/Carbon-I.html",
+      "/BlogPosts/BlogQuarto.html"
+    ]
+  },
+  {
     "listing": "/publications.html",
     "items": [
       "/publications/braghiere2023tipping.html",
@@ -262,20 +272,11 @@
     ]
   },
   {
-    "listing": "/blogs.html",
-    "items": [
-      "/BlogPosts/BeyondVisible.html",
-      "/BlogPosts/MoveHyperspectral.html",
-      "/BlogPosts/vod_blog_March19.html",
-      "/BlogPosts/Carbon-I.html",
-      "/BlogPosts/BlogQuarto.html"
-    ]
-  },
-  {
     "listing": "/people.html",
     "items": [
       "/people/staff/frankenberg.html",
       "/people/staff/Eva.html",
+      "/people/staff/renato.html",
       "/people/staff/Qiren.html",
       "/people/staff/keliu.html",
       "/people/staff/emma.html",
