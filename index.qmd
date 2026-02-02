@@ -31,7 +31,7 @@ lightbox:
 ::: {.g-col-12 .g-col-lg-6 .top-story-text}
 
 ### Christian Frankenberg
-Professor of Environmental Science &amp; Engineering<br>Research scientist, JPL<br>
+Chandler Family Professor of Environmental Science &amp; Engineering<br>Senior Research Scientist, JPL<br>
 Mail Code 131-24 <br>
 Pasadena, CA 91125-2300<br>
 Office: 203 Linde+Robinson (<a href="http://lindecenter.caltech.edu/about/contact"><i class="fa fa-map"></i></a>)<br>
