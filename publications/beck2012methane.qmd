@@ -1,13 +1,16 @@
 ---
-title: "Methane airborne measurements and comparison to global models during BARCA"
-author: "Beck, Veronika and Chen, Huilin and Gerbig, Christoph and Bergamaschi, Peter and Bruhwiler, Lori and Houweling, Sander and Rockmann, Thomas and Kolle, Olaf and Steinbach, Julia and Koch, Thomas and others"
-type: "article"
+title: 'Methane airborne measurements and comparison to global models during BARCA'
+author: 'Beck, Veronika and Chen, Huilin and Gerbig, Christoph and Bergamaschi, Peter and Bruhwiler, Lori and Houweling, Sander and Röckmann, Thomas and Kolle, Olaf and Steinbach, Julia and Koch, Thomas and Sapart, Célia J. and van der Veen, Carina and Frankenberg, Christian and Andreae, Meinrat O. and Artaxo, Paulo and Longo, Karla M. and Wofsy, Steven C.'
+type: 'journal-article'
 year: 2012
-publication: "Journal of Geophysical Research: Atmospheres"
-doi: "10.1029/2011jd017345"
-materials: ""
+publication: 'Journal of Geophysical Research: Atmospheres'
+doi: '10.1029/2011jd017345'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Tropical regions, especially the Amazon region, account for large emissions of methane (CH<sub>4</sub>). Here, we present CH<sub>4</sub> observations from two airborne campaigns conducted within the BARCA (Balanço Atmosférico Regional de Carbono na Amazônia) project in the Amazon basin in November 2008 (end of the dry season) and May 2009 (end of the wet season). We performed continuous measurements of CH<sub>4</sub> onboard an aircraft for the first time in the Amazon region, covering the whole Amazon basin with over 150 vertical profiles between altitudes of 500 m and 4000 m. The observations support the finding of previous ground‐based, airborne, and satellite measurements that the Amazon basin is a large source of atmospheric CH<sub>4</sub>. Isotope analysis verified that the majority of emissions can be attributed to CH<sub>4</sub> emissions from wetlands, while urban CH<sub>4</sub> emissions could be also traced back to biogenic origin. A comparison of five TM<sub>5</sub> based global CH<sub>4</sub> inversions with the observations clearly indicates that the inversions using SCIAMACHY observations represent the BARCA observations best. The calculated CH<sub>4</sub> flux estimate obtained from the mismatch between observations and TM<sub>5</sub>‐modeled CH<sub>4</sub> fields ranges from 36 to 43 mg m−2 d−1 for the Amazon lowland region.

@@ -1,0 +1,16 @@
+---
+title: 'Beyond the visible: Accounting for ultraviolet and far‐red radiation in vegetation productivity and surface energy budgets'
+author: 'Wang, Yujie and Braghiere, Renato K. and Yin, Yi and Yao, Yitong and Hao, Dalei and Frankenberg, Christian'
+type: 'journal-article'
+year: 2024
+publication: 'Global Change Biology'
+doi: '10.1111/gcb.17346'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractPhotosynthetically active radiation (PAR) is typically defined as light with a wavelength within 400–700 nm. However, ultra‐violet (UV) radiation within 280–400 nm and far‐red (FR) radiation within 700–750 nm can also excite photosystems, though not as efficiently as PAR. Vegetation and land surface models (LSMs) typically do not explicitly account for UV's contribution to energy budgets or photosynthesis, nor FR's contribution to photosynthesis. However, whether neglecting UV and FR has significant impacts remains unknown. We explored how canopy radiative transfer (RT) and photosynthesis are impacted when explicitly implementing UV in the canopy RT model and accounting for UV and FR in the photosynthesis models within a next‐generation LSM that can simulate hyperspectral canopy RT. We validated our improvements using photosynthesis measurements from plants under different light sources and intensities and surface reflection from an eddy‐covariance tower. Our model simulations suggested that at the whole plant level, after accounting for UV and FR explicitly, chlorophyll content, leaf area index (LAI), clumping index, and solar radiation all impact the modeling of gross primary productivity (GPP). At the global scale, mean annual GPP within a grid would increase by up to 7.3% and the increase is proportional to LAI; globally integrated GPP increases by 4.6 PgC year−1 (3.8% of the GPP without accounting for UV + FR). Further, using PAR to proxy UV could overestimate surface albedo by more than 0.1, particularly in the boreal forests. Our results highlight the importance of improving UV and FR in canopy RT and photosynthesis modeling and the necessity to implement hyperspectral or multispectral canopy RT schemes in future vegetation and LSMs.

@@ -1,13 +1,16 @@
 ---
-title: "Systematic orbital geometry-dependent variations in satellite solar-induced fluorescence (SIF) retrievals"
-author: "Joiner, Joanna and Yoshida, Yasuko and Koehler, Philipp and Campbell, Petya and Frankenberg, Christian and van der Tol, Christiaan and Yang, Peiqi and Parazoo, Nicholas and Guanter, Luis and Sun, Ying"
-type: "article"
+title: 'Systematic Orbital Geometry-Dependent Variations in Satellite Solar-Induced Fluorescence (SIF) Retrievals'
+author: 'Joiner, Joanna and Yoshida, Yasuko and Köehler, Philipp and Campbell, Petya and Frankenberg, Christian and van der Tol, Christiaan and Yang, Peiqi and Parazoo, Nicholas and Guanter, Luis and Sun, Ying'
+type: 'journal-article'
 year: 2020
-publication: "Remote sensing"
-doi: "10.3390/rs12152346"
-materials: ""
+publication: 'Remote Sensing'
+doi: '10.3390/rs12152346'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+While solar-induced fluorescence (SIF) shows promise as a remotely-sensed measurement directly related to photosynthesis, interpretation and validation of satellite-based SIF retrievals remains a challenge. SIF is influenced by the fraction of absorbed photosynthetically-active radiation at the canopy level that depends upon illumination geometry as well as the escape of SIF through the canopy that depends upon the viewing geometry. Several approaches to estimate the effects of sun-sensor geometry on satellite-based SIF have been proposed, and some have been implemented, most relying upon satellite reflectance measurements and/or other ancillary data sets. These approaches, designed to ultimately estimate intrinsic or physiological components of SIF related to photosynthesis, have not generally been applied globally to satellite measurements. Here, we examine in detail how SIF and related reflectance-based indices from wide swath polar orbiting satellites in low Earth orbit vary systematically due to the host satellite orbital characteristics. We compare SIF and reflectance-based parameters from the Global Ozone Mapping Experiment 2 (GOME-2) on the MetOp-B platform and from the TROPOspheric Monitoring Instrument (TROPOMI) on the Sentinel 5 Precursor satellite with a focus on high northern latitudes in summer where observations at similar geometries and local times occur. We show that GOME-2 and TROPOMI SIF observations agree nearly to within estimated uncertainties when they are compared at similar observing geometries. We show that the cross-track dependence of SIF normalized by PAR and related reflectance-based indices are highly correlated for dense canopies, but diverge substantially as the vegetation within a field-of-view becomes more sparse. This has implications for approaches that utilize reflectance measurements to help account for SIF geometrical dependences in satellite measurements. To further help interpret the GOME-2 and TROPOMI SIF observations, we simulated cross-track dependences of PAR normalized SIF and reflectance-based indices with the one dimensional Soil-Canopy Observation Photosynthesis and Energy fluxes (SCOPE) canopy radiative transfer model at sun–satellite geometries that occur across the wide swaths of these instruments and examine the geometrical dependencies of the various components (e.g., fraction of absorbed PAR, SIF yield, and escape of SIF from the canopy) of the observed SIF signal. The simulations show that most of the cross-track variations in SIF result from the escape of SIF through the scattering canopy and not the illumination.

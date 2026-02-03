@@ -1,13 +1,16 @@
 ---
-title: "Effects of chemical feedbacks on decadal methane emissions estimates"
-author: "Nguyen, Newton H and Turner, Alexander J and Yin, Yi and Prather, Michael J and Frankenberg, Christian"
-type: "article"
+title: 'Effects of Chemical Feedbacks on Decadal Methane Emissions Estimates'
+author: 'Nguyen, Newton H. and Turner, Alexander J. and Yin, Yi and Prather, Michael J. and Frankenberg, Christian'
+type: 'journal-article'
 year: 2020
-publication: "Geophysical Research Letters"
-doi: "10.1029/2019gl085706"
-materials: ""
+publication: 'Geophysical Research Letters'
+doi: '10.1029/2019gl085706'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractThe coupled chemistry of methane, carbon monoxide (CO), and hydroxyl radical (OH) can modulate methane's 9‐year lifetime. This is often ignored in methane flux inversions, and the impacts of neglecting interactive chemistry have not been quantified. Using a coupled‐chemistry box model, we show that neglecting the effect of methane source perturbation on [OH] can lead to a 25% bias in estimating abrupt changes in methane sources after only 10 years. Further, large CO emissions, such as from biomass burning, can increase methane concentrations by extending the methane lifetime through impacts on [OH]. Finally, we quantify the biases of including (or excluding) coupled chemistry in the context of recent methane and CO trends. Decreasing CO concentrations, beginning in the 2000's, have notable impacts on methane flux inversions. Given these nonnegligible errors, decadal methane emissions inversions should incorporate chemical feedbacks for more robust methane trend analyses and source attributions.

@@ -15,7 +15,7 @@ about:
     - icon: twitter
       text: twitter
       href: https://twitter.com/chr_fronge
-    - text: "{{< ai google-scholar >}} Google Scholar"
+    - text: "{{< iconify academicons google-scholar >}} Google Scholar"
       href: https://scholar.google.com/citations?user=7XYDtdYAAAAJ&hl=en 
     - icon: mortarboard
       text: ResearchID

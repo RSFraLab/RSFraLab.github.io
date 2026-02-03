@@ -1,0 +1,17 @@
+---
+title: 'Global Retrievals of Solar‐Induced Chlorophyll Fluorescence With TROPOMI: First Results and Intersensor Comparison to OCO‐2'
+author: 'Köhler, Philipp and Frankenberg, Christian and Magney, Troy S. and Guanter, Luis and Joiner, Joanna and Landgraf, Jochen'
+type: 'journal-article'
+year: 2018
+publication: 'Geophysical Research Letters'
+doi: '10.1029/2018gl079031'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+In recent years, solar‐induced chlorophyll fluorescence (SIF) retrieved from spaceborne spectrometers has been extensively used as a proxy for terrestrial photosynthesis at relatively sparse temporal and spatial scales. The near‐infrared band of the recently launched TROPOspheric Monitoring Instrument (TROPOMI) features the required spectral resolution and signal‐to‐noise ratio to retrieve SIF in a spectral range devoid of atmospheric absorption features. We find that initial TROPOMI spectra meet high expectations for a substantially improved spatiotemporal resolution (up to 7‐km × 3.5‐km pixels with daily revisit), representing a step change in SIF remote sensing capabilities. However, interpretation requires caution, as the broad range of viewing‐illumination geometries covered by TROPOMI's 2,600‐km‐wide swath needs to be taken into account. A first intersensor comparison with OCO‐2 (Orbiting Carbon Observatory‐2) SIF shows excellent agreement, underscoring the high quality of TROPOMI's SIF retrievals and the notable radiometric performance of the instrument.

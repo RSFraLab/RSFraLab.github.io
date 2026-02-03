@@ -1,13 +1,16 @@
 ---
-title: "Characterization of the OCO-2 instrument line shape functions using on-orbit solar measurements"
-author: "Sun, Kang and Liu, Xiong and Nowlan, Caroline R and Cai, Zhaonan and Chance, Kelly and Frankenberg, Christian and Lee, Richard AM and Pollock, Randy and Rosenberg, Robert and Crisp, David"
-type: "article"
+title: 'Characterization of the OCO-2 instrument line shape functions using on-orbit solar measurements'
+author: 'Sun, Kang and Liu, Xiong and Nowlan, Caroline R. and Cai, Zhaonan and Chance, Kelly and Frankenberg, Christian and Lee, Richard A. M. and Pollock, Randy and Rosenberg, Robert and Crisp, David'
+type: 'journal-article'
 year: 2017
-publication: "Atmospheric Measurement Techniques"
-doi: "10.5194/amt-2016-335-rc2"
-materials: ""
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-10-939-2017'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Abstract. Accurately characterizing the instrument line shape (ILS) of the Orbiting Carbon Observatory-2 (OCO-2) is challenging and highly important due to its high spectral resolution and requirement for retrieval accuracy (0. 25 %) compared to previous spaceborne grating spectrometers. On-orbit ILS functions for all three bands of the OCO-2 instrument have been derived using its frequent solar measurements and high-resolution solar reference spectra. The solar reference spectrum generated from the 2016 version of the Total Carbon Column Observing Network (TCCON) solar line list shows significant improvements in the fitting residual compared to the solar reference spectrum currently used in the version 7 Level 2 algorithm in the O<sub>2</sub> A band. The analytical functions used to represent the ILS of previous grating spectrometers are found to be inadequate for the OCO-2 ILS. Particularly, the hybrid Gaussian and super-Gaussian functions may introduce spurious variations, up to 5 % of the ILS width, depending on the spectral sampling position, when there is a spectral undersampling. Fitting a homogeneous stretch of the preflight ILS together with the relative widening of the wings of the ILS is insensitive to the sampling grid position and accurately captures the variation of ILS in the O<sub>2</sub> A band between decontamination events. These temporal changes of ILS may explain the spurious signals observed in the solar-induced fluorescence retrieval in barren areas.

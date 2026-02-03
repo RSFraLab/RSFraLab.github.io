@@ -1,0 +1,130 @@
+---
+pagetitle: "Preprints | FraLab"
+toc: false
+listing:
+  - id: preprints
+    contents: "publications/preprints/*.qmd"
+    template: ./ejs/article.ejs
+    categories: false
+    sort:
+      - "year desc"
+    sort-ui: [year]
+    filter-ui: [title]
+    page-size: 80
+    field-display-names:
+      publication: "Publication"
+      year: "Year"
+---
+
+```{=html}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Preprints</li>
+  </ol>
+</nav>
+
+<div class="pubs-layout">
+  <div class="pubs-content">
+```
+
+::: {#preprints}
+:::
+
+```{=html}
+  </div>
+  <aside class="pubs-sidebar">
+    <div class="pubs-sidebar-title">Years</div>
+    <ul id="preprint-year-list" class="pubs-year-list"></ul>
+  </aside>
+</div>
+
+<script>
+  (function () {
+    function buildYearSidebar() {
+      const listing = window['quarto-listings'] && window['quarto-listings']['listing-preprints'];
+      const listRoot = document.querySelector('#listing-preprints .pub-list');
+      const yearList = document.getElementById('preprint-year-list');
+      if (!listing || !listRoot || !yearList) return false;
+
+      const items = listing.items.map((item) => item.elm).filter(Boolean);
+      const yearCounts = new Map();
+
+      items.forEach((item) => {
+        const yearSpan = item.querySelector('.listing-year');
+        if (!yearSpan) return;
+        const match = yearSpan.textContent.match(/\d{4}/);
+        if (!match) return;
+        const year = match[0];
+        yearCounts.set(year, (yearCounts.get(year) || 0) + 1);
+      });
+
+      const years = Array.from(yearCounts.keys()).sort((a, b) => Number(b) - Number(a));
+      yearList.innerHTML = '';
+
+      function setActive(linkEl) {
+        yearList.querySelectorAll('a').forEach((a) => a.classList.remove('active'));
+        if (linkEl) linkEl.classList.add('active');
+      }
+
+      function applyFilter(year) {
+        listing.filter((item) => {
+          const yearSpan = item.elm ? item.elm.querySelector('.listing-year') : null;
+          const match = yearSpan ? yearSpan.textContent.match(/\d{4}/) : null;
+          const itemYear = match ? match[0] : null;
+          return !year || itemYear === year;
+        });
+      }
+
+      const allItem = document.createElement('li');
+      const allLink = document.createElement('a');
+      allLink.href = '#';
+      allLink.textContent = `All (${items.length})`;
+      allLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        setActive(allLink);
+        listing.filter();
+      });
+      allItem.appendChild(allLink);
+      yearList.appendChild(allItem);
+
+      years.forEach((year) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '#';
+        a.textContent = `${year} (${yearCounts.get(year)})`;
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          setActive(a);
+          applyFilter(year);
+        });
+        li.appendChild(a);
+        yearList.appendChild(li);
+      });
+
+      setActive(allLink);
+      return true;
+    }
+
+    function initWhenReady() {
+      if (!buildYearSidebar()) {
+        setTimeout(initWhenReady, 250);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initWhenReady);
+    } else {
+      initWhenReady();
+    }
+
+    if (window['quarto-listing-loaded']) {
+      const prev = window['quarto-listing-loaded'];
+      window['quarto-listing-loaded'] = function () {
+        prev();
+        initWhenReady();
+      };
+    }
+  })();
+</script>
+```

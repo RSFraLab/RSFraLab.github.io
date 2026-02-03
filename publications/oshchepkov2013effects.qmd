@@ -1,13 +1,16 @@
 ---
-title: "Effects of atmospheric light scattering on spectroscopic observations of greenhouse gases from space. Part 2: Algorithm intercomparison in the GOSAT data processing for CO2 retrievals over TCCON sites"
-author: "Oshchepkov, Sergey and Bril, Andrey and Yokota, Tatsuya and Wennberg, Paul O and Deutscher, Nicholas M and Wunch, Debra and Toon, Geoffrey C and Yoshida, Yukio and O'Dell, Christopher W and Crisp, David and others"
-type: "article"
+title: 'Effects of atmospheric light scattering on spectroscopic observations of greenhouse gases from space. Part 2: Algorithm intercomparison in the GOSAT data processing for CO<sub>2</sub> retrievals over TCCON sites'
+author: 'Oshchepkov, Sergey and Bril, Andrey and Yokota, Tatsuya and Wennberg, Paul O. and Deutscher, Nicholas M. and Wunch, Debra and Toon, Geoffrey C. and Yoshida, Yukio and O''Dell, Christopher W. and Crisp, David and Miller, Charles E. and Frankenberg, Christian and Butz, André and Aben, Ilse and Guerlet, Sandrine and Hasekamp, Otto and Boesch, Hartmut and Cogan, Austin and Parker, Robert and Griffith, David and Macatangay, Ronald and Notholt, Justus and Sussmann, Ralf and Rettinger, Markus and Sherlock, Vanessa and Robinson, John and Kyrö, Esko and Heikkinen, Pauli and Feist, Dietrich G. and Morino, Isamu and Kadygrov, Nikolay and Belikov, Dmitry and Maksyutov, Shamil and Matsunaga, Tsuneo and Uchino, Osamu and Watanabe, Hiroshi'
+type: 'journal-article'
 year: 2013
-publication: "Journal of Geophysical Research: Atmospheres"
-doi: "10.1002/jgrd.50146"
-materials: ""
+publication: 'Journal of Geophysical Research: Atmospheres'
+doi: '10.1002/jgrd.50146'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+This report is the second in a series of companion papers describing the effects of atmospheric light scattering in observations of atmospheric carbon dioxide (CO<sub>2</sub>) by the Greenhouse gases Observing SATellite (GOSAT), in orbit since 23 January 2009. Here we summarize the retrievals from six previously published algorithms; retrieving column‐averaged dry air mole fractions of CO<sub>2</sub> (XCO<sub>2</sub>) during 22 months of operation of GOSAT from June 2009. First, we compare data products from each algorithm with ground‐based remote sensing observations by Total Carbon Column Observing Network (TCCON). Our GOSAT‐TCCON coincidence criteria select satellite observations within a 5° radius of 11 TCCON sites. We have compared the GOSAT‐TCCON XCO<sub>2</sub> regression slope, standard deviation, correlation and determination coefficients, and global and station‐to‐station biases. The best agreements with TCCON measurements were detected for NIES 02.xx and RemoTeC. Next, the impact of atmospheric light scattering on XCO<sub>2</sub> retrievals was estimated for each data product using scan by scan retrievals of light path modification with the photon path length probability density function (PPDF) method. After a cloud pre‐filtering test, approximately 25% of GOSAT soundings processed by NIES 02.xx, ACOS B<sub>2</sub>.9, and UoL‐FP: 3G and 35% processed by RemoTeC were found to be contaminated by atmospheric light scattering. This study suggests that NIES 02.xx and ACOS B<sub>2</sub>.9 algorithms tend to overestimate aerosol amounts over bright surfaces, resulting in an underestimation of XCO<sub>2</sub> for GOSAT observations. Cross‐comparison between algorithms shows that ACOS B<sub>2</sub>.9 agrees best with NIES 02.xx and UoL‐FP: 3G while RemoTeC XCO<sub>2</sub> retrievals are in a best agreement with NIES PPDF‐D.

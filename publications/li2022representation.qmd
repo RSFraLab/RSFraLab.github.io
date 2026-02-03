@@ -1,13 +1,16 @@
 ---
-title: "Representation of leaf-to-canopy radiative transfer processes improves simulation of far-red solar-induced chlorophyll fluorescence in the community land model version 5"
-author: "Li, Rong and Lombardozzi, Danica and Shi, Mingjie and Frankenberg, Christian and Parazoo, Nicholas C and Kohler, Philipp and Yi, Koong and Guan, Kaiyu and Yang, Xi"
-type: "article"
+title: 'Representation of Leaf‐to‐Canopy Radiative Transfer Processes Improves Simulation of Far‐Red Solar‐Induced Chlorophyll Fluorescence in the Community Land Model Version 5'
+author: 'Li, Rong and Lombardozzi, Danica and Shi, Mingjie and Frankenberg, Christian and Parazoo, Nicholas C. and Köhler, Philipp and Yi, Koong and Guan, Kaiyu and Yang, Xi'
+type: 'journal-article'
 year: 2022
-publication: "Journal of Advances in Modeling Earth Systems"
-doi: "10.1029/2021ms002747"
-materials: ""
+publication: 'Journal of Advances in Modeling Earth Systems'
+doi: '10.1029/2021ms002747'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractRecent advances in satellite observations of solar‐induced chlorophyll fluorescence (SIF) provide a new opportunity to constrain the simulation of terrestrial gross primary productivity (GPP). Accurate representation of the processes driving SIF emission and its radiative transfer to remote sensing sensors is an essential prerequisite for data assimilation. Recently, SIF simulations have been incorporated into several land surface models, but the scaling of SIF from leaf‐level to canopy‐level is usually not well‐represented. Here, we incorporate the simulation of far‐red SIF observed at nadir into the Community Land Model version 5 (CLM<sub>5</sub>). Leaf‐level fluorescence yield was simulated by a parametric simplification of the Soil Canopy‐Observation of Photosynthesis and Energy fluxes model (SCOPE). And an efficient and accurate method based on escape probability is developed to scale SIF from leaf‐level to top‐of‐canopy while taking clumping and the radiative transfer processes into account. SIF simulated by CLM<sub>5</sub> and SCOPE agreed well at sites except one in needleleaf forest (R<sub>2</sub> > 0.91, root‐mean‐square error <0.19 W⋅m−2⋅sr−1⋅μm−1), and captured the day‐to‐day variation of tower‐measured SIF at temperate forest sites (R<sub>2</sub> > 0.68). At the global scale, simulated SIF generally captured the spatial and seasonal patterns of satellite‐observed SIF. Factors including the fluorescence emission model, clumping, bidirectional effect, and leaf optical properties had considerable impacts on SIF simulation, and the discrepancies between simulate d and observed SIF varied with plant functional type. By improving the representation of radiative transfer for SIF simulation, our model allows better comparisons between simulated and observed SIF toward constraining GPP simulations.

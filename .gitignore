@@ -9,3 +9,5 @@ _site
 # vim
 *~
 *swp
+
+**/*.quarto_ipynb

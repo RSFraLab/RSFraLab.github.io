@@ -1,0 +1,16 @@
+---
+title: 'A multi-year methane inversion using SCIAMACHY, accounting for systematic errors using TCCON measurements'
+author: 'Houweling, S. and Krol, M. and Bergamaschi, P. and Frankenberg, C. and Dlugokencky, E. J. and Morino, I. and Notholt, J. and Sherlock, V. and Wunch, D. and Beck, V. and Gerbig, C. and Chen, H. and Kort, E. A. and Röckmann, T. and Aben, I.'
+type: 'journal-article'
+year: 2014
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-14-3991-2014'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. This study investigates the use of total column CH<sub>4</sub> (XCH<sub>4</sub>) retrievals from the SCIAMACHY satellite instrument for quantifying large-scale emissions of methane. A unique data set from SCIAMACHY is available spanning almost a decade of measurements, covering a period when the global CH<sub>4</sub> growth rate showed a marked transition from stable to increasing mixing ratios. The TM<sub>5</sub> 4DVAR inverse modelling system has been used to infer CH<sub>4</sub> emissions from a combination of satellite and surface measurements for the period 2003–2010. In contrast to earlier inverse modelling studies, the SCIAMACHY retrievals have been corrected for systematic errors using the TCCON network of ground-based Fourier transform spectrometers. The aim is to further investigate the role of bias correction of satellite data in inversions. Methods for bias correction are discussed, and the sensitivity of the optimized emissions to alternative bias correction functions is quantified. It is found that the use of SCIAMACHY retrievals in TM<sub>5</sub> 4DVAR increases the estimated inter-annual variability of large-scale fluxes by 22% compared with the use of only surface observations. The difference in global methane emissions between 2-year periods before and after July 2006 is estimated at 27–35 Tg yr−1. The use of SCIAMACHY retrievals causes a shift in the emissions from the extra-tropics to the tropics of 50 ± 25 Tg yr−1. The large uncertainty in this value arises from the uncertainty in the bias correction functions. Using measurements from the HIPPO and BARCA aircraft campaigns, we show that systematic errors in the SCIAMACHY measurements are a main factor limiting the performance of the inversions. To further constrain tropical emissions of methane using current and future satellite missions, extended validation capabilities in the tropics are of critical importance.

@@ -3,13 +3,15 @@ pagetitle: "Publications | FraLab"
 toc: false
 listing:
   - id: articles
-    contents: "publications/**.qmd"
+    contents:
+      - "publications/*.qmd"
+      - "publications/preprints/*.qmd"
     template: ./ejs/article.ejs
-    categories: true
+    categories: false
     sort:
       - "year desc"
-    sort-ui: [author,year]
-    filter-ui: [title,year]
+    sort-ui: [year]
+    filter-ui: [title]
     page-size: 80
     field-display-names: 
       publication: "Publication"
@@ -23,7 +25,220 @@ listing:
     <li class="breadcrumb-item active" aria-current="page">Publications</li>
   </ol>
 </nav>
+
+<div class="pubs-layout">
+  <div class="pubs-content">
 ```
 
 :::{#articles}
 :::
+
+```{=html}
+  </div>
+  <aside class="pubs-sidebar">
+    <div class="pubs-sidebar-title">Types</div>
+    <div id="pub-type-filters" class="pubs-type-filters"></div>
+    <div class="pubs-sidebar-title">Years</div>
+    <ul id="pub-year-list" class="pubs-year-list"></ul>
+  </aside>
+</div>
+
+<script>
+  (function () {
+    let activeYear = null;
+    function typesetMath() {
+      if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+        window.MathJax.typesetPromise();
+      }
+    }
+
+    function decodeTitleHtml() {
+      const titles = document.querySelectorAll('#listing-articles .listing-title');
+      titles.forEach((el) => {
+        const html = el.innerHTML;
+        const formulaToHtml = (formula) => {
+          let plain = formula
+            .replace(/\\mathrm\{([^}]+)\}/g, '$1')
+            .replace(/\\mathbf\{([^}]+)\}/g, '$1')
+            .replace(/\s+/g, '');
+          plain = plain
+            .replace(/_\{?(\d+)\}?/g, '<sub>$1</sub>')
+            .replace(/\^\{?(\d+)\}?/g, '<sup>$1</sup>')
+            .replace(/([A-Za-z])([0-9]+)/g, '$1<sub>$2</sub>');
+          return plain;
+        };
+        let decoded = html
+          .replace(/&lt;(\/?)sub&gt;/gi, '<$1sub>')
+          .replace(/&lt;(\/?)sup&gt;/gi, '<$1sup>')
+          .replace(/\s*<sub>\s*/gi, '<sub>')
+          .replace(/\s*<\/sub>\s*/gi, '</sub>')
+          .replace(/\s*<sup>\s*/gi, '<sup>')
+          .replace(/\s*<\/sup>\s*/gi, '</sup>')
+          .replace(/\$([^$]+)\$/g, (_m, inner) => formulaToHtml(inner))
+          .replace(/\s{2,}/g, ' ');
+        if (decoded !== html) {
+          el.innerHTML = decoded.trim();
+        }
+      });
+    }
+
+    function buildYearSidebar() {
+      const listing = window['quarto-listings'] && window['quarto-listings']['listing-articles'];
+      const listRoot = document.querySelector('#listing-articles .pub-list');
+      const yearList = document.getElementById('pub-year-list');
+      const typeFilters = document.getElementById('pub-type-filters');
+      if (!listing || !listRoot || !yearList) return false;
+
+      const items = listing.items.map((item) => item.elm).filter(Boolean);
+      const yearCounts = new Map();
+      const typeCounts = new Map();
+
+      function selectedTypes() {
+        if (!typeFilters) return [];
+        return Array.from(typeFilters.querySelectorAll('input[type="checkbox"]'))
+          .filter((cb) => cb.checked)
+          .map((cb) => cb.value);
+      }
+
+      items.forEach((item) => {
+        const typeSpan = item.querySelector('.listing-type');
+        const type = typeSpan ? typeSpan.textContent.trim() : '';
+        if (type) {
+          typeCounts.set(type, (typeCounts.get(type) || 0) + 1);
+        }
+      });
+
+      const selected = selectedTypes();
+      const typeFilteredItems = selected.length
+        ? items.filter((item) => {
+            const typeSpan = item.querySelector('.listing-type');
+            const type = typeSpan ? typeSpan.textContent.trim() : '';
+            return selected.includes(type);
+          })
+        : [];
+
+      typeFilteredItems.forEach((item) => {
+        const yearSpan = item.querySelector('.listing-year');
+        if (!yearSpan) return;
+        const match = yearSpan.textContent.match(/\d{4}/);
+        if (!match) return;
+        const year = match[0];
+        yearCounts.set(year, (yearCounts.get(year) || 0) + 1);
+      });
+
+      const years = Array.from(yearCounts.keys()).sort((a, b) => Number(b) - Number(a));
+      yearList.innerHTML = '';
+
+      function setActive(linkEl) {
+        yearList.querySelectorAll('a').forEach((a) => a.classList.remove('active'));
+        if (linkEl) linkEl.classList.add('active');
+      }
+
+      function applyFilter(year) {
+        if (typeof year !== 'undefined') {
+          activeYear = year;
+        }
+        const types = selectedTypes();
+        if (types.length === 0) {
+          listing.filter(() => false);
+          return;
+        }
+        listing.filter((item) => {
+          const yearSpan = item.elm ? item.elm.querySelector('.listing-year') : null;
+          const match = yearSpan ? yearSpan.textContent.match(/\d{4}/) : null;
+          const itemYear = match ? match[0] : null;
+          const typeSpan = item.elm ? item.elm.querySelector('.listing-type') : null;
+          const itemType = typeSpan ? typeSpan.textContent.trim() : '';
+          const typeOk = types.length === 0 || types.includes(itemType);
+          return (!activeYear || itemYear === activeYear) && typeOk;
+        });
+      }
+
+      if (typeFilters && typeFilters.childElementCount === 0) {
+        typeFilters.innerHTML = '';
+        const types = Array.from(typeCounts.keys()).sort();
+
+        types.forEach((type) => {
+          const id = `type-${type.replace(/[^a-z0-9]+/gi, '-')}`;
+          const wrap = document.createElement('div');
+          wrap.className = 'pubs-type-option';
+          const cb = document.createElement('input');
+          cb.type = 'checkbox';
+          cb.id = id;
+          cb.value = type;
+          cb.checked = type === 'journal-article';
+          cb.addEventListener('change', () => {
+            buildYearSidebar();
+            applyFilter(activeYear);
+          });
+          const label = document.createElement('label');
+          label.setAttribute('for', id);
+          label.textContent = `${type} (${typeCounts.get(type)})`;
+          wrap.appendChild(cb);
+          wrap.appendChild(label);
+          typeFilters.appendChild(wrap);
+        });
+      }
+
+      const allItem = document.createElement('li');
+      const allLink = document.createElement('a');
+      allLink.href = '#';
+      allLink.textContent = `All (${typeFilteredItems.length})`;
+      allLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        setActive(allLink);
+        activeYear = null;
+        applyFilter(activeYear);
+      });
+      allItem.appendChild(allLink);
+      yearList.appendChild(allItem);
+
+      years.forEach((year) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '#';
+        a.textContent = `${year} (${yearCounts.get(year)})`;
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          setActive(a);
+          applyFilter(year);
+        });
+        li.appendChild(a);
+        yearList.appendChild(li);
+      });
+
+      if (activeYear) {
+        const activeLink = Array.from(yearList.querySelectorAll('a'))
+          .find((a) => a.textContent.startsWith(activeYear));
+        setActive(activeLink || allLink);
+      } else {
+        setActive(allLink);
+      }
+      applyFilter(activeYear);
+      decodeTitleHtml();
+      typesetMath();
+      return true;
+    }
+
+    function initWhenReady() {
+      if (!buildYearSidebar()) {
+        setTimeout(initWhenReady, 250);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initWhenReady);
+    } else {
+      initWhenReady();
+    }
+
+    if (window['quarto-listing-loaded']) {
+      const prev = window['quarto-listing-loaded'];
+      window['quarto-listing-loaded'] = function () {
+        prev();
+        initWhenReady();
+      };
+    }
+  })();
+</script>
+```

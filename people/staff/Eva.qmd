@@ -9,7 +9,7 @@ about:
   template: solana
   image-shape: round
   links:
-    - text: "{{< ai google-scholar >}} Google Scholar"
+    - text: "{{< iconify academicons google-scholar >}} Google Scholar"
       href: https://scholar.google.com/citations?user=lskO0BMAAAAJ&hl=de&oi=ao
     - text: "{{< iconify fa6-brands orcid >}} OrcidID"
       href: https://orcid.org/0000-0002-8862-0831

@@ -1,13 +1,16 @@
 ---
-title: "Improving estimates of gross primary productivity by assimilating solar-induced fluorescence satellite retrievals in a terrestrial biosphere model using a process-based SIF model"
-author: "Bacour, Cedric and Maignan, Fabienne and MacBean, Natasha and Porcar-Castell, Albert and Flexas, Jaume and Frankenberg, Christian and Peylin, Philippe and Chevallier, F and Vuichard, N and Bastrikov, Vladislav"
-type: "article"
+title: 'Improving Estimates of Gross Primary Productivity by Assimilating Solar‐Induced Fluorescence Satellite Retrievals in a Terrestrial Biosphere Model Using a Process‐Based SIF Model'
+author: 'Bacour, C. and Maignan, F. and MacBean, N. and Porcar‐Castell, A. and Flexas, J. and Frankenberg, C. and Peylin, P. and Chevallier, F. and Vuichard, N. and Bastrikov, V.'
+type: 'journal-article'
 year: 2019
-publication: "Journal of Geophysical Research: Biogeosciences"
-doi: "10.1029/2019jg005040"
-materials: ""
+publication: 'Journal of Geophysical Research: Biogeosciences'
+doi: '10.1029/2019jg005040'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractOver the last few years, solar‐induced chlorophyll fluorescence (SIF) observations from space have emerged as a promising resource for evaluating the spatio‐temporal distribution of gross primary productivity (GPP) simulated by global terrestrial biosphere models. SIF can be used to improve GPP simulations by optimizing critical model parameters through statistical Bayesian data assimilation techniques. A prerequisite is the availability of a functional link between GPP and SIF in terrestrial biosphere models. Here we present the development of a mechanistic SIF observation operator in the ORCHIDEE (Organizing Carbon and Hydrology In Dynamic Ecosystems) terrestrial biosphere model. It simulates the regulation of photosystem II fluorescence quantum yield at the leaf level thanks to a novel parameterization of non‐photochemical quenching as a function of temperature, photosynthetically active radiation, and normalized quantum yield of photochemistry. It emulates the radiative transfer of chlorophyll fluorescence to the top of the canopy using a parametric simplification of the SCOPE (Soil Canopy Observation Photosynthesis Energy) model. We assimilate two years of monthly OCO‐2 (Orbiting Carbon Observatory‐2) SIF product at 0.5° (2015–2016) to optimize ORCHIDEE photosynthesis and phenological parameters over an ensemble of grid points for all plant functional types. The impact on the simulated GPP is considerable with a large decrease of the global scale budget by 28 GtC/year over the period 1990–2009. The optimized GPP budget (134/136 GtC/year over 1990–2009/2001–2009) remarkably agrees with independent GPP estimates, FLUXSAT (137 GtC/year over 2001–2009) in particular and FLUXCOM (121 GtC/year over 1990–2009). Our results also suggest a biome dependency of the SIF‐GPP relationship that needs to be improved for some plant functional types.

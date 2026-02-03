@@ -2,16 +2,82 @@
 ```{=html}
 <ul class="pub-list list">
 <% for (const item of items) { %>
+  <% const decodeEntitiesOnce = (value) => (value || '')
+       .replace(/&lt;/g, '<')
+       .replace(/&gt;/g, '>')
+       .replace(/&quot;/g, '"')
+       .replace(/&#39;/g, "'")
+       .replace(/&amp;/g, '&')
+       .replace(/&#(\d+);/g, (_m, code) => String.fromCharCode(Number(code)))
+       .replace(/&#x([0-9a-fA-F]+);/g, (_m, code) => String.fromCharCode(parseInt(code, 16)));
+     const decodeEntities = (value) => {
+       let current = value || '';
+       for (let i = 0; i < 3; i += 1) {
+         const next = decodeEntitiesOnce(current);
+         if (next === current) break;
+         current = next;
+       }
+       return current;
+     };
+     const titleDecoded = decodeEntities(item.title || '');
+     const titleHtml = titleDecoded.replace(/\$\\mathrm\{([^}]+)\}\$/g, (_m, formula) => {
+       const plain = formula.replace(/_\{?(\d+)\}?/g, '$1');
+       return plain.replace(/([A-Za-z])([0-9]+)/g, '$1<sub>$2</sub>');
+     }).replace(/\b([A-Z][a-z]?)(\d+)\b/g, '$1<sub>$2</sub>'); %>
+  <% const formatAuthors = (value) => {
+       const raw = (value || '').trim();
+       if (!raw) return '';
+       const parts = raw.split(/\s+and\s+/i).map((p) => p.trim()).filter(Boolean);
+       const formatted = parts.map((p) => {
+         const cleaned = p.replace(/\s+/g, ' ').replace(/[{}]/g, '').trim();
+         if (!cleaned) return '';
+         if (cleaned.includes(',')) {
+           const [last, rest] = cleaned.split(',').map((s) => s.trim());
+           const initials = (rest || '')
+             .split(/\s+/)
+             .map((token) => token.replace(/[^A-Za-z-]/g, ''))
+             .filter(Boolean)
+             .map((token) => `${token[0]}.`)
+             .join(' ');
+           return `${last}${initials ? `, ${initials}` : ''}`;
+         }
+         const tokens = cleaned.split(/\s+/).filter(Boolean);
+         if (tokens.length === 1) return tokens[0];
+         const last = tokens[tokens.length - 1];
+         const initials = tokens.slice(0, -1).map((token) => `${token[0]}.`).join(' ');
+         return `${last}${initials ? `, ${initials}` : ''}`;
+       }).filter(Boolean);
+       if (formatted.length <= 1) return formatted.join('');
+       return `${formatted.slice(0, -1).join(', ')} and ${formatted[formatted.length - 1]}`;
+     };
+     const authorsFormatted = formatAuthors(item.author); %>
   <li <%= metadataAttrs(item) %>>
-    <span class="listing-title lead" style="color:orange;font-weight:bold"><%= item.title %></span><br />
-    <span class="listing-author"><%= item.author %></span>
-    <span class="listing-publication fst-italic "><%= item.publication %></span>
-    <span class="listing-year">(<%= item.year %>)</span>
+    <div class="pub-item">
+      <div class="listing-title pub-title"><%- titleHtml %></div>
+      <div class="listing-author pub-authors"><%= authorsFormatted %></div>
+      <span class="listing-type pub-type" style="display:none"><%= item.type %></span>
+      <div class="pub-meta">
+        <span class="listing-publication pub-publication"><%= item.publication %></span>
+        <span class="listing-year pub-year">(<%= item.year %>)</span>
+      </div>
+      <div class="pub-links">
     <% if (item.doi) { %>
     <a href="https://doi.org/<%- item.doi %>">
       DOI
     </a>
     <% } %>
+    <% if (item.materials) { %>
+    <a href="<%- item.materials %>">
+      PDF
+    </a>
+    <% } %>
+    <% if (item.supplement) { %>
+    <a href="<%- item.supplement %>">
+      Supplement
+    </a>
+    <% } %>
+      </div>
+    </div>
   </li>
 <% } %>
 </ul>

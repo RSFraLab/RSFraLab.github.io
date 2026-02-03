@@ -1,11 +1,13 @@
 ---
-title: "Optical vegetation indices for monitoring terrestrial ecosystems globally"
-author: "Zeng, Yelu and Hao, Dalei and Huete, Alfredo and Dechant, Benjamin and Berry, Joe and Chen, Jing M and Joiner, Joanna and Frankenberg, Christian and Bond-Lamberty, Ben and Ryu, Youngryel and others"
-type: "article"
+title: 'Optical vegetation indices for monitoring terrestrial ecosystems globally'
+author: 'Zeng, Yelu and Hao, Dalei and Huete, Alfredo and Dechant, Benjamin and Berry, Joe and Chen, Jing M. and Joiner, Joanna and Frankenberg, Christian and Bond-Lamberty, Ben and Ryu, Youngryel and Xiao, Jingfeng and Asrar, Ghassem R. and Chen, Min'
+type: 'journal-article'
 year: 2022
-publication: "Nature Reviews Earth & Environment"
-doi: "10.1038/s43017-022-00298-5"
-materials: ""
+publication: 'Nature Reviews Earth &amp; Environment'
+doi: '10.1038/s43017-022-00298-5'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 

@@ -1,13 +1,16 @@
 ---
-title: "Simulations of chlorophyll fluorescence incorporated into the C ommunity L and M odel version 4"
-author: "Lee, Jung-Eun and Berry, Joseph A and van der Tol, Christiaan and Yang, Xi and Guanter, Luis and Damm, Alexander and Baker, Ian and Frankenberg, Christian"
-type: "article"
+title: 'Simulations of chlorophyll fluorescence incorporated into the <scp>C</scp>ommunity <scp>L</scp>and <scp>M</scp>odel version 4'
+author: 'Lee, Jung‐Eun and Berry, Joseph A. and van der Tol, Christiaan and Yang, Xi and Guanter, Luis and Damm, Alexander and Baker, Ian and Frankenberg, Christian'
+type: 'journal-article'
 year: 2015
-publication: "Global change biology"
-doi: "10.1111/gcb.12948"
-materials: ""
+publication: 'Global Change Biology'
+doi: '10.1111/gcb.12948'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractSeveral studies have shown that satellite retrievals of solar‐induced chlorophyll fluorescence (SIF) provide useful information on terrestrial photosynthesis or gross primary production (GPP). Here, we have incorporated equations coupling SIF to photosynthesis in a land surface model, the National Center for Atmospheric Research Community Land Model version 4 (NCAR CLM<sub>4</sub>), and have demonstrated its use as a diagnostic tool for evaluating the calculation of photosynthesis, a key process in a land surface model that strongly influences the carbon, water, and energy cycles. By comparing forward simulations of SIF, essentially as a byproduct of photosynthesis, in CLM<sub>4</sub> with observations of actual SIF, it is possible to check whether the model is accurately representing photosynthesis and the processes coupled to it. We provide some background on how SIF is coupled to photosynthesis, describe how SIF was incorporated into CLM<sub>4</sub>, and demonstrate that our simulated relationship between SIF and GPP values are reasonable when compared with satellite (Greenhouse gases Observing SATellite; GOSAT) and in situ flux‐tower measurements. CLM<sub>4</sub> overestimates SIF in tropical forests, and we show that this error can be corrected by adjusting the maximum carboxylation rate (Vmax) specified for tropical forests in CLM<sub>4</sub>. Our study confirms that SIF has the potential to improve photosynthesis simulation and thereby can play a critical role in improving land surface and carbon cycle models.

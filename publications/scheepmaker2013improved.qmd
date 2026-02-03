@@ -1,13 +1,20 @@
 ---
-title: "Improved water vapour spectroscopy in the 4174-4300 cm- 1 region and its impact on SCIAMACHY HDO/H 2 O measurements"
-author: "Scheepmaker, RA and Frankenberg, Christian and Galli, Andre and Butz, Andre and Schrijver, Hans and Deutscher, NM and Wunch, D and Warneke, Thorsten and Fally, Sophie and Aben, Ilse"
-type: "article"
+title: 'Improved water vapour spectroscopy in the 4174–4300 cm
+<sup>−1</sup>
+region and its impact on SCIAMACHY HDO/H
+<sub>2</sub>
+O measurements'
+author: 'Scheepmaker, R. A. and Frankenberg, C. and Galli, A. and Butz, A. and Schrijver, H. and Deutscher, N. M. and Wunch, D. and Warneke, T. and Fally, S. and Aben, I.'
+type: 'journal-article'
 year: 2013
-publication: "Atmospheric Measurement Techniques"
-doi: "10.5194/amt-6-879-2013"
-materials: ""
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-6-879-2013'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Abstract. The relative abundance of the heavy water isotopologue HDO provides a deeper insight into the atmospheric hydrological cycle. The SCanning Imaging Absorption spectroMeter for Atmospheric CartograpHY (SCIAMACHY) allows for global retrievals of the ratio HDO/H<sub>2</sub>O in the 2.3 micron wavelength range. However, the spectroscopy of water lines in this region remains a large source of uncertainty for these retrievals. We therefore evaluate and improve the water spectroscopy in the range 4174–4300 cm−1 and test if this reduces systematic uncertainties in the SCIAMACHY retrievals of HDO/H<sub>2</sub>O. We use a laboratory spectrum of water vapour to fit line intensity, air broadening and wavelength shift parameters. The improved spectroscopy is tested on a series of ground-based high resolution FTS spectra as well as on SCIAMACHY retrievals of H<sub>2</sub>O and the ratio HDO/H<sub>2</sub>O. We find that the improved spectroscopy leads to lower residuals in the FTS spectra compared to HITRAN 2008 and Jenouvrier et al. (2007) spectroscopy, and the retrievals become more robust against changes in the retrieval window. For both the FTS and SCIAMACHY measurements, the retrieved total H<sub>2</sub>O columns decrease by 2–4% and we find a negative shift of the HDO/H<sub>2</sub>O ratio, which for SCIAMACHY is partly compensated by changes in the retrieval setup and calibration software. The updated SCIAMACHY HDO/H<sub>2</sub>O product shows somewhat steeper latitudinal and temporal gradients and a steeper Rayleigh distillation curve, strengthening previous conclusions that current isotope-enabled general circulation models underestimate the variability in the near-surface HDO/H<sub>2</sub>O ratio.

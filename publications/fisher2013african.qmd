@@ -1,13 +1,48 @@
 ---
-title: "African tropical rainforest net carbon dioxide fluxes in the twentieth century"
-author: "Fisher, Joshua B and Sikka, Munish and Sitch, Stephen and Ciais, Philippe and Poulter, Benjamin and Galbraith, David and Lee, Jung-Eun and Huntingford, Chris and Viovy, Nicolas and Zeng, Ning and others"
-type: "article"
+title: 'African tropical rainforest net carbon dioxide fluxes in the twentieth century'
+author: 'Fisher, Joshua B. and Sikka, Munish and Sitch, Stephen and Ciais, Philippe and Poulter, Benjamin and Galbraith, David and Lee, Jung-Eun and Huntingford, Chris and Viovy, Nicolas and Zeng, Ning and Ahlström, Anders and Lomas, Mark R. and Levy, Peter E. and Frankenberg, Christian and Saatchi, Sassan and Malhi, Yadvinder'
+type: 'journal-article'
 year: 2013
-publication: "Philosophical Transactions of the Royal Society B: Biological Sciences"
-doi: "10.1098/rstb.2012.0376"
-materials: ""
+publication: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+doi: '10.1098/rstb.2012.0376'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+The African humid tropical biome constitutes the second largest rainforest region, significantly impacts global carbon cycling and climate, and has undergone major changes in functioning owing to climate and land-use change over the past century. We assess changes and trends in CO
+2
+fluxes from 1901 to 2010 using nine land surface models forced with common driving data, and depict the inter-model variability as the uncertainty in fluxes. The biome is estimated to be a natural (no disturbance) net carbon sink (−0.02 kg C m
+−2
+yr
+−1
+or −0.04 Pg C yr
+−1
+,
+p
+< 0.05) with increasing strength fourfold in the second half of the century. The models were in close agreement on net CO
+2
+flux at the beginning of the century (
+σ
+1901
+= 0.02 kg C m
+−2
+yr
+−1
+), but diverged exponentially throughout the century (
+σ
+2010
+= 0.03 kg C m
+−2
+yr
+−1
+). The increasing uncertainty is due to differences in sensitivity to increasing atmospheric CO
+2
+, but not increasing water stress, despite a decrease in precipitation and increase in air temperature. However, the largest uncertainties were associated with the most extreme drought events of the century. These results highlight the need to constrain modelled CO
+2
+fluxes with increasing atmospheric CO
+2
+concentrations and extreme climatic events, as the uncertainties will only amplify in the next century.

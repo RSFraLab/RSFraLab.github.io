@@ -1,13 +1,16 @@
 ---
-title: "Drought onset mechanisms revealed by satellite solar-induced chlorophyll fluorescence: Insights from two contrasting extreme events"
-author: "Sun, Ying and Fu, Rong and Dickinson, Robert and Joiner, Joanna and Frankenberg, Christian and Gu, Lianhong and Xia, Youlong and Fernando, Nelun"
-type: "article"
+title: 'Drought onset mechanisms revealed by satellite solar‐induced chlorophyll fluorescence: Insights from two contrasting extreme events'
+author: 'Sun, Ying and Fu, Rong and Dickinson, Robert and Joiner, Joanna and Frankenberg, Christian and Gu, Lianhong and Xia, Youlong and Fernando, Nelun'
+type: 'journal-article'
 year: 2015
-publication: "Journal of Geophysical Research: Biogeosciences"
-doi: "10.1002/2015jg003150"
-materials: ""
+publication: 'Journal of Geophysical Research: Biogeosciences'
+doi: '10.1002/2015jg003150'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractThis study uses the droughts of 2011 in Texas and 2012 over the central Great Plains as case studies to explore the potential of satellite‐observed solar‐induced chlorophyll fluorescence (SIF) for monitoring drought dynamics. We find that the spatial patterns of negative SIF anomalies from the Global Ozone Monitoring Experiment 2 (GOME‐2) closely resembled drought intensity maps from the U.S. Drought Monitor for both events. The drought‐induced suppression of SIF occurred throughout 2011 but was exacerbated in summer in the Texas drought. This event was characterized by a persistent depletion of root zone soil moisture caused by yearlong below‐normal precipitation. In contrast, for the central Great Plains drought, warmer temperatures and relatively normal precipitation boosted SIF in the spring of 2012; however, a sudden drop in precipitation coupled with unusually high temperatures rapidly depleted soil moisture through evapotranspiration, leading to a rapid onset of drought in early summer. Accordingly, SIF reversed from above to below normal. For both regions, the GOME‐2 SIF anomalies were significantly correlated with those of root zone soil moisture, indicating that the former can potentially be used as proxy of the latter for monitoring agricultural droughts with different onset mechanisms. Further analyses indicate that the contrasting dynamics of SIF during these two extreme events were caused by changes in both fraction of absorbed photosynthetically active radiation fPAR and fluorescence yield, suggesting that satellite SIF is sensitive to both structural and physiological/biochemical variations of vegetation. We conclude that the emerging satellite SIF has excellent potential for dynamic drought monitoring.

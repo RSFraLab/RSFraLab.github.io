@@ -1,13 +1,16 @@
 ---
-title: "Atmospheric CH4 in the first decade of the 21st century: Inverse modeling analysis using SCIAMACHY satellite retrievals and NOAA surface measurements"
-author: "Bergamaschi, Peter and Houweling, Sander and Segers, Arjo and Krol, M and Frankenberg, Christian and Scheepmaker, RA and Dlugokencky, Edward and Wofsy, Steven C and Kort, EA and Sweeney, Colm and others"
-type: "article"
+title: 'Atmospheric CH<sub>4</sub> in the first decade of the 21st century: Inverse modeling analysis using SCIAMACHY satellite retrievals and NOAA surface measurements'
+author: 'Bergamaschi, P. and Houweling, S. and Segers, A. and Krol, M. and Frankenberg, C. and Scheepmaker, R. A. and Dlugokencky, E. and Wofsy, S. C. and Kort, E. A. and Sweeney, C. and Schuck, T. and Brenninkmeijer, C. and Chen, H. and Beck, V. and Gerbig, C.'
+type: 'journal-article'
 year: 2013
-publication: "Journal of Geophysical Research: Atmospheres"
-doi: "10.1002/jgrd.50480"
-materials: ""
+publication: 'Journal of Geophysical Research: Atmospheres'
+doi: '10.1002/jgrd.50480'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractThe causes of renewed growth in the atmospheric CH<sub>4</sub> burden since 2007 are still poorly understood and subject of intensive scientific discussion. We present a reanalysis of global CH<sub>4</sub> emissions during the 2000s, based on the TM<sub>5</sub>‐4DVAR inverse modeling system. The model is optimized using high‐accuracy surface observations from NOAA ESRL's global air sampling network for 2000–2010 combined with retrievals of column‐averaged CH<sub>4</sub> mole fractions from SCIAMACHY onboard ENVISAT (starting 2003). Using climatological OH fields, derived global total emissions for 2007–2010 are 16–20 Tg CH<sub>4</sub>/yr higher compared to 2003–2005. Most of the inferred emission increase was located in the tropics (9–14 Tg CH<sub>4</sub>/yr) and mid‐latitudes of the northern hemisphere (6–8 Tg CH<sub>4</sub>/yr), while no significant trend was derived for Arctic latitudes. The atmospheric increase can be attributed mainly to increased anthropogenic emissions, but the derived trend is significantly smaller than estimated in the EDGARv<sub>4</sub>.2 emission inventory. Superimposed on the increasing trend in anthropogenic CH<sub>4</sub> emissions are significant inter‐annual variations (IAV) of emissions from wetlands (up to ±10 Tg CH<sub>4</sub>/yr), and biomass burning (up to ±7 Tg CH<sub>4</sub>/yr). Sensitivity experiments, which investigated the impact of the SCIAMACHY observations (versus inversions using only surface observations), of the OH fields used, and of a priori emission inventories, resulted in differences in the detailed latitudinal attribution of CH<sub>4</sub> emissions, but the IAV and trends aggregated over larger latitude bands were reasonably robust. All sensitivity experiments show similar performance against independent shipboard and airborne observations used for validation, except over Amazonia where satellite retrievals improved agreement with observations in the free troposphere.

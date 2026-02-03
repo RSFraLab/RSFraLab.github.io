@@ -1,11 +1,13 @@
 ---
-title: "Toward accurate CO2 and CH4 observations from GOSAT"
-author: "Butz, Andre and Guerlet, S and Hasekamp, O and Schepers, D and Galli, A and Aben, Ilse and Frankenberg, C and Hartmann, J-M and Tran, H and Kuze, A and others"
-type: "article"
+title: 'Toward accurate CO<sub>2</sub>and CH<sub>4</sub>observations from GOSAT'
+author: 'Butz, A. and Guerlet, S. and Hasekamp, O. and Schepers, D. and Galli, A. and Aben, I. and Frankenberg, C. and Hartmann, J.-M. and Tran, H. and Kuze, A. and Keppel-Aleks, G. and Toon, G. and Wunch, D. and Wennberg, P. and Deutscher, N. and Griffith, D. and Macatangay, R. and Messerschmidt, J. and Notholt, J. and Warneke, T.'
+type: 'journal-article'
 year: 2011
-publication: "Geophysical Research Letters"
-doi: "10.5194/egusphere-egu2020-3576"
-materials: ""
+publication: 'Geophysical Research Letters'
+doi: '10.1029/2011gl047888'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 

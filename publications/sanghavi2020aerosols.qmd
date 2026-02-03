@@ -1,11 +1,13 @@
 ---
-title: "Aerosols in OCO-2/GOSAT retrievals of XCO2: An information content and error analysis"
-author: "Sanghavi, Suniti and Nelson, Robert and Frankenberg, Christian and Gunson, Michael"
-type: "article"
+title: 'Aerosols in OCO-2/GOSAT retrievals of XCO<sub>2</sub>: An information content and error analysis'
+author: 'Sanghavi, Suniti and Nelson, Robert and Frankenberg, Christian and Gunson, Michael'
+type: 'journal-article'
 year: 2020
-publication: "Remote Sensing of Environment"
-doi: "10.1016/j.rse.2020.112053"
-materials: ""
+publication: 'Remote Sensing of Environment'
+doi: '10.1016/j.rse.2020.112053'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 

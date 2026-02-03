@@ -1,13 +1,16 @@
 ---
-title: "Detecting forest response to droughts with global observations of vegetation water content"
-author: "Konings, Alexandra G and Saatchi, Sassan S and Frankenberg, Christian and Keller, Michael and Leshyk, Victor and Anderegg, William RL and Humphrey, Vincent and Matheny, Ashley M and Trugman, Anna and Sack, Lawren and others"
-type: "article"
+title: 'Detecting forest response to droughts with global observations of vegetation water content'
+author: 'Konings, Alexandra G. and Saatchi, Sassan S. and Frankenberg, Christian and Keller, Michael and Leshyk, Victor and Anderegg, William R. L. and Humphrey, Vincent and Matheny, Ashley M. and Trugman, Anna and Sack, Lawren and Agee, Elizabeth and Barnes, Mallory L. and Binks, Oliver and Cawse‐Nicholson, Kerry and Christoffersen, Bradley O. and Entekhabi, Dara and Gentine, Pierre and Holtzman, Nataniel M. and Katul, Gabriel G. and Liu, Yanlan and Longo, Marcos and Martinez‐Vilalta, Jordi and McDowell, Nate and Meir, Patrick and Mencuccini, Maurizio and Mrad, Assaad and Novick, Kimberly A. and Oliveira, Rafael S. and Siqueira, Paul and Steele‐Dunne, Susan C. and Thompson, David R. and Wang, Yujie and Wehr, Richard and Wood, Jeffrey D. and Xu, Xiangtao and Zuidema, Pieter A.'
+type: 'journal-article'
 year: 2021
-publication: "Global change biology"
-doi: "10.1111/gcb.15872"
-materials: ""
+publication: 'Global Change Biology'
+doi: '10.1111/gcb.15872'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractDroughts in a warming climate have become more common and more extreme, making understanding forest responses to water stress increasingly pressing. Analysis of water stress in trees has long focused on water potential in xylem and leaves, which influences stomatal closure and water flow through the soil‐plant‐atmosphere continuum. At the same time, changes of vegetation water content (VWC) are linked to a range of tree responses, including fluxes of water and carbon, mortality, flammability, and more. Unlike water potential, which requires demandingin situmeasurements, VWC can be retrieved from remote sensing measurements, particularly at microwave frequencies using radar and radiometry. Here, we highlight key frontiers through which VWC has the potential to significantly increase our understanding of forest responses to water stress. To validate remote sensing observations of VWC at landscape scale and to better relate them to data assimilation model parameters, we introduce an ecosystem‐scale analog of the pressure–volume curve, the non‐linear relationship between average leaf or branch water potential and water content commonly used in plant hydraulics. The sources of variability in these ecosystem‐scale pressure‐volume curves and their relationship to forest response to water stress are discussed. We further show to what extent diel, seasonal, and decadal dynamics of VWC reflect variations in different processes relating the tree response to water stress. VWC can also be used for inferring belowground conditions—which are difficult to impossible to observe directly. Lastly, we discuss how a dedicated geostationary spaceborne observational system for VWC, when combined with existing datasets, can capture diel and seasonal water dynamics to advance the science and applications of global forest vulnerability to future droughts.

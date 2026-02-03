@@ -1,13 +1,16 @@
 ---
-title: "Assimilation of atmospheric methane products into the MACC-II system: from SCIAMACHY to TANSO and IASI"
-author: "Massart, S and Agusti-Panareda, A and Aben, I and Butz, A and Chevallier, F and Crevoisier, C and Engelen, R and Frankenberg, C and Hasekamp, O"
-type: "article"
+title: 'Assimilation of atmospheric methane products into the MACC-II system: from SCIAMACHY to TANSO and IASI'
+author: 'Massart, S. and Agusti-Panareda, A. and Aben, I. and Butz, A. and Chevallier, F. and Crevoisier, C. and Engelen, R. and Frankenberg, C. and Hasekamp, O.'
+type: 'journal-article'
 year: 2014
-publication: "Atmospheric Chemistry and Physics"
-doi: "10.5194/acp-14-6139-2014"
-materials: ""
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-14-6139-2014'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Abstract. The Monitoring Atmospheric Composition and Climate Interim Implementation (MACC-II) delayed-mode (DM) system has been producing an atmospheric methane (CH<sub>4</sub>) analysis 6 months behind real time since June 2009. This analysis used to rely on the assimilation of the CH<sub>4</sub> product from the SCanning Imaging Absorption spectroMeter for Atmospheric CHartographY (SCIAMACHY) instrument onboard Envisat. Recently the Laboratoire de Météorologie Dynamique (LMD) CH<sub>4</sub> products from the Infrared Atmospheric Sounding Interferometer (IASI) and the SRON Netherlands Institute for Space Research CH<sub>4</sub> products from the Thermal And Near-infrared Sensor for carbon Observation (TANSO) were added to the DM system. With the loss of Envisat in April 2012, the DM system now has to rely on the assimilation of methane data from TANSO and IASI. This paper documents the impact of this change in the observing system on the methane tropospheric analysis. It is based on four experiments: one free run and three analyses from respectively the assimilation of SCIAMACHY, TANSO and a combination of TANSO and IASI CH<sub>4</sub> products in the MACC-II system. The period between December 2010 and April 2012 is studied. The SCIAMACHY experiment globally underestimates the tropospheric methane by 35 part per billion (ppb) compared to the HIAPER Pole-to-Pole Observations (HIPPO) data and by 28 ppb compared the Total Carbon Column Observing Network (TCCON) data, while the free run presents an underestimation of 5 ppb and 1 ppb against the same HIPPO and TCCON data, respectively. The assimilated TANSO product changed in October 2011 from version v.1 to version v.2.0. The analysis of version v.1 globally underestimates the tropospheric methane by 18 ppb compared to the HIPPO data and by 15 ppb compared to the TCCON data. In contrast, the analysis of version v.2.0 globally overestimates the column by 3 ppb. When the high density IASI data are added in the tropical region between 30° N and 30° S, their impact is mainly positive but more pronounced and effective when combined with version v.2.0 of the TANSO products. The resulting analysis globally underestimates the column-averaged dry-air mole fractions of methane (xCH4) just under 1 ppb on average compared to the TCCON data, whereas in the tropics it overestimates xCH4 by about 3 ppb. The random error is estimated to be less than 7 ppb when compared to TCCON data.
