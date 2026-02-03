@@ -1,13 +1,16 @@
 ---
-title: "Asian monsoon hydrometeorology from TES and SCIAMACHY water vapor isotope measurements and LMDZ simulations: Implications for speleothem climate record interpretation"
-author: "Lee, Jung-Eun and Risi, Camille and Fung, Inez and Worden, John and Scheepmaker, Remco A and Lintner, Benjamin and Frankenberg, Christian"
-type: "article"
+title: 'Asian monsoon hydrometeorology from TES and SCIAMACHY water vapor isotope measurements and LMDZ simulations: Implications for speleothem climate record interpretation'
+author: 'Lee, Jung‐Eun and Risi, Camille and Fung, Inez and Worden, John and Scheepmaker, Remco A. and Lintner, Benjamin and Frankenberg, Christian'
+type: 'journal-article'
 year: 2012
-publication: "Journal of Geophysical Research: Atmospheres"
-doi: "10.1029/2011jd017133"
-materials: ""
+publication: 'Journal of Geophysical Research: Atmospheres'
+doi: '10.1029/2011jd017133'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Observations show that heavy oxygen isotope composition in precipitation (δ18Op) increases from coastal southeastern (SE) China to interior northwestern (NW) China during the wet season, contradicting expectations from simple Rayleigh distillation theory. Here we employ stable isotopes of precipitation and vapor from satellite measurements and climate model simulations to characterize the moisture processes that control Asian monsoon precipitation and relate these processes to speleothem paleoclimate records. We find that δ18Op is low over SE China as a result of local and upstream condensation and that δ18Op is high over NW China because of evaporative enrichment of 18O as raindrops fall through dry air. We show that δ18Op at cave sites over southern China is weakly correlated with upstream precipitation in the core of the Indian monsoon region rather than local precipitation, but it is well‐correlated with the δ18Op over large areas of southern and central China, consistent with coherent speleothem δ18Op variations over different parts of China. Previous studies have documented high correlations between speleothem δ18Op and millennial timescale climate forcings, and we suggest that the high correlation between insolation and speleothem δ18Op in southern China reflects the variations of hydrologic processes over the Indian monsoon region on millennial and orbital timescales. The δ18Op in the drier part (north of ∼30°N) of China, on the other hand, has consistently negative correlations with local precipitation and may capture local hydrologic processes related to changes in the extent of the Hadley circulation.

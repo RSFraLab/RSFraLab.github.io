@@ -1,0 +1,39 @@
+---
+title: 'Improved retrievals of carbon dioxide from Orbiting Carbon Observatory-2 with the version 8 ACOS algorithm'
+author: 'O''Dell, Christopher W. and Eldering, Annmarie and Wennberg, Paul O. and Crisp, David and Gunson, Michael R. and Fisher, Brendan and Frankenberg, Christian and Kiel, Matthäus and Lindqvist, Hannakaisa and Mandrake, Lukas and Merrelli, Aronne and Natraj, Vijay and Nelson, Robert R. and Osterman, Gregory B. and Payne, Vivienne H. and Taylor, Thomas E. and Wunch, Debra and Drouin, Brian J. and Oyafuso, Fabiano and Chang, Albert and McDuffie, James and Smyth, Michael and Baker, David F. and Basu, Sourish and Chevallier, Frédéric and Crowell, Sean M. R. and Feng, Liang and Palmer, Paul I. and Dubey, Mavendra and García, Omaira E. and Griffith, David W. T. and Hase, Frank and Iraci, Laura T. and Kivi, Rigel and Morino, Isamu and Notholt, Justus and Ohyama, Hirofumi and Petri, Christof and Roehl, Coleen M. and Sha, Mahesh K. and Strong, Kimberly and Sussmann, Ralf and Te, Yao and Uchino, Osamu and Velazco, Voltaire A.'
+type: 'journal-article'
+year: 2018
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-11-6539-2018'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. Since September 2014, NASA's Orbiting Carbon Observatory-2 (OCO-2)
+satellite has been taking measurements of reflected solar spectra and using
+them to infer atmospheric carbon dioxide levels. This work provides details
+of the OCO-2 retrieval algorithm, versions 7 and 8, used to derive the
+column-averaged dry air mole fraction of atmospheric CO<sub>2</sub>
+(XCO<sub>2</sub>) for the roughly 100 000 cloud-free measurements recorded
+by OCO-2 each day. The algorithm is based on the Atmospheric Carbon
+Observations from Space (ACOS) algorithm which has been applied to
+observations from the Greenhouse Gases Observing SATellite (GOSAT) since
+2009, with modifications necessary for OCO-2. Because high accuracy,
+better than 0.25 %, is required in order to accurately infer carbon
+sources and sinks from XCO<sub>2</sub>, significant errors and regional-scale
+biases in the measurements must be minimized. We discuss efforts to filter
+out poor-quality measurements, and correct the remaining good-quality
+measurements to minimize regional-scale biases. Updates to the radiance
+calibration and retrieval forward model in version 8 have improved many
+aspects of the retrieved data products. The version 8 data appear to have
+reduced regional-scale biases overall, and demonstrate a clear improvement
+over the version 7 data. In particular, error variance with respect to TCCON
+was reduced by 20 % over land and 40 % over ocean between versions 7
+and 8, and nadir and glint observations over land are now more consistent.
+While this paper documents the significant improvements in the ACOS
+algorithm, it will continue to evolve and improve as the CO<sub>2</sub> data
+record continues to expand.

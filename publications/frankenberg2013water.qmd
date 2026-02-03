@@ -1,13 +1,16 @@
 ---
-title: "Water vapor isotopologue retrievals from high-resolution GOSAT shortwave infrared spectra"
-author: "Frankenberg, C and Wunch, D and Toon, G and Risi, C and Scheepmaker, R and Lee, JE and Wennberg, P and Worden, J"
-type: "article"
+title: 'Water vapor isotopologue retrievals from high-resolution GOSAT shortwave infrared spectra'
+author: 'Frankenberg, C. and Wunch, D. and Toon, G. and Risi, C. and Scheepmaker, R. and Lee, J.-E. and Wennberg, P. and Worden, J.'
+type: 'journal-article'
 year: 2013
-publication: ""
-doi: "10.5194/amt-6-263-2013"
-materials: ""
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-6-263-2013'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Abstract. Remote sensing of the isotopic composition of water vapor can provide valuable information on the hydrological cycle. Here, we demonstrate the feasibility of retrievals of the relative abundance of HDO (the HDO/H<sub>2</sub>O ratio) from the Japanese GOSAT satellite. For this purpose, we use high spectral resolution nadir radiances around 6400 cm−1 (1.56 μm) to retrieve vertical column amounts of H<sub>2</sub>O and HDO. Retrievals of H<sub>2</sub>O correlate well with ECMWF (European Centre for Medium-Range Weather Forecasts) integrated profiles (r2 = 0.96). Typical precision errors in the retrieved column-averaged deuterium depletion (δD) are 20–40‰. We compare δD against a TCCON (Total Carbon Column Observing Network) ground-based station in Lamont, Oklahoma. Using retrievals in very dry areas over Antarctica, we detect a small systematic offset in retrieved H<sub>2</sub>O and HDO column amounts and take this into account for a bias correction of δD. Monthly averages of δD in the June 2009 to September 2011 time frame are well correlated with TCCON (r2 = 0.79) and exhibit a slope of 0.98 (1.23 if not bias corrected). We also compare seasonal averages on the global scale with results from the SCIAMACHY instrument in the 2003–2005 time frame. Despite the lack of temporal overlap, seasonal averages in general agree well, with spatial correlations (r2) ranging from 0.62 in September through November to 0.83 in June through August. However, we observe higher variability in GOSAT δD, indicated by fitted slopes between 1.2 and 1.46. The discrepancies are likely related to differences in vertical sensitivities but warrant further validation of both GOSAT and SCIAMACHY and an extension of the validation dataset.

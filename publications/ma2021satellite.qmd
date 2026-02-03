@@ -1,13 +1,16 @@
 ---
-title: "Satellite constraints on the latitudinal distribution and temperature sensitivity of wetland methane emissions"
-author: "Ma, Shuang and Worden, John R and Bloom, A Anthony and Zhang, Yuzhong and Poulter, Benjamin and Cusworth, Daniel H and Yin, Yi and Pandey, Sudhanshu and Maasakkers, Joannes D and Lu, Xiao and others"
-type: "article"
+title: 'Satellite Constraints on the Latitudinal Distribution and Temperature Sensitivity of Wetland Methane Emissions'
+author: 'Ma, Shuang and Worden, John R. and Bloom, A. Anthony and Zhang, Yuzhong and Poulter, Benjamin and Cusworth, Daniel H. and Yin, Yi and Pandey, Sudhanshu and Maasakkers, Joannes D. and Lu, Xiao and Shen, Lu and Sheng, Jianxiong and Frankenberg, Christian and Miller, Charles E. and Jacob, Daniel J.'
+type: 'journal-article'
 year: 2021
-publication: "Agu Advances"
-doi: "10.1029/2021av000408"
-materials: ""
+publication: 'AGU Advances'
+doi: '10.1029/2021av000408'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractWetland methane (CH<sub>4</sub>) emissions comprise about one‐third of the global CH<sub>4</sub> source. The latitudinal distribution and climate sensitivity of wetland CH<sub>4</sub> fluxes are the key determinants of the global CH<sub>4</sub>‐climate feedback. However, large differences exist between bottom‐up estimates, informed by ground‐based flux measurements, and top‐down estimates derived from spaceborne total column CH<sub>4</sub>. Despite the extensive coverage of satellite CH<sub>4</sub> concentration observations, challenges remain with using top‐down estimates to test bottom‐up models, mainly because of the uncertainties in the satellite retrievals, the model representation errors, the variable prior emissions, and the confounding role of the posterior error covariance structures. Here, we use satellite‐based top‐down CH<sub>4</sub> flux estimates (2010–2012) to test and refine 42 bottom‐up estimates of wetland emissions that use a range of hypothesized wetland extents and process controls. Our comparison between bottom‐up models and satellite‐based fluxes innovatively accounts for cross‐correlations and spatial uncertainties typically found in top‐down inverse estimates, such that only the information from satellite observations and the atmospheric transport model is kept as a constraint. We present a satellite‐constrained wetland CH<sub>4</sub> ensemble product derived from assembling the highest‐performance bottom‐up models, which estimates global wetland CH<sub>4</sub> emissions of 148 (117–189, 5th–95th percentile) Tg CH<sub>4</sub> yr−1. We find that tropical wetland emissions contribute 72% (63%–85%) to the global wetland total. We also find that a lower‐than‐expected temperature sensitivity agrees better with atmospheric CH<sub>4</sub> measurements. Overall, our approach demonstrates the potential for using satellites to quantitatively refine bottom‐up wetland CH<sub>4</sub> emission estimates, their latitudinal distributions, and their sensitivity to climate.

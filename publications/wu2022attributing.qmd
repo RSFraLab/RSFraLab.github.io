@@ -1,11 +1,13 @@
 ---
-title: "Attributing differences of solar-induced chlorophyll fluorescence (SIF)-gross primary production (GPP) relationships between two C4 crops: corn and miscanthus"
-author: "Wu, Genghong and Guan, Kaiyu and Jiang, Chongya and Kimm, Hyungsuk and Miao, Guofang and Bernacchi, Carl J and Moore, Caitlin E and Ainsworth, Elizabeth A and Yang, Xi and Berry, Joseph A and others"
-type: "article"
+title: 'Attributing differences of solar-induced chlorophyll fluorescence (SIF)-gross primary production (GPP) relationships between two C<sub>4</sub> crops: corn and miscanthus'
+author: 'Wu, Genghong and Guan, Kaiyu and Jiang, Chongya and Kimm, Hyungsuk and Miao, Guofang and Bernacchi, Carl J. and Moore, Caitlin E. and Ainsworth, Elizabeth A. and Yang, Xi and Berry, Joseph A. and Frankenberg, Christian and Chen, Min'
+type: 'journal-article'
 year: 2022
-publication: "Agricultural and Forest Meteorology"
-doi: "10.1016/j.agrformet.2022.109046"
-materials: ""
+publication: 'Agricultural and Forest Meteorology'
+doi: '10.1016/j.agrformet.2022.109046'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 

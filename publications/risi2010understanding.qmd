@@ -1,13 +1,16 @@
 ---
-title: "Understanding the Sahelian water budget through the isotopic composition of water vapor and precipitation"
-author: "Risi, Camille and Bony, Sandrine and Vimeux, Franccoise and Frankenberg, Christian and Noone, David and Worden, John"
-type: "article"
+title: 'Understanding the Sahelian water budget through the isotopic composition of water vapor and precipitation'
+author: 'Risi, Camille and Bony, Sandrine and Vimeux, Françoise and Frankenberg, Christian and Noone, David and Worden, John'
+type: 'journal-article'
 year: 2010
-publication: "Journal of Geophysical Research: Atmospheres"
-doi: "10.1029/2010jd014690"
-materials: ""
+publication: 'Journal of Geophysical Research: Atmospheres'
+doi: '10.1029/2010jd014690'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+The goal of this paper is to investigate the added value of water isotopic measurements to estimate the relative influence of large‐scale dynamics, convection, and land surface recycling on the Sahelian water budget. To this aim, we use isotope data in the lower tropospheric water vapor measured by the SCIAMACHY and TES satellite instruments and in situ precipitation data from the Global Network for Isotopes in Precipitation and collected during the African Monsoon Multidisciplinary Analysis field campaign, together with water‐tagging experiments with the Laboratoire de Météorologie Dynamique general circulation model (LMDZ) fitted with isotopes. We show that some isotopic biases in LMDZ reveal the misrepresentation of dehydrating processes that would be undetected without isotopic measurements. In dry regions, the vapor isotopic composition is primarily controlled by the intensity of the air dehydration. In addition, it may also keep some memory of dehydration pathways that is erased in the humidity distribution, namely the relative contribution of dehydration in the tropical upper troposphere versus midlatitudes. In wet regions, vapor and rain isotope compositions are primarily controlled by changes in convection, through rain reevaporation and through the progressive depletion of the vapor by convective mixing along air mass trajectories. Gradients in vapor isotope composition along air mass trajectories may help estimate continental recycling intensity, provided that we could quantify the effect of convection on the isotopic composition of water vapor.

@@ -1,13 +1,16 @@
 ---
-title: "First light demonstration of red solar induced fluorescence for harmful algal bloom monitoring"
-author: "Luis, Kelly and Kohler, Philipp and Frankenberg, Christian and Gierach, Michelle"
-type: "article"
+title: 'First Light Demonstration of Red Solar Induced Fluorescence for Harmful Algal Bloom Monitoring'
+author: 'Luis, Kelly and Köhler, Philipp and Frankenberg, Christian and Gierach, Michelle'
+type: 'journal-article'
 year: 2023
-publication: "Geophysical Research Letters"
-doi: "10.1029/2022gl101715"
-materials: ""
+publication: 'Geophysical Research Letters'
+doi: '10.1029/2022gl101715'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractThe risks harmful algal blooms (HAB) pose to aquatic ecosystems, public health, and coastal economies necessitate supplementation of current observation strategies. Herein, we explore the use of red solar induced fluorescence (SIF) from the TROPOspheric Monitoring Instrument (TROPOMI), a remote sensing measurement retrievable in variable cloud conditions, for Karenia brevis detection. Along the West Florida Shelf from 2018 to 2020, we compare red SIF with normalized fluorescence line height (nFLH) from MODIS‐Aqua, a standard remote sensing HAB indicator limited to clear sky days. A strong positive linear relationship is found between nFLH and red SIF during severe bloom conditions in 2018 (N = 33,376, r‐value = 0.79, R<sub>2</sub> = 0.63) permitting direct comparison. Red SIF provided nearly double the amount of spatiotemporal fluorescence information than nFLH. This work presents the first application of TROPOMI's red SIF for HAB monitoring and illuminates an approach for bolstering early warning systems for HABs beyond clear sky conditions.

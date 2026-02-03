@@ -1,13 +1,22 @@
 ---
-title: "Comparisons between SCIAMACHY and ground-based FTIR data for total columns of CO, CH 4, CO 2 and N 2 O"
-author: "Dils, Bart and De Maziere, Martine and Muller, JF and Blumenstock, Thomas and Buchwitz, M and De Beek, R and Demoulin, Philippe and Duchatelet, Pierre and Fast, Hans and Frankenberg, Christian and others"
-type: "article"
+title: 'Comparisons between SCIAMACHY and ground-based FTIR data for total columns of CO, CH
+<sub>4</sub>
+, CO
+<sub>2</sub>
+and N
+<sub>2</sub>
+O'
+author: 'Dils, B. and De Mazière, M. and Müller, J. F. and Blumenstock, T. and Buchwitz, M. and de Beek, R. and Demoulin, P. and Duchatelet, P. and Fast, H. and Frankenberg, C. and Gloudemans, A. and Griffith, D. and Jones, N. and Kerzenmacher, T. and Kramer, I. and Mahieu, E. and Mellqvist, J. and Mittermeier, R. L. and Notholt, J. and Rinsland, C. P. and Schrijver, H. and Smale, D. and Strandberg, A. and Straume, A. G. and Stremme, W. and Strong, K. and Sussmann, R. and Taylor, J. and van den Broek, M. and Velazco, V. and Wagner, T. and Warneke, T. and Wiacek, A. and Wood, S.'
+type: 'journal-article'
 year: 2006
-publication: "Atmospheric Chemistry and Physics"
-doi: "10.5194/acp-6-1953-2006"
-materials: ""
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-6-1953-2006'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Abstract. Total column amounts of CO, CH<sub>4</sub>, CO<sub>2</sub> and N<sub>2</sub>O retrieved from SCIAMACHY nadir observations in its near-infrared channels have been compared to data from a ground-based quasi-global network of Fourier-transform infrared (FTIR) spectrometers. The SCIAMACHY data considered here have been produced by three different retrieval algorithms, WFM-DOAS (version 0.5 for CO and CH<sub>4</sub> and version 0.4 for CO<sub>2</sub> and N<sub>2</sub>O), IMAP-DOAS (version 1.1 and 0.9 (for CO)) and IMLM (version 6.3) and cover the January to December 2003 time period. Comparisons have been made for individual data, as well as for monthly averages. To maximize the number of reliable coincidences that satisfy the temporal and spatial collocation criteria, the SCIAMACHY data have been compared with a temporal 3rd order polynomial interpolation of the ground-based data. Particular attention has been given to the question whether SCIAMACHY observes correctly the seasonal and latitudinal variability of the target species. The present results indicate that the individual SCIAMACHY data obtained with the actual versions of the algorithms have been significantly improved, but that the quality requirements, for estimating emissions on regional scales, are not yet met. Nevertheless, possible directions for further algorithm upgrades have been identified which should result in more reliable data products in a near future.

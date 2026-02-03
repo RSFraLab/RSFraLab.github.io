@@ -1,13 +1,45 @@
 ---
-title: "Continuous ground monitoring of vegetation optical depth and water content with GPS signals"
-author: "Humphrey, Vincent and Frankenberg, Christian"
-type: "article"
+title: 'Continuous ground monitoring of vegetation optical depth and water content with GPS signals'
+author: 'Humphrey, Vincent and Frankenberg, Christian'
+type: 'journal-article'
 year: 2023
-publication: "Biogeosciences"
-doi: "10.5194/bg-2022-84-supplement"
-materials: ""
+publication: 'Biogeosciences'
+doi: '10.5194/bg-20-1789-2023'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Abstract. Satellite microwave remote sensing techniques can be used
+to monitor vegetation optical depth (VOD), a metric which is directly linked
+to vegetation biomass and water content. However, these large-scale
+measurements are still difficult to reference against either rare or not
+directly comparable field observations. So far, in situ estimates of canopy
+biomass or water status often rely on infrequent and time-consuming
+destructive samples, which are not necessarily representative of the canopy
+scale. Here, we present a simple technique based on Global Navigation
+Satellite Systems (GNSS) with the potential to bridge this persisting scale
+gap. Because GNSS microwave signals are attenuated and scattered by
+vegetation and liquid water, placing a GNSS sensor under a vegetated canopy
+and measuring changes in signal strength over time can provide continuous
+information about VOD and thus on vegetation biomass and water content. We
+test this technique at a forested site in southern California for a period
+of 8 months. We show that variations in GNSS signal-to-noise ratios reflect
+the overall distribution of biomass density in the canopy and can be
+monitored continuously. For the first time, we show that this technique can
+resolve diurnal variations in VOD and canopy water content at hourly to
+sub-hourly time steps. Using a model of canopy transmissivity to assess
+these diurnal signals, we find that temperature effects on the vegetation
+dielectric constant, and thus on VOD, may be non-negligible at the diurnal
+scale or during extreme events like heat waves. Sensitivity to rainfall and
+dew deposition events also suggests that canopy water interception can be
+monitored with this approach. The technique presented here has the potential
+to resolve two important knowledge gaps, namely the lack of ground truth
+observations for satellite-based VOD and the need for a reliable
+proxy to extrapolate isolated and labor-intensive in situ measurements of
+biomass, canopy water content, or leaf water potential. We provide
+recommendations for deploying such off-the-shelf and easy-to-use systems at
+existing ecohydrological monitoring networks such as FluxNet or SapfluxNet.

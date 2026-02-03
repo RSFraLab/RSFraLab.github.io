@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Frankenberg, Christian and Platt, U and Wagner, T">
+<meta name="author" content="Frankenberg, C. and Platt, U. and Wagner, T.">
 
 <title>Iterative maximum a posteriori (IMAP)-DOAS for retrieval of strongly absorbing trace gases: Model studies for CH 4 and CO 2 retrieval from near infrared spectra of SCIAMACHY onboard ENVISAT – FraLab</title>
 <style>
@@ -47,8 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-9171db61792df5317058cbbb6d0bf0e8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-8f4d7737b7e67d613ff89a7e31a66232.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-9171db61792df5317058cbbb6d0bf0e8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,12 +84,15 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
 </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 
 <link rel="stylesheet" href="../custom.css">
 <meta property="og:title" content="Iterative maximum a posteriori (IMAP)-DOAS for retrieval of strongly absorbing trace gases: Model studies for CH 4 and CO 2 retrieval from near infrared spectra of SCIAMACHY onboard ENVISAT – FraLab">
+<meta property="og:description" content="Website for the Carbon Cycle Lab at Caltech.">
 <meta property="og:site_name" content="FraLab">
 <meta name="twitter:title" content="Iterative maximum a posteriori (IMAP)-DOAS for retrieval of strongly absorbing trace gases: Model studies for CH 4 and CO 2 retrieval from near infrared spectra of SCIAMACHY onboard ENVISAT – FraLab">
+<meta name="twitter:description" content="Website for the Carbon Cycle Lab at Caltech.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -305,7 +307,7 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="https://scholar.google.com/citations?user=7XYDtdYAAAAJ&amp;hl=en"> 
-<span class="menu-text"><i class="ai  ai-google-scholar" aria-label="google-scholar"></i></span></a>
+<span class="menu-text"><iconify-icon role="img" inline="" icon="academicons:google-scholar" aria-label="Icon google-scholar from academicons Iconify.design set." title="Icon google-scholar from academicons Iconify.design set."></iconify-icon></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/cfranken"> <i class="bi bi-github" role="img" aria-label="GitHub">
@@ -336,7 +338,7 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Iterative maximum a posteriori (IMAP)-DOAS for retrieval of strongly absorbing trace gases: Model studies for CH 4 and CO 2 retrieval from near infrared spectra of SCIAMACHY onboard ENVISAT</h1>
+<h1 class="title">Iterative maximum a posteriori (IMAP)-DOAS for retrieval of strongly absorbing trace gases: Model studies for CH <sub>4</sub> and CO <sub>2</sub> retrieval from near infrared spectra of SCIAMACHY onboard ENVISAT</h1>
 </div>
 
 
@@ -346,7 +348,7 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Frankenberg, Christian and Platt, U and Wagner, T </p>
+             <p>Frankenberg, C. and Platt, U. and Wagner, T. </p>
           </div>
   </div>
     
@@ -369,6 +371,7 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>Abstract. In the past, differential optical absorption spectroscopy (DOAS) has mostly been employed for atmospheric trace gas retrieval in the UV/Vis spectral region. New spectrometers such as SCIAMACHY onboard ENVISAT also provide near infrared channels and thus allow for the detection of greenhouse gases like CH<sub>4</sub>, CO<sub>2</sub>, or N<sub>2</sub>O. However, modifications of the classical DOAS algorithm are necessary to account for the idiosyncrasies of this spectral region, i.e.&nbsp;the temperature and pressure dependence of the high resolution absorption lines. Furthermore, understanding the sensitivity of the measurement of these high resolution, strong absorption lines by means of a non-ideal device, i.e.&nbsp;having finite spectral resolution, is of special importance. This applies not only in the NIR, but can also prove to be an issue for the UV/Vis spectral region. This paper presents a modified iterative maximum a posteriori-DOAS (IMAP-DOAS) algorithm based on optimal estimation theory introduced to the remote sensing community by rodgers76. This method directly iterates the vertical column densities of the absorbers of interest until the modeled total optical density fits the measurement. Although the discussion in this paper lays emphasis on satellite retrieval, the basic principles of the algorithm also hold for arbitrary measurement geometries. This new approach is applied to modeled spectra based on a comprehensive set of atmospheric temperature and pressure profiles. This analysis reveals that the sensitivity of measurement strongly depends on the prevailing pressure-height. The IMAP-DOAS algorithm properly accounts for the sensitivity of measurement on pressure due to pressure broadening of the absorption lines. Thus, biases in the retrieved vertical columns that would arise in classical algorithms, are obviated. Here, we analyse and quantify these systematic biases as well as errors due to variations in the temperature and pressure profiles, which is indispensable for the understanding of measurement precision and accuracy in the near infrared as well as for future intercomparisons of retrieval algorithms.</p>
 
 
 </section>
@@ -800,7 +803,7 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link" href="https://scholar.google.com/citations?user=7XYDtdYAAAAJ&amp;hl=en">
-<p><i class="ai  ai-google-scholar" aria-label="google-scholar"></i> Google Scholar</p>
+<p><iconify-icon role="img" inline="" icon="academicons:google-scholar" aria-label="Icon google-scholar from academicons Iconify.design set." title="Icon google-scholar from academicons Iconify.design set."></iconify-icon> Google Scholar</p>
 </a>
   </li>  
     <li class="nav-item compact">

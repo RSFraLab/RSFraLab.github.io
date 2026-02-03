@@ -1,13 +1,16 @@
 ---
-title: "Diurnal and seasonal dynamics of solar-induced chlorophyll fluorescence, vegetation indices, and gross primary productivity in the boreal forest"
-author: "Pierrat, Zoe and Magney, Troy and Parazoo, Nicholas C and Grossmann, Katja and Bowling, David R and Seibt, Ulli and Johnson, Bruce and Helgason, Warren and Barr, Alan and Bortnik, Jacob and others"
-type: "article"
+title: 'Diurnal and Seasonal Dynamics of Solar‐Induced Chlorophyll Fluorescence, Vegetation Indices, and Gross Primary Productivity in the Boreal Forest'
+author: 'Pierrat, Zoe and Magney, Troy and Parazoo, Nicholas C. and Grossmann, Katja and Bowling, David R. and Seibt, Ulli and Johnson, Bruce and Helgason, Warren and Barr, Alan and Bortnik, Jacob and Norton, Alexander and Maguire, Andrew and Frankenberg, Christian and Stutz, Jochen'
+type: 'journal-article'
 year: 2022
-publication: "Journal of Geophysical Research: Biogeosciences"
-doi: "10.1029/2021jg006588"
-materials: ""
+publication: 'Journal of Geophysical Research: Biogeosciences'
+doi: '10.1029/2021jg006588'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractRemote sensing of solar‐induced chlorophyll fluorescence (SIF) provides a powerful proxy for gross primary productivity (GPP). It is particularly promising in boreal ecosystems where seasonal downregulation of photosynthesis occurs without significant changes in canopy structure or chlorophyll content. The use of SIF as a proxy for GPP is complicated by inherent non‐linearities due to both physical (illumination effects) and ecophysiological (light use efficiencies) controls at fine spatial (tower/leaf) and temporal (half‐hourly) scales. To study the SIF‐GPP relationship, we investigated the diurnal and seasonal dynamics of continuous tower‐based measurements of SIF, GPP, and common vegetation indices at the Southern Old Black Spruce Site (SOBS) in Saskatchewan, CA over the course of two years. We find that SIF outperforms other vegetation indices as a proxy for GPP at all temporal scales but shows a non‐linear relationship with GPP at a half‐hourly resolution. At small temporal scales, SIF and GPP are predominantly driven by light and non‐linearity between SIF and GPP is due to the light saturation of GPP. Averaged over daily and monthly scales, the relationship between SIF and GPP is linear due to a reduction in the observed PAR range. Seasonal changes in the light responses of SIF and GPP are driven by changes in light use efficiency which co‐vary with changes in temperature, while illumination and canopy structure partially linearize the SIF‐GPP relationship. Additionally, we find that the SIF‐GPP relationship has a seasonal dependency. Our results help clarify the utility of SIF for estimating carbon assimilation in boreal forests.

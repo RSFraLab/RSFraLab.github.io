@@ -1,13 +1,16 @@
 ---
-title: "Varying contributions of drivers to the relationship between canopy photosynthesis and far-red Sun-induced fluorescence for two maize sites at different temporal scales"
-author: "Miao, Guofang and Guan, Kaiyu and Suyker, Andrew E and Yang, Xi and Arkebauer, Timothy J and Walter-Shea, Elizabeth A and Kimm, Hyungsuk and Hmimina, Gabriel Y and Gamon, John A and Franz, Trenton E and others"
-type: "article"
+title: 'Varying Contributions of Drivers to the Relationship Between Canopy Photosynthesis and Far‐Red Sun‐Induced Fluorescence for Two Maize Sites at Different Temporal Scales'
+author: 'Miao, Guofang and Guan, Kaiyu and Suyker, Andrew E. and Yang, Xi and Arkebauer, Timothy J. and Walter‐Shea, Elizabeth A. and Kimm, Hyungsuk and Hmimina, Gabriel Y. and Gamon, John A. and Franz, Trenton E. and Frankenberg, Christian and Berry, Joseph A. and Wu, Genghong'
+type: 'journal-article'
 year: 2020
-publication: "Journal of Geophysical Research: Biogeosciences"
-doi: "10.1029/2019jg005051"
-materials: ""
+publication: 'Journal of Geophysical Research: Biogeosciences'
+doi: '10.1029/2019jg005051'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractSun‐induced fluorescence (SIF) has been found to be strongly correlated with gross primary production (GPP) in a quasi‐linear pattern at the scales beyond leaves. However, the causes of the GPP:SIF relationship deviating from a linear pattern remain unclear. In the current study conducted at two maize sites in Nebraska in 2017 summer growing season, we investigated the relationship between GPP and SIF at 760 nm (F<sub>760</sub>) at two temporal scales and quantified the contributions of incoming photosynthetically active radiation (PARin), fraction of absorbed PAR (fPAR), light use efficiency (LUE), and F<sub>760</sub> yield (F<sub>760</sub>,y, defined as F<sub>760</sub>/(PARin×fPAR)) to GPP and F<sub>760</sub> variabilities to further understand the linearity and deviations in the GPP:F<sub>760</sub> relationship. We found the following: (1) For individual growth stages when canopy structure and chlorophyll content were stable, GPP and F<sub>760</sub> were strongly controlled by PARin, while LUE and F<sub>760</sub>,y had much lower contributions to the GPP:F<sub>760</sub> relationship; during this period, LUE and F<sub>760</sub>,y had either a slightly negative or no clear relationship, which explained some deviations in the GPP:SIF relationship. (2) At the seasonal scale, the contribution of LUE to GPP variability as well as the contribution of F<sub>760</sub>,y to F<sub>760</sub> variability increased and was comparable to the contribution of PARin; the LUE:F<sub>760</sub>,y relationship showed a strong linear relationship, which strengthened the linear GPP:F<sub>760</sub> relationship. Both maize sites showed similar patterns. A framework was applied to estimate LUE at individual stages and as a result, significantly improved the GPP estimation, thus enhancing the SIF potential for inferring photosynthesis.

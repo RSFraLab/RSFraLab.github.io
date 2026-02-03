@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Bacour, Cedric and Maignan, Fabienne and Peylin, Philippe and Macbean, Natasha and Bastrikov, Vladislav and Joiner, Joanna and Kohler, Philipp and Guanter, Luis and Frankenberg, Christian">
+<meta name="author" content="Bacour, C. and Maignan, F. and Peylin, P. and MacBean, N. and Bastrikov, V. and Joiner, J. and Köhler, P. and Guanter, L. and Frankenberg, C.">
 
-<title>Differences between OCO-2 and GOME-2 SIF products from a model-data fusion perspective – FraLab</title>
+<title>Differences Between OCO‐2 and GOME‐2 SIF Products From a Model‐Data Fusion Perspective – FraLab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,8 +47,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-9171db61792df5317058cbbb6d0bf0e8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-8f4d7737b7e67d613ff89a7e31a66232.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-9171db61792df5317058cbbb6d0bf0e8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,12 +84,15 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
 </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 
 <link rel="stylesheet" href="../custom.css">
-<meta property="og:title" content="Differences between OCO-2 and GOME-2 SIF products from a model-data fusion perspective – FraLab">
+<meta property="og:title" content="Differences Between OCO‐2 and GOME‐2 SIF Products From a Model‐Data Fusion Perspective – FraLab">
+<meta property="og:description" content="Website for the Carbon Cycle Lab at Caltech.">
 <meta property="og:site_name" content="FraLab">
-<meta name="twitter:title" content="Differences between OCO-2 and GOME-2 SIF products from a model-data fusion perspective – FraLab">
+<meta name="twitter:title" content="Differences Between OCO‐2 and GOME‐2 SIF Products From a Model‐Data Fusion Perspective – FraLab">
+<meta name="twitter:description" content="Website for the Carbon Cycle Lab at Caltech.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -305,7 +307,7 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="https://scholar.google.com/citations?user=7XYDtdYAAAAJ&amp;hl=en"> 
-<span class="menu-text"><i class="ai  ai-google-scholar" aria-label="google-scholar"></i></span></a>
+<span class="menu-text"><iconify-icon role="img" inline="" icon="academicons:google-scholar" aria-label="Icon google-scholar from academicons Iconify.design set." title="Icon google-scholar from academicons Iconify.design set."></iconify-icon></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/cfranken"> <i class="bi bi-github" role="img" aria-label="GitHub">
@@ -336,7 +338,7 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Differences between OCO-2 and GOME-2 SIF products from a model-data fusion perspective</h1>
+<h1 class="title">Differences Between OCO‐2 and GOME‐2 SIF Products From a Model‐Data Fusion Perspective</h1>
 </div>
 
 
@@ -346,7 +348,7 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Bacour, Cedric and Maignan, Fabienne and Peylin, Philippe and Macbean, Natasha and Bastrikov, Vladislav and Joiner, Joanna and Kohler, Philipp and Guanter, Luis and Frankenberg, Christian </p>
+             <p>Bacour, C. and Maignan, F. and Peylin, P. and MacBean, N. and Bastrikov, V. and Joiner, J. and Köhler, P. and Guanter, L. and Frankenberg, C. </p>
           </div>
   </div>
     
@@ -369,6 +371,7 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
 
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>AbstractSpace‐borne retrievals of solar‐induced chlorophyll fluorescence (SIF) over land surfaces have recently become a resource for studying and quantifying the broad scale dynamics of gross carbon uptake (gross primary productivity—GPP) across ecosystems. To prepare for the assimilation of SIF data in terrestrial biosphere models, we examine how differences between SIF products (due to differences in acquisition characteristics and processing chain) may affect the optimization of model parameters and the resultant GPP estimate. We compare recent daily mean SIF products (one from the Orbiting Carbon Observatory‐2 [OCO‐2] and two from the Global Ozone Monitoring Experiment–2 [GOME‐2], GlobFluo [GF] and NASA‐v28 [N<sub>28</sub>], missions), averaged at 0.5°&nbsp;×&nbsp;0.5° spatial resolution and 16‐day temporal resolution, at the biome level. Phase differences between these products are relatively small. A first‐order correction of the difference in spectral sampling between the two instruments shows that OCO‐2 and N<sub>28</sub> are consistent in terms of magnitude and amplitude, while GF is twice as large as the others. Using a bias‐blind toy data assimilation framework, we analyze how biases between SIF products, and between model and products, can be partially alleviated by optimizing the slope and intercept parameters of a linear GPP‐SIF operator. As observation biases can transfer to biases in other optimized process‐based parameters and to modeled carbon fluxes— thereby resulting in unidentified inaccurate parameter values—we argue that potential SIF biases should be treated cautiously in real‐world experiments in order to achieve realistic and reliable future simulations.</p>
 
 
 </section>
@@ -800,7 +803,7 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
     <a class="nav-link" href="https://scholar.google.com/citations?user=7XYDtdYAAAAJ&amp;hl=en">
-<p><i class="ai  ai-google-scholar" aria-label="google-scholar"></i> Google Scholar</p>
+<p><iconify-icon role="img" inline="" icon="academicons:google-scholar" aria-label="Icon google-scholar from academicons Iconify.design set." title="Icon google-scholar from academicons Iconify.design set."></iconify-icon> Google Scholar</p>
 </a>
   </li>  
     <li class="nav-item compact">

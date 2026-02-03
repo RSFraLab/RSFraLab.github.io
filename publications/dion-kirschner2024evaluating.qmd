@@ -1,0 +1,21 @@
+---
+title: 'Evaluating the contribution of methanotrophy kinetics to uncertainty in the soil methane sink'
+author: 'Dion-Kirschner, Hannah and Nguyen, Newton H and Frankenberg, Christian and Fischer, Woodward W'
+type: 'journal-article'
+year: 2024
+publication: 'Environmental Research Letters'
+doi: '10.1088/1748-9326/ad4c7a'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+The oxidation of atmospheric methane by soil microbes is an important natural sink for a potent greenhouse gas. However, estimates of the current and future soil methane sink are highly uncertain. Here we assessed the extent to which methanotrophy enzyme kinetics contribute to uncertainty in projections of the soil methane sink. We generated a comprehensive compilation of methanotrophy kinetic data from modern environments and assessed the patterns in kinetic parameters present in natural samples. Our compiled data enabled us to quantify the global soil methane sink through two idealized calculations comparing first-order and Michaelis–Menten models of kinetics. We show that these two kinetic models diverge only under high atmospheric CH<sub>4</sub> scenarios, where first-order rate constants slightly overestimate the soil methane sink size, but produce similar predictions at modern atmospheric concentrations. Our compilation also shows that the kinetics of methanotrophy in natural soil samples is highly variable—both the V
+max (oxidation rate at saturation) and KM
+(half-saturation constant) in natural samples span over six orders of magnitude. However, accounting for the correlation we observe between V
+max and KM
+reduces the range of calculated uptake rates by as much as 96%. Additionally, our results indicate that variation in enzyme kinetics introduces a similar magnitude of variation in the calculated soil methane sink as temperature sensitivity. Systematic sampling of methanotroph kinetic parameters at multiple spatial scales should therefore be a key objective for closing the budget on the global soil methane sink.

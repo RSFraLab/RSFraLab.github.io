@@ -1,11 +1,13 @@
 ---
-title: "Preflight spectral calibration of the Orbiting Carbon Observatory 2"
-author: "Lee, Richard AM and O’Dell, Christopher W and Wunch, Debra and Roehl, Coleen M and Osterman, Gregory B and Blavier, Jean-Francois and Rosenberg, Robert and Chapsky, Lars and Frankenberg, Christian and Hunyadi-Lay, Sarah L and others"
-type: "article"
+title: 'Preflight Spectral Calibration of the Orbiting Carbon Observatory 2'
+author: 'Lee, Richard A. M. and O''Dell, Christopher W. and Wunch, Debra and Roehl, Coleen M. and Osterman, Gregory B. and Blavier, Jean-Francois and Rosenberg, Robert and Chapsky, Lars and Frankenberg, Christian and Hunyadi-Lay, Sarah L. and Fisher, Brendan M. and Rider, David M. and Crisp, David and Pollock, Randy'
+type: 'journal-article'
 year: 2017
-publication: "IEEE Transactions on Geoscience and Remote Sensing"
-doi: "10.1109/tgrs.2011.2107745"
-materials: ""
+publication: 'IEEE Transactions on Geoscience and Remote Sensing'
+doi: '10.1109/tgrs.2016.2645614'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 

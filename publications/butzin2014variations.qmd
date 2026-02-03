@@ -1,13 +1,16 @@
 ---
-title: "Variations of oxygen-18 in West Siberian precipitation during the last 50 years"
-author: "Butzin, Martin and Werner, Martin and Masson-Delmotte, Valerie and Risi, Camille and Frankenberg, Christian and Gribanov, Konstantin and Jouzel, Jean and Zakharov, Vyacheslav I"
-type: "article"
+title: 'Variations of oxygen-18 in West Siberian precipitation during the last 50 years'
+author: 'Butzin, M. and Werner, M. and Masson-Delmotte, V. and Risi, C. and Frankenberg, C. and Gribanov, K. and Jouzel, J. and Zakharov, V. I.'
+type: 'journal-article'
 year: 2014
-publication: "Atmospheric Chemistry and Physics"
-doi: "10.5194/acp-14-5853-2014"
-materials: ""
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-14-5853-2014'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Abstract. Global warming is associated with large increases in surface air temperature in Siberia. Here, we apply the isotope-enabled atmospheric general circulation model ECHAM<sub>5</sub>-wiso to explore the potential of water isotope measurements at a recently opened monitoring station in Kourovka (57.04° N, 59.55° E) in order to successfully trace climate change in western Siberia. Our model is constrained to atmospheric reanalysis fields for the period 1957–2013 to facilitate the comparison with observations of δD in total column water vapour from the GOSAT satellite, and with precipitation δ18O measurements from 15 Russian stations of the Global Network of Isotopes in Precipitation. The model captures the observed Russian climate within reasonable error margins, and displays the observed isotopic gradients associated with increasing continentality and decreasing meridional temperatures. The model also reproduces the observed seasonal cycle of δ18O, which parallels the seasonal cycle of temperature and ranges from −25 ‰ in winter to −5 ‰ in summer. Investigating West Siberian climate and precipitation δ18O variability during the last 50 years, we find long-term increasing trends in temperature and δ18O, while precipitation trends are uncertain. During the last 50 years, winter temperatures have increased by 1.7 °C. The simulated long-term increase of precipitation δ18O is at the detection limit (<1 ‰ per 50 years) but significant. West Siberian climate is characterized by strong interannual variability, which in winter is strongly related to the North Atlantic Oscillation. In winter, regional temperature is the predominant factor controlling δ18O variations on interannual to decadal timescales with a slope of about 0.5 ‰ °C−1. In summer, the interannual variability of δ18O can be attributed to short-term, regional-scale processes such as evaporation and convective precipitation. This finding suggests that precipitation δ18O has the potential to reveal hydrometeorological regime shifts in western Siberia which are otherwise difficult to identify. Focusing on Kourovka, the simulated evolution of temperature, δ18O and, to a smaller extent, precipitation during the last 50 years is synchronous with model results averaged over all of western Siberia, suggesting that this site will be representative to monitor future isotopic changes in the entire region.

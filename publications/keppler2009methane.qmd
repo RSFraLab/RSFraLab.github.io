@@ -1,13 +1,17 @@
 ---
-title: "Methane formation in aerobic environments"
-author: "Keppler, Frank and Boros, Mihaly and Frankenberg, Christian and Lelieveld, Jos and McLeod, Andrew and Pirttila, Anna Maria and Rockmann, Thomas and Schnitzler, Joerg-Peter"
-type: "article"
+title: 'Methane formation in aerobic environments'
+author: 'Keppler, Frank and Boros, Mihály and Frankenberg, Christian and Lelieveld, Jos and McLeod, Andrew and Pirttilä, Anna Maria and Röckmann, Thomas and Schnitzler, Jörg-Peter'
+type: 'journal-article'
 year: 2009
-publication: "Environmental Chemistry"
-doi: "10.1071/en09137"
-materials: ""
+publication: 'Environmental Chemistry'
+doi: '10.1071/en09137'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Environmental context. Methane is an important greenhouse gas and its atmospheric concentration has drastically increased since pre-industrial times. Until recently biological methane formation has been associated exclusively with anoxic environments and microbial activity. In this article we discuss several alternative formation pathways of methane in aerobic environments and suggest that non-microbial methane formation may be ubiquitous in terrestrial and marine ecosystems.
+Abstract. Methane (CH<sub>4</sub>), the second principal anthropogenic greenhouse gas after CO<sub>2</sub>, is the most abundant reduced organic compound in the atmosphere and plays a central role in atmospheric chemistry. Therefore a comprehensive understanding of its sources and sinks and the parameters that control emissions is prerequisite to simulate past, present and future atmospheric conditions. Until recently biological CH<sub>4</sub> formation has been associated exclusively with anoxic environments and methanogenic activity. However, there is growing and convincing evidence of alternative pathways in the aerobic biosphere including terrestrial plants, soils, marine algae and animals. Identifying and describing these sources is essential to complete our understanding of the biogeochemical cycles that control CH<sub>4</sub> in the atmospheric environment and its influence as a greenhouse gas.

@@ -1,0 +1,16 @@
+---
+title: 'Global Retrievals of Solar‐Induced Chlorophyll Fluorescence at Red Wavelengths With TROPOMI'
+author: 'Köhler, Philipp and Behrenfeld, Michael J. and Landgraf, Jochen and Joiner, Joanna and Magney, Troy S. and Frankenberg, Christian'
+type: 'journal-article'
+year: 2020
+publication: 'Geophysical Research Letters'
+doi: '10.1029/2020gl087541'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractObservations of solar‐induced chlorophyll a fluorescence (SIF) from spaceborne spectrometers can advance our understanding of terrestrial and aquatic carbon cycles. Here we present the first global retrievals of SIF at red wavelengths from the TROPOspheric Monitoring Instrument (TROPOMI). Despite the weak signal level, considerable uncertainties, and subtle measurement artifacts, spatial patterns and magnitudes agree with independent data sets. Over land, spatial patterns of our red SIF estimates covary with the far‐red SIF data. Red SIF over the ocean is highly consistent with the normalized fluorescence line height (nFLH) inferred from measurements of the MODerate resolution Imaging Spectroradiometer (MODIS), even when comparing single days and fine spatial scales. Major advantages of our Fraunhofer line‐based SIF retrievals include the capability to sense SIF through optically thin cloud/aerosol layers and an insensitivity to ocean color. This opens up new avenues for studying ocean biogeochemistry from space.

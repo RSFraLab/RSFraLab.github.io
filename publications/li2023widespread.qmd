@@ -1,13 +1,16 @@
 ---
-title: "Widespread and complex drought effects on vegetation physiology inferred from space"
-author: "Li, Wantong and Pacheco-Labrador, Javier and Migliavacca, Mirco and Miralles, Diego and Hoek van Dijke, Anne and Reichstein, Markus and Forkel, Matthias and Zhang, Weijie and Frankenberg, Christian and Panwar, Annu and others"
-type: "article"
+title: 'Widespread and complex drought effects on vegetation physiology inferred from space'
+author: 'Li, Wantong and Pacheco-Labrador, Javier and Migliavacca, Mirco and Miralles, Diego and Hoek van Dijke, Anne and Reichstein, Markus and Forkel, Matthias and Zhang, Weijie and Frankenberg, Christian and Panwar, Annu and Zhang, Qian and Weber, Ulrich and Gentine, Pierre and Orth, Rene'
+type: 'journal-article'
 year: 2023
-publication: "Nature Communications"
-doi: "10.1038/s41467-023-40226-9"
-materials: ""
+publication: 'Nature Communications'
+doi: '10.1038/s41467-023-40226-9'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractThe response of vegetation physiology to drought at large spatial scales is poorly understood due to a lack of direct observations. Here, we study vegetation drought responses related to photosynthesis, evaporation, and vegetation water content using remotely sensed data, and we isolate physiological responses using a machine learning technique. We find that vegetation functional decreases are largely driven by the downregulation of vegetation physiology such as stomatal conductance and light use efficiency, with the strongest downregulation in water-limited regions. Vegetation physiological decreases in wet regions also result in a discrepancy between functional and structural changes under severe drought. We find similar patterns of physiological drought response using simulations from a soil–plant–atmosphere continuum model coupled with a radiative transfer model. Observation-derived vegetation physiological responses to drought across space are mainly controlled by aridity and additionally modulated by abnormal hydro-meteorological conditions and vegetation types. Hence, isolating and quantifying vegetation physiological responses to drought enables a better understanding of ecosystem biogeochemical and biophysical feedback in modulating climate change.

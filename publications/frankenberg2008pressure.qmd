@@ -1,13 +1,18 @@
 ---
-title: "Pressure broadening in the 2$u$ 3 band of methane and its implication on atmospheric retrievals"
-author: "Frankenberg, Christian and Warneke, Thorsten and Butz, Andre and Aben, Ilse and Hase, Frank and Spietz, Peter and Brown, Linda R"
-type: "article"
+title: 'Pressure broadening in the 2ν
+<sub>3</sub>
+band of methane and its implication on atmospheric retrievals'
+author: 'Frankenberg, C. and Warneke, T. and Butz, A. and Aben, I. and Hase, F. and Spietz, P. and Brown, L. R.'
+type: 'journal-article'
 year: 2008
-publication: "Atmospheric chemistry and physics"
-doi: "10.5194/acp-8-5061-2008"
-materials: ""
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-8-5061-2008'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Abstract. N<sub>2</sub>-broadened half widths and pressure shifts were obtained for transitions in the 2ν3 methane band. Laboratory measurements recorded at 0.011 cm−1 resolution with a Bruker 120 HR Fouriertransform spectrometer were analysed from 5860 to 6185 cm−1. A 140 cm gas cell was filled with methane at room temperature and N<sub>2</sub> as foreign gas at pressures ranging from 125 to 900 hPa. A multispectrum nonlinear constrained least squares approach based on Optimal Estimation was applied to derive the spectroscopic parameters by simultaneously fitting laboratory spectra at different ambient pressures assuming a Voigt line-shape. At room temperature, the half widths ranged between 0.030 and 0.071 cm−1 atm−1, and the pressure shifts varied from –0.002 to –0.025 cm−1 atm−1 for transitions up to J"=10. Especially for higher rotational levels, we find systematically narrower lines than HITRAN predicts. The Q and R branch of the new set of spectroscopic parameters is further tested with ground based direct sun Fourier transform infrared (FTIR) measurements where systematic fit residuals reduce by about a factor of 3–4. We report the implication of those differences on atmospheric methane measurements using high-resolution ground based FTIR measurements as well as low-resolution spectra from the SCanning Imaging Absorption SpectroMeter for Atmospheric ChartographY (SCIAMACHY) instrument onboard ENVISAT. We find that for SCIAMACHY, a latitudinal and seasonally varying bias of about 1% can be introduced by erroneous broadening parameters.

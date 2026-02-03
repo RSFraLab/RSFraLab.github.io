@@ -1,13 +1,16 @@
 ---
-title: "Four corners: The largest US methane anomaly viewed from space"
-author: "Kort, Eric A and Frankenberg, Christian and Costigan, Keeley R and Lindenmaier, Rodica and Dubey, Manvendra K and Wunch, Debra"
-type: "article"
+title: 'Four corners: The largest US methane anomaly viewed from space'
+author: 'Kort, Eric A. and Frankenberg, Christian and Costigan, Keeley R. and Lindenmaier, Rodica and Dubey, Manvendra K. and Wunch, Debra'
+type: 'journal-article'
 year: 2014
-publication: "Geophysical Research Letters"
-doi: "10.1002/2014gl061503"
-materials: ""
+publication: 'Geophysical Research Letters'
+doi: '10.1002/2014gl061503'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+AbstractMethane (CH<sub>4</sub>) is a potent greenhouse gas and ozone precursor. Quantifying methane emissions is critical for projecting and mitigating changes to climate and air quality. Here we present CH<sub>4</sub> observations made from space combined with Earth‐based remote sensing column measurements. Results indicate the largest anomalous CH<sub>4</sub> levels viewable from space over the conterminous U.S. are located at the Four Corners region in the Southwest U.S. Emissions exceeding inventory estimates, totaling 0.59 Tg CH<sub>4</sub>/yr [0.50–0.67; 2σ], are necessary to bring high‐resolution simulations and observations into agreement. This underestimated source approaches 10% of the EPA estimate of total U.S. CH<sub>4</sub> emissions from natural gas. The persistence of this CH<sub>4</sub> signal from 2003 onward indicates that the source is likely from established gas, coal, and coalbed methane mining and processing. This work demonstrates that space‐based observations can identify anomalous CH<sub>4</sub> emission source regions and quantify their emissions with the use of a transport model.

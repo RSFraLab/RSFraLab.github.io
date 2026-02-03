@@ -1,13 +1,19 @@
 ---
-title: "Quantification of uncertainties in OCO-2 measurements of XCO 2: Simulations and linear error analysis"
-author: "Connor, Brian and Bosch, Hartmut and McDuffie, James and Taylor, Tommy and Fu, Dejian and Frankenberg, Christian and O'Dell, Chris and Payne, Vivienne H and Gunson, Michael and Pollock, Randy and others"
-type: "article"
+title: 'Quantification of uncertainties in OCO-2 measurements of XCO
+<sub>2</sub>
+:
+simulations and linear error analysis'
+author: 'Connor, Brian and Bösch, Hartmut and McDuffie, James and Taylor, Tommy and Fu, Dejian and Frankenberg, Christian and O''Dell, Chris and Payne, Vivienne H. and Gunson, Michael and Pollock, Randy and Hobbs, Jonathan and Oyafuso, Fabiano and Jiang, Yibo'
+type: 'journal-article'
 year: 2016
-publication: "Atmospheric Measurement Techniques"
-doi: "10.5194/amt-9-5227-2016"
-materials: ""
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-9-5227-2016'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
 toc: false
 ---
 
 ## Abstract
 
+Abstract. We present an analysis of uncertainties in global measurements of the column averaged dry-air mole fraction of CO<sub>2</sub> (XCO<sub>2</sub>) by the NASA Orbiting Carbon Observatory-2 (OCO-2). The analysis is based on our best estimates for uncertainties in the OCO-2 operational algorithm and its inputs, and uses simulated spectra calculated for the actual flight and sounding geometry, with measured atmospheric analyses. The simulations are calculated for land nadir and ocean glint observations. We include errors in measurement, smoothing, interference, and forward model parameters. All types of error are combined to estimate the uncertainty in XCO<sub>2</sub> from single soundings, before any attempt at bias correction has been made. From these results we also estimate the "variable error" which differs between soundings, to infer the error in the difference of XCO<sub>2</sub> between any two soundings. The most important error sources are aerosol interference, spectroscopy, and instrument calibration. Aerosol is the largest source of variable error. Spectroscopy and calibration, although they are themselves fixed error sources, also produce important variable errors in XCO<sub>2</sub>. Net variable errors are usually < 1 ppm over ocean and ∼ 0.5–2.0 ppm over land. The total error due to all sources is ∼ 1.5–3.5 ppm over land and ∼ 1.5–2.5 ppm over ocean.
