@@ -1,37 +1,55 @@
 [
   {
-    "listing": "/blogs.html",
+    "listing": "/people.html",
     "items": [
-      "/BlogPosts/BeyondVisible.html",
-      "/BlogPosts/MoveHyperspectral.html",
-      "/BlogPosts/vod_blog_March19.html",
-      "/BlogPosts/Carbon-I.html",
-      "/BlogPosts/BlogQuarto.html"
+      "/people/staff/frankenberg.html",
+      "/people/staff/Eva.html",
+      "/people/staff/renato.html",
+      "/people/staff/Qiren.html",
+      "/people/staff/keliu.html",
+      "/people/staff/emma.html",
+      "/people/alumni/Alexis.html",
+      "/people/alumni/Liyin.html",
+      "/people/alumni/Newton.html",
+      "/people/alumni/Philipp.html",
+      "/people/alumni/Rui.html",
+      "/people/alumni/Troy.html",
+      "/people/alumni/Vincent.html",
+      "/people/alumni/Ying.html",
+      "/people/alumni/anamika.html",
+      "/people/alumni/debsunder.html",
+      "/people/alumni/siraput.html",
+      "/people/alumni/yi.html",
+      "/people/alumni/yinon.html",
+      "/people/alumni/yujie.html",
+      "/people/alumni/yyao.html"
     ]
-  },
-  {
-    "listing": "/preprints.html",
-    "items": []
   },
   {
     "listing": "/publications.html",
     "items": [
       "/publications/deck2026climaland.html",
+      "/publications/bar-on2025recent.html",
       "/publications/li2025a.html",
       "/publications/magney2025tracking.html",
+      "/publications/pandey2025reduction.html",
+      "/publications/parazoo2025a.html",
       "/publications/plewa2025improvements.html",
       "/publications/sanghavi2025impact.html",
+      "/publications/wang2025impacts.html",
       "/publications/wang2025platespect.html",
       "/publications/zhu2025advancements.html",
       "/publications/anema2024monitoring.html",
       "/publications/cao2024understanding.html",
       "/publications/dion-kirschner2024evaluating.html",
       "/publications/frankenberg2024data.html",
+      "/publications/joiner2024noise.html",
       "/publications/liu2024non-steady-state.html",
       "/publications/pierrat2024seasonal.html",
       "/publications/wang2024beyond.html",
       "/publications/wang2024toward.html",
       "/publications/yao2024investigating.html",
+      "/publications/yao2024the.html",
       "/publications/braghiere2023the.html",
       "/publications/braghiere2023tipping.html",
       "/publications/gerlein-safdi2023algae.html",
@@ -190,6 +208,7 @@
       "/publications/sun2015drought.html",
       "/publications/thompson2015real-time.html",
       "/publications/worden2015quantifying.html",
+      "/publications/work2015corrigendum.html",
       "/publications/xu2015satellite.html",
       "/publications/basu2014the.html",
       "/publications/butzin2014variations.html",
@@ -272,29 +291,17 @@
     ]
   },
   {
-    "listing": "/people.html",
+    "listing": "/preprints.html",
+    "items": []
+  },
+  {
+    "listing": "/blogs.html",
     "items": [
-      "/people/staff/frankenberg.html",
-      "/people/staff/Eva.html",
-      "/people/staff/renato.html",
-      "/people/staff/Qiren.html",
-      "/people/staff/keliu.html",
-      "/people/staff/emma.html",
-      "/people/alumni/Alexis.html",
-      "/people/alumni/Liyin.html",
-      "/people/alumni/Newton.html",
-      "/people/alumni/Philipp.html",
-      "/people/alumni/Rui.html",
-      "/people/alumni/Troy.html",
-      "/people/alumni/Vincent.html",
-      "/people/alumni/Ying.html",
-      "/people/alumni/anamika.html",
-      "/people/alumni/debsunder.html",
-      "/people/alumni/siraput.html",
-      "/people/alumni/yi.html",
-      "/people/alumni/yinon.html",
-      "/people/alumni/yujie.html",
-      "/people/alumni/yyao.html"
+      "/BlogPosts/BeyondVisible.html",
+      "/BlogPosts/MoveHyperspectral.html",
+      "/BlogPosts/vod_blog_March19.html",
+      "/BlogPosts/Carbon-I.html",
+      "/BlogPosts/BlogQuarto.html"
     ]
   }
 ]

@@ -1,0 +1,17 @@
+---
+title: 'A U.S. Scientific Community Vision for Sustained Earth Observations of Greenhouse Gases to Support Local to Global Action'
+author: 'Parazoo, N. and Carroll, D. and Abshire, J. B. and Bar‐On, Y. M. and Birdsey, R. A. and Bloom, A. A. and Bowman, K. W. and Braghiere, R. K. and Bruhwiler, L. M. and Byrne, B. and Chatterjee, A. and Crisp, D. and Duncanson, L. and Feldman, A. F. and Fox, A. M. and Frankenberg, C. and Gay, B. A. and Hopkins, F. and Hoffman, F. M. and Holmquist, J. R. and Hutyra, L. R. and Keller, M. and Koven, C. D. and Laughner, J. L. and Liu, J. and Lovenduski, N. S. and Macbean, N. and McKinley, G. A. and McNicol, G. and Menemenlis, D. and Michalak, A. M. and Miller, C. E. and Nesser, H. and Oda, T. and Ordway, E. M. and Ott, L. E. and Paustian, K. and Pierrat, Z. A. and Poulter, B. and Reed, S. C. and Schimel, D. S. and Serbin, S. P. and Saatchi, S. S. and Suto, H. and Windham‐Myers, L. and Wunch, D.'
+type: 'journal-article'
+year: 2025
+publication: 'AGU Advances'
+doi: '10.1029/2025av001914'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+Managing carbon stocks in the land, ocean, and atmosphere under changing climate requires a globally‐integrated view of carbon cycle processes at local and regional scales. The growing Earth Observation (EO) record is the backbone of this multi‐scale system, providing local information with discrete coverage from surface measurements and regional information at global scale from satellites. Carbon flux information, anchored by inverse estimates from spaceborne Greenhouse Gas (GHG) concentrations, provides an important top‐down view of carbon emissions and sinks, but currently lacks global continuity at assessment and management scales (<100 km). Partial‐column data can help separate signals in the boundary layer from the overlying atmosphere, providing an opportunity to enhance surface sensitivity and bring flux resolution down from that of column‐integrated data (100–500 km). Based on a workshop held in September 2024, the carbon cycle community envisions a carbon observation system leveraging GHG partial columns in the lower and upper troposphere to weave together information across scales from surface and satellite EO data, and integration of top‐down/bottom‐up analyses to link process understanding to global assessment.

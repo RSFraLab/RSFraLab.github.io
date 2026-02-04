@@ -1,0 +1,16 @@
+---
+title: 'Recent gains in global terrestrial carbon stocks are mostly stored in nonliving pools'
+author: 'Bar-On, Yinon M. and Li, Xiaojun and O’Sullivan, Michael and Wigneron, Jean-Pierre and Sitch, Stephen and Ciais, Philippe and Frankenberg, Christian and Fischer, Woodward W.'
+type: 'journal-article'
+year: 2025
+publication: 'Science'
+doi: '10.1126/science.adk1637'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Terrestrial sequestration of carbon has mitigated ≈30% of anthropogenic carbon emissions. However, its distribution across different pools, live or dead biomass and soil and sedimentary organic carbon, remains uncertain. Analyzing global observational datasets of changes in terrestrial carbon pools, we found that ≈35 ± 14 gigatons of carbon (GtC) have been sequestered on land between 1992 and 2019, whereas live biomass changed by ≈1 ± 7 GtC. Global vegetation models instead imply that sequestration has been mostly in live biomass. We identify key processes not included in most models that can explain this discrepancy. Most terrestrial carbon gains are sequestered as nonliving matter and thus are more persistent than previously appreciated, with a substantial fraction linked to human activities such as river damming, wood harvest, and garbage disposal in landfills.

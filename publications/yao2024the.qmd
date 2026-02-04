@@ -1,0 +1,18 @@
+---
+title: 'The impacts of elevated CO
+<sub>2</sub>
+on forest growth, mortality, and recovery in the Amazon rainforest'
+author: 'Yao, Yitong and Ciais, Philippe and Joetzjer, Emilie and Li, Wei and Zhu, Lei and Wang, Yujie and Frankenberg, Christian and Viovy, Nicolas'
+type: 'journal-article'
+year: 2024
+publication: 'Earth System Dynamics'
+doi: '10.5194/esd-15-763-2024'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. The Amazon rainforest plays a crucial role in global carbon storage, but a minor destabilization of these forests could result in considerable carbon loss. Among the external factors affecting vegetation, elevated CO<sub>2</sub> (eCO2) levels have long been anticipated to have positive impacts on vegetation, including the direct enhancement of both photosynthesis and productivity and increasing water use efficiency. However, the overall impact of eCO2 on the net carbon balance, especially concerning tree-mortality-induced carbon loss and recovery following extreme drought events, has remained elusive. Here, we use a process-based model that couples physiological CO<sub>2</sub> effects with demography and both drought mortality and resistance processes. The model was previously calibrated to reproduce observed drought responses of Amazon forest sites. The model results, based on factorial simulations with and without eCO2, reveal that eCO2 enhances forest growth and promotes competition between trees, leading to more natural self-thinning of forest stands. This occurs following a growth–mortality trade-off response, although the growth outweighs the tree loss. Additionally, eCO2 provides water-saving benefits, reducing the risk of tree mortality during drought episodes. However, extra carbon losses could still occur due to an eCO2-induced increase in background biomass density, leading to “more carbon available to lose” when severe droughts happen. Furthermore, we found that eCO2 accelerates drought recovery and enhances drought resistance and resilience. By delving into the less-explored aspect of tree mortality response to eCO2, the model improvements advance our understanding of how carbon balance responds to eCO2, particularly regarding mechanisms of continuous competition-induced carbon loss vs. pulses of drought-induced carbon loss. These findings provide valuable insights into the intricate ways in which rising CO<sub>2</sub> influences forest carbon dynamics and vulnerability, offering a critical understanding of the Amazon rainforest's evolution amidst more frequent and intense extreme climate events.
