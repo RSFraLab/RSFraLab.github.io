@@ -1,0 +1,15 @@
+---
+title: 'Airborne observations reveal underestimated riverine methane emissions across the Amazon'
+author: 'Ort, Linda and Frankenberg, Christian and Dadheech, Nikhil and Yoon, James Y. S. and Turner, Alexander J. and Bloom, A. Anthony and Konopka, Paul and Lachnitt, Hans-Christoph and Hoor, Peter Michael and Lelieveld, Jos and Kort, Eric A. and Fischer, Horst'
+type: 'preprint'
+year: 2026
+publication: ''
+doi: '10.22541/essoar.177248180.00166712/v1'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
