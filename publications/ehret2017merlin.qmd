@@ -1,0 +1,16 @@
+---
+title: 'MERLIN: A French-German Space Lidar Mission Dedicated to Atmospheric Methane'
+author: 'Ehret, Gerhard and Bousquet, Philippe and Pierangelo, Clémence and Alpers, Matthias and Millet, Bruno and Abshire, James and Bovensmann, Heinrich and Burrows, John and Chevallier, Frédéric and Ciais, Philippe and Crevoisier, Cyril and Fix, Andreas and Flamant, Pierre and Frankenberg, Christian and Gibert, Fabien and Heim, Birgit and Heimann, Martin and Houweling, Sander and Hubberten, Hans and Jöckel, Patrick and Law, Kathy and Löw, Alexander and Marshall, Julia and Agusti-Panareda, Anna and Payan, Sebastien and Prigent, Catherine and Rairoux, Patrick and Sachs, Torsten and Scholze, Marko and Wirth, Martin'
+type: 'journal-article'
+year: 2017
+publication: 'Remote Sensing'
+doi: '10.3390/rs9101052'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+The MEthane Remote sensing Lidar missioN (MERLIN) aims at demonstrating the spaceborne active measurement of atmospheric methane, a potent greenhouse gas, based on an Integrated Path Differential Absorption (IPDA) nadir-viewing LIght Detecting and Ranging (Lidar) instrument. MERLIN is a joint French and German space mission, with a launch currently scheduled for the timeframe 2021/22. The German Space Agency (DLR) is responsible for the payload, while the platform (MYRIADE Evolutions product line) is developed by the French Space Agency (CNES). The main scientific objective of MERLIN is the delivery of weighted atmospheric columns of methane dry-air mole fractions for all latitudes throughout the year with systematic errors small enough (<3.7 ppb) to significantly improve our knowledge of methane sources from global to regional scales, with emphasis on poorly accessible regions in the tropics and at high latitudes. This paper presents the MERLIN objectives, describes the methodology and the main characteristics of the payload and of the platform, and proposes a first assessment of the error budget and its translation into expected uncertainty reduction of methane surface emissions.
