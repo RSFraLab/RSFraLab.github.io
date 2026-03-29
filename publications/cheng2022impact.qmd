@@ -1,0 +1,15 @@
+---
+title: 'Impact of radiation variations on temporal upscaling of instantaneous Solar-Induced Chlorophyll Fluorescence'
+author: 'Cheng, Rui and Köhler, Philipp and Frankenberg, Christian'
+type: 'journal-article'
+year: 2022
+publication: 'Agricultural and Forest Meteorology'
+doi: '10.1016/j.agrformet.2022.109197'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

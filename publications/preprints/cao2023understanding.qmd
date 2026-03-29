@@ -1,0 +1,15 @@
+---
+title: 'Understanding Interactions between Terrestrial Water and Carbon Cycles Using Integrated SMAP Soil Moisture and OCO-2 SIF Observations and Land Surface Models'
+author: 'Cao, Zhijiong and Xue, Yongkang and Nayak, Hara Prasad and Lettenmaier, Dennis P. and Frankenberg, Christian and Köhler, Philipp and Li, Ziwei'
+type: 'preprint'
+year: 2023
+publication: ''
+doi: '10.22541/essoar.169945149.99261799/v1'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+

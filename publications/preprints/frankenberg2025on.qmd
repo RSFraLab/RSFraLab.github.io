@@ -1,0 +1,15 @@
+---
+title: 'On the use of N<sub>2</sub>O as a light-path proxy for accurate greenhouse gas measurements from space'
+author: 'Frankenberg, Christian and Sanghavi, Suniti and Saha, Anwesh and Wennberg, Paul O. and Jacob, Daniel J. and Michalak, Anna M'
+type: 'preprint'
+year: 2025
+publication: ''
+doi: '10.22541/essoar.174888969.90967466/v1'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+

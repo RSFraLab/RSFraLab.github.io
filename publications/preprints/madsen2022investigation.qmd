@@ -1,0 +1,15 @@
+---
+title: 'Investigation of Urban Vegetative Fluxes of Carbon Dioxide over the Greater Toronto and Hamilton Area'
+author: 'Madsen, Sabrina and Wunch, Debra and Arain, Muhammad Altaf and Frankenberg, Christian and Koehler, Philipp and Rogers, Cheryl and Staebler, Ralf and Vogel, Felix and Wu, Dien'
+type: 'preprint'
+year: 2022
+publication: ''
+doi: '10.1002/essoar.10510330.1'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+

@@ -1,0 +1,15 @@
+---
+title: 'Data Drought in the Humid Tropics: How to Overcome the Cloud Barrier in Greenhouse Gas Remote Sensing'
+author: 'Frankenberg, Christian and Bar-On, Yinon Moise and Yin, Yi and Wenberg, Paul O. and Jacob, Daniel J. and Michalak, Anna M'
+type: 'preprint'
+year: 2024
+publication: ''
+doi: '10.22541/essoar.170923255.57545328/v1'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
