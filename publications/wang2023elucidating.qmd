@@ -1,0 +1,16 @@
+---
+title: 'Elucidating climatic drivers of photosynthesis by tropical forests'
+author: 'Wang, Yuan and Liu, Junjie and Wennberg, Paul O. and He, Liyin and Bonal, Damien and Köhler, Philipp and Frankenberg, Christian and Sitch, Stephen and Friedlingstein, Pierre'
+type: 'journal-article'
+year: 2023
+publication: 'Global Change Biology'
+doi: '10.1111/gcb.16837'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractTropical forests play a pivotal role in regulating the global carbon cycle. However, the response of these forests to changes in absorbed solar energy and water supply under the changing climate is highly uncertain. Three‐year (2018–2021) spaceborne high‐resolution measurements of solar‐induced chlorophyll fluorescence (SIF) from the TROPOspheric Monitoring Instrument (TROPOMI) provide a new opportunity to study the response of gross primary production (GPP) and more broadly tropical forest carbon dynamics to differences in climate. SIF has been shown to be a good proxy for GPP on monthly and regional scales. Combining tropical climate reanalysis records and other contemporary satellite products, we find that on the seasonal timescale, the dependence of GPP on climate variables is highly heterogeneous. Following the principal component analyses and correlation comparisons, two regimes are identified: water limited and energy limited. GPP variations over tropical Africa are more correlated with water‐related factors such as vapor pressure deficit (VPD) and soil moisture, while in tropical Southeast Asia, GPP is more correlated with energy‐related factors such as photosynthetically active radiation (PAR) and surface temperature. Amazonia is itself heterogeneous: with an energy‐limited regime in the north and water‐limited regime in the south. The correlations of GPP with climate variables are supported by other observation‐based products, such as Orbiting Carbon Observatory‐2 (OCO<sub>2</sub>) SIF and FluxSat GPP. In each tropical continent, the coupling between SIF and VPD increases with the mean VPD. Even on the interannual timescale, the correlation of GPP with VPD is still discernable, but the sensitivity is smaller than the intra‐annual correlation. By and large, the dynamic global vegetation models in the TRENDY v8 project do not capture the high GPP seasonal sensitivity to VPD in dry tropics. The complex interactions between carbon and water cycles in the tropics illustrated in this study and the poor representation of this coupling in the current suite of vegetation models suggest that projections of future changes in carbon dynamics based on these models may not be robust.
