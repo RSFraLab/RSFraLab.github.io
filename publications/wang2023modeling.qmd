@@ -1,0 +1,16 @@
+---
+title: 'Modeling Global Vegetation Gross Primary Productivity, Transpiration and Hyperspectral Canopy Radiative Transfer Simultaneously Using a Next Generation Land Surface Model—CliMA Land'
+author: 'Wang, Y. and Braghiere, R. K. and Longo, M. and Norton, A. J. and Köhler, P. and Doughty, R. and Yin, Y. and Bloom, A. A. and Frankenberg, C.'
+type: 'journal-article'
+year: 2023
+publication: 'Journal of Advances in Modeling Earth Systems'
+doi: '10.1029/2021ms002964'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractRecent progress in satellite observations has provided unprecedented opportunities to monitor vegetation activity at global scale. However, a major challenge in fully utilizing remotely sensed data to constrain land surface models (LSMs) lies in inconsistencies between simulated and observed quantities. For example, gross primary productivity (GPP) and transpiration (T) that traditional LSMs simulate are not directly measurable from space, although they can be inferred from spaceborne observations using assumptions that are inconsistent with those LSMs. In comparison, canopy reflectance and fluorescence spectra that satellites can detect are not modeled by traditional LSMs. To bridge these quantities, we presented an overview of the next generation land model developed within the Climate Modeling Alliance (CliMA), and simulated global GPP, T, and hyperspectral canopy radiative transfer (RT; 400–2,500 nm for reflectance, 640–850 nm for fluorescence) at hourly time step and 1° spatial resolution using CliMA Land. CliMA Land predicts vegetation indices and outgoing radiances, including solar‐induced chlorophyll fluorescence (SIF), normalized difference vegetation index (NDVI), enhanced vegetation index (EVI), and near infrared reflectance of vegetation (NIRv) for any given sun‐sensor geometry. The spatial patterns of modeled GPP, T, SIF, NDVI, EVI, and NIRv correlate significantly with existing data‐driven products (mean R<sub>2</sub> = 0.777 for 9 products). CliMA Land would be also useful in high temporal resolution simulations, for example, providing insights into when GPP, SIF, and NIRv diverge.

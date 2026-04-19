@@ -1,0 +1,15 @@
+---
+title: 'Constraining plant hydraulics with microwave radiometry in a land surface model: Impacts of temporal resolution'
+author: 'Holtzman, Nataniel M and Wang, Yujie and Wood, Jeffrey David and Frankenberg, Christian and Konings, Alexandra'
+type: 'preprint'
+year: 2023
+publication: ''
+doi: '10.22541/essoar.168652288.81621833/v1'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+

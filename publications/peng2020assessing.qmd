@@ -1,0 +1,15 @@
+---
+title: 'Assessing the benefit of satellite-based Solar-Induced Chlorophyll Fluorescence in crop yield prediction'
+author: 'Peng, Bin and Guan, Kaiyu and Zhou, Wang and Jiang, Chongya and Frankenberg, Christian and Sun, Ying and He, Liyin and Köhler, Philipp'
+type: 'journal-article'
+year: 2020
+publication: 'International Journal of Applied Earth Observation and Geoinformation'
+doi: '10.1016/j.jag.2020.102126'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

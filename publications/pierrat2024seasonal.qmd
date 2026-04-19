@@ -1,0 +1,16 @@
+---
+title: 'Seasonal timing of fluorescence and photosynthetic yields at needle and canopy scales in evergreen needleleaf forests'
+author: 'Pierrat, Zoe Amie and Magney, Troy and Maguire, Andrew and Brissette, Logan and Doughty, Russell and Bowling, David R. and Logan, Barry and Parazoo, Nicholas and Frankenberg, Christian and Stutz, Jochen'
+type: 'journal-article'
+year: 2024
+publication: 'Ecology'
+doi: '10.1002/ecy.4402'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractThe seasonal timing and magnitude of photosynthesis in evergreen needleleaf forests (ENFs) has major implications for the carbon cycle and is increasingly sensitive to changing climate. Earlier spring photosynthesis can increase carbon uptake over the growing season or cause early water reserve depletion that leads to premature cessation and increased carbon loss. Determining the start and the end of the growing season in ENFs is challenging due to a lack of field measurements and difficulty in interpreting satellite data, which are impacted by snow and cloud cover, and the pervasive “greenness” of these systems. We combine continuous needle‐scale chlorophyll fluorescence measurements with tower‐based remote sensing and gross primary productivity (GPP) estimates at three ENF sites across a latitudinal gradient (Colorado, Saskatchewan, Alaska) to link physiological changes with remote sensing signals during transition seasons. We derive a theoretical framework for observations of solar‐induced chlorophyll fluorescence (SIF) and solar intensity‐normalized SIF (SIFrelative) under snow‐covered conditions, and show decreased sensitivity compared with reflectance data (~20% reduction in measured SIF vs. ~60% reduction in near‐infrared vegetation index [NIRv] under 50% snow cover). Needle‐scale fluorescence and photochemistry strongly correlated (r2 = 0.74 in Colorado, 0.70 in Alaska) and showed good agreement on the timing and magnitude of seasonal transitions. We demonstrate that this can be scaled to the site level with tower‐based estimates of LUEP and SIFrelative which were well correlated across all sites (r2 = 0.70 in Colorado, 0.53 in Saskatchewan, 0.49 in Alaska). These independent, temporally continuous datasets confirm an increase in physiological activity prior to snowmelt across all three evergreen forests. This suggests that data‐driven and process‐based carbon cycle models which assume negligible physiological activity prior to snowmelt are inherently flawed, and underscores the utility of SIF data for tracking phenological events. Our research probes the spectral biology of evergreen forests and highlights spectral methods that can be applied in other ecosystems.

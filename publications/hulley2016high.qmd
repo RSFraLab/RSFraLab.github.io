@@ -1,0 +1,16 @@
+---
+title: 'High spatial resolution imaging of methane and other trace gases with the  airborne Hyperspectral Thermal Emission Spectrometer (HyTES)'
+author: 'Hulley, Glynn C. and Duren, Riley M. and Hopkins, Francesca M. and Hook, Simon J. and Vance, Nick and Guillevic, Pierre and Johnson, William R. and Eng, Bjorn T. and Mihaly, Jonathan M. and Jovanovic, Veljko M. and Chazanoff, Seth L. and Staniszewski, Zak K. and Kuai, Le and Worden, John and Frankenberg, Christian and Rivera, Gerardo and Aubrey, Andrew D. and Miller, Charles E. and Malakar, Nabin K. and Sánchez Tomás, Juan M. and Holmes, Kendall T.'
+type: 'journal-article'
+year: 2016
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-9-2393-2016'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. Currently large uncertainties exist associated with the attribution and quantification of fugitive emissions of criteria pollutants and greenhouse gases such as methane across large regions and key economic sectors. In this study, data from the airborne Hyperspectral Thermal Emission Spectrometer (HyTES) have been used to develop robust and reliable techniques for the detection and wide-area mapping of emission plumes of methane and other atmospheric trace gas species over challenging and diverse environmental conditions with high spatial resolution that permits direct attribution to sources. HyTES is a pushbroom imaging spectrometer with high spectral resolution (256 bands from 7.5 to 12 µm), wide swath (1–2 km), and high spatial resolution (∼ 2 m at 1 km altitude) that incorporates new thermal infrared (TIR) remote sensing technologies. In this study we introduce a hybrid clutter matched filter (CMF) and plume dilation algorithm applied to HyTES observations to efficiently detect and characterize the spatial structures of individual plumes of CH<sub>4</sub>, H<sub>2</sub>S, NH<sub>3</sub>, NO<sub>2</sub>, and SO<sub>2</sub> emitters. The sensitivity and field of regard of HyTES allows rapid and frequent airborne surveys of large areas including facilities not readily accessible from the surface. The HyTES CMF algorithm produces plume intensity images of methane and other gases from strong emission sources. The combination of high spatial resolution and multi-species imaging capability provides source attribution in complex environments. The CMF-based detection of strong emission sources over large areas is a fast and powerful tool needed to focus on more computationally intensive retrieval algorithms to quantify emissions with error estimates, and is useful for expediting mitigation efforts and addressing critical science questions.

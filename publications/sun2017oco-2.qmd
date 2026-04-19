@@ -1,0 +1,65 @@
+---
+title: 'OCO-2 advances photosynthesis observation from space via solar-induced chlorophyll fluorescence'
+author: 'Sun, Y. and Frankenberg, C. and Wood, J. D. and Schimel, D. S. and Jung, M. and Guanter, L. and Drewry, D. T. and Verma, M. and Porcar-Castell, A. and Griffis, T. J. and Gu, L. and Magney, T. S. and Köhler, P. and Evans, B. and Yuen, K.'
+type: 'journal-article'
+year: 2017
+publication: 'Science'
+doi: '10.1126/science.aam5747'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+INTRODUCTION
+
+Reliable estimation of gross primary production (GPP) from landscape to global scales is pivotal to a wide range of ecological research areas, such as carbon-climate feedbacks, and agricultural applications, such as crop yield and drought monitoring. However, measuring GPP at these scales remains a major challenge. Solar-induced chlorophyll fluorescence (SIF) is a signal emitted directly from the core of photosynthetic machinery. SIF integrates complex plant physiological functions in vivo to reflect photosynthetic dynamics in real time. The advent of satellite SIF observation promises a new era in global photosynthesis research. The Orbiting Carbon Observatory-2 (OCO-2) SIF product is a serendipitous but critically complementary by-product of OCO-2’s primary mission target—atmospheric column CO
+2
+(
+
+
+
+
+X
+
+
+
+CO
+
+2
+
+
+
+
+
+
+). OCO-2 SIF removes some important roadblocks that prevent wide and in-depth applications of satellite SIF data sets and offers new opportunities for studying the SIF-GPP relationship and vegetation functional gradients at different spatiotemporal scales.
+
+
+
+RATIONALE
+Compared with earlier satellite missions with SIF capability, the OCO-2 SIF product has substantially improved spatial resolution, data acquisition, and retrieval precision. These improvements allow satellite SIF data to be validated, for the first time, directly against ground and airborne measurements and also used to investigate the SIF-GPP relationship and terrestrial ecosystem functional dynamics with considerably better spatiotemporal credibility.
+
+
+RESULTS
+
+Coordinated airborne measurements of SIF with the Chlorophyll Fluorescence Imaging Spectrometer (CFIS) were used to validate OCO-2 retrievals. The validation shows close agreement between OCO-2 and CFIS SIF, with a regression slope of 1.02 and
+R
+2
+of 0.71. Landscape gradients in SIF emission, corresponding to differences in vegetation types, were clearly delineated by OCO-2, a capability that was lacking in previous satellite missions. The SIF-GPP relationships at eddy covariance flux sites in the vicinity of OCO-2 orbital tracks were found to be more consistent across biomes than previously suggested. Finally, empirical orthogonal function (EOF) analyses on OCO-2 SIF and available GPP products show highly consistent spatiotemporal correspondence in their leading EOF modes across the globe, suggesting that SIF and GPP are governed by similar dynamics and controlled by similar environmental and biological conditions.
+
+
+
+CONCLUSION
+
+OCO-2 represents a major advance in satellite SIF remote sensing. Our analyses suggest that SIF is a powerful proxy for GPP at multiple spatiotemporal scales and that high-quality satellite SIF is of central importance to studying terrestrial ecosystems and the carbon cycle. Although the possibility of a universal SIF-GPP relationship across different biome types cannot be dismissed, in-depth process-based studies are needed to unravel the true nature of covariations between SIF and GPP. Of critical importance in such efforts are the potential coordinated dynamics between the light-use efficiencies of CO
+2
+assimilation and fluorescence emission in response to changes in climate and vegetation characteristics. Eventual synergistic uses of SIF with atmospheric CO
+2
+enabled by OCO-2 will lead to more reliable estimates of terrestrial carbon sources and sinks—when, where, why, and how carbon is exchanged between land and atmosphere—as well as a deeper understanding of carbon-climate feedbacks.
+
+
+
+The marked ecological gradients depicted by OCO-2’s high-resolution SIF measurements along a transect of temperate deciduous forests, crops, and urban area from Indiana to suburban Chicago, Illinois.
