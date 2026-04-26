@@ -1,0 +1,18 @@
+---
+title: 'Profiling tropospheric CO
+<sub>2</sub>
+using Aura TES and TCCON instruments'
+author: 'Kuai, L. and Worden, J. and Kulawik, S. and Bowman, K. and Lee, M. and Biraud, S. C. and Abshire, J. B. and Wofsy, S. C. and Natraj, V. and Frankenberg, C. and Wunch, D. and Connor, B. and Miller, C. and Roehl, C. and Shia, R.-L. and Yung, Y.'
+type: 'journal-article'
+year: 2013
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-6-63-2013'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. Monitoring the global distribution and long-term variations of CO<sub>2</sub> sources and sinks is required for characterizing the global carbon budget. Total column measurements are useful for estimating regional-scale fluxes; however, model transport remains a significant error source, particularly for quantifying local sources and sinks. To improve the capability of estimating regional fluxes, we estimate lower tropospheric CO<sub>2</sub> concentrations from ground-based near-infrared (NIR) measurements with space-based thermal infrared (TIR) measurements. The NIR measurements are obtained from the Total Carbon Column Observing Network (TCCON) of solar measurements, which provide an estimate of the total CO<sub>2</sub> column amount. Estimates of tropospheric CO<sub>2</sub> that are co-located with TCCON are obtained by assimilating Tropospheric Emission Spectrometer (TES) free tropospheric CO<sub>2</sub> estimates into the GEOS-Chem model. We find that quantifying lower tropospheric CO<sub>2</sub> by subtracting free tropospheric CO<sub>2</sub> estimates from total column estimates is a linear problem, because the calculated random uncertainties in total column and lower tropospheric estimates are consistent with actual uncertainties as compared to aircraft data. For the total column estimates, the random uncertainty is about 0.55 ppm with a bias of −5.66 ppm, consistent with previously published results. After accounting for the total column bias, the bias in the lower tropospheric CO<sub>2</sub> estimates is 0.26 ppm with a precision (one standard deviation) of 1.02 ppm. This precision is sufficient for capturing the winter to summer variability of approximately 12 ppm in the lower troposphere; double the variability of the total column. This work shows that a combination of NIR and TIR measurements can profile CO<sub>2</sub> with the precision and accuracy needed to quantify lower tropospheric CO<sub>2</sub> variability.
