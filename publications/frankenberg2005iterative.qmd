@@ -1,0 +1,20 @@
+---
+title: 'Iterative maximum a posteriori (IMAP)-DOAS for retrieval of strongly absorbing trace gases: Model studies for CH
+<sub>4</sub>
+and CO
+<sub>2</sub>
+retrieval from near infrared spectra of SCIAMACHY onboard ENVISAT'
+author: 'Frankenberg, C. and Platt, U. and Wagner, T.'
+type: 'journal-article'
+year: 2005
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-5-9-2005'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. In the past, differential optical absorption spectroscopy (DOAS) has mostly been employed for atmospheric trace gas retrieval in the UV/Vis spectral region. New spectrometers such as SCIAMACHY onboard ENVISAT also provide near infrared channels and thus allow for the detection of greenhouse gases like CH<sub>4</sub>, CO<sub>2</sub>, or N<sub>2</sub>O. However, modifications of the classical DOAS algorithm are necessary to account for the idiosyncrasies of this spectral region, i.e. the temperature and pressure dependence of the high resolution absorption lines. Furthermore, understanding the sensitivity of the measurement of these high resolution, strong absorption lines by means of a non-ideal device, i.e. having finite spectral resolution, is of special importance. This applies not only in the NIR, but can also prove to be an issue for the UV/Vis spectral region.  This paper presents a modified iterative maximum a posteriori-DOAS (IMAP-DOAS) algorithm based on optimal estimation theory introduced to the remote sensing community by rodgers76. This method directly iterates the vertical column densities of the absorbers of interest until the modeled total optical density fits the measurement. Although the discussion in this paper lays emphasis on satellite retrieval, the basic principles of the algorithm also hold for arbitrary measurement geometries.  This new approach is applied to modeled spectra based on a comprehensive set of atmospheric temperature and pressure profiles. This analysis reveals that the sensitivity of measurement strongly depends on the prevailing pressure-height. The IMAP-DOAS algorithm properly accounts for the sensitivity of measurement on pressure due to pressure broadening of the absorption lines. Thus, biases in the retrieved vertical columns that would arise in classical algorithms, are obviated. Here, we analyse and quantify these systematic biases as well as errors due to variations in the temperature and pressure profiles, which is indispensable for the understanding of measurement precision and accuracy in the near infrared as well as for future intercomparisons of retrieval algorithms.

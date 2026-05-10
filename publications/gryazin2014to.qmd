@@ -1,0 +1,16 @@
+---
+title: 'To what extent could water isotopic measurements help us understand model biases in the water cycle over Western Siberia'
+author: 'Gryazin, V. and Risi, C. and Jouzel, J. and Kurita, N. and Worden, J. and Frankenberg, C. and Bastrikov, V. and Gribanov, K. and Stukova, O.'
+type: 'journal-article'
+year: 2014
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-14-9807-2014'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. We evaluate the isotopic composition of water vapor and precipitation simulated by the LMDZ (Laboratoire de Météorologie Dynamique-Zoom) GCM (General Circulation Model) over Siberia using several data sets: TES (Tropospheric Emission Spectrometer) and GOSAT (Greenhouse gases Observing SATellite) satellite observations of tropospheric water vapor, GNIP (Global Network for Isotopes in Precipitation) and SNIP (Siberian Network for Isotopes in Precipitation) precipitation networks, and daily, in situ measurements of water vapor and precipitation at the Kourovka site in Western Siberia. LMDZ captures the spatial, seasonal and daily variations reasonably well, but it underestimates humidity (q) in summer and overestimates δD in the vapor and precipitation in all seasons. The performance of LMDZ is put in the context of other isotopic models from the SWING<sub>2</sub> (Stable Water Intercomparison Group phase 2) models. There is significant spread among models in the simulation of δD, and of the δD-q relationship. This confirms that δD brings additional information compared to q only. We specifically investigate the added value of water isotopic measurements to interpret the warm and dry bias featured by most GCMs over mid and high latitude continents in summer. The analysis of the slopes in δD-q diagrams and of processes controlling δD and q variations suggests that the cause of the dry bias could be either a problem in the large-scale advection transporting too much dry and warm air from the south, or too strong boundary-layer mixing. However, δD-q diagrams using the available data do not tell the full story. Additional measurements would be needed, or a more sophisticated theoretical framework would need to be developed.

@@ -1,0 +1,16 @@
+---
+title: 'Global‐Scale Consistency of Spaceborne Vegetation Indices, Chlorophyll Fluorescence, and Photosynthesis'
+author: 'Doughty, Russell and Xiao, Xiangming and Köhler, Philipp and Frankenberg, Christian and Qin, Yuanwei and Wu, Xiaocui and Ma, Shuang and Moore, Berrien'
+type: 'journal-article'
+year: 2021
+publication: 'Journal of Geophysical Research: Biogeosciences'
+doi: '10.1029/2020jg006136'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractThe new TROPOspheric Monitoring Instrument (TROPOMI) solar‐induced chlorophyll fluorescence (SIF) data provides new opportunities to corroborate and improve global photosynthesis estimates. Here we report the spatiotemporal consistency between TROPOMI SIF and vegetation indices from the bidirectional reflectance distribution function (BRDF) adjusted (MCD<sub>43</sub>) and standard MODIS (MOD<sub>09</sub>) surface reflectance products, estimates of absorbed photosynthetically active radiation by chlorophyll (APARchl) derived from National Centers for Environmental Prediction Reanalysis‐2 (NCEP<sub>2</sub>), MODIS MCD<sub>18</sub>, and European Reanalysis (ERA<sub>5</sub>) data, and two GPP products (GPPVPM and GPPMOD<sub>17</sub>). We find (a) non‐adjusted VIs were more highly correlated with SIF at mid and high latitude than BRDF‐adjusted VIs, but were less correlated in the tropics, (b) negligible differences in the correlation between SIF and non‐adjusted NIRv and EVI, but BRDF‐adjusted NIRv had higher correlations with SIF at mid to high latitude than BRDF‐adjusted EVI but lower correlations in the tropics, (c) choice of PAR data set likely to cause substantial differences in global and regional GPP estimates and the correlation between modeled GPP and SIF, (d) SIF was more highly correlated with APARchl at high to mid latitude than EVI but more highly correlated with EVI at lower latitudes, and (e) GPPVPM is more highly correlated with SIF than GPPMOD<sub>17</sub>, except in sub‐Sahara Africa. Our results highlight that spaceborne photosynthesis would likely be improved by using a non‐linear response to PAR and that the fundamental differences between the vegetation indices and PAR data sets are likely to yield important differences in global and regional estimates of photosynthesis.

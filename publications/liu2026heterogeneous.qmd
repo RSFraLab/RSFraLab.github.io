@@ -1,0 +1,17 @@
+---
+title: 'Heterogeneous Responses of High‐Latitude Forest Productivity to Interannual Climate Variability'
+author: 'Liu, Ke and Liu, Junjie and Yao, Yitong and Frankenberg, Christian and Wennberg, Paul'
+type: 'journal-article'
+year: 2026
+publication: 'Geophysical Research Letters'
+doi: '10.1029/2025gl121078'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+Amplified warming has altered the phenology and structure of high‐latitude forests, yet their carbon uptake responses to environmental variations remain uncertain. Using satellite observations of solar‐induced chlorophyll fluorescence (SIF), we quantify interannual variations in growing‐season (GS) productivity of these forests and their climatic drivers. GS productivity is largely controlled by early‐ and peak‐season temperatures: warmer springs enhance carbon uptake and, despite moderate legacy declines later in the season, overall productivity increases in warmer years in most regions. Pronounced heterogeneity is observed among plant functional types—deciduous needleleaf forests (DNF) show weaker temperature sensitivity and stronger water dependence than other forests. In DNF, temperature effects weaken or reverse under dry conditions and persist after accounting for canopy structural effects, indicating strong water constraints on physiological responses. These results underscore the heterogeneous climate sensitivities of high‐latitude forests and highlight SIF as a powerful tool for monitoring their productivity and responses to climate.

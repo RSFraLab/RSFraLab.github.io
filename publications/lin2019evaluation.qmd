@@ -1,0 +1,15 @@
+---
+title: 'Evaluation and mechanism exploration of the diurnal hysteresis of ecosystem fluxes'
+author: 'Lin, Changjie and Gentine, Pierre and Frankenberg, Christian and Zhou, Sha and Kennedy, Daniel and Li, Xi'
+type: 'journal-article'
+year: 2019
+publication: 'Agricultural and Forest Meteorology'
+doi: '10.1016/j.agrformet.2019.107642'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

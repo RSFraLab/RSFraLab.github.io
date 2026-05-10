@@ -1,0 +1,15 @@
+---
+title: 'Simplified physically based retrieval of sun-induced chlorophyll fluorescence from GOSAT data'
+author: 'Kohler, Philipp and Guanter, Luis and Frankenberg, Christian'
+type: 'journal-article'
+year: 2015
+publication: 'IEEE Geoscience and Remote Sensing Letters'
+doi: '10.1109/lgrs.2015.2407051'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

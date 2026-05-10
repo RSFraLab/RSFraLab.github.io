@@ -1,0 +1,16 @@
+---
+title: 'The seasonal variation of the CO<sub>2</sub> flux over Tropical Asia estimated from GOSAT, CONTRAIL, and IASI'
+author: 'Basu, S. and Krol, M. and Butz, A. and Clerbaux, C. and Sawa, Y. and Machida, T. and Matsueda, H. and Frankenberg, C. and Hasekamp, O. P. and Aben, I.'
+type: 'journal-article'
+year: 2014
+publication: 'Geophysical Research Letters'
+doi: '10.1002/2013gl059105'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractWe estimate the CO<sub>2</sub> flux over Tropical Asia in 2009, 2010, and 2011 using Greenhouse Gases Observing Satellite (GOSAT) total column CO<sub>2</sub>(XCO<sub>2</sub>) and in situ measurements of CO<sub>2</sub>. Compared to flux estimates from assimilating surface measurements of CO<sub>2</sub>, GOSAT XCO<sub>2</sub> estimates a more dynamic seasonal cycle and a large source in March–May 2010. The more dynamic seasonal cycle is consistent with earlier work by Patra et al. (2011), and the enhanced 2010 source is supported by independent upper air CO<sub>2</sub> measurements from the Comprehensive Observation Network for Trace gases by Airliner (CONTRAIL) project. Using Infrared Atmospheric Sounding Interferometer (IASI) measurements of total column CO (XCO), we show that biomass burning CO<sub>2</sub> can explain neither the dynamic seasonal cycle nor the 2010 source. We conclude that both features must come from the terrestrial biosphere. In particular, the 2010 source points to biosphere response to above‐average temperatures that year.

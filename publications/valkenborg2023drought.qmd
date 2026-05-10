@@ -1,0 +1,16 @@
+---
+title: 'Drought and Waterlogging Stress Regimes in Northern Peatlands Detected Through Satellite Retrieved Solar‐Induced Chlorophyll Fluorescence'
+author: 'Valkenborg, Bram and De Lannoy, Gabriëlle J. M. and Gruber, Alexander and Miralles, Diego G. and Köhler, Philipp and Frankenberg, Christian and Desai, Ankur R. and Humphreys, Elyn and Klatt, Janina and Lohila, Annalea and Nilsson, Mats B. and Tuittila, Eeva‐Stiina and Bechtold, Michel'
+type: 'journal-article'
+year: 2023
+publication: 'Geophysical Research Letters'
+doi: '10.1029/2023gl105205'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractThe water table depth (WTD) in peatlands determines the soil carbon decomposition rate and influences vegetation growth, hence the above‐ground carbon assimilation. Here, we used satellite‐observed Solar‐Induced chlorophyll Fluorescence (SIF) as a proxy of Gross Primary Production (GPP) to investigate water‐related vegetation stress over northern peatlands. A linear model with interaction effects was used to relate short‐ and long‐term anomalies in SIF with WTD anomalies and the absolute WTD. Most locations showed the occurrence of drought and waterlogging stress though regions with exclusively waterlogging or drought stress were also detected. As a spatial median, minimal water‐related vegetation stress was found for a WTD of −0.22 m (short‐term) and −0.20 m (long‐term) (±0.01 m, 95% confidence interval of statistical uncertainty). The stress response observed with SIF is supported by an analysis of in situ GPP data. Our findings provide insight into how changes in WTD of northern peatlands could affect GPP under climate change.

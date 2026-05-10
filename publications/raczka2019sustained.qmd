@@ -1,0 +1,16 @@
+---
+title: 'Sustained Nonphotochemical Quenching Shapes the Seasonal Pattern of Solar‐Induced Fluorescence at a High‐Elevation Evergreen Forest'
+author: 'Raczka, Brett and Porcar‐Castell, A. and Magney, T. and Lee, J. E. and Köhler, P. and Frankenberg, C. and Grossmann, K. and Logan, B. A. and Stutz, J. and Blanken, P. D. and Burns, S. P. and Duarte, H. and Yang, X. and Lin, J. C. and Bowling, D. R.'
+type: 'journal-article'
+year: 2019
+publication: 'Journal of Geophysical Research: Biogeosciences'
+doi: '10.1029/2018jg004883'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractTraditional methods of carbon monitoring in mountainous regions are challenged by complex terrain. Recently, solar‐induced fluorescence (SIF) has been found to be an indicator of gross primary production (GPP), and the increased availability of remotely sensed SIF provides an opportunity to estimate GPP across the Western United States. Although the empirical linkage between SIF and GPP is strong, the current mechanistic understanding of this linkage is incomplete and depends upon changes in leaf biochemical processes in which absorbed sunlight leads to photochemistry, heat (via nonphotochemical quenching [NPQ]), fluorescence, or tissue damage. An improved mechanistic understanding is necessary to leverage SIF observations to improve representation of ecosystem processes within land surface models. Here we included an improved fluorescence model within the Community Land Model, Version 4.5 (CLM 4.5), to simulate seasonal changes in SIF at a subalpine forest in Colorado. We found that when the model accounted for sustained NPQ, this provided a larger seasonal change in fluorescence yield leading to simulated SIF that more closely resembled the observed seasonal pattern (Global Ozone Monitoring Experiment‐2 [GOME‐2] satellite platform and a tower‐mounted spectrometer system). We found that an acclimation model based on mean air temperature was a useful predictor for sustained NPQ. Although light intensity was not an important factor for this analysis, it should be considered before applying the sustained NPQ and SIF to other cold climate evergreen biomes. More leaf‐level fluorescence measurements are necessary to better understand the seasonal relationship between sustained and reversible components of NPQ and to what extent that influences SIF.
