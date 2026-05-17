@@ -13,3 +13,29 @@ toc: false
 
 ## Abstract
 
+Recently, more advanced synchronous global-scale satellite observations,
+the Soil Moisture Active Passive enhanced Level 3 (SMAP L<sub>3</sub>) soil
+moisture product and the Orbiting Carbon Observatory 2 (OCO-2)
+solar-induced chlorophyll fluorescence (SIF) product, provide an
+opportunity to improve the simulations of both water and carbon cycles
+in land surface modeling. This study introduces a mechanistic
+representation of SIF to the Simplified Simple Biosphere Model version 4
+(SSiB<sub>4</sub>) coupled with the Top-down Representation of Interactive Foliage
+and Flora Including Dynamics Model (TRIFFID). This newly developed model
+with the observed satellite data indicates that introducing dynamic
+processes can lead to substantial improvement in global carbon flux
+simulation. In the SSiB<sub>4</sub>/TRIFFID/SIF, four critical soil and vegetation
+parameters–B parameter, soil hydraulic conductivity at saturation (Ks),
+wilting point, and maximum Rubisco carboxylation rate (Vmax)–were
+identified through numerical sensitivity experiments. Among the four
+parameters, the B parameter has the most significant effects on both
+soil moisture and SIF simulations. With the optimized B parameter, both
+soil moisture and SIF simulations were improved substantially, with
+especially significant improvement for shrubs. The Ks and wilting point
+also affect both soil moisture and SIF but with reduced magnitude. The
+Vmax directly affects photosynthesis, and its modification can
+substantially improve the SIF simulation of needleleaf trees and C<sub>3</sub>
+grasses. With all four calibrated parameters based on SMAP L<sub>3</sub> and OCO-2
+data, the root-mean-squared error (RMSE) of soil moisture and SIF
+simulations decreased from 0.076 to 0.063 m3/m3 and from 0.143 to 0.117
+W/m2/μm/sr, respectively.

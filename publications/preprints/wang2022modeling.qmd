@@ -13,3 +13,27 @@ toc: false
 
 ## Abstract
 
+Recent progress in satellite observations has provided unprecedented
+opportunities to monitor vegetation activity on the global scale.
+However, a major challenge in fully utilizing remotely sensed data to
+constrain land surface models (LSMs) lies in inconsistencies between
+simulated and observed quantities. Transpiration and gross primary
+productivity (GPP) that traditional LSMs simulate are not directly
+measurable from space and they are inferred from spaceborne observations
+using assumptions that are inconsistent with those of the LSMs, whereas
+canopy reflectance and fluorescence spectra that satellites can detect
+are not modeled by traditional LSMs. To bridge these quantities, we
+present the land model developed within the Climate Modeling Alliance
+(CliMA), which simulates global-scale GPP, transpiration, and
+hyperspectral canopy radiative transfer (RT). Thus, CliMA Land can
+predict any vegetation index or outgoing radiance, including
+solar-induced chlorophyll fluorescence (SIF), normalized difference
+vegetation index (NDVI), enhanced vegetation index (EVI), and near
+infrared reflectance of vegetation (NIRv) for any given measurement
+geometry. Even without parameter optimization, the modeled spatial
+patterns of CliMA Land GPP, SIF, NDVI, EVI, and NIRv correlate
+significantly with existing observational products. CliMA Land is also
+very useful in its high temporal resolution, e.g., providing insights
+into when GPP, SIF, and NIRv diverge. Based on comparisons between
+models and observations, we propose ways to improve future land modeling
+regarding data processing and model development.
