@@ -1,0 +1,16 @@
+---
+title: 'Disentangling Changes in the Spectral Shape of Chlorophyll Fluorescence: Implications for Remote Sensing of Photosynthesis'
+author: 'Magney, Troy S. and Frankenberg, Christian and Köhler, Philipp and North, Gretchen and Davis, Thomas S. and Dold, Christian and Dutta, Debsunder and Fisher, Joshua B. and Grossmann, Katja and Harrington, Alexis and Hatfield, Jerry and Stutz, Jochen and Sun, Ying and Porcar‐Castell, Albert'
+type: 'journal-article'
+year: 2019
+publication: 'Journal of Geophysical Research: Biogeosciences'
+doi: '10.1029/2019jg005029'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractNovel satellite measurements of solar‐induced chlorophyll fluorescence (SIF) can improve our understanding of global photosynthesis; however, little is known about how to interpret the controls on its spectral variability. To address this, we disentangle simultaneous drivers of fluorescence spectra by coupling active and passive fluorescence measurements with photosynthesis. We show empirical and mechanistic evidence for where, why, and to what extent leaf fluorescence spectra change. Three distinct components explain more than 95% of the variance in leaf fluorescence spectra under both steady‐state and changing illumination conditions. A single spectral shape of fluorescence explains 84% of the variance across a wide range of species. The magnitude of this shape responds to absorbed light and photosynthetic up/down regulation; meanwhile, chlorophyll concentration and nonphotochemical quenching control 9% and 3% of the remaining spectral variance, respectively. The spectral shape of fluorescence is remarkably stable where most current satellite retrievals occur (“far‐red,” >740nm), and dynamic downregulation of photosynthesis reduces fluorescence magnitude similarly across the 670‐ to 850‐nm range. We conduct an exploratory analysis of hourly red and far‐red canopy SIF in soybean, which shows a subtle change in red:far‐red fluorescence coincident with photosynthetic downregulation but is overshadowed by longer‐term changes in canopy chlorophyll and structure. Based on our leaf and canopy analysis, caution should be taken when attributing large changes in the spectral shape of remotely sensed SIF to plant stress, particularly if data acquisition is temporally sparse. Ultimately, changes in SIF magnitude at wavelengths greater than 740 nm alone may prove sufficient for tracking photosynthetic dynamics.

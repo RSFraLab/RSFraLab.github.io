@@ -1,0 +1,30 @@
+---
+title: 'Extreme events driving year-to-year differences in gross primary productivity across the US'
+author: 'Turner, Alexander and Köhler, Philipp and Magney, Troy and Frankenberg, Christian and Fung, Inez and Cohen, Ronald'
+type: 'preprint'
+year: 2020
+publication: ''
+doi: '10.1002/essoar.10504378.1'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
+Solar-Induced chlorophyll Fluorescence (SIF) has previously been shown
+to strongly correlate with gross primary productivity (GPP), however
+this relationship has not yet been quantified for the recently launched
+TROPOspheric Monitoring Instrument (TROPOMI). Here we use a Gaussian
+mixture model to develop a parsimonious relationship between SIF from
+TROPOMI and GPP from flux towers across the conterminous United States
+(CONUS). The mixture model indicates the SIF-GPP relationship can be
+characterized by a linear model with two terms. We then estimate GPP
+across CONUS at 500-m spatial resolution over a 16-day moving window. We
+find that CONUS GPP varies by less than 4% between 2018 and 2019.
+However, we observe four extreme precipitation events that induce
+regional GPP anomalies: drought in west Texas, flooding in the
+midwestern US, drought in South Dakota, and drought in California. Taken
+together, these events account for 28% of the year-to-year GPP
+differences across CONUS.

@@ -1,0 +1,16 @@
+---
+title: 'Tundra photosynthesis captured by satellite‐observed solar‐induced chlorophyll fluorescence'
+author: 'Luus, K. A. and Commane, R. and Parazoo, N. C. and Benmergui, J. and Euskirchen, E. S. and Frankenberg, C. and Joiner, J. and Lindaas, J. and Miller, C. E. and Oechel, W. C. and Zona, D. and Wofsy, S. and Lin, J. C.'
+type: 'journal-article'
+year: 2017
+publication: 'Geophysical Research Letters'
+doi: '10.1002/2016gl070842'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractAccurately quantifying the timing and magnitude of respiration and photosynthesis by high‐latitude ecosystems is important for understanding how a warming climate influences global carbon cycling. Data‐driven estimates of photosynthesis across Arctic regions often rely on satellite‐derived enhanced vegetation index (EVI); we find that satellite observations of solar‐induced chlorophyll fluorescence (SIF) provide a more direct proxy for photosynthesis. We model Alaskan tundra CO<sub>2</sub> cycling (2012–2014) according to temperature and shortwave radiation and alternately input EVI or SIF to prescribe the annual seasonal cycle of photosynthesis. We find that EVI‐based seasonality indicates spring “green‐up” to occur 9 days prior to SIF‐based estimates, and that SIF‐based estimates agree with aircraft and tower measurements of CO<sub>2</sub>. Adopting SIF, instead of EVI, for modeling the seasonal cycle of tundra photosynthesis can result in more accurate estimates of growing season duration and net carbon uptake by arctic vegetation.

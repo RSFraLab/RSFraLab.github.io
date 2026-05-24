@@ -1,0 +1,20 @@
+---
+title: 'Marked Impacts of Pollution Mitigation on Crop Yields in China'
+author: 'He, Liyin and Wei, Jing and Wang, Yuan and Shang, Quanbiao and Liu, Junjie and Yin, Yi and Frankenberg, Christian and Jiang, Jonathan H. and Li, Zhanqing and Yung, Yuk L.'
+type: 'journal-article'
+year: 2022
+publication: 'Earth''s Future'
+doi: '10.1029/2022ef002936'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+
+Plant growth and crop harvest are impacted by both climate change and air pollution. However, their relative importance in crop yields remains elusive, especially in heavily polluted regions. Here we develop crop yield prediction models, based on a large volume of historical crop data, as well as climate and pollution records in China since 1980. A long‐term surface ozone concentration data set is developed from a machine‐learning model and various observations. An assessment of four climate and pollution factors reveals the critical role of particulate and ozone pollution in regulating interannual variations of crop yields in China. During 2010–2018, we find that the particulate pollution mitigation outweighs the negative impacts of concurrent climate change, resulting in 0.5%–1.9% net yield increases nationwide, despite of the ozone increases in the North China Plain. Looking to the future, the impacts of climate change, particularly from surface temperature increase, will dominate over pollution factors and profoundly reduce future maize and rice yields by 0.6 to 2.8% 10 yr
+−1
+by 2050. Our findings call for attention on the threat to future global food security from the absence of pollution mitigation and the persistence of global warming.

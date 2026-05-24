@@ -1,0 +1,15 @@
+---
+title: 'Two-Year Comparison of Airborne Measurements of CO<sub>2</sub> and CH<sub>4</sub> With GOSAT at Railroad Valley, Nevada'
+author: 'Tanaka, Tomoaki and Yates, Emma and Iraci, Laura T. and Johnson, Matthew S. and Gore, Warren and Tadic, Jovan M. and Loewenstein, Max and Kuze, Akihiko and Frankenberg, Christian and Butz, Andre and Yoshida, Yukio'
+type: 'journal-article'
+year: 2016
+publication: 'IEEE Transactions on Geoscience and Remote Sensing'
+doi: '10.1109/tgrs.2016.2539973'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

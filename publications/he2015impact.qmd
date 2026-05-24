@@ -1,0 +1,16 @@
+---
+title: 'Impact of atmospheric convection on south Tibet summer precipitation isotopologue composition using a combination of in situ measurements, satellite data, and atmospheric general circulation modeling'
+author: 'He, You and Risi, Camille and Gao, Jing and Masson‐Delmotte, Valérie and Yao, Tandong and Lai, Chun‐Ta and Ding, Yongjian and Worden, John and Frankenberg, Christian and Chepfer, Helene and Cesana, Gregory'
+type: 'journal-article'
+year: 2015
+publication: 'Journal of Geophysical Research: Atmospheres'
+doi: '10.1002/2014jd022180'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractPrecipitation isotopologues recorded in natural archives from the southern Tibetan Plateau may document past variations of Indian monsoon intensity. The exact processes controlling the variability of precipitation isotopologue composition must therefore first be deciphered and understood. This study investigates how atmospheric convection affects the summer variability of δ18O in precipitation (δ18Op) and δD in water vapor (δDv) at the daily scale. This is achieved using isotopic data from precipitation samples at Lhasa, isotopic measurements of water vapor retrieved from satellites (Tropospheric Emission Spectrometer (TES), GOSAT) and atmospheric general circulation modeling. We reveal that both δ18Op and δDv at Lhasa are well correlated with upstream convective activity, especially above northern India. First, during days of strong convection, northern India surface air contains large amounts of vapor with relatively low δDv. Second, when this low‐δDv moisture is uplifted toward southern Tibet, this initial depletion in HDO is further amplified by Rayleigh distillation as the vapor moves over the Himalayan. The intraseasonal variability of the isotopologue composition of vapor and precipitation over the southern Tibetan Plateau results from these processes occurring during air mass transportation.

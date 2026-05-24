@@ -1,0 +1,18 @@
+---
+title: 'Inverse modelling of CH
+<sub>4</sub>
+emissions for 2010–2011 using different satellite retrieval products from GOSAT and SCIAMACHY'
+author: 'Alexe, M. and Bergamaschi, P. and Segers, A. and Detmers, R. and Butz, A. and Hasekamp, O. and Guerlet, S. and Parker, R. and Boesch, H. and Frankenberg, C. and Scheepmaker, R. A. and Dlugokencky, E. and Sweeney, C. and Wofsy, S. C. and Kort, E. A.'
+type: 'journal-article'
+year: 2015
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-15-113-2015'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. At the beginning of 2009 new space-borne observations of dry-air column-averaged mole fractions of atmospheric methane (XCH<sub>4</sub>) became available from the Thermal And Near infrared Sensor for carbon Observations–Fourier Transform Spectrometer (TANSO-FTS) instrument on board the Greenhouse Gases Observing SATellite (GOSAT). Until April 2012 concurrent {methane (CH<sub>4</sub>) retrievals} were provided by the SCanning Imaging Absorption spectroMeter for Atmospheric CartograpHY (SCIAMACHY) instrument on board the ENVironmental SATellite (ENVISAT). The GOSAT and SCIAMACHY XCH<sub>4</sub> retrievals can be compared during the period of overlap. We estimate monthly average CH<sub>4</sub> emissions between January 2010 and December 2011, using the TM<sub>5</sub>-4DVAR inverse modelling system. In addition to satellite data, high-accuracy measurements from the Cooperative Air Sampling Network of the National Oceanic and Atmospheric Administration Earth System Research Laboratory (NOAA ESRL) are used, providing strong constraints on the remote surface atmosphere. We discuss five inversion scenarios that make use of different GOSAT and SCIAMACHY XCH<sub>4</sub> retrieval products, including two sets of GOSAT proxy retrievals processed independently by the Netherlands Institute for Space Research (SRON)/Karlsruhe Institute of Technology (KIT), and the University of Leicester (UL), and the RemoTeC "Full-Physics" (FP) XCH<sub>4</sub> retrievals available from SRON/KIT. The GOSAT-based inversions show significant reductions in the root mean square (rms) difference between retrieved and modelled XCH<sub>4</sub>, and require much smaller bias corrections compared to the inversion using SCIAMACHY retrievals, reflecting the higher precision and relative accuracy of the GOSAT XCH<sub>4</sub>. Despite the large differences between the GOSAT and SCIAMACHY retrievals, 2-year average emission maps show overall good agreement among all satellite-based inversions, with consistent flux adjustment patterns, particularly across equatorial Africa and North America. Over North America, the satellite inversions result in a significant redistribution of CH<sub>4</sub> emissions from North-East to South-Central United States. This result is consistent with recent independent studies suggesting a systematic underestimation of CH<sub>4</sub> emissions from North American fossil fuel sources in bottom-up inventories, likely related to natural gas production facilities. Furthermore, all four satellite inversions yield lower CH<sub>4</sub> fluxes across the Congo basin compared to the NOAA-only scenario, but higher emissions across tropical East Africa. The GOSAT and SCIAMACHY inversions show similar performance when validated against independent shipboard and aircraft observations, and XCH<sub>4</sub> retrievals available from the Total Carbon Column Observing Network (TCCON).

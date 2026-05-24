@@ -1,0 +1,25 @@
+---
+title: 'Seasonal variation in the canopy color of temperate evergreen conifer forests'
+author: 'Seyednasrollah, Bijan and Bowling, David R. and Cheng, Rui and Logan, Barry A. and Magney, Troy S. and Frankenberg, Christian and Yang, Julia C. and Young, Adam M. and Hufkens, Koen and Arain, M. Altaf and Black, T. Andrew and Blanken, Peter D. and Bracho, Rosvel and Jassal, Rachhpal and Hollinger, David Y. and Law, Beverly E. and Nesic, Zoran and Richardson, Andrew D.'
+type: 'journal-article'
+year: 2020
+publication: 'New Phytologist'
+doi: '10.1111/nph.17046'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Summary
+
+
+Evergreen conifer forests are the most prevalent land cover type in North America. Seasonal changes in the color of evergreen forest canopies have been documented with near‐surface remote sensing, but the physiological mechanisms underlying these changes, and the implications for photosynthetic uptake, have not been fully elucidated.
+
+Here, we integrate on‐the‐ground phenological observations, leaf‐level physiological measurements, near surface hyperspectral remote sensing and digital camera imagery, tower‐based CO<sub>2</sub> flux measurements, and a predictive model to simulate seasonal canopy color dynamics.
+
+We show that seasonal changes in canopy color occur independently of new leaf production, but track changes in chlorophyll fluorescence, the photochemical reflectance index, and leaf pigmentation. We demonstrate that at winter‐dormant sites, seasonal changes in canopy color can be used to predict the onset of canopy‐level photosynthesis in spring, and its cessation in autumn. Finally, we parameterize a simple temperature‐based model to predict the seasonal cycle of canopy greenness, and we show that the model successfully simulates interannual variation in the timing of changes in canopy color.
+
+These results provide mechanistic insight into the factors driving seasonal changes in evergreen canopy color and provide opportunities to monitor and model seasonal variation in photosynthetic activity using color‐based vegetation indices.

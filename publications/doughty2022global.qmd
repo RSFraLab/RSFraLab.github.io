@@ -1,0 +1,19 @@
+---
+title: 'Global GOSAT, OCO-2, and OCO-3 solar-induced chlorophyll fluorescence datasets'
+author: 'Doughty, Russell and Kurosu, Thomas P. and Parazoo, Nicholas and Köhler, Philipp and Wang, Yujie and Sun, Ying and Frankenberg, Christian'
+type: 'journal-article'
+year: 2022
+publication: 'Earth System Science Data'
+doi: '10.5194/essd-14-1513-2022'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. The retrieval of solar-induced chlorophyll fluorescence (SIF) from space is a relatively new advance in Earth observation science, having only become feasible within the last decade. Interest in SIF data has grown exponentially, and the retrieval of SIF and the provision of SIF data products has become an important and formal component of spaceborne Earth observation missions. Here, we describe the global Level 2 SIF Lite data products for the Greenhouse Gases Observing Satellite (GOSAT), the Orbiting
+Carbon Observatory-2 (OCO-2), and Orbiting Carbon Observatory-3 (OCO-3) platforms, which are provided for each platform in daily netCDF files (Frankenberg, 2022, https://doi.org/10.22002/D<sub>1</sub>.8771; OCO-2 Science Team et al., 2020, https://doi.org/10.5067/XO<sub>2</sub>LBBNPO<sub>010</sub>; OCO-3 Science Team et al., 2020, https://doi.org/10.5067/NOD<sub>1</sub>DPPBCXSO). We also outline the methods used to retrieve SIF and estimate uncertainty, describe all the data fields, and provide users with the background information necessary for the proper use
+and interpretation of the data, such as considerations of retrieval noise, sun sensor geometry, the indirect relationship between SIF and photosynthesis, and differences among the three platforms and their respective data products. OCO-2 and OCO-3 have the highest spatial resolution of spaceborne SIF retrievals to date, and the target and snapshot area mode observation modes of OCO-2 and OCO-3 are unique. These modes
+provide hundreds to thousands of SIF retrievals at biologically diverse global target sites during a single overpass, and provide an opportunity to better inform our understanding of canopy-scale vegetation SIF emission across biomes.

@@ -1,0 +1,17 @@
+---
+title: 'Assessing fossil fuel CO
+<sub>2</sub>
+emissions in California using atmospheric observations and models'
+author: 'Graven, H and Fischer, M L and Lueker, T and Jeong, S and Guilderson, T P and Keeling, R F and Bambha, R and Brophy, K and Callahan, W and Cui, X and Frankenberg, C and Gurney, K R and LaFranchi, B W and Lehman, S J and Michelsen, H and Miller, J B and Newman, S and Paplawsky, W and Parazoo, N C and Sloop, C and Walker, S J'
+type: 'journal-article'
+year: 2018
+publication: 'Environmental Research Letters'
+doi: '10.1088/1748-9326/aabd43'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

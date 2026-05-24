@@ -1,0 +1,16 @@
+---
+title: 'Technical note: Common ambiguities in plant hydraulics'
+author: 'Wang, Yujie and Frankenberg, Christian'
+type: 'journal-article'
+year: 2022
+publication: 'Biogeosciences'
+doi: '10.5194/bg-19-4705-2022'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. Plant hydraulics gains increasing interest in plant ecophysiology and vegetation modeling. However, the hydraulic properties and profiles are often improperly represented, thus leading to biased results and simulations, e.g., the neglection of gravitational pressure drop results in overestimated water flux. We highlight the commonly seen ambiguities and/or misunderstandings in plant hydraulics, including (1) the distinction between water potential and pressure, (2) differences among hydraulic conductance and conductivity, (3) xylem vulnerability curve formulations, (4) model complexity, (5) stomatal-model representations, (6) bias from analytic estimations, (7) whole-plant vulnerability, and (8) neglected temperature dependencies. We recommend careful thinking before using or modifying existing definitions, methods, and models.

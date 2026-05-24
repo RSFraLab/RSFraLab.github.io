@@ -1,0 +1,48 @@
+---
+title: 'Sustained Non-Photochemical Quenching Shapes the Seasonal Pattern of Solar-Induced Fluorescence at a High-Elevation Evergreen Forest'
+author: 'Raczka, Brett and Blanken, Peter and Burns, Sean and Duarte, Henrique and Frankenberg, Christian and Grossman, Katja and Koehler, Philipp and Lee, Jung-Eun and Lin, John and Logan, Barry and Magney, Troy and Porcar-Castell, Albert and Stutz, Jochen and Yang, Xi'
+type: 'preprint'
+year: 2019
+publication: ''
+doi: '10.1002/essoar.10500358.1'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
+The Western US accounts for a significant amount of the forested biomass
+and carbon uptake within the conterminous United States. Warming and
+drying climate trends combined with a legacy of fire suppression have
+left Western forests particularly vulnerable to disturbance from
+insects, fire and drought mortality. These challenging conditions may
+significantly weaken this region’s ability to uptake carbon from the
+atmosphere and warrant continued monitoring. Traditional methods of
+carbon monitoring are limited by the complex terrain of the Rocky
+Mountains that lead to complex atmospheric flows coupled with
+heterogeneous climate and soil conditions. Recently, solar induced
+fluorescence (SIF) has been found to be a strong indicator of GPP, and
+with the increased availability of remotely-sensed SIF, provides an
+opportunity to estimate GPP and ecosystem function across the Western
+US. Although the SIF-GPP empirical linkage is strong, the mechanistic
+understanding between SIF and GPP is lacking, and ultimately depends
+upon changes in leaf chemistry that convert absorbed radiation into
+photochemistry, heat (via non-photochemical quenching (NPQ)), leaf
+damage or SIF. Understanding of the mechanistic detail is necessary to
+fully leverage observed SIF to constrain model estimates of GPP and
+improve representation of ecosystem processes. Here, we include an
+improved fluorescence model within CLM 4.5 to simulate seasonal changes
+in SIF at a sub-alpine forest in Colorado. We find that when the model
+includes a representation of sustained NPQ the simulated fluorescence is
+much closer to the seasonal pattern of SIF observed from the GOME-2
+satellite platform and a custom tower mounted spectrometer system. We
+also find that average air temperature may be used as a predictor of
+sustained NPQ when observations are not available. This relationship to
+air temperature is promising because it may allow for efficient spatial
+upscaling of SIF simulations, given widespread availability of
+temperature data, but not NPQ observations. Further improvements to the
+fluorescence model should focus upon distinguishing between the impacts
+of NPQ versus the de-activation of photosystems brought on by
+high-stress environmental conditions.
