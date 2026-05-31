@@ -1,0 +1,16 @@
+---
+title: 'A deep learning-driven emission estimator utilizing a mixture of experts for local wind speed situations applied to high-resolution methane imagery'
+author: 'Plewa, Thomas and Butz, André and Frankenberg, Christian and Thorpe, Andrew K. and Marshall, Julia'
+type: 'preprint'
+year: 2026
+publication: ''
+doi: '10.5194/egusphere-2026-2572'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
+Abstract. Methane (CH<sub>4</sub>) is the anthropogenic greenhouse gas with the second-highest impact on the Earth's radiative budget since pre-industrial times. A substantial amount of CH<sub>4</sub> emissions are from the fossil fuel industry and are emitted from point-like sources that can be measured using airborne or space-based spectrometers. The precise quantification of point-source emissions has proven to be difficult, with uncertainties driven by the lack of local wind speed measurements and the task of estimating the effective wind speed of the plume. Here, we continue the development of deep learning-based methods using convolutional neural networks (CNN) to estimate emissions without the need for auxiliary wind speed information. We use a library of plumes obtained from large-eddy-simulations (LES) and realistic background noise scenes from the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS-NG), used in previous studies, to generate realistic synthetic data. We suggest a mixture of experts (MoE) architecture, that is able to extract the wind speed forcing used in the LES and to estimate emission rates conditional on the wind speed present in the scenes. This allows us to integrate the concept of different wind speed scenarios into the network architecture, making the performance of the network more transparent and explainable and, while still being independent of external wind speed information, makes it possible to use external wind speed information to validate or improve emission estimates. The MoE-based network, without any external wind speed information, provides a mean absolute percentage error (MAPE) of 5.65 % for scenes with CH<sub>4</sub> emission rates exceeding 100 kg h-1, which is a 40 % improvement compared to previous implementations. The proposed network is also able to address biases at high wind speed situations, leading to almost unbiased estimates over the entire emission and wind speed domain.
