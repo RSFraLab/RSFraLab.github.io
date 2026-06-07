@@ -1,0 +1,16 @@
+---
+title: 'Towards a Harmonized Long‐Term Spaceborne Record of Far‐Red Solar‐Induced Fluorescence'
+author: 'Parazoo, Nicholas C. and Frankenberg, Christian and Köhler, Philipp and Joiner, Joanna and Yoshida, Yasuko and Magney, Troy and Sun, Ying and Yadav, Vineet'
+type: 'journal-article'
+year: 2019
+publication: 'Journal of Geophysical Research: Biogeosciences'
+doi: '10.1029/2019jg005289'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractFar‐red solar‐induced chlorophyll fluorescence (SIF) has been retrieved from multiple satellites with nearly continuous global coverage since 1996. Multiple official and research‐grade retrievals provide a means for cross validation across sensors and algorithms, but produces substantial variation across products due to differences in instrument characteristics and retrieval algorithm. The lack of a consistent, calibrated SIF data set hampers scientific interpretation of planetary photosynthesis. NASA's Orbiting Carbon Observatory 2 (OCO‐2) offers small sampling footprints, high data acquisition, and repeating spatially resolved targets at bioclimatically diverse locations, providing a unique benchmark for spaceborne sensors traceable to ground data. We leverage overlap between the longer running Global Ozone Monitoring Instrument version 2 (GOME‐2) SIF time series, and more recent state‐of‐the‐art OCO‐2 and TROPOspheric Monitoring Instrument (TROPOMI) data, in a first attempt to reconcile inconsistencies in the long‐term record. After screening and correcting for key instrument differences (time of day, wavelength, Sun‐sensor geometry, cloud effects, footprint area), we find that Global Ozone Monitoring Instrument version 2 and TROPOspheric Monitoring Instrument perform exceedingly well in capturing spatial, seasonal, and interannual variability across OCO‐2 targets. However, Global Ozone Monitoring Instrument version 2 retrieval methods differ by up to a factor of 2 in signal‐to‐noise and magnitude. Magnitude differences are largely attributed to retrieval window choice, with wider windows producing higher magnitudes. The assumed SIF spectral shape has negligible effect. Substantial research is needed to understand remaining sensitivities to atmospheric absorption and reflectance. We conclude that OCO‐2 and TROPOspheric Monitoring Instrument have opened up the possibility to produce a multidecadal SIF record with well‐characterized uncertainty and error quantification for overlapping instruments, enabling back‐calibration of previous instruments and production of a consistent, research‐grade, harmonized time series.

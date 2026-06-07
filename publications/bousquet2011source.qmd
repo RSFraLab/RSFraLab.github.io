@@ -1,0 +1,16 @@
+---
+title: 'Source attribution of the changes in atmospheric methane for 2006–2008'
+author: 'Bousquet, P. and Ringeval, B. and Pison, I. and Dlugokencky, E. J. and Brunke, E.-G. and Carouge, C. and Chevallier, F. and Fortems-Cheiney, A. and Frankenberg, C. and Hauglustaine, D. A. and Krummel, P. B. and Langenfelds, R. L. and Ramonet, M. and Schmidt, M. and Steele, L. P. and Szopa, S. and Yver, C. and Viovy, N. and Ciais, P.'
+type: 'journal-article'
+year: 2011
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-11-3689-2011'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. The recent increase of atmospheric methane is investigated by using two atmospheric inversions to quantify the distribution of sources and sinks for the 2006–2008 period, and a process-based model of methane emissions by natural wetland ecosystems. Methane emissions derived from the two inversions are consistent at a global scale: emissions are decreased in 2006 (−7 Tg) and increased in 2007 (+21 Tg) and 2008 (+18 Tg), as compared to the 1999–2006 period. The agreement on the latitudinal partition of the flux anomalies for the two inversions is fair in 2006, good in 2007, and not good in 2008. In 2007, a positive anomaly of tropical emissions is found to be the main contributor to the global emission anomalies (~60–80%) for both inversions, with a dominant share attributed to natural wetlands (~2/3), and a significant contribution from high latitudes (~25%). The wetland ecosystem model produces smaller and more balanced positive emission anomalies between the tropics and the high latitudes for 2006, 2007 and 2008, mainly due to precipitation changes during these years. At a global scale, the agreement between the ecosystem model and the inversions is good in 2008 but not satisfying in 2006 and 2007. Tropical South America and Boreal Eurasia appear to be major contributors to variations in methane emissions consistently in the inversions and the ecosystem model. Finally, changes in OH radicals during 2006–2008 are found to be less than 1% in inversions, with only a small impact on the inferred methane emissions.
