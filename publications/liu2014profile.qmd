@@ -1,0 +1,16 @@
+---
+title: 'Profile information on CO from SCIAMACHY observations using cloud slicing and comparison with model simulations'
+author: 'Liu, C. and Beirle, S. and Butler, T. and Hoor, P. and Frankenberg, C. and Jöckel, P. and Penning de Vries, M. and Platt, U. and Pozzer, A. and Lawrence, M. G. and Lelieveld, J. and Tost, H. and Wagner, T.'
+type: 'journal-article'
+year: 2014
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-14-1717-2014'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. We apply a cloud slicing technique (CST), originally developed for Total Ozone Mapping Spectrometer (TOMS) ozone observations, to CO vertical column densities retrieved from the SCanning Imaging Absorption spectroMeter for Atmospheric CHartographY (SCIAMACHY). CST makes use of the shielding effect of clouds and combines trace gas column measurements of cloudy pixels with different cloud heights to retrieve fractional columns aloft. Here we determine seasonal mean tropospheric CO profiles at a vertical resolution of about 1 km, which is much finer than what can be obtained from thermal infrared (IR) instruments. However, since both the atmospheric CO profiles and the effective cloud heights depend systematically on meteorology, and in addition part of the retrieved signal originates from the clear part of the satellite ground pixel, the profiles retrieved from the CST have to be interpreted with care. We compare the seasonal mean SCIAMACHY CO profiles with the output from two atmospheric models sampled in the same way as the satellite observations. We find in general good agreement of the spatial patterns, but systematic differences in the absolute values are observed in both hemispheres (more strongly in the Northern Hemisphere), indicating that the source strengths in the emission inventories are probably underestimated.
