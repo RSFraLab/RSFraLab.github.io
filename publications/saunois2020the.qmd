@@ -1,0 +1,73 @@
+---
+title: 'The Global Methane Budget 2000–2017'
+author: 'Saunois, Marielle and Stavert, Ann R. and Poulter, Ben and Bousquet, Philippe and Canadell, Josep G. and Jackson, Robert B. and Raymond, Peter A. and Dlugokencky, Edward J. and Houweling, Sander and Patra, Prabir K. and Ciais, Philippe and Arora, Vivek K. and Bastviken, David and Bergamaschi, Peter and Blake, Donald R. and Brailsford, Gordon and Bruhwiler, Lori and Carlson, Kimberly M. and Carrol, Mark and Castaldi, Simona and Chandra, Naveen and Crevoisier, Cyril and Crill, Patrick M. and Covey, Kristofer and Curry, Charles L. and Etiope, Giuseppe and Frankenberg, Christian and Gedney, Nicola and Hegglin, Michaela I. and Höglund-Isaksson, Lena and Hugelius, Gustaf and Ishizawa, Misa and Ito, Akihiko and Janssens-Maenhout, Greet and Jensen, Katherine M. and Joos, Fortunat and Kleinen, Thomas and Krummel, Paul B. and Langenfelds, Ray L. and Laruelle, Goulven G. and Liu, Licheng and Machida, Toshinobu and Maksyutov, Shamil and McDonald, Kyle C. and McNorton, Joe and Miller, Paul A. and Melton, Joe R. and Morino, Isamu and Müller, Jurek and Murguia-Flores, Fabiola and Naik, Vaishali and Niwa, Yosuke and Noce, Sergio and O''Doherty, Simon and Parker, Robert J. and Peng, Changhui and Peng, Shushi and Peters, Glen P. and Prigent, Catherine and Prinn, Ronald and Ramonet, Michel and Regnier, Pierre and Riley, William J. and Rosentreter, Judith A. and Segers, Arjo and Simpson, Isobel J. and Shi, Hao and Smith, Steven J. and Steele, L. Paul and Thornton, Brett F. and Tian, Hanqin and Tohjima, Yasunori and Tubiello, Francesco N. and Tsuruta, Aki and Viovy, Nicolas and Voulgarakis, Apostolos and Weber, Thomas S. and van Weele, Michiel and van der Werf, Guido R. and Weiss, Ray F. and Worthy, Doug and Wunch, Debra and Yin, Yi and Yoshida, Yukio and Zhang, Wenxin and Zhang, Zhen and Zhao, Yuanhong and Zheng, Bo and Zhu, Qing and Zhu, Qiuan and Zhuang, Qianlai'
+type: 'journal-article'
+year: 2020
+publication: 'Earth System Science Data'
+doi: '10.5194/essd-12-1561-2020'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. Understanding and quantifying the global methane (CH<sub>4</sub>) budget
+is important for assessing realistic pathways to mitigate climate change.
+Atmospheric emissions and concentrations of CH<sub>4</sub> continue to increase,
+making CH<sub>4</sub> the second most important human-influenced greenhouse gas in
+terms of climate forcing, after carbon dioxide (CO<sub>2</sub>). The relative
+importance of CH<sub>4</sub> compared to CO<sub>2</sub> depends on its shorter
+atmospheric lifetime, stronger warming potential, and variations in
+atmospheric growth rate over the past decade, the causes of which are still
+debated. Two major challenges in reducing uncertainties in the atmospheric
+growth rate arise from the variety of geographically overlapping CH<sub>4</sub>
+sources and from the destruction of CH<sub>4</sub> by short-lived hydroxyl
+radicals (OH). To address these challenges, we have established a
+consortium of multidisciplinary scientists under the umbrella of the Global
+Carbon Project to synthesize and stimulate new research aimed at improving
+and regularly updating the global methane budget. Following Saunois et al. (2016), we present here the second version of the living review paper
+dedicated to the decadal methane budget, integrating results of top-down
+studies (atmospheric observations within an atmospheric inverse-modelling
+framework) and bottom-up estimates (including process-based models for
+estimating land surface emissions and atmospheric chemistry, inventories of
+anthropogenic emissions, and data-driven extrapolations). For the 2008–2017 decade, global methane emissions are estimated by
+atmospheric inversions (a top-down approach) to be 576 Tg CH<sub>4</sub> yr−1 (range 550–594, corresponding to the minimum and maximum
+estimates of the model ensemble). Of this total, 359 Tg CH<sub>4</sub> yr−1 or
+∼ 60 % is attributed to anthropogenic sources, that is
+emissions caused by direct human activity (i.e. anthropogenic emissions; range 336–376 Tg CH<sub>4</sub> yr−1 or 50 %–65 %). The mean annual total emission for the new decade (2008–2017) is
+29 Tg CH<sub>4</sub> yr−1 larger than our estimate for the previous decade (2000–2009),
+and 24 Tg CH<sub>4</sub> yr−1 larger than the one reported in the previous
+budget for 2003–2012 (Saunois et al., 2016). Since 2012, global CH<sub>4</sub>
+emissions have been tracking the warmest scenarios assessed by the
+Intergovernmental Panel on Climate Change. Bottom-up methods suggest almost
+30 % larger global emissions (737 Tg CH<sub>4</sub> yr−1, range 594–881)
+than top-down inversion methods. Indeed, bottom-up estimates for natural
+sources such as natural wetlands, other inland water systems, and geological
+sources are higher than top-down estimates. The atmospheric constraints on
+the top-down budget suggest that at least some of these bottom-up emissions
+are overestimated. The latitudinal distribution of atmospheric
+observation-based emissions indicates a predominance of tropical emissions
+(∼ 65 % of the global budget, < 30∘ N)
+compared to mid-latitudes (∼ 30 %, 30–60∘ N)
+and high northern latitudes (∼ 4 %, 60–90∘ N). The most important source of uncertainty in the methane
+budget is attributable to natural emissions, especially those from wetlands
+and other inland waters. Some of our global source estimates are smaller than those in previously
+published budgets (Saunois et al., 2016; Kirschke et al., 2013). In particular wetland emissions are about 35 Tg CH<sub>4</sub> yr−1 lower due to
+improved partition wetlands and other inland waters. Emissions from
+geological sources and wild animals are also found to be smaller by 7 Tg CH<sub>4</sub> yr−1 by 8 Tg CH<sub>4</sub> yr−1, respectively. However, the overall
+discrepancy between bottom-up and top-down estimates has been reduced by
+only 5 % compared to Saunois et al. (2016), due to a higher estimate of emissions from inland waters, highlighting the need for more detailed research on emissions factors. Priorities for improving the methane
+budget include (i) a global, high-resolution map of water-saturated soils
+and inundated areas emitting methane based on a robust classification of
+different types of emitting habitats; (ii) further development of
+process-based models for inland-water emissions; (iii) intensification of
+methane observations at local scales (e.g., FLUXNET-CH<sub>4</sub> measurements)
+and urban-scale monitoring to constrain bottom-up land surface models, and
+at regional scales (surface networks and satellites) to constrain
+atmospheric inversions; (iv) improvements of transport models and the
+representation of photochemical sinks in top-down inversions; and (v) development of a 3D variational inversion system using isotopic and/or
+co-emitted species such as ethane to improve source partitioning. The data presented here can be downloaded from
+https://doi.org/10.18160/GCP-CH<sub>4</sub>-2019 (Saunois et al., 2020) and from the
+Global Carbon Project.

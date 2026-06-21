@@ -1,0 +1,24 @@
+---
+title: 'Terrestrial gross primary production inferred from satellite fluorescence and vegetation models'
+author: 'Parazoo, Nicholas C. and Bowman, Kevin and Fisher, Joshua B. and Frankenberg, Christian and Jones, Dylan B. A. and Cescatti, Alessandro and Pérez‐Priego, Óscar and Wohlfahrt, Georg and Montagnani, Leonardo'
+type: 'journal-article'
+year: 2014
+publication: 'Global Change Biology'
+doi: '10.1111/gcb.12652'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+
+Determining the spatial and temporal distribution of terrestrial gross primary production (GPP) is a critical step in closing the Earth's carbon budget. Dynamical global vegetation models (DGVMs) provide mechanistic insight into GPP variability but diverge in predicting the response to climate in poorly investigated regions. Recent advances in the remote sensing of solar‐induced chlorophyll fluorescence (SIF) opens up a new possibility to provide direct global observational constraints for GPP. Here, we apply an optimal estimation approach to infer the global distribution of GPP from an ensemble of eight DGVMs constrained by global measurements of SIF from the Greenhouse Gases Observing SATellite (GOSAT). These estimates are compared to flux tower data in N. America, Europe, and tropical S. America, with careful consideration of scale differences between models, GOSAT, and flux towers. Assimilation of GOSAT SIF with DGVMs causes a redistribution of global productivity from northern latitudes to the tropics of 7–8 Pg C yr
+−1
+from 2010 to 2012, with reduced GPP in northern forests (~3.6 Pg C yr
+−1
+) and enhanced GPP in tropical forests (~3.7 Pg C yr
+−1
+). This leads to improvements in the structure of the seasonal cycle, including earlier dry season GPP loss and enhanced peak‐to‐trough GPP in tropical forests within the Amazon Basin and reduced growing season length in northern croplands and deciduous forests. Uncertainty in predicted GPP (estimated from the spread of DGVMs) is reduced by 40–70% during peak productivity suggesting the assimilation of GOSAT SIF with models is well‐suited for benchmarking. We conclude that satellite fluorescence augurs a new opportunity to quantify the GPP response to climate drivers and the potential to constrain predictions of carbon cycle evolution.

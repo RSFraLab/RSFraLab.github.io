@@ -1,0 +1,15 @@
+---
+title: 'Prospects for chlorophyll fluorescence remote sensing from the Orbiting Carbon Observatory-2'
+author: 'Frankenberg, Christian and O''Dell, Chris and Berry, Joseph and Guanter, Luis and Joiner, Joanna and Köhler, Philipp and Pollock, Randy and Taylor, Thomas E.'
+type: 'journal-article'
+year: 2014
+publication: 'Remote Sensing of Environment'
+doi: '10.1016/j.rse.2014.02.007'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

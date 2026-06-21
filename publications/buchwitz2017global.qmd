@@ -1,0 +1,15 @@
+---
+title: 'Global satellite observations of column-averaged carbon dioxide and methane: The GHG-CCI XCO<sub>2</sub> and XCH<sub>4</sub> CRDP<sub>3</sub> data set'
+author: 'Buchwitz, M. and Reuter, M. and Schneising, O. and Hewson, W. and Detmers, R.G. and Boesch, H. and Hasekamp, O.P. and Aben, I. and Bovensmann, H. and Burrows, J.P. and Butz, A. and Chevallier, F. and Dils, B. and Frankenberg, C. and Heymann, J. and Lichtenberg, G. and De Mazière, M. and Notholt, J. and Parker, R. and Warneke, T. and Zehner, C. and Griffith, D.W.T. and Deutscher, N.M. and Kuze, A. and Suto, H. and Wunch, D.'
+type: 'journal-article'
+year: 2017
+publication: 'Remote Sensing of Environment'
+doi: '10.1016/j.rse.2016.12.027'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

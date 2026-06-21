@@ -1,0 +1,15 @@
+---
+title: 'Solar Induced Chlorophyll Fluorescence: Origins, Relation to Photosynthesis and Retrieval'
+author: 'Frankenberg, C. and Berry, J.'
+type: 'journal-article'
+year: 2018
+publication: 'Comprehensive Remote Sensing'
+doi: '10.1016/b978-0-12-409548-9.10632-3'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

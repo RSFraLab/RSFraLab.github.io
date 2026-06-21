@@ -1,0 +1,16 @@
+---
+title: 'Application of imaging spectroscopy for assessing fuel moisture content in Fishlake National Forest, Utah'
+author: 'Pascolini-Campbell, Madeleine and Bohn, Niklas and Miner, Kimberley and Lou, Yunling and An, Karen and Peacocock, Annemarie and Chen, Richard and Rolla, Julie and Frankenberg, Christian and Seidel, Felix and Hudak, Andrew'
+type: 'preprint'
+year: 2026
+publication: ''
+doi: '10.2139/ssrn.6960725'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
+Fuel moisture content is a key indicator of fire ignition risk and required to drive fire behavior models, however it often relies on in situ measurements which are sparse in time and space. Regional-scale and temporally dynamic measurements are required, and remote sensing provides an opportunity for more comprehensive mapping. In this paper, we demonstrate the use of fuel moisture metrics derived from imaging spectroscopy to inform pre- and post-fire conditions. Imaging spectroscopy can quantify canopy water content (CWC) using a physics-based retrieval, and distinguish landscape characteristics such as photosynthetic and non‐photosynthetic vegetation, and soils. Here, we demonstrate a use case of imaging spectroscopy-derived CWC and fractional cover for a field site on Monroe Mountain in the Fishlake National Forest, Utah. This location was heavily mapped by airborne AVIRIS-3 during a 2023 NASA/FASMEE field campaign. This region also underwent a prescribed burn in October 2023, permitting us to examine how we can use imaging spectroscopy to image fuel conditions pre- and post-fire. The relationship of CWC with in situ dead fuel moisture measurements is stronger for the DFMC surface fuels when filtering for points that contain 50% or more fraction of non-photosynthetic vegetation (R² = 0.50 to 0.54), except for 10-hour fuels (small branches and larger twigs) which had a decrease in agreement. CWC was also found to both decline following the prescribed burn, consistent with the spatial patterns of burn severity, indicating the use of these variables for assessing pre- and post-fire vegetation conditions.

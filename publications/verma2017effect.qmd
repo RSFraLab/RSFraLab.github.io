@@ -1,0 +1,16 @@
+---
+title: 'Effect of environmental conditions on the relationship between solar‐induced fluorescence and gross primary productivity at an OzFlux grassland site'
+author: 'Verma, Manish and Schimel, David and Evans, Bradley and Frankenberg, Christian and Beringer, Jason and Drewry, Darren T. and Magney, Troy and Marang, Ian and Hutley, Lindsay and Moore, Caitlin and Eldering, Annmarie'
+type: 'journal-article'
+year: 2017
+publication: 'Journal of Geophysical Research: Biogeosciences'
+doi: '10.1002/2016jg003580'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractRecent studies have utilized coarse spatial and temporal resolution remotely sensed solar‐induced fluorescence (SIF) for modeling terrestrial gross primary productivity (GPP) at regional scales. Although these studies have demonstrated the potential of SIF, there have been concerns about the ecophysiological basis of the relationship between SIF and GPP in different environmental conditions. Launched in 2014, the Orbiting Carbon Observatory‐2 (OCO‐2) has enabled fine‐scale (1.3 by 2.5 km) retrievals of SIF that are comparable with measurements recorded at eddy covariance towers. In this study, we examine the effect of environmental conditions on the relationship of OCO‐2 SIF with tower GPP over the course of a growing season at a well‐characterized natural grassland site. Combining OCO‐2 SIF and eddy covariance tower data with a canopy radiative transfer and an ecosystem model, we also assess the potential of OCO‐2 SIF to constrain the estimates of Vcmax, one of the most important parameters in ecosystem models. Based on the results, we suggest that although environmental conditions play a role in determining the nature of relationship between SIF and GPP, overall, the linear relationship is more robust at ecosystem scale than the theory based on leaf‐level processes might suggest. Our study also shows that the ability of SIF to constrain Vcmax is weak at the selected site.

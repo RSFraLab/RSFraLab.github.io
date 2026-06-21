@@ -1,0 +1,16 @@
+---
+title: 'Multiscale analyses of solar‐induced florescence and gross primary production'
+author: 'Wood, Jeffrey D. and Griffis, Timothy J. and Baker, John M. and Frankenberg, Christian and Verma, Manish and Yuen, Karen'
+type: 'journal-article'
+year: 2017
+publication: 'Geophysical Research Letters'
+doi: '10.1002/2016gl070775'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractSolar‐induced fluorescence (SIF) has shown great promise for probing spatiotemporal variations in terrestrial gross primary production (GPP), the largest component flux of the global carbon cycle. However, scale mismatches between SIF and ground‐based GPP have posed challenges toward fully exploiting these data. We used SIF obtained at high spatial sampling rates and resolution by NASA's Orbiting Carbon Observatory‐2 satellite to elucidate GPP‐SIF relationships across space and time in the U.S. Corn Belt. Strong linear scaling functions (R<sub>2</sub> ≥ 0.79) that were consistent across instantaneous to monthly time scales were obtained for corn ecosystems and for a heterogeneous landscape based on tall tower observations. Although the slope of the corn function was ~56% higher than for the landscape, SIF was similar for corn (C<sub>4</sub>) and soybean (C<sub>3</sub>). Taken together, there is strong observational evidence showing robust linear GPP‐SIF scaling that is sensitive to plant physiology but insensitive to the spatial or temporal scale.

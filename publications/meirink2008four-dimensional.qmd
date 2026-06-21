@@ -1,0 +1,16 @@
+---
+title: 'Four‐dimensional variational data assimilation for inverse modeling of atmospheric methane emissions: Analysis of SCIAMACHY observations'
+author: 'Meirink, Jan Fokke and Bergamaschi, Peter and Frankenberg, Christian and d''Amelio, Monica T. S. and Dlugokencky, Edward J. and Gatti, Luciana V. and Houweling, Sander and Miller, John B. and Röckmann, Thomas and Villani, M. Gabriella and Krol, Maarten C.'
+type: 'journal-article'
+year: 2008
+publication: 'Journal of Geophysical Research: Atmospheres'
+doi: '10.1029/2007jd009740'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Recent observations from the Scanning Imaging Absorption Spectrometer for Atmospheric Chartography (SCIAMACHY) instrument aboard ENVISAT have brought new insights in the global distribution of atmospheric methane. In particular, the observations showed higher methane concentrations in the tropics than previously assumed. Here, we analyze the SCIAMACHY observations and their implications for emission estimates in detail using a four‐dimensional variational (4D‐Var) data assimilation system. We focus on the period September to November 2003 and on the South American continent, for which the satellite observations showed the largest deviations from model simulations. In this set‐up the advantages of the 4D‐Var approach and the zooming capability of the underlying TM<sub>5</sub> atmospheric transport model are fully exploited. After application of a latitude‐dependent bias correction to the SCIAMACHY observations, the assimilation system is able to accurately fit those observations, while retaining consistency with a network of surface methane measurements. The main emission increments resulting from the inversion are an increase in the tropics, a decrease in South Asia, and a decrease at northern hemispheric high latitudes. The SCIAMACHY observations yield considerable additional emission uncertainty reduction, particularly in the (sub‐)tropical regions, which are poorly constrained by the surface network. For tropical South America, the inversion suggests more than a doubling of emissions compared to the a priori during the 3 months considered. Extensive sensitivity experiments, in which key assumptions of the inversion set‐up are varied, show that this finding is robust. Independent airborne observations in the Amazon basin support the presence of considerable local methane sources. However, these observations also indicate that emissions from eastern South America may be smaller than estimated from SCIAMACHY observations. In this respect it must be realized that the bias correction applied to the satellite observations does not take into account potential regional systematic errors, which – if identified in the future – will lead to shifts in the overall distribution of emission estimates.

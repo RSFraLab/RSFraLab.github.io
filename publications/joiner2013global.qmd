@@ -1,0 +1,16 @@
+---
+title: 'Global monitoring of terrestrial chlorophyll fluorescence from moderate-spectral-resolution near-infrared satellite measurements: methodology, simulations, and application to GOME-2'
+author: 'Joiner, J. and Guanter, L. and Lindstrot, R. and Voigt, M. and Vasilkov, A. P. and Middleton, E. M. and Huemmrich, K. F. and Yoshida, Y. and Frankenberg, C.'
+type: 'journal-article'
+year: 2013
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-6-2803-2013'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. Globally mapped terrestrial chlorophyll fluorescence retrievals are of high interest because they can provide information on the functional status of vegetation including light-use efficiency and global primary productivity that can be used for global carbon cycle modeling and agricultural applications. Previous satellite retrievals of fluorescence have relied solely upon the filling-in of solar Fraunhofer lines that are not significantly affected by atmospheric absorption. Although these measurements provide near-global coverage on a monthly basis, they suffer from relatively low precision and sparse spatial sampling. Here, we describe a new methodology to retrieve global far-red fluorescence information; we use hyperspectral data with a simplified radiative transfer model to disentangle the spectral signatures of three basic components: atmospheric absorption, surface reflectance, and fluorescence radiance. An empirically based principal component analysis approach is employed, primarily using cloudy data over ocean, to model and solve for the atmospheric absorption. Through detailed simulations, we demonstrate the feasibility of the approach and show that moderate-spectral-resolution measurements with a relatively high signal-to-noise ratio can be used to retrieve far-red fluorescence information with good precision and accuracy. The method is then applied to data from the Global Ozone Monitoring Instrument 2 (GOME-2). The GOME-2 fluorescence retrievals display similar spatial structure as compared with those from a simpler technique applied to the Greenhouse gases Observing SATellite (GOSAT). GOME-2 enables global mapping of far-red fluorescence with higher precision over smaller spatial and temporal scales than is possible with GOSAT. Near-global coverage is provided within a few days. We are able to show clearly for the first time physically plausible variations in fluorescence over the course of a single month at a spatial resolution of 0.5° × 0.5°. We also show some significant differences between fluorescence and coincident normalized difference vegetation indices (NDVI) retrievals.

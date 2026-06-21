@@ -1,0 +1,16 @@
+---
+title: 'Assessing Methane Emissions from Global Space-Borne Observations'
+author: 'Frankenberg, C. and Meirink, J. F. and van Weele, M. and Platt, U. and Wagner, T.'
+type: 'journal-article'
+year: 2005
+publication: 'Science'
+doi: '10.1126/science.1106644'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+In the past two centuries, atmospheric methane has more than doubled and now constitutes 20% of the anthropogenic climate forcing by greenhouse gases. Yet its sources are not well quantified, introducing uncertainties in its global budget. We retrieved the global methane distribution by using spaceborne near-infrared absorption spectroscopy. In addition to the expected latitudinal gradient, we detected large-scale patterns of anthropogenic and natural methane emissions. Furthermore, we observed unexpectedly high methane concentrations over tropical rainforests, revealing that emission inventories considerably underestimated methane sources in these regions during the time period of investigation (August through November 2003).
