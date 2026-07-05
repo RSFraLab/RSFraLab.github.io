@@ -1,0 +1,16 @@
+---
+title: 'Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale'
+author: 'Jongaramrungruang, Siraput and Matheou, Georgios and Thorpe, Andrew K. and Zeng, Zhao-Cheng and Frankenberg, Christian'
+type: 'journal-article'
+year: 2021
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-14-7999-2021'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. Methane (CH<sub>4</sub>) is the second most important anthropogenic greenhouse gas with a significant impact on radiative forcing, tropospheric air quality, and stratospheric water vapor. Remote sensing observations enable the detection and quantification of local methane emissions across large geographical areas, which is a critical step for understanding local flux distributions and subsequently prioritizing mitigation strategies. Obtaining methane column concentration measurements with low noise and minimal surface interference has direct consequences for accurately determining the location and emission rates of methane sources. The quality of retrieved column enhancements depends on the choices of the instrument and retrieval parameters. Here, we studied the changes in precision error and bias as a result of different spectral resolutions, instrument optical performance, and detector exposure times by using a realistic instrument noise model. In addition, we formally analyzed the impact of spectrally complex surface albedo features on retrievals using the iterative maximum a posteriori differential optical absorption spectroscopy (IMAP-DOAS) algorithm. We built an end-to-end modeling framework that can simulate observed radiances from reflected solar irradiance through a simulated CH<sub>4</sub> plume over several natural and artificial surfaces. Our analysis shows that complex surface features can alias into retrieved methane abundances, explaining the existence of retrieval biases in current airborne methane observations. The impact can be mitigated with higher spectral resolution and a larger polynomial degree to approximate surface albedo variations. Using a spectral resolution of 1.5 nm, an exposure time of 20 ms, and a polynomial degree of 25, a retrieval precision error below 0.007 mole m−2 or 1.0 % of total atmospheric CH<sub>4</sub> column can be achieved for high albedo cases, while minimizing the bias due to surface interference such that the noise is uncorrelated among various surfaces. At coarser spectral resolutions, it becomes increasingly harder to separate complex surface albedo features from atmospheric absorption features. Our modeling framework provides the basis for assessing tradeoffs for future remote sensing instruments and algorithmic designs. For instance, we find that improving the spectral resolution beyond 0.2 nm would actually decrease the retrieval precision, as detector readout noise will play an increasing role. Our work contributes towards building an enhanced monitoring system that can measure CH<sub>4</sub> concentration fields to determine methane sources accurately and efficiently at scale.

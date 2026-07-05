@@ -1,0 +1,16 @@
+---
+title: 'Retrieval techniques for airborne imaging of methane concentrations using high spatial and moderate spectral resolution: application to AVIRIS'
+author: 'Thorpe, A. K. and Frankenberg, C. and Roberts, D. A.'
+type: 'journal-article'
+year: 2014
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-7-491-2014'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. Two quantitative retrieval techniques were evaluated to estimate methane (CH<sub>4</sub>) enhancement in concentrated plumes using high spatial and moderate spectral resolution data from the Airborne Visible/Infrared Imaging Spectrometer (AVIRIS). An iterative maximum a posteriori differential optical absorption spectroscopy (IMAP-DOAS) algorithm performed well for an ocean scene containing natural CH<sub>4</sub> emissions from the Coal Oil Point (COP) seep field near Santa Barbara, California. IMAP-DOAS retrieval precision errors are expected to equal between 0.31 to 0.61 ppm CH<sub>4</sub> over the lowest atmospheric layer (height up to 1.04 km), corresponding to about a 30 to 60 ppm error for a 10 m thick plume. However, IMAP-DOAS results for a terrestrial scene were adversely influenced by the underlying land cover. A hybrid approach using singular value decomposition (SVD) was particularly effective for terrestrial surfaces because it could better account for spectral variability in surface reflectance. Using this approach, a CH<sub>4</sub> plume was observed extending 0.1 km downwind of two hydrocarbon storage tanks at the Inglewood Oil Field in Los Angeles, California (USA) with a maximum near surface enhancement of 8.45 ppm above background. At COP, the distinct plume had a maximum enhancement of 2.85 ppm CH<sub>4</sub> above background, and extended more than 1 km downwind of known seep locations. A sensitivity analysis also indicates CH<sub>4</sub> sensitivity should be more than doubled for the next generation AVIRIS sensor (AVIRISng) due to improved spectral resolution and sampling. AVIRIS-like sensors offer the potential to better constrain emissions on local and regional scales, including sources of increasing concern like industrial point source emissions and fugitive CH<sub>4</sub> from the oil and gas industry.

@@ -1,0 +1,17 @@
+---
+title: 'Methane emissions from underground gas storage in California'
+author: 'Thorpe, Andrew K and Duren, Riley M and Conley, Stephen and Prasad, Kuldeep R and Bue, Brian D and Yadav, Vineet and Foster, Kelsey T and Rafiq, Talha and Hopkins, Francesca M and Smith, Mackenzie L and Fischer, Marc L and Thompson, David R and Frankenberg, Christian and McCubbin, Ian B and Eastwood, Michael L and Green, Robert O and Miller, Charles E'
+type: 'journal-article'
+year: 2020
+publication: 'Environmental Research Letters'
+doi: '10.1088/1748-9326/ab751d'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+Accurate and timely detection, quantification, and attribution of methane emissions from Underground Gas Storage (UGS) facilities is essential for improving confidence in greenhouse gas inventories, enabling emission mitigation by facility operators, and supporting efforts to assess facility integrity and safety. We conducted multiple airborne surveys of the 12 active UGS facilities in California between January 2016 and November 2017 using advanced remote sensing and in situ observations of near-surface atmospheric methane (CH<sub>4</sub>). These measurements where combined with wind data to derive spatially and temporally resolved methane emission estimates for California UGS facilities and key components with spatial resolutions as small as 1–3 m and revisit intervals ranging from minutes to months. The study spanned normal operations, malfunctions, and maintenance activity from multiple facilities including the active phase of the Aliso Canyon blowout incident in 2016 and subsequent return to injection operations in summer 2017. We estimate that the net annual methane emissions from the UGS sector in California averaged between 11.0 ± 3.8 GgCH<sub>4</sub> yr−1 (remote sensing) and 12.3 ± 3.8 GgCH<sub>4</sub> yr−1 (in situ). Net annual methane emissions for the 7 facilities that reported emissions in 2016 were estimated between 9.0 ± 3.2 GgCH<sub>4</sub> yr−1 (remote sensing) and 9.5 ± 3.2 GgCH<sub>4</sub> yr−1 (in situ), in both cases around 5 times higher than reported. The majority of methane emissions from UGS facilities in this study are likely dominated by anomalous activity: higher than expected compressor loss and leaking bypass isolation valves. Significant variability was observed at different time-scales: daily compressor duty-cycles and infrequent but large emissions from compressor station blow-downs. This observed variability made comparison of remote sensing and in situ observations challenging given measurements were derived largely at different times, however, improved agreement occurred when comparing simultaneous measurements. Temporal variability in emissions remains one of the most challenging aspects of UGS emissions quantification, underscoring the need for more systematic and persistent methane monitoring.

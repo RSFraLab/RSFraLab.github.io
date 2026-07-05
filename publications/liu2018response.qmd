@@ -1,0 +1,56 @@
+---
+title: 'Response to Comment on “Contrasting carbon cycle responses of the tropical continents to the 2015–2016 El Niño”'
+author: 'Liu, Junjie and Bowman, Kevin W. and Schimel, David and Parazoo, Nicolas C. and Jiang, Zhe and Lee, Meemong and Bloom, A. Anthony and Wunch, Debra and Frankenberg, Christian and Sun, Ying and O’Dell, Christopher W. and Gurney, Kevin R. and Menemenlis, Dimitris and Gierach, Michelle and Crisp, David and Eldering, Annmarie'
+type: 'journal-article'
+year: 2018
+publication: 'Science'
+doi: '10.1126/science.aat1211'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Chevallier showed a column CO
+2
+(
+
+
+
+
+X
+
+
+
+CO
+
+2
+
+
+
+
+
+
+) anomaly of ±0.5 parts per million forced by a uniform net biosphere exchange (NBE) anomaly of 2.5 gigatonnes of carbon over the tropical continents within a year, so he claimed that the inferred NBE uncertainties should be larger than presented in Liu
+et al
+. We show that a much concentrated NBE anomaly led to much larger
+
+
+
+
+X
+
+
+
+CO
+
+2
+
+
+
+
+
+
+perturbations.

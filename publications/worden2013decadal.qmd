@@ -1,0 +1,16 @@
+---
+title: 'Decadal record of satellite carbon monoxide observations'
+author: 'Worden, H. M. and Deeter, M. N. and Frankenberg, C. and George, M. and Nichitiu, F. and Worden, J. and Aben, I. and Bowman, K. W. and Clerbaux, C. and Coheur, P. F. and de Laat, A. T. J. and Detweiler, R. and Drummond, J. R. and Edwards, D. P. and Gille, J. C. and Hurtmans, D. and Luo, M. and Martínez-Alonso, S. and Massie, S. and Pfister, G. and Warner, J. X.'
+type: 'journal-article'
+year: 2013
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-13-837-2013'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. Atmospheric carbon monoxide (CO) distributions are controlled by anthropogenic emissions, biomass burning, transport and oxidation by reaction with the hydroxyl radical (OH). Quantifying trends in CO is therefore important for understanding changes related to all of these contributions. Here we present a comprehensive record of satellite observations from 2000 through 2011 of total column CO using the available measurements from nadir-viewing thermal infrared instruments: MOPITT, AIRS, TES and IASI. We examine trends for CO in the Northern and Southern Hemispheres along with regional trends for Eastern China, Eastern USA, Europe and India. We find that all the satellite observations are consistent with a modest decreasing trend ~ −1 % yr−1 in total column CO over the Northern Hemisphere for this time period and a less significant, but still decreasing trend in the Southern Hemisphere. Although decreasing trends in the United States and Europe have been observed from surface CO measurements, we also find a decrease in CO over E. China that, to our knowledge, has not been reported previously. Some of the interannual variability in the observations can be explained by global fire emissions, but the overall decrease needs further study to understand the implications for changes in anthropogenic emissions.

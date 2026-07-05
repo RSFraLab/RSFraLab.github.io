@@ -1,0 +1,16 @@
+---
+title: 'Evaluating GPP and Respiration Estimates Over Northern Midlatitude Ecosystems Using Solar‐Induced Fluorescence and Atmospheric CO<sub>2</sub> Measurements'
+author: 'Byrne, B. and Wunch, D. and Jones, D. B. A. and Strong, K. and Deng, F. and Baker, I. and Köhler, P. and Frankenberg, C. and Joiner, J. and Arora, V. K. and Badawy, B. and Harper, A. B. and Warneke, T. and Petri, C. and Kivi, R. and Roehl, C. M.'
+type: 'journal-article'
+year: 2018
+publication: 'Journal of Geophysical Research: Biogeosciences'
+doi: '10.1029/2018jg004472'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractOn regional to global scales, few constraints exist on gross primary productivity (GPP) and ecosystem respiration (Re) fluxes. Yet constraints on these fluxes are critical for evaluating and improving terrestrial biosphere models. In this study, we evaluate the seasonal cycle of GPP, Re, and net ecosystem exchange (NEE) produced by four terrestrial biosphere models and FLUXCOM, a data‐driven model, over northern midlatitude ecosystems. We evaluate the seasonal cycle of GPP and NEE using solar‐induced fluorescence retrieved from the Global Ozone Monitoring Experiment‐2 and column‐averaged dry‐air mole fractions of CO<sub>2</sub> (XCO<sub>2</sub>) from the Total Carbon Column Observing Network, respectively. We then infer Re by combining constraints on GPP with constraints on NEE from two flux inversions. An ensemble of optimized Re seasonal cycles is generated using five GPP estimates and two NEE estimates. The optimized Re curves generally show high consistency with each other, with the largest differences due to the magnitude of GPP. We find optimized Re exhibits a systematically broader summer maximum than modeled Re, with values lower during June–July and higher during the fall than Re. Further analysis suggests that the differences could be due to seasonal variations in the carbon use efficiency (possibly due to an ecosystem‐scale Kok effect) and to seasonal variations in the leaf litter and fine root carbon pool. The results suggest that the inclusion of variable carbon use efficiency for autotrophic respiration and carbon pool dependence for heterotrophic respiration is important for accurately simulating Re.
