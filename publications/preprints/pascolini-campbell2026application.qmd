@@ -4,7 +4,7 @@ author: 'Pascolini-Campbell, Madeleine and Bohn, Niklas and Miner, Kimberley and
 type: 'preprint'
 year: 2026
 publication: ''
-doi: '10.2139/ssrn.6960725'
+doi: '10.2139/ssrn.7071889'
 materials: ''
 supplement: ''
 orcid_type: 'preprint'
