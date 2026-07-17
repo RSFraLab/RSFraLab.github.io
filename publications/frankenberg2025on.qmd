@@ -1,0 +1,17 @@
+---
+title: 'On the Use of N<sub>2</sub>O as a Light‐Path Proxy for Accurate Greenhouse Gas Measurements From Space'
+author: 'Frankenberg, C. and Sanghavi, S. and Saha, A. and Wennberg, P. O. and Jacob, D. J. and Michalak, A. M.'
+type: 'journal-article'
+year: 2025
+publication: 'Geophysical Research Letters'
+doi: '10.1029/2024gl114131'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+Accurate greenhouse gas retrievals require either precise radiative transfer modeling or light‐path proxies to separate trace gas variations from photon path‐length changes caused by scattering. Nitrous oxide (O) is a compelling light‐path proxy, particularly in challenging environments such as the humid tropics, where current retrieval methods face low data yields due to persistent partial cloud cover and substantial surface heterogeneity. This study evaluates O as a proxy for  and  retrievals, leveraging its spectral proximity and atmospheric stability. Radiative transfer simulations demonstrate that O effectively mitigates errors from scattering and albedo variability, especially for , demonstrating consistent performance across high aerosol optical depths and low albedos. While  requires small adjustments due to its partially saturated band, the proxy approach offers significant advantages. These findings underscore the promise of O‐based retrievals to enhance data quality for future greenhouse gas satellite missions.

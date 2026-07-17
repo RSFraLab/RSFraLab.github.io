@@ -1,0 +1,16 @@
+---
+title: 'Inferring drivers of tropical isoprene: competing effects of emissions and chemistry'
+author: 'Yoon, James and Wells, Kelley C. and Millet, Dylan B. and Frankenberg, Christian and Sanghavi, Suniti and Swann, Abigail L. S. and Thornton, Joel A. and Turner, Alexander J.'
+type: 'preprint'
+year: 2025
+publication: ''
+doi: '10.5194/egusphere-2025-5532'
+materials: ''
+supplement: 'https://doi.org/10.5194/egusphere-2025-5532-supplement'
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
+Abstract. Isoprene is the most significant non-methane hydrocarbon by total emissions and is an important control on the tropospheric oxidative capacity. In the atmosphere, isoprene is oxidized by the hydroxyl (OH) radical on the order of hours depending on local OH concentrations. Using isoprene retrievals from the Cross-track infrared sounder (CrIS), we monitor global isoprene column variability and observe differing isoprene column responses to El Niño-Southern Oscillation across three tropical regions: Amazonia, the Maritime Continent, and equatorial Africa. We find correlations between isoprene column variability and temperature over Amazonia, which suggests that isoprene emissions drive Amazonian isoprene variability (“emissions-controlled”). In the Maritime Continent, we find strong correlations between isoprene columns, precipitation and soil moisture, as well as an anti-correlation between isoprene and formaldehyde retrievals. These correlations suggest that isoprene columns may be modulated by non-anthropogenic NOx emissions, namely soil and biomass burning NOx (“chemistry-controlled”), although convection and lightning NOx may also modulate isoprene column retrievals if the lofted isoprene flux is large enough. In equatorial Africa, both biomass burning and temperature can explain isoprene variability during different periods, representing an intermediate regime with contributions from emissions and chemistry. We suggest that these isoprene regimes are caused by differences in the dynamic temperature and oxidant range between the three regions, and we specifically highlight oil palm plantations in the Maritime Continent as an area of co-located isoprene and soil NOx fluxes. By leveraging CrIS isoprene retrievals, we can study interactions between VOC and NOx sources over tropical areas with few in-situ observations.

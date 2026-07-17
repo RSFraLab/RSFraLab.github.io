@@ -1,0 +1,16 @@
+---
+title: 'Leveraging temperature–mortality risk relationship to identify most effective urban heat adaptation sites'
+author: 'Shreevastava, Anamika and Druckenmiller, Hannah and Dehaene, Quentin and Halsey, Alexander and Prasanth, Sai and Yoo, Cheolhee and Hulley, Glynn and Frankenburg, Christian and Yin, Yi'
+type: 'preprint'
+year: 2026
+publication: ''
+doi: '10.5194/egusphere-egu26-15726'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
+As cities continue to warm, where should cooling investments be deployed to maximise public health benefits? Here we address this question for cities like Los Angeles, where intensifying heat, entrenched socio-economic inequality, and uneven adaptive capacity intersect. To identify priority “hotspots” where cooling interventions would most effectively reduce temperatures and save lives, we map the intersection of three key variables: (a) high heat exposure, (b) socio-economic vulnerability, and (c) feasibility of intervention strategies. We take an inventory of the urban built form and map the current albedo to evaluate where reflective coating can be deployed. We then formulate a city-specific temperature–mortality relationship to optimize city-wide public health benefits of the potential reduction in temperature. Applying this framework to Los Angeles shows that reflective surface treatments can produce substantial local air temperature reductions in select high-risk areas and yield large mortality benefits relative to the treated area. The resulting benefit distribution is sharply skewed as treating only 9% the city generates half of the total potential reduction in heat-related deaths, highlighting a strong opportunity for targeted, high-return investment. We have also developed an interactive web-based tool that would allow practitioners to explore the cooling potential in every neighborhood, visualize the life years that could be saved, and identify priority neighborhoods for heat adaptation. The utility of this work extends beyond Los Angeles by offering a scalable framework for other cities seeking to deploy equitable and life-saving heat adaptation strategies.

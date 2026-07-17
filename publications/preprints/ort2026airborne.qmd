@@ -1,0 +1,31 @@
+---
+title: 'Airborne observations reveal underestimated riverine methane emissions across the Amazon'
+author: 'Ort, Linda and Frankenberg, Christian and Dadheech, Nikhil and Yoon, James Y. S. and Turner, Alexander J. and Bloom, A. Anthony and Konopka, Paul and Lachnitt, Hans-Christoph and Hoor, Peter Michael and Lelieveld, Jos and Kort, Eric A. and Fischer, Horst'
+type: 'preprint'
+year: 2026
+publication: ''
+doi: '10.22541/essoar.177248180.00166712/v1'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
+Strongly increasing trends in global methane in recent decades highlight
+the importance of understanding source-sink attributions and climate
+feedback mechanisms, especially for large natural sources like wetlands.
+Here, we present an analysis of airborne methane observations above the
+Amazon Basin conducted from December 2022 through January 2023 that
+reveal enhanced methane concentrations, especially below 6 km. Using
+Bayesian inversion with the atmospheric transport model STILT, we
+optimize surface fluxes to match our observations, starting from prior
+bottom-up flux estimates by WetCHARTs. The posterior suggests
+underestimated emissions across the Amazon basin. The largest
+underestimates occur along rivers and tributaries, where emissions
+exceeded model values by up to a factor of four. River deltas make up
+26% of the underestimated fluxes with reservoirs, and regularly flooded
+riverine areas contribute 19% and 13%, respectively. This highlights
+the need for improved understanding of the continuum across wetlands and
+freshwater bodies for tropical methane emissions.

@@ -1,0 +1,16 @@
+---
+title: 'Improved model predictions of carbon and water fluxes by including drought legacy effects'
+author: 'Yao, Yitong and Wang, Yujie and Yin, Yi and Wood, Jeffrey D. and Frankenberg, Christian'
+type: 'preprint'
+year: 2025
+publication: ''
+doi: '10.5194/egusphere-2025-5684'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
+Abstract. Besides simultaneous influences, droughts have lasting impacts on vegetation by impairing hydraulic and photosynthetic capacities, known as the drought legacy effects. The ignorance of legacy effects in numerical simulations, such as lagged xylem recovery, may lead to significant model-observation discrepancies. However, the limited temporal resolution of most observational data makes it challenging to capture the physiological dynamics necessary to improve model accuracy. Here, we investigated the recovery of carbon flux (represented by gross primary productivity, GPP) and water flux (represented by evapotranspiration, ET) following a severe drought in 2012, using half-hourly eddy-covariance flux observations and weekly predawn leaf water potential measurements from a temperate forest in the Central US. We implemented both optimality-based and empirical stomatal models within a land surface model, testing three drought recovery scenarios for each: no recovery, full recovery, and partial recovery of xylem hydraulic conductance and photosynthetic capacity. Before and during the drought, all stomatal models performed similarly for GPP and ET. Post-drought, assuming no recovery led to underestimated ET; assuming full recovery led to overestimated GPP; and assuming partial recovery improved both, indicating persistent biochemical limitations after drought. The observed carbon-water decoupling during and after the event further points to non-stomatal constraints on photosynthesis and unequal stress on carbon and water fluxes. Our work highlights the need to account for delayed recovery of xylem hydraulics and photosynthetic capacity when modeling drought legacy effects. Further research to mechanistically represent dynamic recovery processes, particularly their timing and magnitude, is essential for improving the modeling of global carbon and water fluxes.

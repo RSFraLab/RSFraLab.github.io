@@ -1,5 +1,7 @@
 ---
-title: 'Observed Impacts of COVID‐19 on Urban CO<sub>2</sub> Emissions'
+title: 'Observed Impacts of COVID‐19 on Urban CO
+<sub>2</sub>
+Emissions'
 author: 'Turner, Alexander J. and Kim, Jinsol and Fitzmaurice, Helen and Newman, Catherine and Worthington, Kevin and Chan, Katherine and Wooldridge, Paul J. and Köehler, Philipp and Frankenberg, Christian and Cohen, Ronald C.'
 type: 'journal-article'
 year: 2020
@@ -13,4 +15,30 @@ toc: false
 
 ## Abstract
 
-AbstractGovernments restricted mobility and effectively shuttered much of the global economy in response to the COVID‐19 pandemic. Six San Francisco Bay Area counties were the first region in the United States to issue a “shelter‐in‐place” order asking non‐essential workers to stay home. Here we use CO<sub>2</sub> observations from 35 Berkeley Environment, Air‐quality and CO<sub>2</sub> Network (BEACO<sub>2</sub>N) nodes and an atmospheric transport model to quantify changes in urban CO<sub>2</sub> emissions due to the order. We infer hourly emissions at 900‐m spatial resolution for 6 weeks before and 6 weeks during the order. We observe a 30% decrease in anthropogenic CO<sub>2</sub> emissions during the order and show that this decrease is primarily due to changes in traffic (–48%) with pronounced changes to daily and weekly cycles; non‐traffic emissions show small changes (–8%). These findings provide a glimpse into a future with reduced CO<sub>2</sub> emissions through electrification of vehicles.
+Abstract
+
+Governments restricted mobility and effectively shuttered much of the global economy in response to the COVID‐19 pandemic. Six San Francisco Bay Area counties were the first region in the United States to issue a “shelter‐in‐place” order asking non‐essential workers to stay home. Here we use CO
+
+2
+
+observations from 35 Berkeley Environment, Air‐quality and CO
+
+2
+
+Network (BEACO
+
+2
+
+N) nodes and an atmospheric transport model to quantify changes in urban CO
+
+2
+
+emissions due to the order. We infer hourly emissions at 900‐m spatial resolution for 6 weeks before and 6 weeks during the order. We observe a 30% decrease in anthropogenic CO
+
+2
+
+emissions during the order and show that this decrease is primarily due to changes in traffic (–48%) with pronounced changes to daily and weekly cycles; non‐traffic emissions show small changes (–8%). These findings provide a glimpse into a future with reduced CO
+
+2
+
+emissions through electrification of vehicles.

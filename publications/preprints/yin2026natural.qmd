@@ -1,0 +1,16 @@
+---
+title: 'Natural Variability in Stratosphere-Troposphere Exchange: An Underappreciated Driver of Global Methane Growth Rates'
+author: 'Yin, Yi and Nguyen, Newton and Wang, Qingyu and Turner, Alex and Chevallier, Frederic and Frankenberg, Christian'
+type: 'preprint'
+year: 2026
+publication: ''
+doi: '10.5194/egusphere-egu26-21945'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
+Methane (CH<sub>4</sub>) is a potent greenhouse gas, contributing approximately 25% of anthropogenic warming since pre-industrial times. Recent years have seen a rapid, largely unexplained acceleration in its atmospheric growth rate, with record increases during 2020–2022. While prevailing research focuses on surface emissions and tropospheric sinks, the influence of the stratosphere remains largely treated as a static boundary condition. Here, we present observational evidence of stratospheric impacts that shows critical yet underexplored factors affecting atmospheric methane growth. These findings suggest that natural variability in stratospheric dynamics is a significant, yet overlooked, driver of the global methane budget, with implications for attribution studies and climate projections.

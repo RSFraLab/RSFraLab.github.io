@@ -13,4 +13,10 @@ toc: false
 
 ## Abstract
 
-AbstractDiagnosing land‐atmosphere fluxes of carbon‐dioxide (CO<sub>2</sub>) and methane (CH<sub>4</sub>) is essential for evaluating carbon‐climate feedbacks. Greenhouse gas satellite missions aim to fill data gaps in regions like the humid tropics but obtain very few valid measurements due to cloud contamination. We examined data yields from the Orbiting Carbon Observatory alongside Sentinel‐2 cloud statistics. We find that the main contribution to low data yields are frequent shallow cumulus clouds. In the Amazon, the success rate in obtaining valid measurements vary from 0.1% to 1.0%. By far the lowest yields occur in the wet season, consistent with Sentinel‐2 cloud patterns. We find that increasing the spatial resolution of observations to ∼200 m would increase yields by 2–3 orders of magnitude and allow regular measurements in the wet season. Thus, the key to effective tropical greenhouse gas observations lies in regularly acquiring high‐spatial resolution data.
+Abstract
+
+Diagnosing land‐atmosphere fluxes of carbon‐dioxide (CO
+2
+) and methane (CH
+4
+) is essential for evaluating carbon‐climate feedbacks. Greenhouse gas satellite missions aim to fill data gaps in regions like the humid tropics but obtain very few valid measurements due to cloud contamination. We examined data yields from the Orbiting Carbon Observatory alongside Sentinel‐2 cloud statistics. We find that the main contribution to low data yields are frequent shallow cumulus clouds. In the Amazon, the success rate in obtaining valid measurements vary from 0.1% to 1.0%. By far the lowest yields occur in the wet season, consistent with Sentinel‐2 cloud patterns. We find that increasing the spatial resolution of observations to ∼200 m would increase yields by 2–3 orders of magnitude and allow regular measurements in the wet season. Thus, the key to effective tropical greenhouse gas observations lies in regularly acquiring high‐spatial resolution data.
