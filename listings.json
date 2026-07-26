@@ -1,15 +1,5 @@
 [
   {
-    "listing": "/blogs.html",
-    "items": [
-      "/BlogPosts/BeyondVisible.html",
-      "/BlogPosts/MoveHyperspectral.html",
-      "/BlogPosts/vod_blog_March19.html",
-      "/BlogPosts/Carbon-I.html",
-      "/BlogPosts/BlogQuarto.html"
-    ]
-  },
-  {
     "listing": "/publications.html",
     "items": [
       "/publications/deck2026climaland.html",
@@ -47,7 +37,6 @@
       "/publications/yao2024investigating.html",
       "/publications/yao2024the.html",
       "/publications/preprints/frankenberg2024data.html",
-      "/publications/braghiere2023the.html",
       "/publications/braghiere2023tipping.html",
       "/publications/gerlein-safdi2023algae.html",
       "/publications/holtzman2023constraining.html",
@@ -55,13 +44,10 @@
       "/publications/kunik2023satellite-based.html",
       "/publications/li2023widespread.html",
       "/publications/luis2023first.html",
-      "/publications/sanghavi2023raman.html",
       "/publications/thorpe2023attribution.html",
       "/publications/thorpe2023methane.html",
       "/publications/valkenborg2023drought.html",
       "/publications/wang2023elucidating.html",
-      "/publications/wang2023modeling.html",
-      "/publications/wood2023the.html",
       "/publications/yin2023unequal.html",
       "/publications/zeng2023structural.html",
       "/publications/preprints/cao2023understanding.html",
@@ -205,7 +191,6 @@
       "/publications/guanter2015potential.html",
       "/publications/he2015impact.html",
       "/publications/koffi2015investigating.html",
-      "/publications/kohler2015simplified.html",
       "/publications/lee2015isotopic.html",
       "/publications/lee2015simulations.html",
       "/publications/parazoo2015influence.html",
@@ -220,20 +205,13 @@
       "/publications/butzin2014variations.html",
       "/publications/cressot2014on.html",
       "/publications/dils2014the.html",
-      "/publications/frankenberg2014prospects.html",
-      "/publications/gryazin2014to.html",
-      "/publications/houweling2014a.html",
       "/publications/houweling2014corrigendum.html",
       "/publications/kort2014four.html",
       "/publications/liu2014profile.html",
-      "/publications/massart2014assimilation.html",
-      "/publications/parazoo2014terrestrial.html",
       "/publications/porcar-castell2014linking.html",
       "/publications/tadic2014a.html",
       "/publications/thorpe2014retrieval.html",
       "/publications/wecht2014mapping.html",
-      "/publications/bergamaschi2013atmospheric.html",
-      "/publications/fisher2013african.html",
       "/publications/frankenberg2013water.html",
       "/publications/guanter2013using.html",
       "/publications/hayashida2013methane.html",
@@ -245,29 +223,22 @@
       "/publications/parazoo2013interpreting.html",
       "/publications/risi2013role.html",
       "/publications/scheepmaker2013improved.html",
-      "/publications/worden2013ch.html",
       "/publications/worden2013decadal.html",
       "/publications/worden2013el.html",
       "/publications/beck2012methane.html",
       "/publications/bousquet2012corrigendum.html",
-      "/publications/crisp2012the.html",
       "/publications/frankenberg2012aerosol.html",
       "/publications/frankenberg2012remote.html",
       "/publications/guanter2012retrieval.html",
-      "/publications/kort2012space-based.html",
       "/publications/lee2012asian.html",
-      "/publications/o-dell2012the.html",
       "/publications/risi2012process-evaluation.html",
       "/publications/schepers2012methane.html",
       "/publications/worden2012profiles.html",
       "/publications/bousquet2011source.html",
       "/publications/butz2011toward.html",
-      "/publications/frankenberg2011disentangling.html",
       "/publications/frankenberg2011global.html",
       "/publications/frankenberg2011new.html",
       "/publications/liu2011application.html",
-      "/publications/spahni2011constraining.html",
-      "/publications/wunch2011a.html",
       "/publications/yoshimura2011comparison.html",
       "/publications/bloom2010large-scale.html",
       "/publications/bovensmann2010sciamachy-s.html",
@@ -285,7 +256,6 @@
       "/publications/meirink2008four-dimensional.html",
       "/publications/wagner2008monitoring.html",
       "/publications/bergamaschi2007satellite.html",
-      "/publications/dils2006comparisons.html",
       "/publications/frankenberg2006satellite.html",
       "/publications/houweling2006atmospheric.html",
       "/publications/k-hl2006comparison.html",
@@ -294,6 +264,38 @@
       "/publications/frankenberg2005retrieval.html",
       "/publications/khokhar2005satellite.html",
       "/publications/k-hl2004stratospheric.html"
+    ]
+  },
+  {
+    "listing": "/preprints.html",
+    "items": [
+      "/publications/preprints/ort2026airborne.html",
+      "/publications/preprints/pascolini-campbell2026application.html",
+      "/publications/preprints/plewa2026a.html",
+      "/publications/preprints/shreevastava2026leveraging.html",
+      "/publications/preprints/yin2026natural.html",
+      "/publications/preprints/frankenberg2025on.html",
+      "/publications/preprints/yao2025improved.html",
+      "/publications/preprints/yoon2025inferring.html",
+      "/publications/preprints/frankenberg2024data.html",
+      "/publications/preprints/cao2023understanding.html",
+      "/publications/preprints/holtzman2023constraining.html",
+      "/publications/preprints/madsen2022investigation.html",
+      "/publications/preprints/wang2022modeling.html",
+      "/publications/preprints/liu2020thermal.html",
+      "/publications/preprints/turner2020extreme.html",
+      "/publications/preprints/turner2020observed.html",
+      "/publications/preprints/raczka2019sustained.html"
+    ]
+  },
+  {
+    "listing": "/blogs.html",
+    "items": [
+      "/BlogPosts/BeyondVisible.html",
+      "/BlogPosts/MoveHyperspectral.html",
+      "/BlogPosts/vod_blog_March19.html",
+      "/BlogPosts/Carbon-I.html",
+      "/BlogPosts/BlogQuarto.html"
     ]
   },
   {
@@ -320,28 +322,6 @@
       "/people/alumni/yinon.html",
       "/people/alumni/yujie.html",
       "/people/alumni/yyao.html"
-    ]
-  },
-  {
-    "listing": "/preprints.html",
-    "items": [
-      "/publications/preprints/ort2026airborne.html",
-      "/publications/preprints/pascolini-campbell2026application.html",
-      "/publications/preprints/plewa2026a.html",
-      "/publications/preprints/shreevastava2026leveraging.html",
-      "/publications/preprints/yin2026natural.html",
-      "/publications/preprints/frankenberg2025on.html",
-      "/publications/preprints/yao2025improved.html",
-      "/publications/preprints/yoon2025inferring.html",
-      "/publications/preprints/frankenberg2024data.html",
-      "/publications/preprints/cao2023understanding.html",
-      "/publications/preprints/holtzman2023constraining.html",
-      "/publications/preprints/madsen2022investigation.html",
-      "/publications/preprints/wang2022modeling.html",
-      "/publications/preprints/liu2020thermal.html",
-      "/publications/preprints/turner2020extreme.html",
-      "/publications/preprints/turner2020observed.html",
-      "/publications/preprints/raczka2019sustained.html"
     ]
   }
 ]
