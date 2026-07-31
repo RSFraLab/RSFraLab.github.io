@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chlorophyll Absorbance &amp; Fluorescence Emission</title>
+<style>
+  :root{
+    --bg:transparent; --panel:#ffffff; --hairline:#d9dee3;
+    --text:#1d2530; --muted:#5b6773; --faint:#8a97a5;
+    --abs:#2e7d5b; --abs-fill:rgba(46,125,91,0.10);
+    --emit:#c92a5a; --emit-fill:rgba(201,42,90,0.12);
+    --src:#c9a3b2; --overlap:rgba(138,102,160,0.14); --overlap-edge:#8a66a0;
+  }
+  [data-theme="dark"]{
+    --panel:#10161d; --hairline:#1e2733;
+    --text:#e8edf2; --muted:#8a97a5; --faint:#5b6773;
+    --abs:#4ec49a; --abs-fill:rgba(78,196,154,0.12);
+    --emit:#ff5c8a; --emit-fill:rgba(255,92,138,0.14);
+    --src:#7a5566; --overlap:rgba(168,132,200,0.16); --overlap-edge:#a884c8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg)}
+  body{color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .widget{background:var(--panel);border:1px solid var(--hairline);border-radius:8px;overflow:hidden;max-width:960px;margin:0 auto}
+  .head{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:11px 14px;border-bottom:1px solid var(--hairline)}
+  .key{display:flex;gap:14px;flex-wrap:wrap;font:12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--muted)}
+  .key span{display:flex;align-items:center;gap:6px;white-space:nowrap}
+  .key i{width:16px;height:0;border-top-width:2px;border-top-style:solid;display:inline-block}
+  .hint{margin-left:auto;font:11px ui-monospace,Menlo,monospace;color:var(--faint)}
+  .body{position:relative;padding:6px 6px 0}
+  canvas{display:block;width:100%;touch-action:pan-y}
+  .hover{position:absolute;pointer-events:none;display:none;z-index:3;font:11.5px ui-monospace,Menlo,monospace;color:var(--text);background:var(--panel);border:1px solid var(--hairline);border-radius:5px;padding:5px 8px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+  .presets{display:flex;gap:6px;flex-wrap:wrap;padding:10px 16px 4px;border-top:1px solid var(--hairline)}
+  .preset{appearance:none;cursor:pointer;font:12px ui-monospace,Menlo,monospace;color:var(--muted);background:transparent;border:1px solid var(--hairline);padding:6px 10px;border-radius:99px}
+  .preset:hover{color:var(--text)}
+  .preset:focus-visible{outline:2px solid var(--emit);outline-offset:2px}
+  .preset[aria-pressed="true"]{color:var(--text);border-color:var(--overlap-edge);background:var(--overlap)}
+  .readouts{display:flex;flex-wrap:wrap;gap:6px;padding:8px 16px 6px}
+  .ro{font:11.5px ui-monospace,Menlo,monospace;color:var(--muted);border:1px solid var(--hairline);border-radius:5px;padding:5px 9px}
+  .ro b{color:var(--text);font-weight:600} .ro.em b{color:var(--emit)}
+  .caption{padding:6px 16px 16px;color:var(--muted);font-size:13px;max-width:80ch}
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="widget">
+  <div class="head">
+    <div class="key">
+      <span><i style="border-color:var(--abs)"></i>chlorophyll absorbance</span>
+      <span><i style="border-color:var(--emit)"></i>fluorescence emission</span>
+      <span><i style="border-color:var(--overlap-edge);border-top-style:dashed"></i>overlap (reabsorbed)</span>
+    </div>
+    <span class="hint">hover the spectrum</span>
+  </div>
+  <div class="body">
+    <canvas id="cv" height="340" aria-label="Chlorophyll absorbance spectrum and fluorescence emission spectrum from 400 to 800 nanometres, showing red and far-red emission peaks"></canvas>
+    <div class="hover" id="hv"></div>
+  </div>
+  <div class="presets" role="group" aria-label="Display options">
+    <button class="preset" id="tgl" aria-pressed="false">show reabsorption inside the leaf</button>
+  </div>
+  <div class="readouts">
+    <span class="ro">red peak <b>685 nm</b></span>
+    <span class="ro em">far-red peak <b>740 nm</b></span>
+    <span class="ro">absorbance at 685 <b id="roA">—</b></span>
+    <span class="ro">absorbance at 740 <b id="roF">—</b></span>
+  </div>
+  <p class="caption" id="cap"></p>
+</div>
+
+<script>
+"use strict";
+/* Theme: ?theme=dark switches palette (default light, to match Caltech Sites) */
+(function(){ const t=new URLSearchParams(location.search).get("theme"); if(t==="dark") document.documentElement.setAttribute("data-theme","dark"); })();
+
+const css=getComputedStyle(document.documentElement), col=k=>css.getPropertyValue(k).trim();
+const C={ hair:col("--hairline"),text:col("--text"),muted:col("--muted"),faint:col("--faint"),
+  panel:col("--panel"),
+  abs:col("--abs"),absFill:col("--abs-fill"),emit:col("--emit"),emitFill:col("--emit-fill"),
+  src:col("--src"),overlap:col("--overlap"),overlapEdge:col("--overlap-edge") };
+
+/* Cursor marker: a filled dot riding the curve itself, haloed against the panel
+   so it stays legible over a fill. Matches the OCO dashboard's hover behaviour. */
+function hoverDot(ctx,x,y,color){
+  ctx.beginPath(); ctx.arc(x,y,3.6,0,2*Math.PI);
+  ctx.fillStyle=color; ctx.fill();
+  ctx.lineWidth=1.6; ctx.strokeStyle=C.panel; ctx.stroke();
+}
+
+/* --- Chlorophyll a+b absorbance and fluorescence emission, 400-800 nm.
+   Sums of Gaussians in the exp(-((x-c)/w)^2) convention used across these widgets.
+   Shapes are faithful in peak position and relative width; amplitudes are arbitrary
+   units, normalized to 1 for display. --- */
+const WL0=400, WL1=800, N=900;
+const dx=(WL1-WL0)/(N-1);
+
+const ABS_BANDS=[ {c:415,a:0.45,w:14},   /* Soret shoulder */
+                  {c:437,a:0.95,w:22},   /* chl a Soret */
+                  {c:470,a:0.72,w:22},   /* chl b Soret */
+                  {c:615,a:0.16,w:18},   /* vibronic */
+                  {c:642,a:0.42,w:14},   /* chl b Qy */
+                  {c:662,a:0.88,w:15},   /* chl a Qy */
+                  {c:678,a:0.35,w:22} ]; /* red-edge tail of the Qy band */
+const EMIT_BANDS=[ {c:685,a:1.00,w:13},  /* red peak */
+                   {c:740,a:0.62,w:26},  /* far-red peak */
+                   {c:775,a:0.12,w:34} ];/* long tail */
+const KREABS=2.2;                        /* reabsorption strength inside the leaf */
+
+function sumBands(bands,x){ let s=0; for(const b of bands){ const t=(x-b.c)/b.w; s+=b.a*Math.exp(-t*t); } return s; }
+
+const wl=new Float64Array(N), A=new Float64Array(N), Esrc=new Float64Array(N), Eout=new Float64Array(N);
+for (let i=0;i<N;i++){ const x=WL0+i*dx; wl[i]=x;
+  A[i]=sumBands(ABS_BANDS,x);
+  Esrc[i]=sumBands(EMIT_BANDS,x);
+  Eout[i]=Esrc[i]*Math.exp(-KREABS*A[i]);      /* escaping the leaf after reabsorption */
+}
+/* normalize each curve to its own maximum — arbitrary units */
+function normalize(v){ let m=0; for(let i=0;i<v.length;i++) if(v[i]>m) m=v[i]; if(m>0) for(let i=0;i<v.length;i++) v[i]/=m; return m; }
+normalize(A); const srcMax=normalize(Esrc);
+for (let i=0;i<N;i++) Eout[i]/=srcMax;         /* keep Eout on the same scale as Esrc */
+
+function at(arr,x){ const f=(x-WL0)/dx; const i=Math.max(0,Math.min(N-2,Math.floor(f))), t=f-i; return arr[i]*(1-t)+arr[i+1]*t; }
+
+/* overlap region: where absorbance and emission are both non-negligible */
+const OV_LO=650, OV_HI=710;
+const state={ reabs:false };
+
+const cv=document.getElementById("cv"), hv=document.getElementById("hv");
+const PADL=52,PADR=14,H=340,PT=18,PB=H-40;
+let hoverX=null;
+
+function setup(){ const dpr=window.devicePixelRatio||1, w=cv.clientWidth||cv.parentElement.clientWidth-12;
+  cv.width=Math.round(w*dpr); cv.height=Math.round(H*dpr); cv.style.height=H+"px";
+  const ctx=cv.getContext("2d"); ctx.setTransform(dpr,0,0,dpr,0,0); return {ctx,W:w}; }
+
+function trace(ctx,px,py,arr,color,width,dash){
+  ctx.beginPath();
+  for(let i=0;i<N;i++){ const X=px(wl[i]), Y=py(arr[i]); i===0?ctx.moveTo(X,Y):ctx.lineTo(X,Y); }
+  ctx.setLineDash(dash||[]); ctx.strokeStyle=color; ctx.lineWidth=width; ctx.stroke(); ctx.setLineDash([]);
+}
+function fillUnder(ctx,px,py,arr,color,lo,hi){
+  ctx.beginPath(); ctx.moveTo(px(lo),py(0));
+  for(let i=0;i<N;i++){ if(wl[i]<lo||wl[i]>hi) continue; ctx.lineTo(px(wl[i]),py(arr[i])); }
+  ctx.lineTo(px(hi),py(0)); ctx.closePath(); ctx.fillStyle=color; ctx.fill();
+}
+
+function draw(){
+  const {ctx,W}=setup();
+  const px=x=>PADL+(x-WL0)/(WL1-WL0)*(W-PADL-PADR);
+  const py=v=>PT+(1-v/1.08)*(PB-PT);
+  ctx.clearRect(0,0,W,H);
+  ctx.font="11px ui-monospace, Menlo, monospace";
+
+  /* overlap band behind everything */
+  ctx.fillStyle=C.overlap; ctx.fillRect(px(OV_LO),PT,px(OV_HI)-px(OV_LO),PB-PT);
+  ctx.strokeStyle=C.overlapEdge; ctx.setLineDash([2,3]); ctx.lineWidth=1;
+  for (const e of [OV_LO,OV_HI]){ ctx.beginPath(); ctx.moveTo(px(e),PT); ctx.lineTo(px(e),PB); ctx.stroke(); }
+  ctx.setLineDash([]);
+
+  /* gridlines */
+  ctx.strokeStyle=C.hair; ctx.fillStyle=C.faint; ctx.lineWidth=1;
+  for (const t of [0,0.25,0.5,0.75,1.0]){ const y=py(t);
+    ctx.beginPath(); ctx.moveTo(PADL,y); ctx.lineTo(W-PADR,y); ctx.stroke();
+    ctx.textAlign="right"; ctx.textBaseline="middle"; ctx.fillText(t.toFixed(2),PADL-7,y); }
+  ctx.fillStyle=C.muted; ctx.save(); ctx.translate(12,(PT+PB)/2); ctx.rotate(-Math.PI/2);
+  ctx.textAlign="center"; ctx.textBaseline="middle"; ctx.fillText("normalized units",0,0); ctx.restore();
+
+  /* curves */
+  fillUnder(ctx,px,py,A,C.absFill,WL0,WL1);
+  trace(ctx,px,py,A,C.abs,1.8);
+  if (state.reabs){
+    trace(ctx,px,py,Esrc,C.src,1.5,[4,3]);       /* emitted at the chloroplast */
+    /* shade what reabsorption removes */
+    ctx.beginPath();
+    for(let i=0;i<N;i++){ const X=px(wl[i]); i===0?ctx.moveTo(X,py(Esrc[i])):ctx.lineTo(X,py(Esrc[i])); }
+    for(let i=N-1;i>=0;i--) ctx.lineTo(px(wl[i]),py(Eout[i]));
+    ctx.closePath(); ctx.fillStyle=C.emitFill; ctx.fill();
+  }
+  fillUnder(ctx,px,py,state.reabs?Eout:Esrc,C.emitFill,WL0,WL1);
+  trace(ctx,px,py,state.reabs?Eout:Esrc,C.emit,1.9);
+
+  /* peak markers — labels shorten on narrow canvases so they cannot collide */
+  const wide = W>620;
+  const shown = state.reabs?Eout:Esrc;
+  for (const p of [{x:685,l:wide?"685 red":"685"},{x:740,l:wide?"740 far-red":"740"}]){
+    const X=px(p.x), Y=py(at(shown,p.x));
+    ctx.strokeStyle=C.emit; ctx.setLineDash([2,3]); ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(X,Y); ctx.lineTo(X,PB); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle=C.emit; ctx.beginPath(); ctx.arc(X,Y,3,0,2*Math.PI); ctx.fill();
+    ctx.textAlign="center"; ctx.textBaseline="bottom"; ctx.fillText(p.l,X,Y-7);
+  }
+
+  /* overlap label — right-aligned into the empty green trough, clear of the peak labels.
+     Dropped on narrow canvases; the dashed band edges still mark the region. */
+  if (wide){
+    ctx.fillStyle=C.overlapEdge; ctx.textAlign="right"; ctx.textBaseline="top";
+    ctx.fillText("absorption ∩ emission →", px(OV_LO)-7, PT+3);
+  }
+
+  /* x-axis */
+  ctx.fillStyle=C.faint; ctx.textAlign="center"; ctx.textBaseline="top";
+  for (let t=400;t<=800;t+=50){ const X=px(t);
+    ctx.textAlign = X>W-PADR-16 ? "right" : (X<PADL+16 ? "left" : "center");   /* keep end labels on-canvas */
+    ctx.fillText(String(t),X,PB+7); }
+  ctx.textAlign="center";
+  ctx.fillStyle=C.muted; ctx.fillText("wavelength (nm)",PADL+(W-PADL-PADR)/2,H-13);
+
+  if (hoverX!==null && hoverX>=WL0 && hoverX<=WL1){
+    const hx=px(hoverX); ctx.strokeStyle=C.faint; ctx.setLineDash([3,4]); ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(hx,PT); ctx.lineTo(hx,PB); ctx.stroke(); ctx.setLineDash([]);
+    if (state.reabs) hoverDot(ctx,hx,py(at(Esrc,hoverX)),C.src);
+    hoverDot(ctx,hx,py(at(A,hoverX)),C.abs);
+    hoverDot(ctx,hx,py(at(shown,hoverX)),C.emit);
+  }
+}
+
+function readouts(){
+  document.getElementById("roA").textContent=at(A,685).toFixed(2);
+  document.getElementById("roF").textContent=at(A,740).toFixed(2);
+  const cap=document.getElementById("cap");
+  cap.textContent = state.reabs
+    ? "Dashed: what the chloroplast actually emits. Solid: what escapes the leaf. The red peak at 685 nm is emitted right where chlorophyll still absorbs strongly, so much of it is reabsorbed on the way out; the far-red peak at 740 nm sits beyond the absorption band and escapes almost untouched. That is why the far-red peak dominates the signal a satellite sees."
+    : "Chlorophyll absorbs strongly in the blue and the red and barely at all beyond 700 nm. It re-emits a small fraction of that energy at longer wavelengths, in a band with two peaks: red at 685 nm and far-red at 740 nm. The shaded strip is where absorption and emission overlap — turn on reabsorption to see what that overlap costs.";
+}
+
+const tgl=document.getElementById("tgl");
+tgl.addEventListener("click",()=>{ state.reabs=!state.reabs;
+  tgl.setAttribute("aria-pressed",String(state.reabs));
+  tgl.textContent=state.reabs?"hide reabsorption inside the leaf":"show reabsorption inside the leaf";
+  draw(); readouts(); });
+
+cv.addEventListener("pointermove",e=>{
+  const r=cv.getBoundingClientRect(), x=e.clientX-r.left, W=r.width;
+  if (x>PADL && x<W-PADR){ hoverX=WL0+(x-PADL)/(W-PADL-PADR)*(WL1-WL0);
+    const a=at(A,hoverX), em=at(state.reabs?Eout:Esrc,hoverX);
+    hv.style.display="block"; hv.style.left=Math.min(x+14,Math.max(0,W-215))+"px"; hv.style.top="14px";
+    hv.innerHTML="λ <b>"+hoverX.toFixed(0)+"</b> nm<br>absorbance "+a.toFixed(2)+" · emission "+em.toFixed(2);
+  } else { hoverX=null; hv.style.display="none"; }
+  draw();
+});
+cv.addEventListener("pointerleave",()=>{ hoverX=null; hv.style.display="none"; draw(); });
+
+let rt; window.addEventListener("resize",()=>{ clearTimeout(rt); rt=setTimeout(draw,80); });
+draw(); readouts();
+</script>
+</body>
+</html>

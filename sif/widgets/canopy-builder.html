@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canopy Reflectance &amp; Where the SIF Signal Lives</title>
+<style>
+  :root{
+    --bg:transparent; --panel:#ffffff; --hairline:#d9dee3;
+    --text:#1d2530; --muted:#5b6773; --faint:#8a97a5;
+    --sun:#a9791f; --sun-fill:rgba(169,121,31,0.10);
+    --refl:#2e7d5b; --refl-fill:rgba(46,125,91,0.10); --soil:#9c7b52;
+    --rad:#3b6ea5; --rad-fill:rgba(59,110,165,0.10);
+    --sif:#c92a5a; --sif-fill:rgba(201,42,90,0.16); --mark:#8a66a0;
+  }
+  [data-theme="dark"]{
+    --panel:#10161d; --hairline:#1e2733;
+    --text:#e8edf2; --muted:#8a97a5; --faint:#5b6773;
+    --sun:#e0b64a; --sun-fill:rgba(224,182,74,0.10);
+    --refl:#4ec49a; --refl-fill:rgba(78,196,154,0.10); --soil:#b08f66;
+    --rad:#6ba3dd; --rad-fill:rgba(107,163,221,0.12);
+    --sif:#ff5c8a; --sif-fill:rgba(255,92,138,0.18); --mark:#a884c8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg)}
+  body{color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .widget{background:var(--panel);border:1px solid var(--hairline);border-radius:8px;overflow:hidden;max-width:960px;margin:0 auto}
+  .head{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:11px 14px;border-bottom:1px solid var(--hairline)}
+  .key{display:flex;gap:14px;flex-wrap:wrap;font:12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--muted)}
+  .key span{display:flex;align-items:center;gap:6px;white-space:nowrap}
+  .key i{width:16px;height:0;border-top-width:2px;border-top-style:solid;display:inline-block}
+  .hint{margin-left:auto;font:11px ui-monospace,Menlo,monospace;color:var(--faint)}
+  .body{position:relative;padding:6px 6px 0}
+  canvas{display:block;width:100%;touch-action:pan-y}
+  .hover{position:absolute;pointer-events:none;display:none;z-index:3;font:11.5px ui-monospace,Menlo,monospace;color:var(--text);background:var(--panel);border:1px solid var(--hairline);border-radius:5px;padding:5px 8px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+  .controls{display:grid;grid-template-columns:1fr 1fr;gap:14px 26px;padding:14px 16px 8px;border-top:1px solid var(--hairline)}
+  @media(max-width:600px){.controls{grid-template-columns:1fr}}
+  .ctl label{display:flex;justify-content:space-between;align-items:baseline;font:11.5px ui-monospace,Menlo,monospace;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .ctl label output{color:var(--text);font-size:12.5px;text-transform:none;letter-spacing:0}
+  input[type=range]{width:100%;appearance:none;height:3px;background:var(--hairline);border-radius:2px;outline:none}
+  input[type=range]::-webkit-slider-thumb{appearance:none;width:15px;height:15px;border-radius:50%;background:var(--sif);border:3px solid var(--panel);box-shadow:0 0 0 1px var(--hairline);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;background:var(--sif);border:3px solid var(--panel);cursor:pointer}
+  input[type=range]:focus-visible{box-shadow:0 0 0 2px var(--sif)}
+  .presets{display:flex;gap:6px;flex-wrap:wrap;padding:2px 16px 10px}
+  .preset{appearance:none;cursor:pointer;font:12px ui-monospace,Menlo,monospace;color:var(--muted);background:transparent;border:1px solid var(--hairline);padding:6px 10px;border-radius:99px}
+  .preset:hover{color:var(--text)} .preset:focus-visible{outline:2px solid var(--sif);outline-offset:2px}
+  .readouts{display:flex;flex-wrap:wrap;gap:6px;padding:6px 16px 6px}
+  .ro{font:11.5px ui-monospace,Menlo,monospace;color:var(--muted);border:1px solid var(--hairline);border-radius:5px;padding:5px 9px}
+  .ro b{color:var(--text);font-weight:600} .ro.em b{color:var(--sif)}
+  .caption{padding:6px 16px 16px;color:var(--muted);font-size:13px;max-width:80ch}
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="widget">
+  <div class="head">
+    <div class="key">
+      <span><i style="border-color:var(--sun)"></i>sunlight at the surface</span>
+      <span><i style="border-color:var(--refl)"></i>canopy reflectance</span>
+      <span><i style="border-color:var(--rad)"></i>reflected radiance</span>
+      <span><i style="border-color:var(--sif)"></i>+ fluorescence</span>
+    </div>
+    <span class="hint">build a canopy ↓</span>
+  </div>
+  <div class="body">
+    <canvas id="cv" height="470" aria-label="Three stacked panels: solar irradiance at the surface, canopy reflectance with its red edge, and reflected radiance with and without added fluorescence, from 640 to 800 nanometres"></canvas>
+    <div class="hover" id="hv"></div>
+  </div>
+  <div class="controls">
+    <div class="ctl">
+      <label>Chlorophyll content (Cab) <output id="cabOut">35 µg/cm²</output></label>
+      <input type="range" id="cab" min="5" max="40" step="1" value="35" aria-label="Chlorophyll content in micrograms per square centimetre">
+    </div>
+    <div class="ctl">
+      <label>Leaf area index (LAI) <output id="laiOut">3.0</output></label>
+      <input type="range" id="lai" min="1" max="5" step="0.1" value="3.0" aria-label="Leaf area index">
+    </div>
+    <div class="ctl" style="grid-column:1/-1">
+      <label>Fluorescence at 740 nm <output id="sifOut">2.0 mW m⁻² nm⁻¹ sr⁻¹</output></label>
+      <input type="range" id="sif" min="0" max="4" step="0.05" value="2.0" aria-label="SIF radiance at 740 nm in mW per m2 per nm per steradian">
+    </div>
+  </div>
+  <div class="presets" id="presets" role="group" aria-label="Canopy presets"></div>
+  <div class="readouts">
+    <span class="ro">NIR reflectance <b id="roN">—</b></span>
+    <span class="ro">reflectance @685 <b id="roR">—</b></span>
+    <span class="ro">SIF escape @685 <b id="roE">—</b></span>
+    <span class="ro em">SIF share @685 <b id="roS685">—</b></span>
+    <span class="ro em">SIF share @740 <b id="roS740">—</b></span>
+  </div>
+  <p class="caption" id="cap"></p>
+</div>
+
+<script>
+"use strict";
+/* Theme: ?theme=dark switches palette (default light, to match Caltech Sites) */
+(function(){ const t=new URLSearchParams(location.search).get("theme"); if(t==="dark") document.documentElement.setAttribute("data-theme","dark"); })();
+
+/* -------- external data hook --------
+   Ships with a synthetic surface irradiance. Pass ?data=URL to a solar JSON
+   { "window_nm":[lo,hi], "wl":[...nm ascending], "E0":[...continuum≈1] } and it
+   replaces the irradiance panel. Silent fallback to synthetic on any failure. */
+const DATA_URL = new URLSearchParams(location.search).get("data");
+
+/* -------- real canopy grid --------
+   Pass ?canopy=URL to a PROSPECT-PRO + 4SAIL grid from notebook/export_canopy.jl:
+   { wl[], cab[], lai[], soil[], rho[[]] (cab-major), kcab_norm[], leaf_abs[[]] }
+   4SAIL cannot run in the browser, so the grid is precomputed over both sliders
+   and interpolated bilinearly here. Silent fallback to the analytic two-stream
+   model below on any failure. */
+const CANOPY_URL = new URLSearchParams(location.search).get("canopy");
+
+/* -------- real surface irradiance --------
+   Pass ?atm=URL to notebook/export_atmosphere.jl output:
+   { wl[], E[] } in mW m⁻² nm⁻¹ — a Planck solar continuum times Toon Fraunhofer
+   transmittance times line-by-line O₂/H₂O telluric absorption. When present the
+   radiance panel switches to physical units and the arbitrary RADSCALE is unused. */
+const ATM_URL = new URLSearchParams(location.search).get("atm");
+let IRR=null;                                               /* mW m⁻² nm⁻¹ on the widget grid */
+const MU0=Math.cos(30*Math.PI/180);                         /* matches the export geometry */
+
+const css=getComputedStyle(document.documentElement), col=k=>css.getPropertyValue(k).trim();
+const C={ hair:col("--hairline"),text:col("--text"),muted:col("--muted"),faint:col("--faint"),
+  sun:col("--sun"),sunFill:col("--sun-fill"),refl:col("--refl"),reflFill:col("--refl-fill"),
+  soil:col("--soil"),rad:col("--rad"),radFill:col("--rad-fill"),
+  sif:col("--sif"),sifFill:col("--sif-fill"),mark:col("--mark"),panel:col("--panel") };
+
+/* Cursor marker: a filled dot riding the curve itself, haloed against the panel
+   so it stays legible over a fill. Matches the OCO dashboard's hover behaviour. */
+function hoverDot(ctx,x,y,color){
+  ctx.beginPath(); ctx.arc(x,y,3.6,0,2*Math.PI);
+  ctx.fillStyle=color; ctx.fill();
+  ctx.lineWidth=1.6; ctx.strokeStyle=C.panel; ctx.stroke();
+}
+
+/* 0.04 nm sampling — matches export_atmosphere.jl, so a real O2-A band renders
+   with its actual structure rather than aliasing. */
+const WL0=640, WL1=800, N=4001, dx=(WL1-WL0)/(N-1);
+const wl=new Float64Array(N);
+for (let i=0;i<N;i++) wl[i]=WL0+i*dx;
+
+/* ---------- 1. sunlight reaching the surface ----------
+   Smooth solar continuum, one strong Fraunhofer line (Hα 656.3 nm), and the
+   telluric absorption bands that dominate this window: O2-B near 688 nm,
+   water vapour near 720 nm, and the deep O2-A band 759-771 nm. Bands are drawn
+   as line combs so the sharp structure SIF retrievals exploit is visible. */
+const CONT=new Float64Array(N), E0=new Float64Array(N);
+for (let i=0;i<N;i++) CONT[i]=1.0-0.00035*(wl[i]-WL0);    /* gentle continuum slope */
+E0.set(CONT);
+
+function addLine(arr,c,depth,w){
+  const lo=Math.max(0,Math.floor((c-6*w-WL0)/dx)), hi=Math.min(N-1,Math.ceil((c+6*w-WL0)/dx));
+  for(let i=lo;i<=hi;i++){ const t=(wl[i]-c)/w; arr[i]*=1-depth*Math.exp(-t*t); }
+}
+function addComb(arr,lo,hi,spacing,centerλ,envW,maxDepth,lineW){
+  for(let c=lo;c<=hi;c+=spacing){
+    const d=maxDepth*Math.exp(-Math.pow((c-centerλ)/envW,2));
+    if (d>0.004) addLine(arr,c,d,lineW);
+  }
+}
+addLine(E0,656.28,0.50,0.13);                              /* Hα (solar) */
+addLine(E0,649.50,0.12,0.09); addLine(E0,671.80,0.10,0.08);
+addComb(E0,686.0,693.5,0.30,688.6,2.6,0.42,0.055);         /* O2-B */
+addComb(E0,713.0,733.0,0.42,722.0,7.0,0.16,0.070);         /* H2O */
+addComb(E0,759.3,771.5,0.35,762.0,4.6,0.86,0.060);         /* O2-A */
+let SUN=E0;
+
+/* ---------- 2. canopy reflectance ----------
+   Chlorophyll absorption shape (red Qy band, normalized to 1 at its peak) sets a
+   wavelength-dependent single-scattering albedo; a two-stream semi-infinite
+   albedo gives the leaf/canopy reflectance, mixed with soil through Beer's-law
+   canopy transmittance. Reproduces a red edge that deepens and steepens with
+   chlorophyll and with leaf area. */
+const CHL_BANDS=[{c:615,a:0.16,w:18},{c:642,a:0.42,w:14},{c:662,a:0.88,w:15},{c:678,a:0.35,w:22}];
+const ABSN=new Float64Array(N);
+{ let m=0;
+  for (let i=0;i<N;i++){ let s=0; for(const b of CHL_BANDS){ const t=(wl[i]-b.c)/b.w; s+=b.a*Math.exp(-t*t); } ABSN[i]=s; if(s>m) m=s; }
+  for (let i=0;i<N;i++) ABSN[i]/=m;                        /* 0 … 1, ~0 beyond 720 nm */
+}
+const WMAX=0.88;                                            /* NIR single-scattering albedo ceiling */
+function soilRefl(x){ return 0.15+0.10*(x-WL0)/(WL1-WL0); }
+const SOIL=new Float64Array(N);
+for (let i=0;i<N;i++) SOIL[i]=soilRefl(wl[i]);
+
+/* Reabsorption strength. Recalibrated when a real grid loads, because PROSPECT's
+   chlorophyll absorption is about twice the analytic shape at 685 nm. */
+let KESC=2.4;
+let GRID=null;                                              /* {cab, lai, nl, rows} */
+
+/* resample a spectrum on the grid's wavelengths onto the widget's grid */
+function resampleTo(gwl, vals){
+  const out=new Float64Array(N), last=gwl.length-1; let k=0;
+  for (let i=0;i<N;i++){
+    const x=wl[i];
+    if (x<=gwl[0]){ out[i]=vals[0]; continue; }
+    if (x>=gwl[last]){ out[i]=vals[last]; continue; }
+    while (k<last-1 && gwl[k+1]<x) k++;
+    const t=(x-gwl[k])/(gwl[k+1]-gwl[k]);
+    out[i]=vals[k]+t*(vals[k+1]-vals[k]);
+  }
+  return out;
+}
+/* bracketing indices + weight for a scalar in an ascending axis */
+function span(arr,v){
+  const n=arr.length;
+  if (v<=arr[0]) return [0,0,0];
+  if (v>=arr[n-1]) return [n-1,n-1,0];
+  let i=0; while (i<n-2 && arr[i+1]<v) i++;
+  return [i,i+1,(v-arr[i])/(arr[i+1]-arr[i])];
+}
+
+const RHO=new Float64Array(N);
+function buildReflectance(cab,lai){
+  if (GRID){                                                /* bilinear in (Cab, LAI) */
+    const [c0,c1,tc]=span(GRID.cab,cab), [l0,l1,tl]=span(GRID.lai,lai);
+    const nl=GRID.nl, R=GRID.rows;
+    const a=R[c0*nl+l0], b=R[c0*nl+l1], c=R[c1*nl+l0], d=R[c1*nl+l1];
+    for (let i=0;i<N;i++){
+      const lo=a[i]+tl*(b[i]-a[i]), hi=c[i]+tl*(d[i]-c[i]);
+      RHO[i]=lo+tc*(hi-lo);
+    }
+    return;
+  }
+  const t2=Math.exp(-1.0*lai);                              /* two-way canopy transmittance, G=0.5 nadir */
+  for (let i=0;i<N;i++){
+    const w=WMAX*Math.exp(-2.0*(cab/40)*ABSN[i]);
+    const s=Math.sqrt(Math.max(0,1-w));
+    const rInf=(1-s)/(1+s);                                 /* semi-infinite two-stream albedo */
+    RHO[i]=rInf*(1-t2)+SOIL[i]*t2;
+  }
+}
+
+/* ---------- 3. fluorescence ----------
+   Fixed two-peak emission shape (685 red, 740 far-red) scaled by one scalar —
+   the way a real retrieval treats it. Reabsorption inside the canopy attenuates
+   the red peak, and more so as chlorophyll and leaf area increase. */
+const SIF_BANDS=[{c:685,a:1.00,w:13},{c:740,a:0.62,w:26},{c:775,a:0.12,w:34}];
+const SIFSRC=new Float64Array(N);
+{ for (let i=0;i<N;i++){ let s=0; for(const b of SIF_BANDS){ const t=(wl[i]-b.c)/b.w; s+=b.a*Math.exp(-t*t); } SIFSRC[i]=s; }
+  /* Normalize to 1 at 740 nm so the slider reads as SIF₇₄₀ — the quantity satellite
+     products actually report. At source the red peak is then the taller of the two. */
+  const ref=SIFSRC[Math.round((740-WL0)/dx)];
+  for (let i=0;i<N;i++) SIFSRC[i]/=ref;
+}
+const SIFOUT=new Float64Array(N);
+function buildSIF(cab,lai,mag){
+  const path=(1+0.35*lai)/1.35;
+  for (let i=0;i<N;i++) SIFOUT[i]=mag*SIFSRC[i]*Math.exp(-KESC*(cab/40)*ABSN[i]*path);
+}
+
+/* ---------- combine ---------- */
+const L0=new Float64Array(N), L1=new Float64Array(N);       /* without / with fluorescence */
+/* mW/m²/nm/sr per unit reflectance: E₀·cosθ₀/π for a nominal 1200 mW/m²/nm surface
+   irradiance at 30° solar zenith. Putting this on a real scale is what makes the
+   "SIF share" readouts comparable to published numbers. */
+const RADSCALE=330;
+function recompute(){
+  buildReflectance(state.cab,state.lai);
+  buildSIF(state.cab,state.lai,state.sif);
+  /* With real irradiance: L = ρ·E·μ₀/π, so radiance is in mW m⁻² nm⁻¹ sr⁻¹ outright. */
+  for (let i=0;i<N;i++){
+    L0[i] = IRR ? RHO[i]*IRR[i]*MU0/Math.PI : RADSCALE*RHO[i]*SUN[i];
+    L1[i] = L0[i]+SIFOUT[i];
+  }
+}
+function at(arr,x){ const f=(x-WL0)/dx; const i=Math.max(0,Math.min(N-2,Math.floor(f))), t=f-i; return arr[i]*(1-t)+arr[i+1]*t; }
+
+const state={ cab:35, lai:3.0, sif:2.0 };
+recompute();
+
+/* real surface irradiance */
+if (ATM_URL){
+  fetch(ATM_URL).then(r=>r.json()).then(j=>{
+    if (!j || !Array.isArray(j.wl) || !Array.isArray(j.E)) return;
+    if (j.wl.length!==j.E.length || j.wl.length<8) return;
+    IRR=resampleTo(j.wl, j.E);
+    recompute(); draw(); readouts();
+  }).catch(()=>{ /* keep the synthetic atmosphere */ });
+}
+
+/* real PROSPECT-PRO + 4SAIL grid */
+if (CANOPY_URL){
+  fetch(CANOPY_URL).then(r=>r.json()).then(j=>{
+    if (!j || !Array.isArray(j.wl) || !Array.isArray(j.rho)) return;
+    if (!Array.isArray(j.cab) || !Array.isArray(j.lai)) return;
+    if (j.rho.length !== j.cab.length*j.lai.length) return;          /* cab-major, see export_canopy.jl */
+    if (j.rho.some(r => !Array.isArray(r) || r.length !== j.wl.length)) return;
+    GRID={ cab:j.cab, lai:j.lai, nl:j.lai.length,
+           rows:j.rho.map(r => resampleTo(j.wl, r)) };
+    if (Array.isArray(j.kcab_norm) && j.kcab_norm.length===j.wl.length){
+      ABSN.set(resampleTo(j.wl, j.kcab_norm));
+      KESC=1.2;                                                       /* see note at the declaration */
+    }
+    if (Array.isArray(j.soil) && j.soil.length===j.wl.length) SOIL.set(resampleTo(j.wl, j.soil));
+    recompute(); draw(); readouts();
+  }).catch(()=>{ /* keep the analytic model */ });
+}
+
+/* optional real solar spectrum */
+if (DATA_URL){
+  fetch(DATA_URL).then(r=>r.json()).then(j=>{
+    if (!j || !Array.isArray(j.wl) || !Array.isArray(j.E0) || j.wl.length<2) return;
+    /* E0 in the JSON is normalized transmission (continuum ≈ 1), so it MODULATES the
+       continuum rather than replacing it. Multiplying by CONT keeps the splice
+       continuous when the file covers only part of the 640-800 nm window. */
+    const src=new Float64Array(N);
+    for (let i=0;i<N;i++){
+      const x=wl[i];
+      if (x<j.wl[0] || x>j.wl[j.wl.length-1]){ src[i]=E0[i]; continue; }   /* keep synthetic outside coverage */
+      let lo=0, hi=j.wl.length-1;
+      while (hi-lo>1){ const mid=(lo+hi)>>1; if (j.wl[mid]<=x) lo=mid; else hi=mid; }
+      const t=(x-j.wl[lo])/(j.wl[hi]-j.wl[lo]);
+      src[i]=CONT[i]*(j.E0[lo]*(1-t)+j.E0[hi]*t);
+    }
+    SUN=src; recompute(); draw(); readouts();
+  }).catch(()=>{ /* keep synthetic fallback */ });
+}
+
+/* ---------- canvas ---------- */
+const cv=document.getElementById("cv"), hv=document.getElementById("hv");
+const PADL=54,PADR=14,H=470;
+const P=[{t:14,b:136},{t:164,b:286},{t:314,b:436}];
+const MARKS=[685,740];
+let hoverX=null;
+
+function setup(){ const dpr=window.devicePixelRatio||1, w=cv.clientWidth||cv.parentElement.clientWidth-12;
+  cv.width=Math.round(w*dpr); cv.height=Math.round(H*dpr); cv.style.height=H+"px";
+  const ctx=cv.getContext("2d"); ctx.setTransform(dpr,0,0,dpr,0,0); return {ctx,W:w}; }
+
+/* round tick steps that stop short of vmax, so the top gridline never runs
+   through the panel title */
+function autoTicks(vmax){
+  const raw=vmax/3, mag=Math.pow(10,Math.floor(Math.log10(raw)));
+  let st=mag; for (const s of [1,2,2.5,5,10]) if (raw<=s*mag){ st=s*mag; break; }
+  const o=[]; for (let v=0; v<=vmax*0.98; v+=st) o.push(v); return o;
+}
+function axis(ctx,W,p,vmax,ticks,label,title){
+  ctx.strokeStyle=C.hair; ctx.lineWidth=1;
+  for (const t of ticks){ const y=p.t+(1-t/vmax)*(p.b-p.t);
+    ctx.beginPath(); ctx.moveTo(PADL,y); ctx.lineTo(W-PADR,y); ctx.stroke();
+    ctx.fillStyle=C.faint; ctx.textAlign="right"; ctx.textBaseline="middle";
+    ctx.fillText(typeof label==="function"?label(t):t.toFixed(2),PADL-7,y); }
+  ctx.fillStyle=C.muted; ctx.textAlign="left"; ctx.textBaseline="top"; ctx.fillText(title,PADL+2,p.t+2);
+}
+function curve(ctx,px,py,arr,color,width,dash){
+  ctx.beginPath();
+  for(let i=0;i<N;i++){ const X=px(wl[i]), Y=py(arr[i]); i===0?ctx.moveTo(X,Y):ctx.lineTo(X,Y); }
+  ctx.setLineDash(dash||[]); ctx.strokeStyle=color; ctx.lineWidth=width; ctx.stroke(); ctx.setLineDash([]);
+}
+
+function draw(){
+  const {ctx,W}=setup();
+  const px=x=>PADL+(x-WL0)/(WL1-WL0)*(W-PADL-PADR);
+  const PY=[];                                  /* each panel's value→y, for the hover markers */
+  ctx.clearRect(0,0,W,H);
+  ctx.font="11px ui-monospace, Menlo, monospace";
+
+  /* 685 / 740 guides across all three panels */
+  for (const m of MARKS){
+    ctx.strokeStyle=C.mark; ctx.setLineDash([2,4]); ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(px(m),P[0].t); ctx.lineTo(px(m),P[2].b); ctx.stroke(); ctx.setLineDash([]);
+  }
+
+  /* --- panel 1: irradiance --- */
+  { const p=P[0], arr=IRR||SUN;
+    let peak=0; for(let i=0;i<N;i++) if(arr[i]>peak) peak=arr[i];
+    const ymax=IRR?peak*1.12:1.12, py=v=>p.t+(1-v/ymax)*(p.b-p.t); PY[0]=py;
+    axis(ctx,W,p,ymax, IRR?autoTicks(ymax):[0,0.5,1.0],
+         IRR?(t=>t.toFixed(0)):(t=>t.toFixed(1)),
+         IRR?"① sunlight reaching the canopy (mW m⁻² nm⁻¹)":"① sunlight reaching the canopy");
+    ctx.beginPath(); ctx.moveTo(px(WL0),py(0));
+    for(let i=0;i<N;i++) ctx.lineTo(px(wl[i]),py(arr[i]));
+    ctx.lineTo(px(WL1),py(0)); ctx.closePath(); ctx.fillStyle=C.sunFill; ctx.fill();
+    curve(ctx,px,py,arr,C.sun,1.3);
+    ctx.fillStyle=C.faint; ctx.textAlign="center"; ctx.textBaseline="bottom";
+    ctx.fillText("O₂-B",px(688.6),p.b-4); ctx.fillText("H₂O",px(722),p.b-4); ctx.fillText("O₂-A",px(765),p.b-4);
+  }
+
+  /* --- panel 2: reflectance --- */
+  { const p=P[1], ymax=0.62, py=v=>p.t+(1-v/ymax)*(p.b-p.t); PY[1]=py;
+    axis(ctx,W,p,ymax,[0,0.2,0.4,0.6],t=>t.toFixed(1),"② canopy reflectance — the red edge");
+    ctx.beginPath(); ctx.moveTo(px(WL0),py(0));
+    for(let i=0;i<N;i++) ctx.lineTo(px(wl[i]),py(RHO[i]));
+    ctx.lineTo(px(WL1),py(0)); ctx.closePath(); ctx.fillStyle=C.reflFill; ctx.fill();
+    ctx.beginPath();
+    for(let i=0;i<N;i++){ const X=px(wl[i]),Y=py(SOIL[i]); i===0?ctx.moveTo(X,Y):ctx.lineTo(X,Y); }
+    ctx.setLineDash([3,4]); ctx.strokeStyle=C.soil; ctx.lineWidth=1; ctx.stroke(); ctx.setLineDash([]);
+    curve(ctx,px,py,RHO,C.refl,1.9);
+    ctx.fillStyle=C.soil; ctx.textAlign="left"; ctx.textBaseline="bottom"; ctx.fillText("bare soil",px(645),py(at(SOIL,645))-5);
+  }
+
+  /* --- panel 3: reflected radiance, with and without SIF --- */
+  { const p=P[2]; let ymax=0;
+    for(let i=0;i<N;i++) if(L1[i]>ymax) ymax=L1[i];
+    ymax=Math.max(ymax*1.12,1);
+    const py=v=>p.t+(1-v/ymax)*(p.b-p.t); PY[2]=py;
+    axis(ctx,W,p,ymax,autoTicks(ymax),t=>t.toFixed(0),
+         IRR?"③ what the spectrometer sees (mW m⁻² nm⁻¹ sr⁻¹)":"③ what the spectrometer sees");
+    ctx.beginPath();
+    for(let i=0;i<N;i++) ctx.lineTo(px(wl[i]),py(L1[i]));
+    for(let i=N-1;i>=0;i--) ctx.lineTo(px(wl[i]),py(L0[i]));
+    ctx.closePath(); ctx.fillStyle=C.sifFill; ctx.fill();
+    curve(ctx,px,py,L0,C.rad,1.6,[4,3]);
+    curve(ctx,px,py,L1,C.sif,1.9);
+    if (W>700){                                 /* drops out before it can collide with the panel title */
+      ctx.fillStyle=C.muted; ctx.textAlign="right"; ctx.textBaseline="top";
+      ctx.fillText("shaded = the fluorescence contribution",W-PADR-2,p.t+2);
+    }
+  }
+
+  /* peak labels along the foot of panel 3, where every curve is clear of them */
+  ctx.fillStyle=C.mark; ctx.textAlign="center"; ctx.textBaseline="bottom";
+  for (const m of MARKS) ctx.fillText(m===685?"685 red":"740 far-red",px(m),P[2].b-5);
+
+  /* x-axis */
+  ctx.fillStyle=C.faint; ctx.textAlign="center"; ctx.textBaseline="top";
+  for (let t=640;t<=800;t+=20){ const X=px(t);
+    ctx.textAlign = X>W-PADR-16 ? "right" : (X<PADL+16 ? "left" : "center");   /* keep end labels on-canvas */
+    ctx.fillText(String(t),X,P[2].b+7); }
+  ctx.textAlign="center";
+  ctx.fillStyle=C.muted; ctx.fillText("wavelength (nm)",PADL+(W-PADL-PADR)/2,H-13);
+
+  if (hoverX!==null && hoverX>=WL0 && hoverX<=WL1){
+    const hx=px(hoverX); ctx.strokeStyle=C.faint; ctx.setLineDash([3,4]); ctx.lineWidth=1;
+    for (const p of P){ ctx.beginPath(); ctx.moveTo(hx,p.t); ctx.lineTo(hx,p.b); ctx.stroke(); }
+    ctx.setLineDash([]);
+    hoverDot(ctx,hx,PY[0](at(IRR||SUN,hoverX)),C.sun);
+    hoverDot(ctx,hx,PY[1](at(RHO,hoverX)),C.refl);
+    hoverDot(ctx,hx,PY[2](at(L0,hoverX)),C.rad);
+    hoverDot(ctx,hx,PY[2](at(L1,hoverX)),C.sif);
+  }
+}
+
+function readouts(){
+  const r685=at(RHO,685), r740=at(RHO,740), rNIR=at(RHO,780);
+  const esc=Math.exp(-KESC*(state.cab/40)*at(ABSN,685)*(1+0.35*state.lai)/1.35);
+  const s685=at(L1,685)>0 ? 100*at(SIFOUT,685)/at(L1,685) : 0;
+  const s740=at(L1,740)>0 ? 100*at(SIFOUT,740)/at(L1,740) : 0;
+  document.getElementById("roN").textContent=rNIR.toFixed(2);
+  document.getElementById("roR").textContent=r685.toFixed(3);
+  document.getElementById("roE").textContent=(100*esc).toFixed(0)+"%";
+  document.getElementById("roS685").textContent=s685.toFixed(1)+"%";
+  document.getElementById("roS740").textContent=s740.toFixed(1)+"%";
+  const cap=document.getElementById("cap");
+  if (state.sif<0.03)
+    cap.textContent="With fluorescence off, panel ③ is just panel ① times panel ②: reflected sunlight, carrying every sharp solar and atmospheric line at full depth. Add fluorescence to fill them in.";
+  else
+    cap.textContent="Both peaks are emitted; only one travels well. At 685 nm the leaf reabsorbs its own light, so most of the red peak never leaves the canopy and the fraction that does swings with chlorophyll and leaf area. At 740 nm chlorophyll no longer absorbs: the far-red peak escapes almost intact onto the bright NIR shoulder, beside the deep O₂-A band that supplies the sharp lines a retrieval needs. Raise chlorophyll and leaf area and watch the 685 escape fraction collapse while 740 barely moves — that is why space-based SIF is a far-red measurement.";
+}
+
+const cabEl=document.getElementById("cab"), laiEl=document.getElementById("lai"), sifEl=document.getElementById("sif");
+function sync(){
+  document.getElementById("cabOut").textContent=state.cab+" µg/cm²";
+  document.getElementById("laiOut").textContent=state.lai.toFixed(1);
+  document.getElementById("sifOut").textContent=state.sif.toFixed(2)+" mW m⁻² nm⁻¹ sr⁻¹";
+  recompute(); draw(); readouts();
+}
+cabEl.addEventListener("input",()=>{ state.cab=+cabEl.value; sync(); });
+laiEl.addEventListener("input",()=>{ state.lai=+laiEl.value; sync(); });
+sifEl.addEventListener("input",()=>{ state.sif=+sifEl.value; sync(); });
+
+const PRESETS=[ ["dense forest",40,5.0], ["cropland",35,3.0], ["sparse / stressed",12,1.4], ["bare-ish soil",5,1.0] ];
+const wrap=document.getElementById("presets");
+for (const [label,cab,lai] of PRESETS){
+  const b=document.createElement("button"); b.className="preset"; b.textContent=label;
+  b.addEventListener("click",()=>{ state.cab=cab; state.lai=lai; cabEl.value=cab; laiEl.value=lai; sync(); });
+  wrap.appendChild(b);
+}
+
+cv.addEventListener("pointermove",e=>{
+  const r=cv.getBoundingClientRect(), x=e.clientX-r.left, W=r.width;
+  if (x>PADL && x<W-PADR){ hoverX=WL0+(x-PADL)/(W-PADL-PADR)*(WL1-WL0);
+    hv.style.display="block"; hv.style.left=Math.min(x+14,Math.max(0,W-250))+"px"; hv.style.top="14px";
+    hv.innerHTML="λ <b>"+hoverX.toFixed(1)+"</b> nm<br>reflectance "+at(RHO,hoverX).toFixed(3)+
+                 " · SIF "+at(SIFOUT,hoverX).toFixed(2);
+  } else { hoverX=null; hv.style.display="none"; }
+  draw();
+});
+cv.addEventListener("pointerleave",()=>{ hoverX=null; hv.style.display="none"; draw(); });
+
+let rt; window.addEventListener("resize",()=>{ clearTimeout(rt); rt=setTimeout(draw,80); });
+sync();
+</script>
+</body>
+</html>

@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Christian Frankenberg">
+<meta name="dcterms.date" content="2026-07-31">
+<meta name="description" content="An interactive tour of how solar-induced chlorophyll fluorescence is retrieved from a spectrum — and why it works at all.">
+
+<title>How We Measure a Plant’s Glow from Space – FraLab</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../img/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-aff14ff3d2203394bca3bbffccc0bb16.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-19fb8a515a5aa4e44941c7a9c242d897.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-aff14ff3d2203394bca3bbffccc0bb16.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V5MKFZWK6P"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../custom.css">
+<meta property="og:title" content="How We Measure a Plant’s Glow from Space – FraLab">
+<meta property="og:description" content="An interactive tour of how solar-induced chlorophyll fluorescence is retrieved from a spectrum — and why it works at all.">
+<meta property="og:image" content="https:/tester/Tutorials/figures/sif-tutorial.png">
+<meta property="og:site_name" content="FraLab">
+<meta property="og:image:height" content="692">
+<meta property="og:image:width" content="1916">
+<meta name="twitter:title" content="How We Measure a Plant’s Glow from Space – FraLab">
+<meta name="twitter:description" content="An interactive tour of how solar-induced chlorophyll fluorescence is retrieved from a spectrum — and why it works at all.">
+<meta name="twitter:image" content="https:/tester/Tutorials/figures/sif-tutorial.png">
+<meta name="twitter:image-height" content="692">
+<meta name="twitter:image-width" content="1916">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/FraLabLogo.png" alt="" class="navbar-logo light-content">
+    <img src="../img/FraLabLogo.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">FraLab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../people.html"> 
+<span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../LabGuide.html"> 
+<span class="menu-text">Lab Guide</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../join.html"> 
+<span class="menu-text">Join the Group</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../tutorials.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blogs.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=7XYDtdYAAAAJ&amp;hl=en"> 
+<span class="menu-text"><iconify-icon role="img" inline="" icon="academicons:google-scholar" aria-label="Icon google-scholar from academicons Iconify.design set." title="Icon google-scholar from academicons Iconify.design set."></iconify-icon></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/cfranken"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/chr_fronge"> <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#where-the-glow-comes-from" id="toc-where-the-glow-comes-from" class="nav-link active" data-scroll-target="#where-the-glow-comes-from">Where the glow comes from</a></li>
+  <li><a href="#the-problem-sif-is-tiny-and-it-hides-in-reflected-sunlight" id="toc-the-problem-sif-is-tiny-and-it-hides-in-reflected-sunlight" class="nav-link" data-scroll-target="#the-problem-sif-is-tiny-and-it-hides-in-reflected-sunlight">The problem: SIF is tiny and it hides in reflected sunlight</a></li>
+  <li><a href="#seeing-the-filling-in" id="toc-seeing-the-filling-in" class="nav-link" data-scroll-target="#seeing-the-filling-in">Seeing the filling-in</a></li>
+  <li><a href="#forward-model" id="toc-forward-model" class="nav-link" data-scroll-target="#forward-model">The forward model</a></li>
+  <li><a href="#retrieval" id="toc-retrieval" class="nav-link" data-scroll-target="#retrieval">The retrieval</a></li>
+  <li><a href="#spectral-resolution-is-what-limits-us" id="toc-spectral-resolution-is-what-limits-us" class="nav-link" data-scroll-target="#spectral-resolution-is-what-limits-us">Spectral resolution is what limits us</a></li>
+  <li><a href="#canopy" id="toc-canopy" class="nav-link" data-scroll-target="#canopy">Putting a real canopy underneath</a></li>
+  <li><a href="#what-oco-does" id="toc-what-oco-does" class="nav-link" data-scroll-target="#what-oco-does">What OCO actually does</a></li>
+  <li><a href="#why-we-bother" id="toc-why-we-bother" class="nav-link" data-scroll-target="#why-we-bother">Why we bother</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How We Measure a Plant’s Glow from Space</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Remote Sensing</div>
+    <div class="quarto-category">Spectroscopy</div>
+    <div class="quarto-category">Photosynthesis</div>
+    <div class="quarto-category">SIF</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    An interactive tour of how solar-induced chlorophyll fluorescence is retrieved from a spectrum — and why it works at all.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page-left">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Christian Frankenberg </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 31, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- GENERATED by oco-sif-tutorial/deploy-to-site.sh from tutorial/index.qmd.
+     Do not edit here — edit the source and re-run the script. -->
+<!--
+  SOURCE OF TRUTH: this page. The Caltech version is caltech-excerpt.qmd, and the
+  blog version on the group site is generated from this file by
+  ../deploy-to-site.sh — so edit here, then re-run that script.
+
+  Widget URLs come from /sif, set once in ../_variables.yml.
+  iframe heights are measured at a 900 px body width, not guessed.
+-->
+<p>Plants fluoresce. A small part of the light a leaf absorbs is not used for photosynthesis and not turned into heat, but re-emitted at slightly longer wavelengths. This is solar induced chlorophyll fluorescence, SIF, and the remarkable thing is that we can measure it from orbit, with instruments that were built to do something else entirely.</p>
+<p>What I want to do here is go through the measurement the way we would actually construct it in a forward model: start with the sun, put an atmosphere in the way, put a canopy at the bottom, and only then add the fluorescence on top. Every step has an interactive figure attached, so you can push the parameters around yourself rather than take my word for it. The equations and the code are folded away in the collapsible sections for those who want them.</p>
+<section id="where-the-glow-comes-from" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-glow-comes-from">Where the glow comes from</h2>
+<p>Chlorophyll absorbs very efficiently in the blue and the red, and essentially not at all beyond about 700 nm. That drop is why leaves look green to us and why they are so bright in the near infrared. A few percent of what is absorbed comes back out as fluorescence, in a broad band with two peaks, one in the red around 685 nm and one in the far-red around 740 nm.</p>
+<p>The two peaks are not equally useful, and the reason is visible in the figure below. The red peak is emitted exactly where chlorophyll still absorbs strongly, so a good part of it gets reabsorbed before it ever leaves the leaf. The far-red peak sits beyond the absorption edge and escapes more or less untouched. Switch the reabsorption on and off to see how much this matters.</p>
+<iframe src="../sif/widgets/fluorescence-spectrum.html" width="100%" height="580" style="border:none" loading="lazy" title="Interactive: chlorophyll absorbance and fluorescence emission spectra">
+</iframe>
+</section>
+<section id="the-problem-sif-is-tiny-and-it-hides-in-reflected-sunlight" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-sif-is-tiny-and-it-hides-in-reflected-sunlight">The problem: SIF is tiny and it hides in reflected sunlight</h2>
+<p>If we point a spectrometer at a sunlit field, almost everything we record is reflected sunlight. The fluorescence is in there too, but at the wavelengths we use it contributes only on the order of one to two percent of the signal in the far-red. Brightness alone will never separate the two: a bright pixel can be a bright surface or a glowing one, and we cannot tell which.</p>
+<p>What saves us is that the two contributions have completely different spectral <em>shape</em>. The sun does not emit a smooth spectrum. Trace elements in the solar photosphere imprint sharp absorption lines on it, the so-called Fraunhofer lines, and their positions are fixed by physics and identical everywhere on Earth. Reflected sunlight reproduces those lines faithfully, because reflectance is a multiplicative term and multiplying does not change the relative depth of a line. Fluorescence is different: it is an additive source sitting at the bottom of the light path, and it is spectrally smooth, so it adds the same small amount of radiance inside a dark line as it does in the bright continuum next to it.</p>
+<p>Inside a deep line, where there is little light to begin with, that small addition is a large fractional change. So SIF fills in the Fraunhofer lines, and the degree of filling-in is what we actually retrieve.</p>
+</section>
+<section id="seeing-the-filling-in" class="level2">
+<h2 class="anchored" data-anchor-id="seeing-the-filling-in">Seeing the filling-in</h2>
+<p>Move the fluorescence slider and watch the line fill up. Then change the surface reflectance with the fluorescence set to zero: the line depth does not move at all. That invariance is the whole reason the method can be trusted, and it is worth convincing yourself of it before going further.</p>
+<iframe src="../sif/widgets/fraunhofer-explorer.html?data=/sif/data/solar_757_771nm.json" width="100%" height="700" style="border:none" loading="lazy" title="Interactive: Fraunhofer line in-filling and the two-point SIF retrieval">
+</iframe>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The retrieved SIF readout recovers the value you dialled in, no matter what you do to the reflectance or the sun angle. That is not a trick of the widget, it is the retrieval working, and the next sections show why.</p>
+</div>
+</div>
+</section>
+<section id="forward-model" class="level2">
+<h2 class="anchored" data-anchor-id="forward-model">The forward model</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Writing down the measured radiance
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Ignoring atmospheric scattering, which is small but not entirely negligible in this wavelength range, a nadir measurement over a Lambertian surface can be written as</p>
+<p><span class="math display">\[
+L_\lambda \;=\; \frac{L_{\lambda 0}\,\mu_0\,\rho_\lambda\,T_\lambda^{\downarrow}\,T_\lambda^{\uparrow}}{\pi}
+\;+\; \mathrm{SIF}_\lambda\,T_\lambda^{\uparrow}
+\]</span></p>
+<p>with <span class="math inline">\(L_{\lambda 0}\)</span> the solar irradiance spectrum, <span class="math inline">\(\mu_0\)</span> the cosine of the solar zenith angle, <span class="math inline">\(\rho_\lambda\)</span> the surface reflectance and <span class="math inline">\(T_\lambda\)</span> the atmospheric transmission along the light path, separated into down- and upwelling parts.</p>
+<p>Two things about this equation matter for the retrieval. First, everything sharp in <span class="math inline">\(L_\lambda\)</span> is inherited from <span class="math inline">\(L_{\lambda 0}\)</span> and <span class="math inline">\(T_\lambda\)</span>, because over a window a few nanometres wide <span class="math inline">\(\rho_\lambda\)</span> varies only slowly. Second, the SIF term is added, not multiplied, and it only sees the upwelling transmission. That asymmetry is what we exploit.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="retrieval" class="level2">
+<h2 class="anchored" data-anchor-id="retrieval">The retrieval</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>From forward model to a linear least-squares fit
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Lump the smooth reflected terms into a low-order polynomial <span class="math inline">\(P(\lambda)=\sum_k a_k \lambda^k\)</span> multiplying the solar reference, and treat SIF as a constant across the window. The forward model then becomes linear in its unknowns:</p>
+<p><span class="math display">\[
+L(\lambda) \;=\; \Big[\textstyle\sum_k a_k \lambda^k\Big]\,E_0(\lambda) \;+\; F .
+\]</span></p>
+<p>Stack the wavelengths into vectors and this is just <span class="math inline">\(L = Kx\)</span>, with <span class="math inline">\(x = [a_0,\dots,a_{n_p},\,F]^\top\)</span> and a design matrix whose columns are <span class="math inline">\(E_0\!\cdot\!\lambda^k\)</span> plus a column of ones for the additive SIF term. Solve by least squares and read off the last coefficient.</p>
+<p>The two-point version, which is what the widget’s readout computes, makes the same point with less machinery. Sample the radiance in a line core, <span class="math inline">\(L_0\)</span>, and in the nearby continuum, <span class="math inline">\(L_c\)</span>, and let <span class="math inline">\(d = E_0(\text{core})/E_0(\text{continuum})\)</span> be the true depth ratio of the line, known from a high resolution solar reference. The reflected part scales by <span class="math inline">\(d\)</span> at the core, the additive <span class="math inline">\(F\)</span> does not, so</p>
+<p><span class="math display">\[
+L_c = R_c + F,\qquad L_0 = d\,R_c + F \;\;\Longrightarrow\;\; F = \frac{L_0 - d\,L_c}{1-d}.
+\]</span></p>
+<p>Note that <span class="math inline">\(R_c\)</span> drops out entirely: reflectance and sun angle never enter the answer. This is the algebraic version of the invariance you just played with above.</p>
+</div>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Minimal linear SIF retrieval (data-driven Fraunhofer approach).</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Reflectance/continuum modeled as polynomial × solar reference; SIF additive.</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">LinearAlgebra</span>, <span class="bu">Statistics</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">    retrieve_sif(λ, L, E0; poly_order=2) -&gt; (sif, coeffs)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="st">λ  : wavelengths (nm) in the retrieval window</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">L  : measured radiance on that grid</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">E0 : high-resolution solar reference, interpolated to the same grid</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">retrieve_sif</span>(λ, L, E0; poly_order <span class="op">=</span> <span class="fl">2</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    λn <span class="op">=</span> (λ <span class="op">.-</span> <span class="fu">mean</span>(λ)) <span class="op">./</span> (<span class="fu">maximum</span>(λ) <span class="op">-</span> <span class="fu">minimum</span>(λ))      <span class="co"># normalize for conditioning</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># columns: E0·λⁿ  (smooth reflectance × solar structure)  +  ones (additive SIF)</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    K <span class="op">=</span> <span class="fu">hcat</span>((E0 <span class="op">.*</span> λn<span class="op">.^</span>k <span class="cf">for</span> k <span class="kw">in</span> <span class="fl">0</span><span class="op">:</span>poly_order)<span class="op">...</span>, <span class="fu">ones</span>(<span class="fu">length</span>(λ)))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> K <span class="op">\</span> L                                             <span class="co"># least squares</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x[<span class="kw">end</span>], x                                     <span class="co"># SIF is the additive term</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># --- tiny self-test: build a synthetic scene, then recover the injected SIF ---</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>λ  <span class="op">=</span> <span class="fu">collect</span>(<span class="fl">756.0</span><span class="op">:</span><span class="fl">0.005</span><span class="op">:</span><span class="fl">759.0</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>E0 <span class="op">=</span> <span class="fl">1</span> <span class="op">.-</span> <span class="fl">0.62</span> <span class="op">.*</span><span class="fu">exp</span>.(<span class="fu">-</span>((λ <span class="op">.-</span> <span class="fl">757.35</span>)<span class="op">./</span><span class="fl">0.055</span>)<span class="op">.^</span><span class="fl">2</span>) <span class="op">.-</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>          <span class="fl">0.30</span> <span class="op">.*</span><span class="fu">exp</span>.(<span class="fu">-</span>((λ <span class="op">.-</span> <span class="fl">758.25</span>)<span class="op">./</span><span class="fl">0.045</span>)<span class="op">.^</span><span class="fl">2</span>)         <span class="co"># solar reference w/ Fraunhofer lines</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>ρπT <span class="op">=</span> <span class="fl">120</span> <span class="op">.*</span> (<span class="fl">1</span> <span class="op">.+</span> <span class="fl">0.02</span> <span class="op">.*</span>(λ <span class="op">.-</span> <span class="fl">757.5</span>))                    <span class="co"># smooth reflected continuum</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>F_true <span class="op">=</span> <span class="fl">1.8</span>                                              <span class="co"># injected SIF</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>L  <span class="op">=</span> ρπT <span class="op">.*</span> E0 <span class="op">.+</span> F_true                                  <span class="co"># "measured" radiance</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>sif, _ <span class="op">=</span> <span class="fu">retrieve_sif</span>(λ, L, E0)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="pp">@info</span> <span class="st">"retrieved SIF"</span> sif F_true                          <span class="co"># ≈ 1.8</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="spectral-resolution-is-what-limits-us" class="level2">
+<h2 class="anchored" data-anchor-id="spectral-resolution-is-what-limits-us">Spectral resolution is what limits us</h2>
+<p>So far we have quietly assumed that we can see a Fraunhofer line at its true depth. No instrument can. Every spectrometer convolves the spectrum with its own instrument line shape, usually well approximated by a Gaussian, and we quote the width as the full width at half maximum, with <span class="math inline">\(\mathrm{FWHM} = 2\sqrt{2\ln 2}\,\sigma \approx 2.355\,\sigma\)</span>. A solar line only a few picometres wide therefore comes back much shallower and broader than it really is.</p>
+<p>This matters directly, because the filling-in signal lives in the depth of the line. Drag the resolution from 0.07 nm out to 0.5 nm and watch the lower panel: the same amount of fluorescence produces a smaller and broader peak as the line washes out. This is the main reason SIF retrievals want narrow, high resolution windows, and it is also why an instrument built for precise CO₂ spectroscopy turned out to be well suited to a measurement nobody had planned for.</p>
+<iframe src="../sif/widgets/resolution-explorer.html?data=/sif/data/solar_750nm.json" width="100%" height="775" style="border:none" loading="lazy" title="Interactive: spectral resolution and Fraunhofer in-filling">
+</iframe>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The solar spectrum here is the disk-integrated transmittance computed from Geoff Toon’s solar line list, not a low resolution measurement, and the convolution happens live in your browser so the slider stays responsive.</p>
+</div>
+</div>
+</section>
+<section id="canopy" class="level2">
+<h2 class="anchored" data-anchor-id="canopy">Putting a real canopy underneath</h2>
+<p>Up to now the surface has been a single number. A real canopy is not. Its reflectance climbs steeply between 700 and 750 nm, the red-edge feature, and how steep and how deep that edge is depends on chlorophyll content and on how many leaves there are.</p>
+<p>This is what decides which of the two fluorescence peaks we can actually use. The figure below is built from PROSPECT-PRO leaf optics run through 4SAIL, with the incoming light constructed as a Planck continuum times the solar Fraunhofer transmittance times line-by-line O₂ and H₂O absorption, so the O₂-A band at 760 nm and the O₂-B band at 688 nm are where they really are. Build yourself a canopy and watch the two readouts at 685 and 740 nm.</p>
+<p>Push chlorophyll and leaf area up and the fraction of red fluorescence that escapes the canopy collapses, from around 90% to under 20%, while the far-red peak barely notices. On top of that, the far-red lands on the bright near-infrared shoulder right next to the deep O₂-A band, which is exactly where we want sharp absorption features to fill in. The red peak sits on a dark background where the relative signal is actually larger, which sounds attractive until you remember that the escape fraction there depends strongly on canopy structure, and that is precisely what we do not want mixed into a photosynthesis proxy.</p>
+<iframe src="../sif/widgets/canopy-builder.html?canopy=/sif/data/canopy_grid.json&amp;atm=/sif/data/surface_irradiance.json" width="100%" height="930" style="border:none" loading="lazy" title="Interactive: canopy reflectance, the red edge, and where the SIF signal sits">
+</iframe>
+</section>
+<section id="what-oco-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-oco-does">What OCO actually does</h2>
+<p>The real retrieval is the same idea done carefully. OCO-2 and OCO-3 fit SIF in narrow microwindows near 757 and 771 nm, in the continuum region of the O₂ A-band, which is full of solar Fraunhofer lines and placed to avoid the strong oxygen absorption itself. The fit runs over hundreds of wavelengths at once with the measured instrument line shape applied to the solar reference, rather than the two-point cartoon above.</p>
+<p>A few things separate a research retrieval from something you would put in an operational product:</p>
+<ul>
+<li><strong>The instrument line shape has to be right.</strong> The solar reference is convolved with the measured ILS before it is compared to anything, and getting this wrong shows up directly as a SIF bias.</li>
+<li><strong>Rotational Raman scattering.</strong> Molecular scattering redistributes photons in wavelength and fills in Fraunhofer lines on its own, which is a rather good imitation of what we are trying to measure. It introduces both additive and multiplicative bias, and correcting it explicitly is one of the main accuracy improvements planned for the operational OCO SIF pipeline.</li>
+<li><strong>Gridding and cross-sensor harmonisation.</strong> Individual soundings are sparse, so anything useful is a gridded composite, ideally harmonised with TROPOMI and others so the records can actually be compared across platforms.</li>
+</ul>
+<p>The OCO instruments are extremely stable by design, and that stability is why their SIF product is still a reference standard even though fluorescence was never a baseline goal of the mission.</p>
+</section>
+<section id="why-we-bother" class="level2">
+<h2 class="anchored" data-anchor-id="why-we-bother">Why we bother</h2>
+<p>At large scales the relationship between space-based SIF and gross primary production, the rate at which the land biosphere fixes carbon, is close to linear and surprisingly insensitive to biome. That is what turns a spectroscopic curiosity into a carbon cycle instrument: a measurement that is robust against how bright the scene is becomes something close to a direct global map of photosynthesis.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Further reading and next steps
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Every figure here is a standalone HTML file with no dependencies, so the same widgets can be embedded elsewhere, including on the OCO mission site.</li>
+<li>A natural companion to this page is the SIF to GPP relationship, and how SIF enters flux inversions as a direct constraint on photosynthetic uptake.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/tester");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="https://www.caltech.edu/"><img src="../img/Caltech_Logo.png" class="img-fluid" alt="Caltech" width="65"></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=7XYDtdYAAAAJ&amp;hl=en">
+<p><iconify-icon role="img" inline="" icon="academicons:google-scholar" aria-label="Icon google-scholar from academicons Iconify.design set." title="Icon google-scholar from academicons Iconify.design set."></iconify-icon> Google Scholar</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/chr_fronge">
+      <i class="bi bi-twitter" role="img" aria-label="PI Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/RemoteSensingTools/">
+      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

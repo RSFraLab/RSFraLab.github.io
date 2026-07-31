@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fraunhofer Line In-Filling — How SIF Is Retrieved</title>
+<style>
+  /* Light default (blends into Caltech Sites); ?theme=dark for personal/Quarto site */
+  :root{
+    --bg:transparent; --panel:#ffffff; --hairline:#d9dee3;
+    --text:#1d2530; --muted:#5b6773; --faint:#8a97a5;
+    --solar:#a9791f;     /* the solar "ruler" */
+    --reflected:#8a97a5; /* reflected-only, no fluorescence */
+    --sif:#c92a5a;       /* fluorescence (chlorophyll red) */
+    --sif-fill:rgba(201,42,90,0.12);
+    --chip-on-bg:#1d2530; --chip-on-fg:#ffffff;
+  }
+  [data-theme="dark"]{
+    --panel:#10161d; --hairline:#1e2733;
+    --text:#e8edf2; --muted:#8a97a5; --faint:#5b6773;
+    --solar:#e0b64a; --reflected:#7c8794; --sif:#ff5c8a;
+    --sif-fill:rgba(255,92,138,0.14);
+    --chip-on-bg:#e8edf2; --chip-on-fg:#0b0f14;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg)}
+  body{
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;
+  }
+  .widget{background:var(--panel);border:1px solid var(--hairline);border-radius:8px;overflow:hidden;max-width:960px;margin:0 auto}
+  .head{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:11px 14px;border-bottom:1px solid var(--hairline)}
+  .key{display:flex;gap:14px;flex-wrap:wrap;font:12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--muted)}
+  .key span{display:flex;align-items:center;gap:6px;white-space:nowrap}
+  .key i{width:16px;height:0;border-top-width:2px;border-top-style:solid;display:inline-block}
+  .hint{margin-left:auto;font:11px ui-monospace,Menlo,monospace;color:var(--faint)}
+  .body{position:relative;padding:6px 6px 0}
+  canvas{display:block;width:100%;touch-action:pan-y}
+  .hover{
+    position:absolute;pointer-events:none;display:none;z-index:3;
+    font:11.5px ui-monospace,Menlo,monospace;color:var(--text);
+    background:var(--panel);border:1px solid var(--hairline);border-radius:5px;
+    padding:5px 8px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.12);
+  }
+  .controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px 24px;padding:14px 16px 8px;border-top:1px solid var(--hairline)}
+  @media(max-width:620px){.controls{grid-template-columns:1fr}}
+  .ctl label{display:flex;justify-content:space-between;align-items:baseline;font:11.5px ui-monospace,Menlo,monospace;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .ctl label output{color:var(--text);font-size:12.5px;text-transform:none;letter-spacing:0}
+  input[type=range]{width:100%;appearance:none;height:3px;background:var(--hairline);border-radius:2px;outline:none}
+  input[type=range]::-webkit-slider-thumb{appearance:none;width:15px;height:15px;border-radius:50%;background:var(--sif);border:3px solid var(--panel);box-shadow:0 0 0 1px var(--hairline);cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:11px;height:11px;border-radius:50%;background:var(--sif);border:3px solid var(--panel);cursor:pointer}
+  input[type=range]:focus-visible{box-shadow:0 0 0 2px var(--sif)}
+  .readouts{display:flex;flex-wrap:wrap;gap:6px;padding:10px 16px 6px}
+  .ro{font:11.5px ui-monospace,Menlo,monospace;color:var(--muted);border:1px solid var(--hairline);border-radius:5px;padding:5px 9px}
+  .ro b{color:var(--text);font-weight:600}
+  .ro.match b{color:var(--sif)}
+  .caption{padding:6px 16px 4px;color:var(--muted);font-size:13px;max-width:78ch}
+  details{padding:2px 16px 16px;color:var(--muted);font-size:13px;max-width:78ch}
+  summary{cursor:pointer;color:var(--text);font-weight:600;font-size:13px;padding:6px 0}
+  details .math{background:var(--bg);border:1px solid var(--hairline);border-radius:6px;padding:12px 14px;margin-top:8px;font:13px/1.7 ui-monospace,Menlo,monospace;color:var(--text);overflow-x:auto}
+  .em{color:var(--sif);font-weight:600}
+</style>
+</head>
+<body>
+<div class="widget">
+  <div class="head">
+    <div class="key">
+      <span><i style="border-color:var(--solar)"></i>solar reference</span>
+      <span><i style="border-color:var(--reflected);border-top-style:dashed"></i>reflected only</span>
+      <span><i style="border-color:var(--sif)"></i>measured (＋SIF)</span>
+    </div>
+    <span class="hint">move the SIF slider ↓</span>
+  </div>
+  <div class="body">
+    <canvas id="cv" height="360" aria-label="Solar Fraunhofer line filled in by fluorescence"></canvas>
+    <div class="hover" id="hv"></div>
+  </div>
+  <div class="controls">
+    <div class="ctl">
+      <label>Fluorescence (SIF) <output id="sifOut">1.8</output></label>
+      <input type="range" id="sif" min="0" max="4" step="0.05" value="1.8" aria-label="SIF radiance mW per m2 per nm per sr">
+    </div>
+    <div class="ctl">
+      <label>Surface reflectance <output id="rhoOut">0.30</output></label>
+      <input type="range" id="rho" min="0.03" max="0.6" step="0.01" value="0.30" aria-label="Surface reflectance">
+    </div>
+    <div class="ctl">
+      <label>Solar zenith angle <output id="szaOut">30°</output></label>
+      <input type="range" id="sza" min="0" max="70" step="1" value="30" aria-label="Solar zenith angle">
+    </div>
+  </div>
+  <div class="readouts">
+    <span class="ro">continuum radiance <b id="roC">—</b></span>
+    <span class="ro">solar line depth <b id="roS">—</b></span>
+    <span class="ro">observed line depth <b id="roO">—</b></span>
+    <span class="ro match">retrieved SIF <b id="roR">—</b></span>
+  </div>
+  <p class="caption" id="cap"></p>
+
+  <details>
+    <summary>Show the retrieval, in one equation</summary>
+    <p style="margin-top:6px">
+      In a narrow window the at-sensor radiance is reflected sunlight (which carries the sharp
+      Fraunhofer structure) plus a spectrally smooth fluorescence term that does not:
+    </p>
+    <div class="math">
+      L(λ)  =  (ρ/π)·E₀(λ)·T  +  <span class="em">F</span>
+    </div>
+    <p style="margin-top:10px">
+      Sample the measured radiance at a Fraunhofer line core (L₀) and in the nearby continuum (L_c).
+      Let <b>d = E₀(core) / E₀(continuum)</b> be the line's true depth ratio, known from a
+      high-resolution solar reference. The reflected term scales by d at the core but the additive
+      <span class="em">F</span> does not, so:
+    </p>
+    <div class="math">
+      L_c = R_c + <span class="em">F</span>          L₀ = d·R_c + <span class="em">F</span>
+      <br><br>
+      ⇒   <span class="em">F</span> = ( L₀ − d·L_c ) / ( 1 − d )
+    </div>
+    <p style="margin-top:10px">
+      That is the "retrieved SIF" readout above — and it recovers the slider value exactly,
+      whatever the reflectance or sun angle. The real OCO retrieval is the least-squares version
+      of this over ~hundreds of wavelengths, with a low-order polynomial standing in for ρ/π·T.
+    </p>
+  </details>
+</div>
+
+<script>
+"use strict";
+(function(){ const t=new URLSearchParams(location.search).get("theme"); if(t==="dark") document.documentElement.setAttribute("data-theme","dark"); })();
+
+/* -------- external data hook --------
+   Ships with a synthetic solar spectrum. Pass ?data=URL to a solar JSON
+   { "window_nm":[lo,hi], "wl":[...nm ascending], "E0":[...continuum≈1] } and the
+   deepest line in that window becomes the retrieval's core sample. The two-point
+   algebra is unchanged. Silent fallback to synthetic on any failure. */
+const DATA_URL = new URLSearchParams(location.search).get("data");
+
+const css=getComputedStyle(document.documentElement), col=k=>css.getPropertyValue(k).trim();
+const C={ hair:col("--hairline"),text:col("--text"),muted:col("--muted"),faint:col("--faint"),
+  solar:col("--solar"),reflected:col("--reflected"),sif:col("--sif"),sifFill:col("--sif-fill"),
+  panel:col("--panel") };
+
+/* Cursor marker: a filled dot riding the curve itself, haloed against the panel
+   so it stays legible over a fill. Matches the OCO dashboard's hover behaviour. */
+function hoverDot(ctx,x,y,color){
+  ctx.beginPath(); ctx.arc(x,y,3.6,0,2*Math.PI);
+  ctx.fillStyle=color; ctx.fill();
+  ctx.lineWidth=1.6; ctx.strokeStyle=C.panel; ctx.stroke();
+}
+
+/* --- synthetic normalized solar spectrum: continuum 1 minus Fraunhofer lines --- */
+let WL0=756.0, WL1=759.0, NPTS=600;
+const LINES=[ {c:757.35, depth:0.62, w:0.055},   /* deep line (used for two-point retrieval) */
+              {c:758.25, depth:0.30, w:0.045},
+              {c:756.75, depth:0.18, w:0.040} ];
+let wl=new Float64Array(NPTS), E=new Float64Array(NPTS);
+for (let i=0;i<NPTS;i++){
+  const x=WL0+i/(NPTS-1)*(WL1-WL0); wl[i]=x;
+  let e=1.0; for (const L of LINES){ const t=(x-L.c)/L.w; e-=L.depth*Math.exp(-t*t); }
+  E[i]=Math.max(0.02,e);
+}
+function Eat(x){ // interpolate solar reference
+  const f=(x-WL0)/(WL1-WL0)*(NPTS-1); const i=Math.max(0,Math.min(NPTS-2,Math.floor(f))); const t=f-i;
+  return E[i]*(1-t)+E[i+1]*t;
+}
+let CORE_WL = LINES[0].c;                     // deep line sampled by the two-point retrieval
+let CONT_WL = 756.35;                         // a continuum sample away from cores
+let d = Eat(CORE_WL) / Eat(CONT_WL);          // line depth ratio
+
+const BASE = 385;                             // brightness scale → continuum radiance in mW/m²/nm/sr
+const state={ sif:1.8, rho:0.30, sza:30 };
+
+/* Real solar spectrum, resampled onto a uniform grid (Eat assumes even spacing).
+   The deepest sample becomes the line core, the brightest the continuum. */
+if (DATA_URL){
+  fetch(DATA_URL).then(r=>r.json()).then(j=>{
+    if (!j || !Array.isArray(j.wl) || !Array.isArray(j.E0)) return;
+    if (j.wl.length<8 || j.wl.length!==j.E0.length) return;
+    const lo=j.wl[0], hi=j.wl[j.wl.length-1];
+    if (!(hi>lo)) return;
+    const M=Math.min(2000,j.wl.length), step=(hi-lo)/(M-1);
+    const nwl=new Float64Array(M), ne=new Float64Array(M);
+    let k=0;
+    for (let i=0;i<M;i++){
+      const x=lo+i*step; nwl[i]=x;
+      while (k<j.wl.length-2 && j.wl[k+1]<x) k++;
+      const span=j.wl[k+1]-j.wl[k], t=span>0?(x-j.wl[k])/span:0;
+      ne[i]=Math.max(0.02, j.E0[k]+t*(j.E0[k+1]-j.E0[k]));
+    }
+    let vmin=Infinity,imin=0,vmax=-Infinity,imax=0;
+    for (let i=0;i<M;i++){ if(ne[i]<vmin){vmin=ne[i];imin=i;} if(ne[i]>vmax){vmax=ne[i];imax=i;} }
+    if (!(vmax>vmin)) return;                 // featureless window: nothing to retrieve against
+    WL0=lo; WL1=hi; NPTS=M; wl=nwl; E=ne;
+    CORE_WL=nwl[imin]; CONT_WL=nwl[imax]; d=vmin/vmax;
+    draw(); readouts();
+  }).catch(()=>{ /* keep synthetic fallback */ });
+}
+
+function Rc(){ return BASE*Math.cos(state.sza*Math.PI/180)*state.rho; }   // continuum reflected radiance
+function reflected(x){ return Rc()*Eat(x); }
+function measured(x){ return reflected(x)+state.sif; }
+
+/* --- canvas --- */
+const cv=document.getElementById("cv"), hv=document.getElementById("hv");
+const PADL=58,PADR=14,PADT=16,PADB=40,H=360;
+let hoverX=null;
+
+function setup(){
+  const dpr=window.devicePixelRatio||1, w=cv.clientWidth||cv.parentElement.clientWidth-12;
+  cv.width=Math.round(w*dpr); cv.height=Math.round(H*dpr); cv.style.height=H+"px";
+  const ctx=cv.getContext("2d"); ctx.setTransform(dpr,0,0,dpr,0,0); return {ctx,W:w};
+}
+function ticks(min,max,n){
+  const s0=(max-min)/n, mag=Math.pow(10,Math.floor(Math.log10(s0))); let st=mag;
+  for (const s of [1,2,2.5,5,10]) if (s0<=s*mag){ st=s*mag; break; }
+  const o=[]; for (let v=Math.ceil(min/st)*st; v<=max+1e-9; v+=st) o.push(v); return o;
+}
+function draw(){
+  const {ctx,W}=setup();
+  const ymax=Math.max(BASE*Math.cos(0)*0.6+4, Rc()+state.sif)*1.08;
+  const px=x=>PADL+(x-WL0)/(WL1-WL0)*(W-PADL-PADR);
+  const py=v=>PADT+(1-v/ymax)*(H-PADT-PADB);
+  ctx.clearRect(0,0,W,H);
+  ctx.font="11px ui-monospace, Menlo, monospace";
+
+  ctx.strokeStyle=C.hair; ctx.fillStyle=C.faint; ctx.lineWidth=1;
+  for (const t of ticks(0,ymax,4)){ const y=py(t);
+    ctx.beginPath(); ctx.moveTo(PADL,y); ctx.lineTo(W-PADR,y); ctx.stroke();
+    ctx.textAlign="right"; ctx.textBaseline="middle"; ctx.fillText(t.toFixed(0),PADL-7,y); }
+  for (const t of ticks(WL0,WL1,6)){ const X=px(t); ctx.textBaseline="top";
+    ctx.textAlign = X>W-PADR-16 ? "right" : (X<PADL+16 ? "left" : "center");   /* keep end labels on-canvas */
+    ctx.fillText(t.toFixed(1),X,H-PADB+7); }
+  ctx.fillStyle=C.muted; ctx.textAlign="center";
+  ctx.fillText("wavelength (nm)",PADL+(W-PADL-PADR)/2,H-13);
+  ctx.save(); ctx.translate(13,PADT+(H-PADT-PADB)/2); ctx.rotate(-Math.PI/2);
+  ctx.fillText("radiance (mW/m²/nm/sr)",0,0); ctx.restore();
+
+  // SIF fill between reflected-only and measured
+  ctx.beginPath();
+  for (let i=0;i<NPTS;i++){ const x=wl[i]; i===0?ctx.moveTo(px(x),py(measured(x))):ctx.lineTo(px(x),py(measured(x))); }
+  for (let i=NPTS-1;i>=0;i--){ const x=wl[i]; ctx.lineTo(px(x),py(reflected(x))); }
+  ctx.closePath(); ctx.fillStyle=C.sifFill; ctx.fill();
+
+  // reflected-only (dashed)
+  ctx.beginPath();
+  for (let i=0;i<NPTS;i++){ const x=wl[i]; i===0?ctx.moveTo(px(x),py(reflected(x))):ctx.lineTo(px(x),py(reflected(x))); }
+  ctx.strokeStyle=C.reflected; ctx.lineWidth=1.4; ctx.setLineDash([5,4]); ctx.stroke(); ctx.setLineDash([]);
+
+  // measured (solid, bold)
+  ctx.beginPath();
+  for (let i=0;i<NPTS;i++){ const x=wl[i]; i===0?ctx.moveTo(px(x),py(measured(x))):ctx.lineTo(px(x),py(measured(x))); }
+  ctx.strokeStyle=C.sif; ctx.lineWidth=1.9; ctx.stroke();
+
+  // solar reference (thin, scaled to continuum for shape comparison)
+  ctx.beginPath();
+  for (let i=0;i<NPTS;i++){ const x=wl[i]; const v=Rc()*Eat(x); i===0?ctx.moveTo(px(x),py(v)):ctx.lineTo(px(x),py(v)); }
+  // (same as reflected; draw a faint solar-colored guide at the deep line core marker instead)
+
+  // deep-line core + continuum markers
+  const cx=px(CORE_WL), cont=px(CONT_WL);
+  ctx.strokeStyle=C.solar; ctx.setLineDash([2,3]); ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(cx,PADT); ctx.lineTo(cx,H-PADB); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle=C.solar; ctx.textAlign="center"; ctx.textBaseline="bottom";
+  ctx.fillText("line core",cx,PADT+11);
+  ctx.fillStyle=C.faint; ctx.fillText("continuum",cont,PADT+11);
+  // dots
+  ctx.fillStyle=C.sif;
+  for (const [x] of [[CORE_WL],[CONT_WL]]){ ctx.beginPath(); ctx.arc(px(x),py(measured(x)),3.2,0,Math.PI*2); ctx.fill(); }
+
+  if (hoverX!==null && hoverX>=WL0 && hoverX<=WL1){
+    const x=hoverX, hx=px(x);
+    ctx.strokeStyle=C.faint; ctx.setLineDash([3,4]); ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(hx,PADT); ctx.lineTo(hx,H-PADB); ctx.stroke(); ctx.setLineDash([]);
+    hoverDot(ctx,hx,py(reflected(x)),C.reflected);
+    hoverDot(ctx,hx,py(measured(x)),C.sif);
+  }
+}
+
+function readouts(){
+  const rc=Rc(), Lc=measured(CONT_WL), L0=measured(CORE_WL);
+  const obs=(Lc-L0)/Lc*100;                 // observed relative depth (%)
+  const Fret=(L0-d*Lc)/(1-d);               // two-point retrieval
+  document.getElementById("roC").textContent=rc.toFixed(0)+" mW/m²/nm/sr";
+  document.getElementById("roS").textContent=((1-d)*100).toFixed(1)+"%";
+  document.getElementById("roO").textContent=obs.toFixed(1)+"%";
+  document.getElementById("roR").textContent=Fret.toFixed(2)+" (input "+state.sif.toFixed(2)+")";
+  const cap=document.getElementById("cap");
+  if (state.sif<0.05)
+    cap.textContent="With no fluorescence, the measured line has its full solar depth — and that depth does not change as you vary reflectance or sun angle. That albedo-independence is what makes the Fraunhofer method robust.";
+  else
+    cap.textContent="Fluorescence adds a smooth offset that fills the sharp solar line: the core rises more than the continuum, so the observed depth shrinks. Slide reflectance and note the depth changes — yet the retrieval below recovers the input SIF exactly, because it works from absolute radiances, not the fractional depth.";
+}
+
+const sifEl=document.getElementById("sif"), rhoEl=document.getElementById("rho"), szaEl=document.getElementById("sza");
+sifEl.addEventListener("input",()=>{ state.sif=+sifEl.value; document.getElementById("sifOut").textContent=state.sif.toFixed(2); draw(); readouts(); });
+rhoEl.addEventListener("input",()=>{ state.rho=+rhoEl.value; document.getElementById("rhoOut").textContent=state.rho.toFixed(2); draw(); readouts(); });
+szaEl.addEventListener("input",()=>{ state.sza=+szaEl.value; document.getElementById("szaOut").textContent=state.sza+"°"; draw(); readouts(); });
+
+cv.addEventListener("pointermove",e=>{
+  const r=cv.getBoundingClientRect(), x=e.clientX-r.left, W=r.width;
+  if (x>PADL && x<W-PADR){
+    hoverX=WL0+(x-PADL)/(W-PADL-PADR)*(WL1-WL0);
+    hv.style.display="block"; hv.style.left=Math.min(x+14,W-210)+"px"; hv.style.top="14px";
+    hv.innerHTML="λ <b>"+hoverX.toFixed(3)+"</b> nm<br>measured "+measured(hoverX).toFixed(1)+" · reflected "+reflected(hoverX).toFixed(1);
+  } else { hoverX=null; hv.style.display="none"; }
+  draw();
+});
+cv.addEventListener("pointerleave",()=>{ hoverX=null; hv.style.display="none"; draw(); });
+
+let rt; window.addEventListener("resize",()=>{ clearTimeout(rt); rt=setTimeout(draw,80); });
+draw(); readouts();
+</script>
+</body>
+</html>
