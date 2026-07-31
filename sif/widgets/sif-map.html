@@ -10,9 +10,9 @@
     --text:#1d2530; --muted:#5b6773; --faint:#8a97a5;
     --sea:#eef1f4; --grat:rgba(90,105,120,0.18); --sif:#c92a5a;
   }
-  [data-theme="dark"][data-standalone]{--bg:#0e141a}
+  [data-theme="dark"][data-standalone]{--bg:#171c22}
   [data-theme="dark"]{
-    --panel:#10161d; --hairline:#1e2733;
+    --panel:#212831; --hairline:#1e2733;
     --text:#e8edf2; --muted:#8a97a5; --faint:#5b6773;
     --sea:#0c1218; --grat:rgba(150,170,190,0.16); --sif:#ff5c8a;
   }
@@ -58,6 +58,15 @@
 /* ---- theme resolution (see the other widgets) ---- */
 const THEME_PARAM = new URLSearchParams(location.search).get("theme");
 const DARK_MQ = window.matchMedia("(prefers-color-scheme: dark)");
+function hostBackground(){
+  try {
+    if (window.parent === window) return null;
+    const c = window.parent.getComputedStyle(window.parent.document.body).backgroundColor;
+    if (!c || c === "transparent") return null;
+    if (/rgba\(\s*0\s*,\s*0\s*,\s*0\s*,\s*0\s*\)/.test(c)) return null;   // unset
+    return c;
+  } catch (e) { return null; }                         // cross-origin
+}
 function pageIsDark(){
   try {
     if (window.parent === window) return null;
@@ -73,12 +82,27 @@ function resolveTheme(){
   const dark = THEME_PARAM ? THEME_PARAM === "dark" : (hosted === null ? DARK_MQ.matches : hosted);
   const root = document.documentElement;
   root.setAttribute("data-theme", dark ? "dark" : "light");
+  /* Sit on the host page's own background rather than inventing one, so the card
+     blends into whatever theme is around it instead of punching a darker hole in
+     it. Cross-origin we cannot read it and fall back to the palette below. */
+  const hb = hostBackground();
+  if (hb) root.style.setProperty("--panel", hb); else root.style.removeProperty("--panel");
   if (window.parent === window) root.setAttribute("data-standalone", "");
 }
 resolveTheme();
 function onThemeChange(cb){
-  const rerun = () => { const b=document.documentElement.getAttribute("data-theme");
-    resolveTheme(); if (document.documentElement.getAttribute("data-theme")!==b) cb(); };
+  /* Quarto swaps stylesheets asynchronously, so the host background read at the
+     instant the class flips is still the OLD one. Re-apply a couple of times as
+     it settles, and treat a background change alone as worth redrawing. */
+  const apply = () => {
+    const root = document.documentElement;
+    const beforeTheme = root.getAttribute("data-theme");
+    const beforePanel = root.style.getPropertyValue("--panel");
+    resolveTheme();
+    if (root.getAttribute("data-theme") !== beforeTheme ||
+        root.style.getPropertyValue("--panel") !== beforePanel) cb();
+  };
+  const rerun = () => { apply(); setTimeout(apply, 120); setTimeout(apply, 400); };
   DARK_MQ.addEventListener("change", rerun);
   try {
     if (window.parent !== window){
