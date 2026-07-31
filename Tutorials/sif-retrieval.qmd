@@ -348,6 +348,23 @@ The OCO instruments are extremely stable by design, and that stability is why
 their SIF product is still a reference standard even though fluorescence was never
 a baseline goal of the mission.
 
+## What it looks like from orbit
+
+Everything above has been one spectrum at a time. Here is what happens when you do
+it for a year: every OCO-2 sounding over land in 2021, gridded to 1°×1° and
+averaged, weighted by how many soundings fell in each cell.
+
+<iframe
+  src="/sif/widgets/sif-map.html"
+  width="100%" height="730" style="border:none" loading="lazy"
+  title="Interactive: global map of annual mean SIF retrieved by OCO-2 in 2021"></iframe>
+
+It is worth pausing on what this map is not. No land cover map went into it, no
+vegetation index, no model. Every pixel is just the degree to which solar
+Fraunhofer lines came back filled in, converted to a radiance. That the Amazon,
+the Congo, the maritime continent, the North China Plain and the Corn Belt fall
+out of it anyway is the whole argument for the method.
+
 ## Why we bother
 
 At large scales the relationship between space-based SIF and gross primary
