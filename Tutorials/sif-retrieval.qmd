@@ -24,6 +24,10 @@ code-fold: true
 
   Widget URLs come from /sif, set once in ../_variables.yml.
   iframe heights are measured at a 900 px body width, not guessed.
+
+  No ?theme= here on purpose: the widgets read the host page's light/dark state
+  (same-origin) and follow the Quarto toggle live. Pin it only where that cannot
+  work — see caltech-excerpt.qmd.
 -->
 
 Plants fluoresce. A small part of the light a leaf absorbs is not used for
@@ -38,6 +42,16 @@ put a canopy at the bottom, and only then add the fluorescence on top. Every ste
 has an interactive figure attached, so you can push the parameters around yourself
 rather than take my word for it. The equations and the code are folded away in the
 collapsible sections for those who want them.
+
+::: {.callout-note appearance="simple"}
+This follows the same thread as a book chapter Joe Berry and I wrote a while back:
+Frankenberg, C. and Berry, J. (2018), [Solar Induced Chlorophyll Fluorescence:
+Origins, Relation to Photosynthesis and
+Retrieval](https://doi.org/10.1016/B978-0-12-409548-9.10632-3), in S. Liang (ed.),
+*Comprehensive Remote Sensing*, Vol. 3, 143–162, Elsevier. The figures here are
+rebuilt from scratch as interactive versions and the text is written fresh; the
+published chapter and its typeset figures remain © Elsevier.
+:::
 
 ## Where the glow comes from
 
@@ -189,6 +203,34 @@ sif, _ = retrieve_sif(λ, L, E0)
 @info "retrieved SIF" sif F_true                          # ≈ 1.8
 ```
 
+::: {.callout-important collapse="true"}
+## What a real fit has to add on top of this
+
+The snippet above is the right idea and it is genuinely what the method rests on,
+but nobody retrieves SIF operationally with that few unknowns. In real life we fit
+a good deal more.
+
+Two additions matter enough to name. The first is a **Doppler shift**: the Earth's
+motion relative to the Sun moves the whole solar spectrum by a small fraction of a
+spectral sample, and since the retrieval works by comparing measured line depths
+against a reference, a mis-registered solar spectrum looks very much like
+in-filling. So the shift (and usually a stretch) is fitted along with everything
+else. The second is **telluric O₂**: the 771 nm microwindow sits close enough to
+the O₂ A-band that oxygen absorption lands right on top of the solar structure,
+and it has to be in the forward model rather than absorbed into the polynomial.
+
+Both of these force a change in *how* the forward model is evaluated. A shifted
+solar spectrum and an O₂ transmittance have to be built line-by-line at high
+resolution and convolved with the instrument line shape only at the very end —
+you cannot apply them on the instrument's own grid, because convolution and
+absorption do not commute. Getting that order wrong is a classic source of bias.
+
+There is more beyond those: a wavelength-dependent instrument line shape, zero
+level offsets, detector nonlinearity, and the rotational Raman correction
+discussed below. None of it changes the picture the dozen lines above give you,
+which is exactly why that version is worth reading first.
+:::
+
 ## Spectral resolution is what limits us
 
 So far we have quietly assumed that we can see a Fraunhofer line at its true
@@ -199,16 +241,40 @@ $\mathrm{FWHM} = 2\sqrt{2\ln 2}\,\sigma \approx 2.355\,\sigma$. A solar line onl
 a few picometres wide therefore comes back much shallower and broader than it
 really is.
 
-This matters directly, because the filling-in signal lives in the depth of the
-line. Drag the resolution from 0.07 nm out to 0.5 nm and watch the lower panel:
-the same amount of fluorescence produces a smaller and broader peak as the line
-washes out. This is the main reason SIF retrievals want narrow, high resolution
-windows, and it is also why an instrument built for precise CO₂ spectroscopy
-turned out to be well suited to a measurement nobody had planned for.
+Before looking at what that costs, it is worth being precise about which part of
+the signal actually matters. Write the ratio of the spectrum with fluorescence to
+the one without:
+
+$$
+\frac{I_0 + F}{I_0} \;=\; 1 \;+\; \frac{F}{I_0(\lambda)}
+\;=\; \underbrace{1 + F}_{\text{flat offset}} \;+\; \underbrace{F\left(\frac{1}{I_0(\lambda)} - 1\right)}_{\text{what we retrieve}}
+$$
+
+(with the solar spectrum normalised so the continuum is 1). The first term is a
+constant lift of the whole curve. It scales with SIF, but it is completely
+degenerate with anything else that multiplies the spectrum — surface reflectance,
+aerosol, a calibration error — so on its own it tells us nothing. Everything we
+can actually retrieve sits in the second term, which is non-zero only where the
+solar line is deep.
+
+That distinction is the whole story of spectral resolution. The flat offset does
+not care what instrument you use. The second term does: as the instrument line
+shape smears the solar line, the core rises back towards the continuum, $1/I_0$
+shrinks, and the retrievable part collapses — even though nothing about the
+fluorescence has changed. Drag the resolution below from 0.07 nm out to 0.5 nm and
+watch the *kept vs native* readout, which compares the retrievable in-filling at
+your chosen resolution against what it would be at the solar spectrum's own
+resolution. Then press *subtract the flat offset* to throw away the degenerate
+part and see only the structure a retrieval can work with.
+
+The window shown is the OCO-2 SIF region, with the two fitting microwindows near
+758.6 and 770 nm shaded. This is also why an instrument built for precise CO₂
+spectroscopy turned out to be so well suited to a measurement nobody had planned
+for: it already had the resolution.
 
 <iframe
   src="/sif/widgets/resolution-explorer.html?data=/sif/data/solar_750nm.json"
-  width="100%" height="775" style="border:none" loading="lazy"
+  width="100%" height="920" style="border:none" loading="lazy"
   title="Interactive: spectral resolution and Fraunhofer in-filling"></iframe>
 
 ::: {.callout-tip}
@@ -231,6 +297,15 @@ transmittance times line-by-line O₂ and H₂O absorption, so the O₂-A band a
 and the O₂-B band at 688 nm are where they really are. Build yourself a canopy and
 watch the two readouts at 685 and 740 nm.
 
+The fourth panel makes the same point as the resolution figure, but across the
+whole window: it is the ratio of the spectrum with fluorescence to the one
+without. Two very different features live in it. The broad hump around 685 nm is
+just SIF sitting on a very dark red background — real, and large, but hopelessly
+tangled up with anything else that changes broadband reflectance. The sharp
+structure in the O₂ bands and the Fraunhofer lines can only be produced by an
+additive source at the surface, and that is what a retrieval keys on. The toggle
+strips the broadband part away so the usable structure is visible on its own.
+
 Push chlorophyll and leaf area up and the fraction of red fluorescence that
 escapes the canopy collapses, from around 90% to under 20%, while the far-red peak
 barely notices. On top of that, the far-red lands on the bright near-infrared
@@ -242,7 +317,7 @@ precisely what we do not want mixed into a photosynthesis proxy.
 
 <iframe
   src="/sif/widgets/canopy-builder.html?canopy=/sif/data/canopy_grid.json&atm=/sif/data/surface_irradiance.json"
-  width="100%" height="930" style="border:none" loading="lazy"
+  width="100%" height="1040" style="border:none" loading="lazy"
   title="Interactive: canopy reflectance, the red edge, and where the SIF signal sits"></iframe>
 
 ## What OCO actually does {#what-oco-does}

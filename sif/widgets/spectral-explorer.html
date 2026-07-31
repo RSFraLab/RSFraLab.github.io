@@ -19,6 +19,7 @@
     --chip-on-bg:#1d2530;
     --chip-on-fg:#ffffff;
   }
+  [data-theme="dark"][data-standalone]{--bg:#0e141a}
   [data-theme="dark"]{
     --bg:transparent;
     --panel:#10161d;
@@ -146,11 +147,52 @@
 
 <script>
 "use strict";
-/* Theme: ?theme=dark switches palette (default light, to match Caltech Sites) */
-(function(){
-  const t = new URLSearchParams(location.search).get("theme");
-  if (t === "dark") document.documentElement.setAttribute("data-theme","dark");
-})();
+/* ---- theme resolution -----------------------------------------------------
+   Priority: an explicit ?theme= wins; otherwise follow the embedding page when
+   we can see it (same-origin iframes, e.g. the Quarto site's light/dark
+   toggle); otherwise follow the reader's OS preference; otherwise light.
+   Re-resolves live, so the host page needs no JavaScript of its own. A
+   cross-origin embed such as Caltech Sites simply falls through to the OS
+   preference and then to light. */
+const THEME_PARAM = new URLSearchParams(location.search).get("theme");
+const DARK_MQ = window.matchMedia("(prefers-color-scheme: dark)");
+
+function pageIsDark(){
+  try {
+    if (window.parent === window) return null;
+    const d = window.parent.document;                  // throws when cross-origin
+    if (d.body.classList.contains("quarto-dark")) return true;
+    if (d.body.classList.contains("quarto-light")) return false;
+    const bs = d.documentElement.getAttribute("data-bs-theme");
+    return bs ? bs === "dark" : null;
+  } catch (e) { return null; }                         // cross-origin: not our business
+}
+function resolveTheme(){
+  const hosted = pageIsDark();
+  const dark = THEME_PARAM ? THEME_PARAM === "dark" : (hosted === null ? DARK_MQ.matches : hosted);
+  const root = document.documentElement;
+  root.setAttribute("data-theme", dark ? "dark" : "light");
+  // Standalone (not in an iframe) we must paint our own backdrop; embedded we stay
+  // transparent so the host page's background shows through in either mode.
+  if (window.parent === window) root.setAttribute("data-standalone", "");
+}
+resolveTheme();
+
+function onThemeChange(cb){
+  const rerun = () => {
+    const before = document.documentElement.getAttribute("data-theme");
+    resolveTheme();
+    if (document.documentElement.getAttribute("data-theme") !== before) cb();
+  };
+  DARK_MQ.addEventListener("change", rerun);
+  try {
+    if (window.parent !== window){
+      const d = window.parent.document;
+      new MutationObserver(rerun).observe(d.body, {attributes:true, attributeFilter:["class"]});
+      new MutationObserver(rerun).observe(d.documentElement, {attributes:true, attributeFilter:["data-bs-theme"]});
+    }
+  } catch (e) { /* cross-origin: no toggle to watch */ }
+}
 
 /* -------- external data hook --------
    The widget ships with synthetic line lists. To use real optical depths,
@@ -163,8 +205,14 @@ const state = { band:0, xco2:421, sza:30, surface:"conifer", zoom:[[0,1],[0,1],[
 
 const css = getComputedStyle(document.documentElement);
 const col = k => css.getPropertyValue(k).trim();
-const C = { hair:col("--hairline"), text:col("--text"), muted:col("--muted"), faint:col("--faint"),
-            band:[col("--o2"), col("--co2w"), col("--co2s")] };
+let C;
+function readPalette(){ C = { hair:col("--hairline"), text:col("--text"), muted:col("--muted"), faint:col("--faint"),
+            band:[col("--o2"), col("--co2w"), col("--co2s")] }; }
+readPalette();
+onThemeChange(() => { readPalette();
+  if (typeof draw === 'function') draw();
+  if (typeof readouts === 'function') readouts();
+  if (typeof legend === 'function') legend(); });
 
 /* Cursor marker: a filled dot riding the curve, haloed against the panel so it
    stays legible over a fill. Matches the OCO dashboard's hover behaviour. */
