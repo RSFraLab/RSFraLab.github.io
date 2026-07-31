@@ -1050,6 +1050,13 @@
     "text": "What OCO actually does\nThe real retrieval is the same idea done carefully. OCO-2 and OCO-3 fit SIF in narrow microwindows near 757 and 771 nm, in the continuum region of the O₂ A-band, which is full of solar Fraunhofer lines and placed to avoid the strong oxygen absorption itself. The fit runs over hundreds of wavelengths at once with the measured instrument line shape applied to the solar reference, rather than the two-point cartoon above.\nA few things separate a research retrieval from something you would put in an operational product:\n\nThe instrument line shape has to be right. The solar reference is convolved with the measured ILS before it is compared to anything, and getting this wrong shows up directly as a SIF bias.\nRotational Raman scattering. Molecular scattering redistributes photons in wavelength and fills in Fraunhofer lines on its own, which is a rather good imitation of what we are trying to measure. It introduces both additive and multiplicative bias, and correcting it explicitly is one of the main accuracy improvements planned for the operational OCO SIF pipeline.\nGridding and cross-sensor harmonisation. Individual soundings are sparse, so anything useful is a gridded composite, ideally harmonised with TROPOMI and others so the records can actually be compared across platforms.\n\nThe OCO instruments are extremely stable by design, and that stability is why their SIF product is still a reference standard even though fluorescence was never a baseline goal of the mission."
   },
   {
+    "objectID": "Tutorials/sif-retrieval.html#what-it-looks-like-from-orbit",
+    "href": "Tutorials/sif-retrieval.html#what-it-looks-like-from-orbit",
+    "title": "How We Measure a Plant’s Glow from Space",
+    "section": "What it looks like from orbit",
+    "text": "What it looks like from orbit\nEverything above has been one spectrum at a time. Here is what happens when you do it for a year: every OCO-2 sounding over land in 2021, gridded to 1°×1° and averaged, weighted by how many soundings fell in each cell.\n\n\nIt is worth pausing on what this map is not. No land cover map went into it, no vegetation index, no model. Every pixel is just the degree to which solar Fraunhofer lines came back filled in, converted to a radiance. That the Amazon, the Congo, the maritime continent, the North China Plain and the Corn Belt fall out of it anyway is the whole argument for the method."
+  },
+  {
     "objectID": "Tutorials/sif-retrieval.html#why-we-bother",
     "href": "Tutorials/sif-retrieval.html#why-we-bother",
     "title": "How We Measure a Plant’s Glow from Space",
