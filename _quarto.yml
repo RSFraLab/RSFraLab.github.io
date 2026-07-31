@@ -4,6 +4,7 @@ project:
     port: 4200
   resources:
     - /publications
+    - /sif
 
 website:
   title: "FraLab"
@@ -47,6 +48,8 @@ website:
         text: Lab Guide
       - href: join.qmd
         text: Join the Group
+      - href: tutorials.qmd
+        text: Tutorials
       - href: blogs.qmd
         text: Blog
     right:

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surface Reflectance in the OCO Bands</title>
+<style>
+  :root{
+    --bg:transparent; --panel:#ffffff; --hairline:#d9dee3;
+    --text:#1d2530; --muted:#5b6773; --faint:#8a97a5;
+    --o2:#3f6ad8; --co2w:#1e9e5a; --co2s:#e05a2b;
+  }
+  [data-theme="dark"]{
+    --panel:#10161d; --hairline:#1e2733;
+    --text:#e8edf2; --muted:#8a97a5; --faint:#5b6773;
+    --o2:#7fa6ff; --co2w:#59c98b; --co2s:#ff7a59;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg)}
+  body{
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;
+  }
+  .widget{
+    background:var(--panel);border:1px solid var(--hairline);border-radius:8px;
+    overflow:hidden;max-width:960px;margin:0 auto;
+  }
+  .body{position:relative;padding:6px 6px 0}
+  canvas{display:block;width:100%;cursor:crosshair;touch-action:pan-y}
+  .hover{
+    position:absolute;pointer-events:none;display:none;z-index:3;
+    font:11.5px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--text);
+    background:var(--panel);border:1px solid var(--hairline);border-radius:5px;
+    padding:5px 8px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.12);
+  }
+  .legend{display:flex;flex-wrap:wrap;gap:6px;padding:12px 14px;border-top:1px solid var(--hairline)}
+  .lchip{
+    appearance:none;cursor:pointer;font:12px ui-monospace,Menlo,monospace;
+    color:var(--muted);background:transparent;border:1px solid var(--hairline);
+    padding:6px 10px;border-radius:99px;display:flex;align-items:center;gap:7px;
+  }
+  .lchip .dot{width:9px;height:9px;border-radius:50%}
+  .lchip:hover{color:var(--text)}
+  .lchip[aria-pressed="true"]{color:var(--text);border-color:var(--muted);background:var(--bg)}
+  .lchip:focus-visible{outline:2px solid var(--o2);outline-offset:2px}
+  .caption{padding:2px 16px 14px;color:var(--muted);font-size:13px;max-width:75ch}
+</style>
+</head>
+<body>
+<div class="widget">
+  <div class="body">
+    <canvas id="cv" height="330" aria-label="Spectral reflectance of common Earth surfaces with OCO bands marked"></canvas>
+    <div class="hover" id="hv"></div>
+  </div>
+  <div class="legend" id="legend" role="group" aria-label="Surface curves"></div>
+  <p class="caption">
+    Spectral reflectance of common Earth surfaces, with the three OCO bands marked.
+    Click a surface to highlight it. Snow — blinding in the visible — is nearly black at
+    2.06 µm, while desert sand stays bright across all three bands.
+  </p>
+</div>
+
+<script>
+"use strict";
+(function(){
+  const t = new URLSearchParams(location.search).get("theme");
+  if (t === "dark") document.documentElement.setAttribute("data-theme","dark");
+})();
+
+const css = getComputedStyle(document.documentElement);
+const col = k => css.getPropertyValue(k).trim();
+const C = { hair:col("--hairline"), text:col("--text"), muted:col("--muted"), faint:col("--faint"),
+            band:[col("--o2"), col("--co2w"), col("--co2s")] };
+
+/* Cursor marker: a filled dot riding the curve, haloed against the panel so it
+   stays legible over a fill. Matches the OCO dashboard's hover behaviour. */
+function hoverDot(ctx,x,y,color){
+  ctx.beginPath(); ctx.arc(x,y,3.6,0,2*Math.PI);
+  ctx.fillStyle=color; ctx.fill();
+  ctx.lineWidth=1.6; ctx.strokeStyle=col("--panel"); ctx.stroke();
+}
+
+const SURFACES = {
+  ocean:   { label:"Ocean",          color:"#4f7fd9",
+    pts:[[0.4,.07],[0.5,.06],[0.6,.05],[0.8,.03],[1.0,.02],[1.4,.02],[1.8,.015],[2.2,.015]] },
+  desert:  { label:"Desert sand",    color:"#c98d3f",
+    pts:[[0.4,.14],[0.5,.22],[0.6,.30],[0.7,.36],[0.9,.42],[1.1,.46],[1.35,.44],[1.5,.48],[1.65,.50],[1.9,.44],[2.06,.47],[2.2,.45]] },
+  snow:    { label:"Snow",           color:"#8fa8bd",
+    pts:[[0.4,.96],[0.7,.95],[0.9,.90],[1.0,.82],[1.1,.55],[1.25,.22],[1.35,.08],[1.5,.04],[1.65,.10],[1.8,.22],[1.95,.06],[2.06,.03],[2.2,.08]] },
+  conifer: { label:"Conifer forest", color:"#2e9e63",
+    pts:[[0.4,.03],[0.55,.08],[0.66,.04],[0.72,.20],[0.80,.34],[1.0,.36],[1.25,.34],[1.45,.14],[1.61,.22],[1.8,.20],[1.95,.08],[2.06,.11],[2.2,.10]] },
+  grass:   { label:"Dry grass",      color:"#a68f2e",
+    pts:[[0.4,.08],[0.55,.14],[0.7,.24],[0.9,.34],[1.1,.42],[1.3,.46],[1.45,.36],[1.61,.48],[1.8,.42],[1.95,.32],[2.06,.40],[2.2,.38]] },
+};
+const KEYS = Object.keys(SURFACES);
+let active = "snow";
+function albedoAt(key, wl){
+  const p = SURFACES[key].pts;
+  if (wl<=p[0][0]) return p[0][1];
+  for (let i=1;i<p.length;i++) if (wl<=p[i][0]){
+    const t=(wl-p[i-1][0])/(p[i][0]-p[i-1][0]); return p[i-1][1]+t*(p[i][1]-p[i-1][1]);
+  }
+  return p[p.length-1][1];
+}
+
+const cv=document.getElementById("cv"), hv=document.getElementById("hv");
+const PADL=52, PADR=12, PADT=22, PADB=38, H=330, WL0=0.4, WL1=2.2;
+const OCO_BANDS=[
+  {a:0.757,b:0.773,label:"O₂",ci:0},
+  {a:1.594,b:1.619,label:"CO₂ weak",ci:1},
+  {a:2.042,b:2.082,label:"CO₂ strong",ci:2},
+];
+let hoverWl=null;
+
+function setup(){
+  const dpr=window.devicePixelRatio||1;
+  const w=cv.clientWidth||cv.parentElement.clientWidth-12;
+  cv.width=Math.round(w*dpr); cv.height=Math.round(H*dpr); cv.style.height=H+"px";
+  const ctx=cv.getContext("2d"); ctx.setTransform(dpr,0,0,dpr,0,0);
+  return {ctx,W:w};
+}
+function draw(){
+  const {ctx,W}=setup();
+  const px=wl=>PADL+(wl-WL0)/(WL1-WL0)*(W-PADL-PADR);
+  const py=v =>PADT+(1-v)*(H-PADT-PADB);
+  ctx.clearRect(0,0,W,H);
+  ctx.font="11px ui-monospace, Menlo, monospace";
+
+  for (const bd of OCO_BANDS){
+    const xa=px(bd.a), xb=px(bd.b);
+    ctx.fillStyle=C.band[bd.ci]; ctx.globalAlpha=0.13;
+    ctx.fillRect(xa,PADT,Math.max(3,xb-xa),H-PADT-PADB);
+    ctx.globalAlpha=1; ctx.fillStyle=C.band[bd.ci];
+    ctx.textAlign="center"; ctx.textBaseline="bottom";
+    ctx.fillText(bd.label,(xa+xb)/2,PADT-4);
+  }
+
+  ctx.strokeStyle=C.hair; ctx.lineWidth=1; ctx.fillStyle=C.faint;
+  for (const t of [0,0.2,0.4,0.6,0.8,1.0]){
+    const y=py(t);
+    ctx.beginPath(); ctx.moveTo(PADL,y); ctx.lineTo(W-PADR,y); ctx.stroke();
+    ctx.textAlign="right"; ctx.textBaseline="middle";
+    ctx.fillText(t.toFixed(1),PADL-7,y);
+  }
+  for (const t of [0.5,0.75,1.0,1.25,1.5,1.75,2.0]){
+    ctx.textAlign="center"; ctx.textBaseline="top";
+    ctx.fillText(t.toFixed(2),px(t),H-PADB+7);
+  }
+  ctx.fillStyle=C.muted; ctx.textAlign="center";
+  ctx.fillText("wavelength (µm)",PADL+(W-PADL-PADR)/2,H-13);
+  ctx.save(); ctx.translate(13,PADT+(H-PADT-PADB)/2); ctx.rotate(-Math.PI/2);
+  ctx.fillText("albedo",0,0); ctx.restore();
+
+  const NS=240;
+  for (const key of KEYS){
+    const on = key===active;
+    ctx.beginPath();
+    for (let i=0;i<=NS;i++){
+      const wl=WL0+i/NS*(WL1-WL0);
+      const x=px(wl), y=py(albedoAt(key,wl));
+      i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle=SURFACES[key].color;
+    ctx.globalAlpha=on?1:0.30;
+    ctx.lineWidth=on?2.25:1.25;
+    ctx.stroke(); ctx.globalAlpha=1;
+  }
+
+  if (hoverWl!==null){
+    const x=px(hoverWl);
+    ctx.strokeStyle=C.faint; ctx.setLineDash([3,4]);
+    ctx.beginPath(); ctx.moveTo(x,PADT); ctx.lineTo(x,H-PADB); ctx.stroke();
+    ctx.setLineDash([]);
+    hoverDot(ctx,x,py(albedoAt(active,hoverWl)),SURFACES[active].color);
+  }
+}
+
+const legend=document.getElementById("legend");
+for (const k of KEYS){
+  const b=document.createElement("button");
+  b.className="lchip"; b.dataset.key=k;
+  b.innerHTML="<span class='dot' style='background:"+SURFACES[k].color+"'></span>"+SURFACES[k].label;
+  b.addEventListener("click",()=>{ active=k; sync(); draw(); });
+  legend.appendChild(b);
+}
+function sync(){
+  document.querySelectorAll(".lchip").forEach(c=>c.setAttribute("aria-pressed",String(c.dataset.key===active)));
+}
+
+cv.addEventListener("pointermove",e=>{
+  const r=cv.getBoundingClientRect(), x=e.clientX-r.left, W=r.width;
+  if (x>PADL && x<W-PADR){
+    hoverWl=WL0+(x-PADL)/(W-PADL-PADR)*(WL1-WL0);
+    const v=albedoAt(active,hoverWl);
+    hv.style.display="block";
+    hv.style.left=Math.min(x+14,W-200)+"px"; hv.style.top="14px";
+    hv.innerHTML="λ <b>"+hoverWl.toFixed(3)+"</b> µm — "+SURFACES[active].label.toLowerCase()+" albedo <b>"+v.toFixed(2)+"</b>";
+  } else { hoverWl=null; hv.style.display="none"; }
+  draw();
+});
+cv.addEventListener("pointerleave",()=>{ hoverWl=null; hv.style.display="none"; draw(); });
+
+let rt; window.addEventListener("resize",()=>{ clearTimeout(rt); rt=setTimeout(draw,80); });
+
+sync(); draw();
+</script>
+</body>
+</html>

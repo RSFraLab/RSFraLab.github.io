@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCO Spectral Explorer</title>
+<style>
+  /* Light theme (default) blends with Caltech Sites; ?theme=dark for Quarto site */
+  :root{
+    --bg:transparent;
+    --panel:#ffffff;
+    --hairline:#d9dee3;
+    --text:#1d2530;
+    --muted:#5b6773;
+    --faint:#8a97a5;
+    --o2:#3f6ad8;
+    --co2w:#1e9e5a;
+    --co2s:#e05a2b;
+    --chip-on-bg:#1d2530;
+    --chip-on-fg:#ffffff;
+  }
+  [data-theme="dark"]{
+    --bg:transparent;
+    --panel:#10161d;
+    --hairline:#1e2733;
+    --text:#e8edf2;
+    --muted:#8a97a5;
+    --faint:#5b6773;
+    --o2:#7fa6ff;
+    --co2w:#59c98b;
+    --co2s:#ff7a59;
+    --chip-on-bg:#e8edf2;
+    --chip-on-fg:#0b0f14;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg)}
+  body{
+    color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;
+  }
+  .widget{
+    background:var(--panel);
+    border:1px solid var(--hairline);
+    border-radius:8px;
+    overflow:hidden;
+    max-width:960px;
+    margin:0 auto;
+  }
+  .head{
+    display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+    padding:10px 14px;border-bottom:1px solid var(--hairline);
+  }
+  .tabs{display:flex;gap:4px;flex-wrap:wrap}
+  .tab{
+    appearance:none;border:1px solid transparent;background:transparent;color:var(--muted);
+    font:12.5px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    padding:8px 11px;border-radius:6px;cursor:pointer;
+  }
+  .tab:hover{color:var(--text)}
+  .tab[aria-selected="true"]{color:var(--text);border-color:var(--hairline);background:var(--bg)}
+  .tab .sw{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;vertical-align:1px}
+  .hint{margin-left:auto;font:11px ui-monospace,Menlo,monospace;color:var(--faint)}
+  .body{position:relative;padding:6px 6px 0}
+  canvas{display:block;width:100%;cursor:crosshair;touch-action:pan-y}
+  .hover{
+    position:absolute;pointer-events:none;display:none;z-index:3;
+    font:11.5px ui-monospace,Menlo,monospace;color:var(--text);
+    background:var(--panel);border:1px solid var(--hairline);border-radius:5px;
+    padding:5px 8px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.12);
+  }
+  .controls{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px 26px;
+    padding:14px 16px 6px;border-top:1px solid var(--hairline);
+  }
+  @media(max-width:600px){.controls{grid-template-columns:1fr}}
+  .ctl label{
+    display:flex;justify-content:space-between;align-items:baseline;
+    font:11.5px ui-monospace,Menlo,monospace;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:6px;
+  }
+  .ctl label output{color:var(--text);font-size:12.5px;text-transform:none;letter-spacing:0}
+  input[type=range]{width:100%;appearance:none;height:3px;background:var(--hairline);border-radius:2px;outline:none}
+  input[type=range]::-webkit-slider-thumb{
+    appearance:none;width:15px;height:15px;border-radius:50%;background:var(--text);
+    border:3px solid var(--panel);box-shadow:0 0 0 1px var(--hairline);cursor:pointer;
+  }
+  input[type=range]::-moz-range-thumb{
+    width:11px;height:11px;border-radius:50%;background:var(--text);
+    border:3px solid var(--panel);cursor:pointer;
+  }
+  input[type=range]:focus-visible{box-shadow:0 0 0 2px var(--o2)}
+  .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .chip{
+    appearance:none;cursor:pointer;font:12px ui-monospace,Menlo,monospace;
+    color:var(--muted);background:transparent;border:1px solid var(--hairline);
+    padding:6px 10px;border-radius:99px;
+  }
+  .chip:hover{color:var(--text)}
+  .chip[aria-pressed="true"]{color:var(--chip-on-fg);background:var(--chip-on-bg);border-color:var(--chip-on-bg)}
+  .chip:focus-visible{outline:2px solid var(--o2);outline-offset:2px}
+  .readouts{display:flex;flex-wrap:wrap;gap:6px;padding:10px 16px 4px}
+  .ro{
+    font:11.5px ui-monospace,Menlo,monospace;color:var(--muted);
+    border:1px solid var(--hairline);border-radius:5px;padding:5px 9px;
+  }
+  .ro b{color:var(--text);font-weight:600}
+  .caption{padding:8px 16px 14px;color:var(--muted);font-size:13px;max-width:75ch}
+</style>
+</head>
+<body>
+<div class="widget" id="widget">
+  <div class="head">
+    <div class="tabs" role="tablist" aria-label="Spectral band">
+      <button class="tab" role="tab" data-band="0"><span class="sw" style="background:var(--o2)"></span>O₂ A-band · 0.76 µm</button>
+      <button class="tab" role="tab" data-band="1"><span class="sw" style="background:var(--co2w)"></span>Weak CO₂ · 1.61 µm</button>
+      <button class="tab" role="tab" data-band="2"><span class="sw" style="background:var(--co2s)"></span>Strong CO₂ · 2.06 µm</button>
+    </div>
+    <span class="hint">drag to zoom · double-click to reset</span>
+  </div>
+  <div class="body">
+    <canvas id="cv" height="340" aria-label="Simulated OCO radiance spectrum"></canvas>
+    <div class="hover" id="hv"></div>
+  </div>
+  <div class="controls">
+    <div class="ctl">
+      <label>Column CO₂ (XCO₂) <output id="xco2Out">421 ppm</output></label>
+      <input type="range" id="xco2" min="280" max="560" step="1" value="421" aria-label="XCO2 in ppm">
+    </div>
+    <div class="ctl">
+      <label>Solar zenith angle <output id="szaOut">30°</output></label>
+      <input type="range" id="sza" min="0" max="70" step="1" value="30" aria-label="Solar zenith angle in degrees">
+    </div>
+    <div class="ctl" style="grid-column:1/-1">
+      <label>Surface below the footprint</label>
+      <div class="chips" id="chips" role="group" aria-label="Surface type"></div>
+    </div>
+  </div>
+  <div class="readouts">
+    <span class="ro">airmass <b id="roM">—</b></span>
+    <span class="ro">surface albedo in band <b id="roA">—</b></span>
+    <span class="ro">mean absorption depth <b id="roD">—</b></span>
+  </div>
+  <p class="caption" id="cap"></p>
+</div>
+
+<script>
+"use strict";
+/* Theme: ?theme=dark switches palette (default light, to match Caltech Sites) */
+(function(){
+  const t = new URLSearchParams(location.search).get("theme");
+  if (t === "dark") document.documentElement.setAttribute("data-theme","dark");
+})();
+
+/* -------- external data hook --------
+   The widget ships with synthetic line lists. To use real optical depths,
+   pass ?data=URL pointing to JSON:
+   { "bands":[ { "wl":[...µm ascending], "tau":[...], "contRef":N }, x3 ] }
+   Slider physics stays identical: L = contRef·albedo·exp(-m·(x/421)·tau).  */
+const DATA_URL = new URLSearchParams(location.search).get("data");
+
+const state = { band:0, xco2:421, sza:30, surface:"conifer", zoom:[[0,1],[0,1],[0,1]] };
+
+const css = getComputedStyle(document.documentElement);
+const col = k => css.getPropertyValue(k).trim();
+const C = { hair:col("--hairline"), text:col("--text"), muted:col("--muted"), faint:col("--faint"),
+            band:[col("--o2"), col("--co2w"), col("--co2s")] };
+
+/* Cursor marker: a filled dot riding the curve, haloed against the panel so it
+   stays legible over a fill. Matches the OCO dashboard's hover behaviour. */
+function hoverDot(ctx,x,y,color){
+  ctx.beginPath(); ctx.arc(x,y,3.6,0,2*Math.PI);
+  ctx.fillStyle=color; ctx.fill();
+  ctx.lineWidth=1.6; ctx.strokeStyle=col("--panel"); ctx.stroke();
+}
+
+const SURFACES = {
+  ocean:   { label:"Ocean",          pts:[[0.4,.07],[0.6,.05],[0.8,.03],[1.0,.02],[1.8,.015],[2.2,.015]] },
+  desert:  { label:"Desert sand",    pts:[[0.4,.14],[0.6,.30],[0.9,.42],[1.1,.46],[1.35,.44],[1.65,.50],[1.9,.44],[2.06,.47],[2.2,.45]] },
+  snow:    { label:"Snow",           pts:[[0.4,.96],[0.9,.90],[1.0,.82],[1.1,.55],[1.35,.08],[1.5,.04],[1.8,.22],[1.95,.06],[2.06,.03],[2.2,.08]] },
+  conifer: { label:"Conifer forest", pts:[[0.4,.03],[0.55,.08],[0.66,.04],[0.80,.34],[1.0,.36],[1.45,.14],[1.61,.22],[1.95,.08],[2.06,.11],[2.2,.10]] },
+  grass:   { label:"Dry grass",      pts:[[0.4,.08],[0.7,.24],[1.1,.42],[1.3,.46],[1.45,.36],[1.61,.48],[1.95,.32],[2.06,.40],[2.2,.38]] },
+};
+const KEYS = Object.keys(SURFACES);
+function albedoAt(key, wl){
+  const p = SURFACES[key].pts;
+  if (wl<=p[0][0]) return p[0][1];
+  for (let i=1;i<p.length;i++) if (wl<=p[i][0]){
+    const t=(wl-p[i-1][0])/(p[i][0]-p[i-1][0]); return p[i-1][1]+t*(p[i][1]-p[i-1][1]);
+  }
+  return p[p.length-1][1];
+}
+
+/* -------- synthetic band construction -------- */
+const CFG = [
+  { nuMin:12980, nuMax:13220, sub:[{nu0:13098,B:1.35,n:36,m0:15}], core:5.0, contRef:520, co2:false },
+  { nuMin:6160,  nuMax:6300,  sub:[{nu0:6252,B:0.80,n:32,m0:13},{nu0:6208,B:0.80,n:30,m0:12}], core:0.9, contRef:135, co2:true },
+  { nuMin:4798,  nuMax:4892,  sub:[{nu0:4856,B:0.80,n:30,m0:13},{nu0:4818,B:0.78,n:22,m0:10}], core:3.4, contRef:42,  co2:true },
+];
+const N = 2400, GAMMA = 0.22;
+function buildBand(cfg){
+  const lines = [];
+  for (const s of cfg.sub) for (let m=1;m<=s.n;m++){
+    const S = m*Math.exp(-(m*m)/(s.m0*s.m0));
+    lines.push([s.nu0 + 2*s.B*m - 0.012*m*m, S]);
+    lines.push([s.nu0 - 2*s.B*m - 0.010*m*m, S]);
+  }
+  const dnu = (cfg.nuMax-cfg.nuMin)/(N-1);
+  const nu = new Float64Array(N), tau = new Float64Array(N);
+  for (let i=0;i<N;i++) nu[i] = cfg.nuMin + i*dnu;
+  const g2 = GAMMA*GAMMA;
+  for (const [nuL,S] of lines){
+    const i0 = Math.max(0, Math.floor((nuL-6-cfg.nuMin)/dnu));
+    const i1 = Math.min(N-1, Math.ceil((nuL+6-cfg.nuMin)/dnu));
+    for (let i=i0;i<=i1;i++){ const d=nu[i]-nuL; tau[i]+=S*g2/(d*d+g2); }
+  }
+  let tmax=0; for (let i=0;i<N;i++) if (tau[i]>tmax) tmax=tau[i];
+  const k = cfg.core/tmax;
+  const wl = new Float64Array(N), tr = new Float64Array(N);
+  for (let i=0;i<N;i++){ wl[i]=1e4/nu[N-1-i]; tr[i]=tau[N-1-i]*k; }
+  return { wl, tau:tr, contRef:cfg.contRef, co2:cfg.co2 };
+}
+let BANDS = CFG.map(buildBand);
+
+/* optional real-data load */
+if (DATA_URL){
+  fetch(DATA_URL).then(r=>r.json()).then(j=>{
+    if (j && Array.isArray(j.bands) && j.bands.length===3){
+      BANDS = j.bands.map((b,i)=>({
+        wl:Float64Array.from(b.wl), tau:Float64Array.from(b.tau),
+        contRef:b.contRef ?? CFG[i].contRef, co2:CFG[i].co2
+      }));
+      draw(); readouts();
+    }
+  }).catch(()=>{ /* keep synthetic fallback */ });
+}
+
+function nPts(){ return BANDS[state.band].wl.length; }
+function bandCenter(b){ const w=BANDS[b].wl; return 0.5*(w[0]+w[w.length-1]); }
+function radiance(b){
+  const band=BANDS[b], n=band.wl.length;
+  const m = 1/Math.cos(state.sza*Math.PI/180)+1;
+  const s = band.co2 ? state.xco2/421 : 1;
+  const a = albedoAt(state.surface, bandCenter(b));
+  const out = new Float64Array(n);
+  for (let i=0;i<n;i++){
+    const slope = 1 - 0.10*((band.wl[i]-band.wl[0])/(band.wl[n-1]-band.wl[0]) - 0.5);
+    out[i] = band.contRef*a*slope*Math.exp(-m*s*band.tau[i]);
+  }
+  return out;
+}
+
+/* -------- canvas -------- */
+const cv = document.getElementById("cv"), hv = document.getElementById("hv");
+const PADL=56, PADR=12, PADT=14, PADB=38, H=340;
+let hoverIdx=-1;
+const drag = { on:false, xA:0, xB:0 };
+
+function setup(){
+  const dpr = window.devicePixelRatio||1;
+  const w = cv.clientWidth || cv.parentElement.clientWidth-12;
+  cv.width=Math.round(w*dpr); cv.height=Math.round(H*dpr); cv.style.height=H+"px";
+  const ctx=cv.getContext("2d"); ctx.setTransform(dpr,0,0,dpr,0,0);
+  return { ctx, W:w };
+}
+function ticks(min,max,n){
+  const span=max-min, s0=span/Math.max(1,n);
+  const mag=Math.pow(10,Math.floor(Math.log10(s0)));
+  let st=mag; for (const s of [1,2,2.5,5,10]) if (s0<=s*mag){ st=s*mag; break; }
+  const out=[]; for (let v=Math.ceil(min/st)*st; v<=max+1e-12; v+=st) out.push(v);
+  return out;
+}
+function vis(){
+  const n=nPts(), [f0,f1]=state.zoom[state.band];
+  const i0=Math.max(0,Math.floor(f0*(n-1))), i1=Math.min(n-1,Math.ceil(f1*(n-1)));
+  return [i0, Math.max(i0+8,i1)];
+}
+function draw(){
+  const {ctx,W}=setup();
+  const b=state.band, band=BANDS[b], color=C.band[b];
+  const L=radiance(b), [i0,i1]=vis();
+  const x0=band.wl[i0], x1=band.wl[i1];
+  let ymax=0; for (let i=i0;i<=i1;i++) if (L[i]>ymax) ymax=L[i];
+  ymax=Math.max(ymax*1.07,1e-6);
+  const px=wl=>PADL+(wl-x0)/(x1-x0)*(W-PADL-PADR);
+  const py=v =>PADT+(1-v/ymax)*(H-PADT-PADB);
+
+  ctx.clearRect(0,0,W,H);
+  ctx.font="11px ui-monospace, Menlo, monospace";
+  ctx.strokeStyle=C.hair; ctx.fillStyle=C.faint; ctx.lineWidth=1;
+  for (const t of ticks(0,ymax,4)){
+    const y=py(t);
+    ctx.beginPath(); ctx.moveTo(PADL,y); ctx.lineTo(W-PADR,y); ctx.stroke();
+    ctx.textAlign="right"; ctx.textBaseline="middle";
+    ctx.fillText(t>=100?t.toFixed(0):t.toFixed(t<10?1:0), PADL-7, y);
+  }
+  for (const t of ticks(x0,x1,6)){
+    ctx.textAlign="center"; ctx.textBaseline="top";
+    ctx.fillText(t.toFixed(4), px(t), H-PADB+7);
+  }
+  ctx.fillStyle=C.muted; ctx.textAlign="center";
+  ctx.fillText("wavelength (µm)", PADL+(W-PADL-PADR)/2, H-13);
+  ctx.save(); ctx.translate(13, PADT+(H-PADT-PADB)/2); ctx.rotate(-Math.PI/2);
+  ctx.fillText("radiance (W/m²/µm/sr)", 0, 0); ctx.restore();
+
+  ctx.beginPath(); ctx.moveTo(px(band.wl[i0]), py(L[i0]));
+  for (let i=i0+1;i<=i1;i++) ctx.lineTo(px(band.wl[i]), py(L[i]));
+  ctx.strokeStyle=color; ctx.lineWidth=1.25; ctx.stroke();
+  ctx.lineTo(px(band.wl[i1]),py(0)); ctx.lineTo(px(band.wl[i0]),py(0)); ctx.closePath();
+  ctx.globalAlpha=0.08; ctx.fillStyle=color; ctx.fill(); ctx.globalAlpha=1;
+
+  if (hoverIdx>=i0 && hoverIdx<=i1){
+    const hx=px(band.wl[hoverIdx]);
+    ctx.strokeStyle=C.faint; ctx.setLineDash([3,4]);
+    ctx.beginPath(); ctx.moveTo(hx,PADT); ctx.lineTo(hx,H-PADB); ctx.stroke();
+    ctx.setLineDash([]);
+    hoverDot(ctx,hx,py(L[hoverIdx]),color);
+  }
+  if (drag.on){
+    ctx.fillStyle="rgba(120,130,140,0.12)";
+    ctx.fillRect(Math.min(drag.xA,drag.xB), PADT, Math.abs(drag.xB-drag.xA), H-PADT-PADB);
+  }
+}
+function readouts(){
+  const b=state.band, band=BANDS[b], n=band.wl.length;
+  const m=1/Math.cos(state.sza*Math.PI/180)+1;
+  const s=band.co2?state.xco2/421:1;
+  let sum=0; for (let i=0;i<n;i++) sum+=Math.exp(-m*s*band.tau[i]);
+  const depth=(1-sum/n)*100;
+  const a=albedoAt(state.surface,bandCenter(b));
+  document.getElementById("roM").textContent=m.toFixed(2);
+  document.getElementById("roA").textContent=a.toFixed(2)+" ("+SURFACES[state.surface].label.toLowerCase()+")";
+  document.getElementById("roD").textContent=depth.toFixed(0)+"%";
+  const cap=document.getElementById("cap");
+  if (!band.co2) cap.textContent="Oxygen is a fixed 20.95% of dry air, so these line depths depend only on the light path — surface pressure, geometry, clouds and aerosols. That is why OCO uses this band as the ruler for the CO₂ measurement.";
+  else if (b===1) cap.textContent="At "+state.xco2+" ppm the 1.61 µm lines absorb about "+depth.toFixed(0)+"% of the continuum on average. This band responds most strongly to CO₂ in the lowest few kilometers of the atmosphere, where sources and sinks live.";
+  else cap.textContent="The 2.06 µm band gives a second, independent CO₂ measurement — and because it is very sensitive to aerosols and pressure, it doubles as the mission's contamination detector.";
+}
+
+/* -------- interaction -------- */
+function selectBand(b){
+  state.band=b;
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",String(+t.dataset.band===b)));
+  draw(); readouts();
+}
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>selectBand(+t.dataset.band)));
+
+const xco2El=document.getElementById("xco2"), szaEl=document.getElementById("sza");
+xco2El.addEventListener("input",()=>{ state.xco2=+xco2El.value;
+  document.getElementById("xco2Out").textContent=state.xco2+" ppm"; draw(); readouts(); });
+szaEl.addEventListener("input",()=>{ state.sza=+szaEl.value;
+  document.getElementById("szaOut").textContent=state.sza+"°"; draw(); readouts(); });
+
+const chips=document.getElementById("chips");
+for (const k of KEYS){
+  const c=document.createElement("button");
+  c.className="chip"; c.textContent=SURFACES[k].label; c.dataset.key=k;
+  c.addEventListener("click",()=>selectSurface(k));
+  chips.appendChild(c);
+}
+function selectSurface(k){
+  state.surface=k;
+  document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",String(c.dataset.key===k)));
+  draw(); readouts();
+}
+
+cv.addEventListener("pointermove",e=>{
+  const r=cv.getBoundingClientRect(), x=e.clientX-r.left, W=r.width;
+  const band=BANDS[state.band], [i0,i1]=vis();
+  const f=Math.min(1,Math.max(0,(x-PADL)/(W-PADL-PADR)));
+  hoverIdx=Math.round(i0+f*(i1-i0));
+  if (drag.on) drag.xB=x;
+  const L=radiance(state.band);
+  if (x>PADL && x<W-PADR){
+    hv.style.display="block";
+    hv.style.left=Math.min(x+14,W-170)+"px"; hv.style.top="14px";
+    hv.innerHTML="λ <b>"+band.wl[hoverIdx].toFixed(5)+"</b> µm<br>L "+L[hoverIdx].toFixed(2)+" W/m²/µm/sr";
+  } else hv.style.display="none";
+  draw();
+});
+cv.addEventListener("pointerleave",()=>{ hoverIdx=-1; hv.style.display="none"; draw(); });
+cv.addEventListener("pointerdown",e=>{
+  const r=cv.getBoundingClientRect();
+  drag.on=true; drag.xA=drag.xB=e.clientX-r.left;
+  cv.setPointerCapture(e.pointerId);
+});
+cv.addEventListener("pointerup",()=>{
+  if (!drag.on) return;
+  drag.on=false;
+  const r=cv.getBoundingClientRect(), W=r.width;
+  const xa=Math.min(drag.xA,drag.xB), xb=Math.max(drag.xA,drag.xB);
+  if (xb-xa>12){
+    const [f0,f1]=state.zoom[state.band];
+    const fa=f0+Math.max(0,(xa-PADL)/(W-PADL-PADR))*(f1-f0);
+    const fb=f0+Math.min(1,(xb-PADL)/(W-PADL-PADR))*(f1-f0);
+    if (fb-fa>0.002) state.zoom[state.band]=[fa,fb];
+  }
+  draw();
+});
+cv.addEventListener("dblclick",()=>{ state.zoom[state.band]=[0,1]; draw(); });
+
+let rt; window.addEventListener("resize",()=>{ clearTimeout(rt); rt=setTimeout(draw,80); });
+
+selectSurface("conifer");
+selectBand(0);
+</script>
+</body>
+</html>
