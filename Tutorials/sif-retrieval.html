@@ -484,9 +484,23 @@ window.Quarto = {
 
   Widget URLs come from /sif, set once in ../_variables.yml.
   iframe heights are measured at a 900 px body width, not guessed.
+
+  No ?theme= here on purpose: the widgets read the host page's light/dark state
+  (same-origin) and follow the Quarto toggle live. Pin it only where that cannot
+  work — see caltech-excerpt.qmd.
 -->
 <p>Plants fluoresce. A small part of the light a leaf absorbs is not used for photosynthesis and not turned into heat, but re-emitted at slightly longer wavelengths. This is solar induced chlorophyll fluorescence, SIF, and the remarkable thing is that we can measure it from orbit, with instruments that were built to do something else entirely.</p>
 <p>What I want to do here is go through the measurement the way we would actually construct it in a forward model: start with the sun, put an atmosphere in the way, put a canopy at the bottom, and only then add the fluorescence on top. Every step has an interactive figure attached, so you can push the parameters around yourself rather than take my word for it. The equations and the code are folded away in the collapsible sections for those who want them.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This follows the same thread as a book chapter Joe Berry and I wrote a while back: Frankenberg, C. and Berry, J. (2018), <a href="https://doi.org/10.1016/B978-0-12-409548-9.10632-3">Solar Induced Chlorophyll Fluorescence: Origins, Relation to Photosynthesis and Retrieval</a>, in S. Liang (ed.), <em>Comprehensive Remote Sensing</em>, Vol. 3, 143–162, Elsevier. The figures here are rebuilt from scratch as interactive versions and the text is written fresh; the published chapter and its typeset figures remain © Elsevier.</p>
+</div>
+</div>
+</div>
 <section id="where-the-glow-comes-from" class="level2">
 <h2 class="anchored" data-anchor-id="where-the-glow-comes-from">Where the glow comes from</h2>
 <p>Chlorophyll absorbs very efficiently in the blue and the red, and essentially not at all beyond about 700 nm. That drop is why leaves look green to us and why they are so bright in the near infrared. A few percent of what is absorbed comes back out as fluorescence, in a broad band with two peaks, one in the red around 685 nm and one in the far-red around 740 nm.</p>
@@ -600,12 +614,38 @@ L_c = R_c + F,\qquad L_0 = d\,R_c + F \;\;\Longrightarrow\;\; F = \frac{L_0 - d\
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>sif, _ <span class="op">=</span> <span class="fu">retrieve_sif</span>(λ, L, E0)</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="pp">@info</span> <span class="st">"retrieved SIF"</span> sif F_true                          <span class="co"># ≈ 1.8</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>What a real fit has to add on top of this
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The snippet above is the right idea and it is genuinely what the method rests on, but nobody retrieves SIF operationally with that few unknowns. In real life we fit a good deal more.</p>
+<p>Two additions matter enough to name. The first is a <strong>Doppler shift</strong>: the Earth’s motion relative to the Sun moves the whole solar spectrum by a small fraction of a spectral sample, and since the retrieval works by comparing measured line depths against a reference, a mis-registered solar spectrum looks very much like in-filling. So the shift (and usually a stretch) is fitted along with everything else. The second is <strong>telluric O₂</strong>: the 771 nm microwindow sits close enough to the O₂ A-band that oxygen absorption lands right on top of the solar structure, and it has to be in the forward model rather than absorbed into the polynomial.</p>
+<p>Both of these force a change in <em>how</em> the forward model is evaluated. A shifted solar spectrum and an O₂ transmittance have to be built line-by-line at high resolution and convolved with the instrument line shape only at the very end — you cannot apply them on the instrument’s own grid, because convolution and absorption do not commute. Getting that order wrong is a classic source of bias.</p>
+<p>There is more beyond those: a wavelength-dependent instrument line shape, zero level offsets, detector nonlinearity, and the rotational Raman correction discussed below. None of it changes the picture the dozen lines above give you, which is exactly why that version is worth reading first.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="spectral-resolution-is-what-limits-us" class="level2">
 <h2 class="anchored" data-anchor-id="spectral-resolution-is-what-limits-us">Spectral resolution is what limits us</h2>
 <p>So far we have quietly assumed that we can see a Fraunhofer line at its true depth. No instrument can. Every spectrometer convolves the spectrum with its own instrument line shape, usually well approximated by a Gaussian, and we quote the width as the full width at half maximum, with <span class="math inline">\(\mathrm{FWHM} = 2\sqrt{2\ln 2}\,\sigma \approx 2.355\,\sigma\)</span>. A solar line only a few picometres wide therefore comes back much shallower and broader than it really is.</p>
-<p>This matters directly, because the filling-in signal lives in the depth of the line. Drag the resolution from 0.07 nm out to 0.5 nm and watch the lower panel: the same amount of fluorescence produces a smaller and broader peak as the line washes out. This is the main reason SIF retrievals want narrow, high resolution windows, and it is also why an instrument built for precise CO₂ spectroscopy turned out to be well suited to a measurement nobody had planned for.</p>
-<iframe src="../sif/widgets/resolution-explorer.html?data=/sif/data/solar_750nm.json" width="100%" height="775" style="border:none" loading="lazy" title="Interactive: spectral resolution and Fraunhofer in-filling">
+<p>Before looking at what that costs, it is worth being precise about which part of the signal actually matters. Write the ratio of the spectrum with fluorescence to the one without:</p>
+<p><span class="math display">\[
+\frac{I_0 + F}{I_0} \;=\; 1 \;+\; \frac{F}{I_0(\lambda)}
+\;=\; \underbrace{1 + F}_{\text{flat offset}} \;+\; \underbrace{F\left(\frac{1}{I_0(\lambda)} - 1\right)}_{\text{what we retrieve}}
+\]</span></p>
+<p>(with the solar spectrum normalised so the continuum is 1). The first term is a constant lift of the whole curve. It scales with SIF, but it is completely degenerate with anything else that multiplies the spectrum — surface reflectance, aerosol, a calibration error — so on its own it tells us nothing. Everything we can actually retrieve sits in the second term, which is non-zero only where the solar line is deep.</p>
+<p>That distinction is the whole story of spectral resolution. The flat offset does not care what instrument you use. The second term does: as the instrument line shape smears the solar line, the core rises back towards the continuum, <span class="math inline">\(1/I_0\)</span> shrinks, and the retrievable part collapses — even though nothing about the fluorescence has changed. Drag the resolution below from 0.07 nm out to 0.5 nm and watch the <em>kept vs native</em> readout, which compares the retrievable in-filling at your chosen resolution against what it would be at the solar spectrum’s own resolution. Then press <em>subtract the flat offset</em> to throw away the degenerate part and see only the structure a retrieval can work with.</p>
+<p>The window shown is the OCO-2 SIF region, with the two fitting microwindows near 758.6 and 770 nm shaded. This is also why an instrument built for precise CO₂ spectroscopy turned out to be so well suited to a measurement nobody had planned for: it already had the resolution.</p>
+<iframe src="../sif/widgets/resolution-explorer.html?data=/sif/data/solar_750nm.json" width="100%" height="920" style="border:none" loading="lazy" title="Interactive: spectral resolution and Fraunhofer in-filling">
 </iframe>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -625,8 +665,9 @@ Tip
 <h2 class="anchored" data-anchor-id="canopy">Putting a real canopy underneath</h2>
 <p>Up to now the surface has been a single number. A real canopy is not. Its reflectance climbs steeply between 700 and 750 nm, the red-edge feature, and how steep and how deep that edge is depends on chlorophyll content and on how many leaves there are.</p>
 <p>This is what decides which of the two fluorescence peaks we can actually use. The figure below is built from PROSPECT-PRO leaf optics run through 4SAIL, with the incoming light constructed as a Planck continuum times the solar Fraunhofer transmittance times line-by-line O₂ and H₂O absorption, so the O₂-A band at 760 nm and the O₂-B band at 688 nm are where they really are. Build yourself a canopy and watch the two readouts at 685 and 740 nm.</p>
+<p>The fourth panel makes the same point as the resolution figure, but across the whole window: it is the ratio of the spectrum with fluorescence to the one without. Two very different features live in it. The broad hump around 685 nm is just SIF sitting on a very dark red background — real, and large, but hopelessly tangled up with anything else that changes broadband reflectance. The sharp structure in the O₂ bands and the Fraunhofer lines can only be produced by an additive source at the surface, and that is what a retrieval keys on. The toggle strips the broadband part away so the usable structure is visible on its own.</p>
 <p>Push chlorophyll and leaf area up and the fraction of red fluorescence that escapes the canopy collapses, from around 90% to under 20%, while the far-red peak barely notices. On top of that, the far-red lands on the bright near-infrared shoulder right next to the deep O₂-A band, which is exactly where we want sharp absorption features to fill in. The red peak sits on a dark background where the relative signal is actually larger, which sounds attractive until you remember that the escape fraction there depends strongly on canopy structure, and that is precisely what we do not want mixed into a photosynthesis proxy.</p>
-<iframe src="../sif/widgets/canopy-builder.html?canopy=/sif/data/canopy_grid.json&amp;atm=/sif/data/surface_irradiance.json" width="100%" height="930" style="border:none" loading="lazy" title="Interactive: canopy reflectance, the red edge, and where the SIF signal sits">
+<iframe src="../sif/widgets/canopy-builder.html?canopy=/sif/data/canopy_grid.json&amp;atm=/sif/data/surface_irradiance.json" width="100%" height="1040" style="border:none" loading="lazy" title="Interactive: canopy reflectance, the red edge, and where the SIF signal sits">
 </iframe>
 </section>
 <section id="what-oco-does" class="level2">
@@ -644,7 +685,7 @@ Tip
 <h2 class="anchored" data-anchor-id="why-we-bother">Why we bother</h2>
 <p>At large scales the relationship between space-based SIF and gross primary production, the rate at which the land biosphere fixes carbon, is close to linear and surprisingly insensitive to biome. That is what turns a spectroscopic curiosity into a carbon cycle instrument: a measurement that is robust against how bright the scene is becomes something close to a direct global map of photosynthesis.</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -653,7 +694,7 @@ Tip
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>Every figure here is a standalone HTML file with no dependencies, so the same widgets can be embedded elsewhere, including on the OCO mission site.</li>

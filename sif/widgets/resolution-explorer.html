@@ -9,12 +9,15 @@
     --bg:transparent; --panel:#ffffff; --hairline:#d9dee3;
     --text:#1d2530; --muted:#5b6773; --faint:#8a97a5;
     --solar:#a9791f; --hires:#c9b48a; --sif:#c92a5a; --sif-fill:rgba(201,42,90,0.12);
-  }
+      --oco:#7a5cc4; --oco-fill:rgba(122,92,196,0.10);
+}
+  [data-theme="dark"][data-standalone]{--bg:#0e141a}
   [data-theme="dark"]{
     --panel:#10161d; --hairline:#1e2733;
     --text:#e8edf2; --muted:#8a97a5; --faint:#5b6773;
     --solar:#e0b64a; --hires:#5b5230; --sif:#ff5c8a; --sif-fill:rgba(255,92,138,0.14);
-  }
+      --oco:#a48ae0; --oco-fill:rgba(164,138,224,0.13);
+}
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{background:var(--bg)}
   body{color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
@@ -38,6 +41,7 @@
   .presets{display:flex;gap:6px;flex-wrap:wrap;padding:2px 16px 10px}
   .preset{appearance:none;cursor:pointer;font:12px ui-monospace,Menlo,monospace;color:var(--muted);background:transparent;border:1px solid var(--hairline);padding:6px 10px;border-radius:99px}
   .preset:hover{color:var(--text)} .preset:focus-visible{outline:2px solid var(--sif);outline-offset:2px}
+  .preset[aria-pressed="true"]{color:var(--text);border-color:var(--sif)}
   .readouts{display:flex;flex-wrap:wrap;gap:6px;padding:6px 16px 6px}
   .ro{font:11.5px ui-monospace,Menlo,monospace;color:var(--muted);border:1px solid var(--hairline);border-radius:5px;padding:5px 9px}
   .ro b{color:var(--text);font-weight:600} .ro.em b{color:var(--sif)}
@@ -51,6 +55,7 @@
       <span><i style="border-color:var(--hires)"></i>solar spectrum (native)</span>
       <span><i style="border-color:var(--solar)"></i>as the instrument sees it</span>
       <span><i style="border-color:var(--sif)"></i>in-filling from SIF</span>
+      <span><i style="border-color:var(--oco);border-top-width:6px"></i>OCO-2 SIF windows</span>
     </div>
     <span class="hint">coarsen the resolution ↓</span>
   </div>
@@ -69,17 +74,67 @@
     </div>
   </div>
   <div class="presets" id="presets" role="group" aria-label="Instrument resolution presets"></div>
+  <div class="presets" style="padding-top:0">
+    <button class="preset" id="subTgl" aria-pressed="false">subtract the flat offset</button>
+  </div>
   <div class="readouts">
+    <span class="ro">line depth here <b id="roD">—</b></span>
     <span class="ro">line-core transmission <b id="roT">—</b></span>
-    <span class="ro em">peak in-filling <b id="roP">—</b></span>
-    <span class="ro">continuum offset <b id="roO">—</b></span>
+    <span class="ro">flat offset <b id="roO">—</b></span>
+    <span class="ro em">usable in-filling <b id="roP">—</b></span>
+    <span class="ro em">kept vs native <b id="roK">—</b></span>
   </div>
   <p class="caption" id="cap"></p>
 </div>
 
 <script>
 "use strict";
-(function(){ const t=new URLSearchParams(location.search).get("theme"); if(t==="dark") document.documentElement.setAttribute("data-theme","dark"); })();
+/* ---- theme resolution -----------------------------------------------------
+   Priority: an explicit ?theme= wins; otherwise follow the embedding page when
+   we can see it (same-origin iframes, e.g. the Quarto site's light/dark
+   toggle); otherwise follow the reader's OS preference; otherwise light.
+   Re-resolves live, so the host page needs no JavaScript of its own. A
+   cross-origin embed such as Caltech Sites simply falls through to the OS
+   preference and then to light. */
+const THEME_PARAM = new URLSearchParams(location.search).get("theme");
+const DARK_MQ = window.matchMedia("(prefers-color-scheme: dark)");
+
+function pageIsDark(){
+  try {
+    if (window.parent === window) return null;
+    const d = window.parent.document;                  // throws when cross-origin
+    if (d.body.classList.contains("quarto-dark")) return true;
+    if (d.body.classList.contains("quarto-light")) return false;
+    const bs = d.documentElement.getAttribute("data-bs-theme");
+    return bs ? bs === "dark" : null;
+  } catch (e) { return null; }                         // cross-origin: not our business
+}
+function resolveTheme(){
+  const hosted = pageIsDark();
+  const dark = THEME_PARAM ? THEME_PARAM === "dark" : (hosted === null ? DARK_MQ.matches : hosted);
+  const root = document.documentElement;
+  root.setAttribute("data-theme", dark ? "dark" : "light");
+  // Standalone (not in an iframe) we must paint our own backdrop; embedded we stay
+  // transparent so the host page's background shows through in either mode.
+  if (window.parent === window) root.setAttribute("data-standalone", "");
+}
+resolveTheme();
+
+function onThemeChange(cb){
+  const rerun = () => {
+    const before = document.documentElement.getAttribute("data-theme");
+    resolveTheme();
+    if (document.documentElement.getAttribute("data-theme") !== before) cb();
+  };
+  DARK_MQ.addEventListener("change", rerun);
+  try {
+    if (window.parent !== window){
+      const d = window.parent.document;
+      new MutationObserver(rerun).observe(d.body, {attributes:true, attributeFilter:["class"]});
+      new MutationObserver(rerun).observe(d.documentElement, {attributes:true, attributeFilter:["data-bs-theme"]});
+    }
+  } catch (e) { /* cross-origin: no toggle to watch */ }
+}
 
 /* -------- external data hook --------
    Ships with a synthetic solar spectrum. Pass ?data=URL to a native-resolution
@@ -89,9 +144,35 @@
 const DATA_URL = new URLSearchParams(location.search).get("data");
 
 const css=getComputedStyle(document.documentElement), col=k=>css.getPropertyValue(k).trim();
-const C={ hair:col("--hairline"),text:col("--text"),muted:col("--muted"),faint:col("--faint"),
+let C;
+function readPalette(){ C ={ hair:col("--hairline"),text:col("--text"),muted:col("--muted"),faint:col("--faint"),
   solar:col("--solar"),hires:col("--hires"),sif:col("--sif"),sifFill:col("--sif-fill"),
-  panel:col("--panel") };
+  panel:col("--panel"),oco:col("--oco"),ocoFill:col("--oco-fill") }; }
+readPalette();
+
+/* OCO-2 / OCO-3 SIF fitting microwindows, nm. APPROXIMATE — see README before
+   quoting these; they are drawn to orient the reader, not as a spec. */
+const OCO_WINDOWS=[[758.17,759.10],[769.62,770.28]];
+function shadeOCO(ctx,px,top,bot,W,label){
+  for (const [a,b] of OCO_WINDOWS){
+    const x0=px(a), x1=px(b);
+    if (x1<PADL || x0>W-PADR) continue;
+    const l=Math.max(x0,PADL), r=Math.min(x1,W-PADR);
+    ctx.fillStyle=C.ocoFill; ctx.fillRect(l,top,Math.max(r-l,1.5),bot-top);
+  }
+  if (label){
+    ctx.fillStyle=C.oco; ctx.textAlign="center"; ctx.textBaseline="bottom";
+    for (const [a,b] of OCO_WINDOWS){
+      const mid=px((a+b)/2);
+      if (mid>PADL+18 && mid<W-PADR-18) ctx.fillText(Math.round((a+b)/2)+" nm", mid, bot-4);
+    }
+  }
+}
+
+onThemeChange(() => { readPalette();
+  if (typeof draw === 'function') draw();
+  if (typeof readouts === 'function') readouts();
+  if (typeof legend === 'function') legend(); });
 
 /* Cursor marker: a filled dot riding the curve itself, haloed against the panel
    so it stays legible over a fill. Matches the OCO dashboard's hover behaviour. */
@@ -104,15 +185,26 @@ function hoverDot(ctx,x,y,color){
 /* --- native disk-integrated solar spectrum over the ~750 nm window (Fig 7 region).
    Continuum = 1 minus Gaussian Fraunhofer lines. Synthetic but faithful in depth/width;
    swap in a real solar line list for production. --- */
-let WL0=747.0, WL1=753.0, N=1000, dx=(WL1-WL0)/(N-1);
+/* The window is the OCO-2 SIF region: both fitting microwindows (around 758.6 and
+   770 nm) plus enough continuum either side to see them in context. The synthetic
+   line list below is only the offline fallback — the tutorial drives this widget
+   from the real Toon solar spectrum via ?data=. */
+let WL0=755.0, WL1=773.0, N=3000, dx=(WL1-WL0)/(N-1);
 let wl=new Float64Array(N), E0=new Float64Array(N);
-let CORE_WL=749.68;                            /* deepest line — anchors the marker and readouts */
-const LINES=[ {c:749.68,depth:0.60,w:0.028},   /* strong pair around 750 */
-              {c:751.22,depth:0.55,w:0.028},
-              {c:748.42,depth:0.30,w:0.026},
-              {c:752.42,depth:0.34,w:0.026},
-              {c:747.55,depth:0.20,w:0.024},
-              {c:750.55,depth:0.16,w:0.022} ];
+let CORE_WL=758.68;                            /* deepest line — anchors the marker and readouts */
+const LINES=[ {c:758.68,depth:0.62,w:0.030},   /* inside the 757 nm microwindow */
+              {c:758.23,depth:0.28,w:0.026},
+              {c:759.02,depth:0.34,w:0.026},
+              {c:769.90,depth:0.55,w:0.030},   /* inside the 771 nm microwindow */
+              {c:770.11,depth:0.30,w:0.024},
+              {c:756.10,depth:0.24,w:0.026},
+              {c:757.20,depth:0.18,w:0.022},
+              {c:761.40,depth:0.40,w:0.028},
+              {c:763.05,depth:0.22,w:0.024},
+              {c:765.80,depth:0.30,w:0.026},
+              {c:767.35,depth:0.19,w:0.022},
+              {c:771.85,depth:0.36,w:0.028},
+              {c:772.60,depth:0.21,w:0.024} ];
 for (let i=0;i<N;i++){ const x=WL0+i*dx; wl[i]=x;
   let e=1; for (const L of LINES){ const t=(x-L.c)/L.w; e-=L.depth*Math.exp(-t*t); }
   E0[i]=Math.max(0.02,e);
@@ -131,7 +223,7 @@ function convolve(fwhm){
 }
 function Sat(x){ const f=(x-WL0)/dx; const i=Math.max(0,Math.min(N-2,Math.floor(f))), t=f-i; return Sconv[i]*(1-t)+Sconv[i+1]*t; }
 
-const state={ fwhm:0.10, sif:0.01 };   // sif as fraction of continuum
+const state={ fwhm:0.10, sif:0.01, sub:false };   // sif as fraction of continuum
 Sconv=convolve(state.fwhm);
 
 /* Real solar spectrum, resampled onto a uniform grid (the convolution assumes
@@ -142,7 +234,7 @@ if (DATA_URL){
     if (j.wl.length<8 || j.wl.length!==j.E0.length) return;
     const lo=j.wl[0], hi=j.wl[j.wl.length-1];
     if (!(hi>lo)) return;
-    const M=Math.min(2400,j.wl.length), step=(hi-lo)/(M-1);
+    const M=Math.min(4000,j.wl.length), step=(hi-lo)/(M-1);
     const nwl=new Float64Array(M), ne=new Float64Array(M);
     let k=0;
     for (let i=0;i<M;i++){
@@ -151,8 +243,13 @@ if (DATA_URL){
       const span=j.wl[k+1]-j.wl[k], t=span>0?(x-j.wl[k])/span:0;
       ne[i]=Math.max(0.02, j.E0[k]+t*(j.E0[k+1]-j.E0[k]));
     }
-    let cmin=Infinity, ci=0;
-    for (let i=0;i<M;i++) if (ne[i]<cmin){ cmin=ne[i]; ci=i; }
+    /* Anchor the readouts on the deepest line INSIDE an OCO fitting window when the
+       data covers one — that is the line the real retrieval leans on. Otherwise
+       fall back to the deepest line anywhere in the window. */
+    const inOCO = x => OCO_WINDOWS.some(([a,b]) => x>=a && x<=b);
+    let cmin=Infinity, ci=-1;
+    for (let i=0;i<M;i++) if (inOCO(nwl[i]) && ne[i]<cmin){ cmin=ne[i]; ci=i; }
+    if (ci<0){ cmin=Infinity; for (let i=0;i<M;i++) if (ne[i]<cmin){ cmin=ne[i]; ci=i; } }
     WL0=lo; WL1=hi; N=M; dx=step; wl=nwl; E0=ne; CORE_WL=nwl[ci];
     Sconv=convolve(state.fwhm); draw(); readouts();
   }).catch(()=>{ /* keep synthetic fallback */ });
@@ -178,6 +275,7 @@ function draw(){
 
   // ---------- TOP: solar spectrum ----------
   const aYmax=1.08, apy=v=>A.t+(1-v/aYmax)*(A.b-A.t);
+  shadeOCO(ctx,px,A.t,A.b,W,true);
   ctx.strokeStyle=C.hair; ctx.fillStyle=C.faint; ctx.lineWidth=1;
   for (const t of [0,0.25,0.5,0.75,1.0]){ const y=apy(t);
     ctx.beginPath(); ctx.moveTo(PADL,y); ctx.lineTo(W-PADR,y); ctx.stroke();
@@ -199,29 +297,54 @@ function draw(){
   ctx.strokeStyle=C.solar; ctx.setLineDash([2,3]); ctx.lineWidth=1;
   ctx.beginPath(); ctx.moveTo(px(CORE_WL),A.t); ctx.lineTo(px(CORE_WL),A.b); ctx.stroke(); ctx.setLineDash([]);
 
-  // ---------- BOTTOM: in-filling ratio ----------
-  // ratio(λ) = 1 + sif / Sconv(λ)   (continuum→1+sif, line cores→large)
-  let rmax=1;
-  for (let i=0;i<N;i++){ const r=1+state.sif/Sconv[i]; if(r>rmax) rmax=r; }
-  const bLo=0.999, bHi=Math.max(1.005, rmax*1.02);
-  const bpy=v=>B.t+(1-(v-bLo)/(bHi-bLo))*(B.b-B.t);
-  ctx.strokeStyle=C.hair; ctx.fillStyle=C.faint; ctx.lineWidth=1;
-  /* bLo sits just under 1 to give the flat no-SIF case a visible baseline, but it is
-     too close to 1.000 to label without the two colliding — so it stays unlabelled. */
-  for (const t of [1.0,1.0+(bHi-1.0)/2,bHi]){ const y=bpy(t);
-    ctx.beginPath(); ctx.moveTo(PADL,y); ctx.lineTo(W-PADR,y); ctx.stroke();
-    ctx.textAlign="right"; ctx.textBaseline="middle"; ctx.fillText(t.toFixed(3),PADL-7,y); }
-  ctx.fillStyle=C.muted; ctx.save(); ctx.translate(13,(B.t+B.b)/2); ctx.rotate(-Math.PI/2);
-  ctx.textAlign="center"; ctx.fillText("(I₀＋SIF) / I₀",0,0); ctx.restore();
-  ctx.textAlign="left"; ctx.textBaseline="top"; ctx.fillStyle=C.muted;
-  ctx.fillText(T("② the in-filling signal — flat without SIF, sharp peaks with it","② the in-filling signal"), PADL+2, B.t+2);
+  // ---------- BOTTOM: the in-filling signal ----------
+  /* ratio(λ) = 1 + F/I(λ) is really two different things added together:
+       a FLAT offset F/1 at the continuum level, which is degenerate with anything
+         else that scales the whole spectrum — reflectance, aerosol, calibration —
+         and therefore carries no retrievable information on its own; and
+       a HIGH-FREQUENCY excess F·(1/I − 1), which is non-zero only where the solar
+         line is deep.
+     The retrieval lives entirely in the second term, and that is the term the
+     instrument destroys as it smears the line. */
+  const off = state.sif;
+  const resid = i => off*(1/Sconv[i] - 1);
+  let rmax=0; for (let i=0;i<N;i++){ const v=resid(i); if(v>rmax) rmax=v; }
 
-  // fill under ratio
-  ctx.beginPath(); ctx.moveTo(px(WL0),bpy(1.0));
-  for(let i=0;i<N;i++){ const x=wl[i]; ctx.lineTo(px(x),bpy(1+state.sif/Sconv[i])); }
-  ctx.lineTo(px(WL1),bpy(1.0)); ctx.closePath(); ctx.fillStyle=C.sifFill; ctx.fill();
-  // ratio line
-  ctx.beginPath(); for(let i=0;i<N;i++){ const x=wl[i]; const r=1+state.sif/Sconv[i]; i===0?ctx.moveTo(px(x),bpy(r)):ctx.lineTo(px(x),bpy(r)); }
+  const sub = state.sub;
+  const bval  = sub ? (i => resid(i)) : (i => 1+off+resid(i));
+  const bbase = sub ? 0 : 1+off;
+  const bHi   = sub ? Math.max(rmax*1.15, 2e-4) : Math.max(1+off+rmax*1.15, 1.004);
+  const bLo   = sub ? -(rmax*0.10 + 2e-5) : 0.999;
+  const bpy   = v=>B.t+(1-(v-bLo)/(bHi-bLo))*(B.b-B.t);
+  const bfmt  = sub ? (v=>(v*1000).toFixed(1)) : (v=>v.toFixed(3));
+  const bticks = [...new Set(sub ? [0, rmax/2, rmax] : [1.0, 1+off, 1+off+rmax])];
+
+  shadeOCO(ctx,px,B.t,B.b,W,false);
+  ctx.strokeStyle=C.hair; ctx.fillStyle=C.faint; ctx.lineWidth=1;
+  for (const t of bticks){ const y=bpy(t);
+    ctx.beginPath(); ctx.moveTo(PADL,y); ctx.lineTo(W-PADR,y); ctx.stroke();
+    ctx.textAlign="right"; ctx.textBaseline="middle"; ctx.fillText(bfmt(t),PADL-7,y); }
+  ctx.fillStyle=C.muted; ctx.save(); ctx.translate(13,(B.t+B.b)/2); ctx.rotate(-Math.PI/2);
+  ctx.textAlign="center";
+  ctx.fillText(sub?"in-filling above the offset (‰)":"(I₀＋SIF) / I₀",0,0); ctx.restore();
+  ctx.textAlign="left"; ctx.textBaseline="top"; ctx.fillStyle=C.muted;
+  ctx.fillText(sub ? T("② what is left once the flat offset is removed — this is the signal","② offset removed")
+                   : T("② the in-filling signal — a flat offset plus sharp peaks","② the in-filling signal"),
+               PADL+2, B.t+2);
+
+  // shade only the excess above the offset: the part a retrieval can actually use
+  ctx.beginPath(); ctx.moveTo(px(WL0),bpy(bbase));
+  for(let i=0;i<N;i++) ctx.lineTo(px(wl[i]),bpy(bval(i)));
+  ctx.lineTo(px(WL1),bpy(bbase)); ctx.closePath(); ctx.fillStyle=C.sifFill; ctx.fill();
+  // the offset itself, drawn as a baseline so it reads as "not the signal"
+  ctx.beginPath(); ctx.moveTo(PADL,bpy(bbase)); ctx.lineTo(W-PADR,bpy(bbase));
+  ctx.setLineDash([5,4]); ctx.strokeStyle=C.faint; ctx.lineWidth=1; ctx.stroke(); ctx.setLineDash([]);
+  if (!sub && W>660){
+    ctx.fillStyle=C.faint; ctx.textAlign="right"; ctx.textBaseline="bottom";
+    ctx.fillText("flat offset — degenerate with reflectance", W-PADR-2, bpy(bbase)-4);
+  }
+  ctx.beginPath();
+  for(let i=0;i<N;i++){ const X=px(wl[i]),Y=bpy(bval(i)); i===0?ctx.moveTo(X,Y):ctx.lineTo(X,Y); }
   ctx.strokeStyle=C.sif; ctx.lineWidth=1.9; ctx.stroke();
 
   // x-axis (shared, drawn under bottom panel)
@@ -241,22 +364,34 @@ function draw(){
     const f=(hoverX-WL0)/dx, i=Math.max(0,Math.min(N-2,Math.floor(f))), t=f-i;
     hoverDot(ctx,hx,apy(E0[i]*(1-t)+E0[i+1]*t),C.hires);   /* native */
     hoverDot(ctx,hx,apy(s),C.solar);                        /* convolved */
-    hoverDot(ctx,hx,bpy(1+state.sif/s),C.sif);              /* in-filling ratio */
+    const rh=off*(1/s-1);
+    hoverDot(ctx,hx,bpy(sub?rh:1+off+rh),C.sif);            /* in-filling */
   }
 }
 
 function readouts(){
-  const core=Sat(CORE_WL);
-  const peak=(state.sif/core)*1000;           // ‰
-  document.getElementById("roT").textContent=(core*100).toFixed(0)+"%";
-  document.getElementById("roP").textContent=peak.toFixed(1)+"‰";
-  document.getElementById("roO").textContent=(state.sif*100).toFixed(2)+"%";
+  const core = Sat(CORE_WL);                          // line core AS THE INSTRUMENT SEES IT
+  const ci   = Math.max(0, Math.min(N-1, Math.round((CORE_WL-WL0)/dx)));
+  const native = E0[ci];                              // the same core before the ILS
+  const usable = state.sif*(1/core   - 1);            // excess above the flat offset
+  const best   = state.sif*(1/native - 1);            // the most any instrument could see
+  document.getElementById("roD").textContent = ((1-core)*100).toFixed(1)+"%";
+  document.getElementById("roT").textContent = (core*100).toFixed(0)+"%";
+  document.getElementById("roO").textContent = (state.sif*100).toFixed(2)+"%";
+  document.getElementById("roP").textContent = (usable*1000).toFixed(2)+"‰";
+  document.getElementById("roK").textContent = best>0 ? ((usable/best)*100).toFixed(0)+"%" : "—";
   const cap=document.getElementById("cap");
   if (state.sif<0.001)
     cap.textContent="With no fluorescence the ratio is flat at 1: reflected sunlight reproduces the solar line depths exactly, whatever the surface or atmosphere. Add SIF to break that.";
   else
-    cap.textContent="A smooth fluorescence offset fills the sharp solar lines: the ratio peaks where the line is deepest. Coarsen the resolution and the instrument smears the line — its core gets shallower, so the same SIF produces a smaller, broader peak. Higher resolution concentrates the signal, which is why narrow, high-resolution windows retrieve SIF best.";
+    cap.textContent="The ratio is two different things added together. One is a flat offset — SIF divided by the continuum — which lifts the whole curve and is indistinguishable from anything else that scales the spectrum, so on its own it tells a retrieval nothing. The other is the extra bump on top of that offset, SIF·(1/I − 1), which exists only where the solar line is deep. That second part is the entire measurement. Now coarsen the resolution: the instrument smears the line, its core rises toward the continuum, and the bump collapses — while the flat offset does not move at all. Watch \u201ckept vs native\u201d fall as you drag, and note how much shallower the line has become. That is the real reason SIF retrievals need high spectral resolution.";
 }
+
+const subTgl=document.getElementById("subTgl");
+subTgl.addEventListener("click",()=>{ state.sub=!state.sub;
+  subTgl.setAttribute("aria-pressed",String(state.sub));
+  subTgl.textContent=state.sub?"show the full ratio":"subtract the flat offset";
+  draw(); });
 
 const fwhmEl=document.getElementById("fwhm"), sifEl=document.getElementById("sif");
 fwhmEl.addEventListener("input",()=>{ state.fwhm=+fwhmEl.value; document.getElementById("fwhmOut").textContent=state.fwhm.toFixed(2)+" nm"; Sconv=convolve(state.fwhm); draw(); readouts(); });

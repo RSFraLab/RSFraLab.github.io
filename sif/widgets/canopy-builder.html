@@ -12,7 +12,9 @@
     --refl:#2e7d5b; --refl-fill:rgba(46,125,91,0.10); --soil:#9c7b52;
     --rad:#3b6ea5; --rad-fill:rgba(59,110,165,0.10);
     --sif:#c92a5a; --sif-fill:rgba(201,42,90,0.16); --mark:#8a66a0;
-  }
+      --oco:#7a5cc4; --oco-fill:rgba(122,92,196,0.10);
+}
+  [data-theme="dark"][data-standalone]{--bg:#0e141a}
   [data-theme="dark"]{
     --panel:#10161d; --hairline:#1e2733;
     --text:#e8edf2; --muted:#8a97a5; --faint:#5b6773;
@@ -20,7 +22,8 @@
     --refl:#4ec49a; --refl-fill:rgba(78,196,154,0.10); --soil:#b08f66;
     --rad:#6ba3dd; --rad-fill:rgba(107,163,221,0.12);
     --sif:#ff5c8a; --sif-fill:rgba(255,92,138,0.18); --mark:#a884c8;
-  }
+      --oco:#a48ae0; --oco-fill:rgba(164,138,224,0.13);
+}
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{background:var(--bg)}
   body{color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
@@ -44,6 +47,7 @@
   .presets{display:flex;gap:6px;flex-wrap:wrap;padding:2px 16px 10px}
   .preset{appearance:none;cursor:pointer;font:12px ui-monospace,Menlo,monospace;color:var(--muted);background:transparent;border:1px solid var(--hairline);padding:6px 10px;border-radius:99px}
   .preset:hover{color:var(--text)} .preset:focus-visible{outline:2px solid var(--sif);outline-offset:2px}
+  .preset[aria-pressed="true"]{color:var(--text);border-color:var(--sif)}
   .readouts{display:flex;flex-wrap:wrap;gap:6px;padding:6px 16px 6px}
   .ro{font:11.5px ui-monospace,Menlo,monospace;color:var(--muted);border:1px solid var(--hairline);border-radius:5px;padding:5px 9px}
   .ro b{color:var(--text);font-weight:600} .ro.em b{color:var(--sif)}
@@ -59,11 +63,12 @@
       <span><i style="border-color:var(--refl)"></i>canopy reflectance</span>
       <span><i style="border-color:var(--rad)"></i>reflected radiance</span>
       <span><i style="border-color:var(--sif)"></i>+ fluorescence</span>
+      <span><i style="border-color:var(--oco);border-top-width:6px"></i>OCO-2 SIF windows</span>
     </div>
     <span class="hint">build a canopy ↓</span>
   </div>
   <div class="body">
-    <canvas id="cv" height="470" aria-label="Three stacked panels: solar irradiance at the surface, canopy reflectance with its red edge, and reflected radiance with and without added fluorescence, from 640 to 800 nanometres"></canvas>
+    <canvas id="cv" height="470" aria-label="Four stacked panels: solar irradiance at the surface, canopy reflectance with its red edge, and reflected radiance with and without added fluorescence, from 640 to 800 nanometres"></canvas>
     <div class="hover" id="hv"></div>
   </div>
   <div class="controls">
@@ -81,6 +86,9 @@
     </div>
   </div>
   <div class="presets" id="presets" role="group" aria-label="Canopy presets"></div>
+  <div class="presets" style="padding-top:0">
+    <button class="preset" id="subTgl" aria-pressed="false">show only the high-frequency in-filling</button>
+  </div>
   <div class="readouts">
     <span class="ro">NIR reflectance <b id="roN">—</b></span>
     <span class="ro">reflectance @685 <b id="roR">—</b></span>
@@ -93,8 +101,52 @@
 
 <script>
 "use strict";
-/* Theme: ?theme=dark switches palette (default light, to match Caltech Sites) */
-(function(){ const t=new URLSearchParams(location.search).get("theme"); if(t==="dark") document.documentElement.setAttribute("data-theme","dark"); })();
+/* ---- theme resolution -----------------------------------------------------
+   Priority: an explicit ?theme= wins; otherwise follow the embedding page when
+   we can see it (same-origin iframes, e.g. the Quarto site's light/dark
+   toggle); otherwise follow the reader's OS preference; otherwise light.
+   Re-resolves live, so the host page needs no JavaScript of its own. A
+   cross-origin embed such as Caltech Sites simply falls through to the OS
+   preference and then to light. */
+const THEME_PARAM = new URLSearchParams(location.search).get("theme");
+const DARK_MQ = window.matchMedia("(prefers-color-scheme: dark)");
+
+function pageIsDark(){
+  try {
+    if (window.parent === window) return null;
+    const d = window.parent.document;                  // throws when cross-origin
+    if (d.body.classList.contains("quarto-dark")) return true;
+    if (d.body.classList.contains("quarto-light")) return false;
+    const bs = d.documentElement.getAttribute("data-bs-theme");
+    return bs ? bs === "dark" : null;
+  } catch (e) { return null; }                         // cross-origin: not our business
+}
+function resolveTheme(){
+  const hosted = pageIsDark();
+  const dark = THEME_PARAM ? THEME_PARAM === "dark" : (hosted === null ? DARK_MQ.matches : hosted);
+  const root = document.documentElement;
+  root.setAttribute("data-theme", dark ? "dark" : "light");
+  // Standalone (not in an iframe) we must paint our own backdrop; embedded we stay
+  // transparent so the host page's background shows through in either mode.
+  if (window.parent === window) root.setAttribute("data-standalone", "");
+}
+resolveTheme();
+
+function onThemeChange(cb){
+  const rerun = () => {
+    const before = document.documentElement.getAttribute("data-theme");
+    resolveTheme();
+    if (document.documentElement.getAttribute("data-theme") !== before) cb();
+  };
+  DARK_MQ.addEventListener("change", rerun);
+  try {
+    if (window.parent !== window){
+      const d = window.parent.document;
+      new MutationObserver(rerun).observe(d.body, {attributes:true, attributeFilter:["class"]});
+      new MutationObserver(rerun).observe(d.documentElement, {attributes:true, attributeFilter:["data-bs-theme"]});
+    }
+  } catch (e) { /* cross-origin: no toggle to watch */ }
+}
 
 /* -------- external data hook --------
    Ships with a synthetic surface irradiance. Pass ?data=URL to a solar JSON
@@ -120,10 +172,36 @@ let IRR=null;                                               /* mW m⁻² nm⁻¹
 const MU0=Math.cos(30*Math.PI/180);                         /* matches the export geometry */
 
 const css=getComputedStyle(document.documentElement), col=k=>css.getPropertyValue(k).trim();
-const C={ hair:col("--hairline"),text:col("--text"),muted:col("--muted"),faint:col("--faint"),
+let C;
+function readPalette(){ C ={ hair:col("--hairline"),text:col("--text"),muted:col("--muted"),faint:col("--faint"),
   sun:col("--sun"),sunFill:col("--sun-fill"),refl:col("--refl"),reflFill:col("--refl-fill"),
   soil:col("--soil"),rad:col("--rad"),radFill:col("--rad-fill"),
-  sif:col("--sif"),sifFill:col("--sif-fill"),mark:col("--mark"),panel:col("--panel") };
+  sif:col("--sif"),sifFill:col("--sif-fill"),mark:col("--mark"),panel:col("--panel"),oco:col("--oco"),ocoFill:col("--oco-fill") }; }
+readPalette();
+
+/* OCO-2 / OCO-3 SIF fitting microwindows, nm. APPROXIMATE — see README before
+   quoting these; they are drawn to orient the reader, not as a spec. */
+const OCO_WINDOWS=[[758.17,759.10],[769.62,770.28]];
+function shadeOCO(ctx,px,top,bot,W,label){
+  for (const [a,b] of OCO_WINDOWS){
+    const x0=px(a), x1=px(b);
+    if (x1<PADL || x0>W-PADR) continue;
+    const l=Math.max(x0,PADL), r=Math.min(x1,W-PADR);
+    ctx.fillStyle=C.ocoFill; ctx.fillRect(l,top,Math.max(r-l,1.5),bot-top);
+  }
+  if (label){
+    ctx.fillStyle=C.oco; ctx.textAlign="center"; ctx.textBaseline="bottom";
+    for (const [a,b] of OCO_WINDOWS){
+      const mid=px((a+b)/2);
+      if (mid>PADL+18 && mid<W-PADR-18) ctx.fillText(Math.round((a+b)/2)+" nm", mid, bot-4);
+    }
+  }
+}
+
+onThemeChange(() => { readPalette();
+  if (typeof draw === 'function') draw();
+  if (typeof readouts === 'function') readouts();
+  if (typeof legend === 'function') legend(); });
 
 /* Cursor marker: a filled dot riding the curve itself, haloed against the panel
    so it stays legible over a fill. Matches the OCO dashboard's hover behaviour. */
@@ -250,6 +328,22 @@ function buildSIF(cab,lai,mag){
 
 /* ---------- combine ---------- */
 const L0=new Float64Array(N), L1=new Float64Array(N);       /* without / with fluorescence */
+const RATIO=new Float64Array(N), RATIO_LF=new Float64Array(N), RATIO_HF=new Float64Array(N);
+const SMOOTH_NM=5.0;                                        /* boxcar half-width for the broadband split */
+
+/* Running mean via prefix sums. Wide enough (±5 nm) that the ~40 nm hump at 685
+   stays in the broadband part, while the O2 bands and Fraunhofer lines — a few nm
+   and narrower — survive in the residual. */
+function splitRatio(){
+  const half=Math.max(1,Math.round(SMOOTH_NM/dx));
+  const cum=new Float64Array(N+1);
+  for (let i=0;i<N;i++) cum[i+1]=cum[i]+RATIO[i];
+  for (let i=0;i<N;i++){
+    const a=Math.max(0,i-half), b=Math.min(N,i+half+1);
+    RATIO_LF[i]=(cum[b]-cum[a])/(b-a);
+    RATIO_HF[i]=RATIO[i]-RATIO_LF[i];
+  }
+}
 /* mW/m²/nm/sr per unit reflectance: E₀·cosθ₀/π for a nominal 1200 mW/m²/nm surface
    irradiance at 30° solar zenith. Putting this on a real scale is what makes the
    "SIF share" readouts comparable to published numbers. */
@@ -261,11 +355,13 @@ function recompute(){
   for (let i=0;i<N;i++){
     L0[i] = IRR ? RHO[i]*IRR[i]*MU0/Math.PI : RADSCALE*RHO[i]*SUN[i];
     L1[i] = L0[i]+SIFOUT[i];
+    RATIO[i] = L0[i]>0 ? L1[i]/L0[i] : 1;
   }
+  splitRatio();
 }
 function at(arr,x){ const f=(x-WL0)/dx; const i=Math.max(0,Math.min(N-2,Math.floor(f))), t=f-i; return arr[i]*(1-t)+arr[i+1]*t; }
 
-const state={ cab:35, lai:3.0, sif:2.0 };
+const state={ cab:35, lai:3.0, sif:2.0, sub:false };
 recompute();
 
 /* real surface irradiance */
@@ -318,8 +414,8 @@ if (DATA_URL){
 
 /* ---------- canvas ---------- */
 const cv=document.getElementById("cv"), hv=document.getElementById("hv");
-const PADL=54,PADR=14,H=470;
-const P=[{t:14,b:136},{t:164,b:286},{t:314,b:436}];
+const PADL=54,PADR=14,H=575;
+const P=[{t:14,b:124},{t:146,b:256},{t:278,b:388},{t:410,b:520}];
 const MARKS=[685,740];
 let hoverX=null;
 
@@ -355,10 +451,13 @@ function draw(){
   ctx.clearRect(0,0,W,H);
   ctx.font="11px ui-monospace, Menlo, monospace";
 
-  /* 685 / 740 guides across all three panels */
+  for (const q of P) shadeOCO(ctx,px,q.t,q.b,W,false);
+  shadeOCO(ctx,px,P[1].t,P[1].b,W,true);
+
+  /* 685 / 740 guides across all four panels */
   for (const m of MARKS){
     ctx.strokeStyle=C.mark; ctx.setLineDash([2,4]); ctx.lineWidth=1;
-    ctx.beginPath(); ctx.moveTo(px(m),P[0].t); ctx.lineTo(px(m),P[2].b); ctx.stroke(); ctx.setLineDash([]);
+    ctx.beginPath(); ctx.moveTo(px(m),P[0].t); ctx.lineTo(px(m),P[3].b); ctx.stroke(); ctx.setLineDash([]);
   }
 
   /* --- panel 1: irradiance --- */
@@ -408,15 +507,51 @@ function draw(){
     }
   }
 
+  /* --- panel 4: the perceived in-filling, across the whole window ---
+     ratio = L(with SIF) / L(without SIF) = 1 + SIF/L. Two very different things
+     live in this curve. The broad hump around 685 nm is just SIF sitting on a dark
+     red background — real, but degenerate with everything else that changes
+     broadband reflectance, so it is hard to trust. The sharp structure in the O2
+     bands and the Fraunhofer lines is the part that can only be produced by an
+     additive source at the surface, and that is what a retrieval keys on. The
+     toggle removes the broadband part so the sharp structure can be seen alone. */
+  { const p=P[3];
+    const arr = state.sub ? RATIO_HF : RATIO;
+    let lo=Infinity, hi=-Infinity;
+    for (let i=0;i<N;i++){ if(arr[i]<lo) lo=arr[i]; if(arr[i]>hi) hi=arr[i]; }
+    const base = state.sub ? 0 : 1;
+    const pad = Math.max((hi-lo)*0.12, 1e-4);
+    const ymin = Math.min(lo-pad, base), ymax = Math.max(hi+pad, base+1e-4);
+    const py = v=>p.t+(1-(v-ymin)/(ymax-ymin))*(p.b-p.t); PY[3]=py;
+    const fmt = state.sub ? (v=>(v*100).toFixed(1)) : (v=>v.toFixed(2));
+    ctx.strokeStyle=C.hair; ctx.lineWidth=1;
+    for (const t of [ymin, base, ymax]){ const y=py(t);
+      ctx.beginPath(); ctx.moveTo(PADL,y); ctx.lineTo(W-PADR,y); ctx.stroke();
+      ctx.fillStyle=C.faint; ctx.textAlign="right"; ctx.textBaseline="middle";
+      ctx.fillText(fmt(t),PADL-7,y); }
+    ctx.fillStyle=C.muted; ctx.textAlign="left"; ctx.textBaseline="top";
+    ctx.fillText(state.sub ? "④ in-filling only — the broadband part removed (%)"
+                           : "④ perceived in-filling  L(with SIF) / L(without)", PADL+2, p.t+2);
+    ctx.beginPath(); ctx.moveTo(px(WL0),py(base));
+    for(let i=0;i<N;i++) ctx.lineTo(px(wl[i]),py(arr[i]));
+    ctx.lineTo(px(WL1),py(base)); ctx.closePath(); ctx.fillStyle=C.sifFill; ctx.fill();
+    if (!state.sub){                       /* the broadband envelope we would subtract */
+      ctx.beginPath();
+      for(let i=0;i<N;i++){ const X=px(wl[i]),Y=py(RATIO_LF[i]); i===0?ctx.moveTo(X,Y):ctx.lineTo(X,Y); }
+      ctx.setLineDash([4,3]); ctx.strokeStyle=C.faint; ctx.lineWidth=1.2; ctx.stroke(); ctx.setLineDash([]);
+    }
+    curve(ctx,px,py,arr,C.sif,1.6);
+  }
+
   /* peak labels along the foot of panel 3, where every curve is clear of them */
   ctx.fillStyle=C.mark; ctx.textAlign="center"; ctx.textBaseline="bottom";
-  for (const m of MARKS) ctx.fillText(m===685?"685 red":"740 far-red",px(m),P[2].b-5);
+  for (const m of MARKS) ctx.fillText(m===685?"685 red":"740 far-red",px(m),P[3].b-5);
 
   /* x-axis */
   ctx.fillStyle=C.faint; ctx.textAlign="center"; ctx.textBaseline="top";
   for (let t=640;t<=800;t+=20){ const X=px(t);
     ctx.textAlign = X>W-PADR-16 ? "right" : (X<PADL+16 ? "left" : "center");   /* keep end labels on-canvas */
-    ctx.fillText(String(t),X,P[2].b+7); }
+    ctx.fillText(String(t),X,P[3].b+7); }
   ctx.textAlign="center";
   ctx.fillStyle=C.muted; ctx.fillText("wavelength (nm)",PADL+(W-PADL-PADR)/2,H-13);
 
@@ -428,6 +563,7 @@ function draw(){
     hoverDot(ctx,hx,PY[1](at(RHO,hoverX)),C.refl);
     hoverDot(ctx,hx,PY[2](at(L0,hoverX)),C.rad);
     hoverDot(ctx,hx,PY[2](at(L1,hoverX)),C.sif);
+    hoverDot(ctx,hx,PY[3](at(state.sub?RATIO_HF:RATIO,hoverX)),C.sif);
   }
 }
 
@@ -466,6 +602,12 @@ for (const [label,cab,lai] of PRESETS){
   b.addEventListener("click",()=>{ state.cab=cab; state.lai=lai; cabEl.value=cab; laiEl.value=lai; sync(); });
   wrap.appendChild(b);
 }
+
+const subTgl=document.getElementById("subTgl");
+subTgl.addEventListener("click",()=>{ state.sub=!state.sub;
+  subTgl.setAttribute("aria-pressed",String(state.sub));
+  subTgl.textContent=state.sub?"show the full in-filling ratio":"show only the high-frequency in-filling";
+  draw(); });
 
 cv.addEventListener("pointermove",e=>{
   const r=cv.getBoundingClientRect(), x=e.clientX-r.left, W=r.width;
