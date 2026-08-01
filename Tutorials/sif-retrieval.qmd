@@ -283,6 +283,30 @@ Toon's solar line list, not a low resolution measurement, and the convolution
 happens live in your browser so the slider stays responsive.
 :::
 
+::: {.callout-note collapse="true"}
+## Why we do not just build the finest spectrometer we can
+
+Taken on its own the figure above argues for ever narrower resolution, and that
+would be the wrong lesson. Resolution is not free.
+
+The light entering a grating spectrometer is spread across detector pixels. Make
+the resolution finer and each pixel receives photons from a narrower slice of the
+spectrum, so it receives fewer of them. Shot noise grows as the square root of the
+signal, so the signal-to-noise ratio per pixel gets *worse* as you sharpen. Worse
+still, readout noise is a fixed cost per pixel no matter how little light landed on
+it — so at high resolution, where the per-pixel signal is small, readout noise
+starts to dominate. And with a detector of finite size, finer sampling buys
+resolution at the cost of coverage: a narrower window, and therefore fewer solar
+lines to fit.
+
+So the in-filling contrast is only one side of the ledger. What matters is how
+precisely SIF comes out once noise is folded in, and that has an optimum rather
+than a limit: sharpen past it and you lose more to noise than you gain in
+contrast. Where the optimum sits depends on the detector, the readout noise, the
+integration time and how much continuum the fit needs — which is exactly the sort
+of trade that mission design spends its time on.
+:::
+
 ## Putting a real canopy underneath {#canopy}
 
 Up to now the surface has been a single number. A real canopy is not. Its
