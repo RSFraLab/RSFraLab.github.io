@@ -661,6 +661,24 @@ Tip
 <p>The solar spectrum here is the disk-integrated transmittance computed from Geoff Toon’s solar line list, not a low resolution measurement, and the convolution happens live in your browser so the slider stays responsive.</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why we do not just build the finest spectrometer we can
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Taken on its own the figure above argues for ever narrower resolution, and that would be the wrong lesson. Resolution is not free.</p>
+<p>The light entering a grating spectrometer is spread across detector pixels. Make the resolution finer and each pixel receives photons from a narrower slice of the spectrum, so it receives fewer of them. Shot noise grows as the square root of the signal, so the signal-to-noise ratio per pixel gets <em>worse</em> as you sharpen. Worse still, readout noise is a fixed cost per pixel no matter how little light landed on it — so at high resolution, where the per-pixel signal is small, readout noise starts to dominate. And with a detector of finite size, finer sampling buys resolution at the cost of coverage: a narrower window, and therefore fewer solar lines to fit.</p>
+<p>So the in-filling contrast is only one side of the ledger. What matters is how precisely SIF comes out once noise is folded in, and that has an optimum rather than a limit: sharpen past it and you lose more to noise than you gain in contrast. Where the optimum sits depends on the detector, the readout noise, the integration time and how much continuum the fit needs — which is exactly the sort of trade that mission design spends its time on.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="canopy" class="level2">
 <h2 class="anchored" data-anchor-id="canopy">Putting a real canopy underneath</h2>
@@ -693,7 +711,7 @@ Tip
 <h2 class="anchored" data-anchor-id="why-we-bother">Why we bother</h2>
 <p>At large scales the relationship between space-based SIF and gross primary production, the rate at which the land biosphere fixes carbon, is close to linear and surprisingly insensitive to biome. That is what turns a spectroscopic curiosity into a carbon cycle instrument: a measurement that is robust against how bright the scene is becomes something close to a direct global map of photosynthesis.</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -702,7 +720,7 @@ Tip
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>Every figure here is a standalone HTML file with no dependencies, so the same widgets can be embedded elsewhere, including on the OCO mission site.</li>
