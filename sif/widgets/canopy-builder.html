@@ -341,28 +341,37 @@ const SIFSRC=new Float64Array(N);
   const ref=SIFSRC[Math.round((740-WL0)/dx)];
   for (let i=0;i<N;i++) SIFSRC[i]/=ref;
 }
-const SIFOUT=new Float64Array(N);
+const SIFOUT=new Float64Array(N), SIFUNIT=new Float64Array(N);
 function buildSIF(cab,lai,mag){
   const path=(1+0.35*lai)/1.35;
-  for (let i=0;i<N;i++) SIFOUT[i]=mag*SIFSRC[i]*Math.exp(-KESC*(cab/40)*ABSN[i]*path);
+  for (let i=0;i<N;i++){ SIFUNIT[i]=SIFSRC[i]*Math.exp(-KESC*(cab/40)*ABSN[i]*path);
+                         SIFOUT[i]=mag*SIFUNIT[i]; }
 }
 
 /* ---------- combine ---------- */
 const L0=new Float64Array(N), L1=new Float64Array(N);       /* without / with fluorescence */
 const RATIO=new Float64Array(N), RATIO_LF=new Float64Array(N), RATIO_HF=new Float64Array(N);
+/* Per-unit in-filling, i.e. the ratio for SIF = 1. Everything in panel 4 is exactly
+   linear in the SIF magnitude, so keeping the unit version lets the panel be framed
+   at the slider's maximum. Framing it on its own range instead rescales the axis in
+   lockstep with the curve, and the panel looks frozen as you drag the slider. */
+const RU=new Float64Array(N), RU_LF=new Float64Array(N), RU_HF=new Float64Array(N);
 const SMOOTH_NM=5.0;                                        /* boxcar half-width for the broadband split */
 
 /* Running mean via prefix sums. Wide enough (±5 nm) that the ~40 nm hump at 685
    stays in the broadband part, while the O2 bands and Fraunhofer lines — a few nm
    and narrower — survive in the residual. */
-function splitRatio(){
+function splitRatio(mag){
   const half=Math.max(1,Math.round(SMOOTH_NM/dx));
   const cum=new Float64Array(N+1);
-  for (let i=0;i<N;i++) cum[i+1]=cum[i]+RATIO[i];
+  for (let i=0;i<N;i++) cum[i+1]=cum[i]+RU[i];
   for (let i=0;i<N;i++){
     const a=Math.max(0,i-half), b=Math.min(N,i+half+1);
-    RATIO_LF[i]=(cum[b]-cum[a])/(b-a);
-    RATIO_HF[i]=RATIO[i]-RATIO_LF[i];
+    RU_LF[i]=(cum[b]-cum[a])/(b-a);
+    RU_HF[i]=RU[i]-RU_LF[i];
+    RATIO[i]    = 1 + mag*RU[i];
+    RATIO_LF[i] = 1 + mag*RU_LF[i];
+    RATIO_HF[i] =     mag*RU_HF[i];
   }
 }
 /* mW/m²/nm/sr per unit reflectance: E₀·cosθ₀/π for a nominal 1200 mW/m²/nm surface
@@ -376,12 +385,13 @@ function recompute(){
   for (let i=0;i<N;i++){
     L0[i] = IRR ? RHO[i]*IRR[i]*MU0/Math.PI : RADSCALE*RHO[i]*SUN[i];
     L1[i] = L0[i]+SIFOUT[i];
-    RATIO[i] = L0[i]>0 ? L1[i]/L0[i] : 1;
+    RU[i] = L0[i]>0 ? SIFUNIT[i]/L0[i] : 0;
   }
-  splitRatio();
+  splitRatio(state.sif);
 }
 function at(arr,x){ const f=(x-WL0)/dx; const i=Math.max(0,Math.min(N-2,Math.floor(f))), t=f-i; return arr[i]*(1-t)+arr[i+1]*t; }
 
+const SIF_MAX=+document.getElementById("sif").max || 4;
 const state={ cab:35, lai:3.0, sif:2.0, sub:false };
 recompute();
 
@@ -538,8 +548,14 @@ function draw(){
      toggle removes the broadband part so the sharp structure can be seen alone. */
   { const p=P[3];
     const arr = state.sub ? RATIO_HF : RATIO;
+    /* Scale to the slider's maximum, not to the current curve: the ratio is linear
+       in SIF, so self-scaling cancels the slider out entirely. */
+    const ref = state.sub ? RU_HF : RU;
     let lo=Infinity, hi=-Infinity;
-    for (let i=0;i<N;i++){ if(arr[i]<lo) lo=arr[i]; if(arr[i]>hi) hi=arr[i]; }
+    for (let i=0;i<N;i++){
+      const v = (state.sub ? 0 : 1) + SIF_MAX*ref[i];
+      if(v<lo) lo=v; if(v>hi) hi=v;
+    }
     const base = state.sub ? 0 : 1;
     const pad = Math.max((hi-lo)*0.12, 1e-4);
     const ymin = Math.min(lo-pad, base), ymax = Math.max(hi+pad, base+1e-4);
