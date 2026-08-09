@@ -1,0 +1,15 @@
+---
+title: 'NIRVP: A robust structural proxy for sun-induced chlorophyll fluorescence and photosynthesis across scales'
+author: 'Dechant, Benjamin and Ryu, Youngryel and Badgley, Grayson and Köhler, Philipp and Rascher, Uwe and Migliavacca, Mirco and Zhang, Yongguang and Tagliabue, Giulia and Guan, Kaiyu and Rossini, Micol and Goulas, Yves and Zeng, Yelu and Frankenberg, Christian and Berry, Joseph A.'
+type: 'journal-article'
+year: 2022
+publication: 'Remote Sensing of Environment'
+doi: '10.1016/j.rse.2021.112763'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

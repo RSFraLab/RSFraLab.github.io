@@ -1,0 +1,48 @@
+---
+title: 'Quantifying methane emissions from the global scale down to point sources using satellite observations of atmospheric methane'
+author: 'Jacob, Daniel J. and Varon, Daniel J. and Cusworth, Daniel H. and Dennison, Philip E. and Frankenberg, Christian and Gautam, Ritesh and Guanter, Luis and Kelley, John and McKeever, Jason and Ott, Lesley E. and Poulter, Benjamin and Qu, Zhen and Thorpe, Andrew K. and Worden, John R. and Duren, Riley M.'
+type: 'journal-article'
+year: 2022
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-22-9617-2022'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. We review the capability of current and scheduled satellite
+observations of atmospheric methane in the shortwave infrared (SWIR) to
+quantify methane emissions from the global scale down to point sources. We
+cover retrieval methods, precision and accuracy requirements, inverse and
+mass balance methods for inferring emissions, source detection thresholds,
+and observing system completeness. We classify satellite instruments as area
+flux mappers and point source imagers, with complementary attributes. Area
+flux mappers are high-precision (<1 %) instruments with 0.1–10 km
+pixel size designed to quantify total methane emissions on regional to
+global scales. Point source imagers are fine-pixel (<60 m)
+instruments designed to quantify individual point sources by imaging of the
+plumes. Current area flux mappers include GOSAT (2009–present), which
+provides a high-quality record for interpretation of long-term methane
+trends, and TROPOMI (2018–present), which provides global continuous daily
+mapping to quantify emissions on regional scales. These instruments already
+provide a powerful resource to quantify national methane emissions in
+support of the Paris Agreement. Current point source imagers include the
+GHGSat constellation and several hyperspectral and multispectral land
+imaging sensors (PRISMA, Sentinel-2, Landsat-8/9, WorldView-3), with
+detection thresholds in the 100–10 000 kg h−1 range that enable
+monitoring of large point sources. Future area flux mappers, including
+MethaneSAT, GOSAT-GW, Sentinel-5, GeoCarb, and CO<sub>2</sub>M, will increase the
+capability to quantify emissions at high resolution, and the MERLIN lidar
+will improve observation of the Arctic. The averaging times required by area
+flux mappers to quantify regional emissions depend on pixel size, retrieval
+precision, observation density, fraction of successful retrievals, and
+return times in a way that varies with the spatial resolution desired. A
+similar interplay applies to point source imagers between detection
+threshold, spatial coverage, and return time, defining an observing system
+completeness. Expanding constellations of point source imagers including
+GHGSat and Carbon Mapper over the coming years will greatly improve
+observing system completeness for point sources through dense spatial
+coverage and frequent return times.

@@ -1,0 +1,22 @@
+---
+title: 'Comment on “Recent global decline of CO
+<sub>2</sub>
+fertilization effects on vegetation photosynthesis”'
+author: 'Frankenberg, Christian and Yin, Yi and Byrne, Brendan and He, Liyin and Gentine, Pierre'
+type: 'journal-article'
+year: 2021
+publication: 'Science'
+doi: '10.1126/science.abg2947'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Wang
+et al
+. (Research Articles, 11 December 2020, p. 1295), using photosynthesis proxies from long-term satellite records, report a significant decline in CO
+2
+fertilization effects. We find that small systematic biases in Advanced Very High Resolution Radiometer (AVHRR) data affect their analysis to the degree that the key finding is not robust. Caution is recommended when using AVHRR to detect changes in near-infrared reflectance of vegetation (NIRv) trends and vegetation indices.

@@ -1,0 +1,15 @@
+---
+title: 'California’s methane super-emitters'
+author: 'Duren, Riley M. and Thorpe, Andrew K. and Foster, Kelsey T. and Rafiq, Talha and Hopkins, Francesca M. and Yadav, Vineet and Bue, Brian D. and Thompson, David R. and Conley, Stephen and Colombi, Nadia K. and Frankenberg, Christian and McCubbin, Ian B. and Eastwood, Michael L. and Falk, Matthias and Herner, Jorn D. and Croes, Bart E. and Green, Robert O. and Miller, Charles E.'
+type: 'journal-article'
+year: 2019
+publication: 'Nature'
+doi: '10.1038/s41586-019-1720-3'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
