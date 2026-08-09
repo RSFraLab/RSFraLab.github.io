@@ -1,0 +1,16 @@
+---
+title: 'Inverse modeling of global and regional CH<sub>4</sub> emissions using SCIAMACHY satellite retrievals'
+author: 'Bergamaschi, Peter and Frankenberg, Christian and Meirink, Jan Fokke and Krol, Maarten and Villani, M. Gabriella and Houweling, Sander and Dentener, Frank and Dlugokencky, Edward J. and Miller, John B. and Gatti, Luciana V. and Engel, Andreas and Levin, Ingeborg'
+type: 'journal-article'
+year: 2009
+publication: 'Journal of Geophysical Research: Atmospheres'
+doi: '10.1029/2009jd012287'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Methane retrievals from the Scanning Imaging Absorption Spectrometer for Atmospheric Chartography (SCIAMACHY) instrument onboard ENVISAT provide important information on atmospheric CH<sub>4</sub> sources, particularly in tropical regions which are poorly monitored by in situ surface observations. Recently, Frankenberg et al. (2008a, 2008b) reported a major revision of SCIAMACHY retrievals due to an update of spectroscopic parameters of water vapor and CH<sub>4</sub>. Here, we analyze the impact of this revision on global and regional CH<sub>4</sub> emissions estimates in 2004, using the TM<sub>5</sub>‐4DVAR inverse modeling system. Inversions based on the revised SCIAMACHY retrievals yield ∼20% lower tropical emissions compared to the previous retrievals. The new retrievals improve significantly the consistency between observed and assimilated column average mixing ratios and the agreement with independent validation data. Furthermore, the considerable latitudinal and seasonal bias correction of the previous SCIAMACHY retrievals, derived in the TM<sub>5</sub>‐4DVAR system by simultaneously assimilating high‐accuracy surface measurements, is reduced by a factor of ∼3. The inversions result in significant changes in the spatial patterns of emissions and their seasonality compared to the bottom‐up inventories. Sensitivity tests were done to analyze the robustness of retrieved emissions, revealing some dependence on the applied a priori emission inventories and OH fields. Furthermore, we performed a detailed validation of simulated CH<sub>4</sub> mixing ratios using NOAA ship and aircraft profile samples, as well as stratospheric balloon samples, showing overall good agreement. We use the new SCIAMACHY retrievals for a regional analysis of CH<sub>4</sub> emissions from South America, Africa, and Asia, exploiting the zooming capability of the TM<sub>5</sub> model. This allows a more detailed analysis of spatial emission patterns and better comparison with aircraft profiles and independent regional emission estimates available for South America. Large CH<sub>4</sub> emissions are attributed to various wetland regions in tropical South America and Africa, seasonally varying and opposite in phase with CH<sub>4</sub> emissions from biomass burning. India, China and South East Asia are characterized by pronounced emissions from rice paddies peaking in the third quarter of the year, in addition to further anthropogenic emissions throughout the year.

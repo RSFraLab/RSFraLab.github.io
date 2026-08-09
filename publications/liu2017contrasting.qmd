@@ -1,0 +1,39 @@
+---
+title: 'Contrasting carbon cycle responses of the tropical continents to the 2015–2016 El Niño'
+author: 'Liu, Junjie and Bowman, Kevin W. and Schimel, David S. and Parazoo, Nicolas C. and Jiang, Zhe and Lee, Meemong and Bloom, A. Anthony and Wunch, Debra and Frankenberg, Christian and Sun, Ying and O’Dell, Christopher W. and Gurney, Kevin R. and Menemenlis, Dimitris and Gierach, Michelle and Crisp, David and Eldering, Annmarie'
+type: 'journal-article'
+year: 2017
+publication: 'Science'
+doi: '10.1126/science.aam5690'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+INTRODUCTION
+The influence of El Niño on climate is accompanied by large changes to the carbon cycle, and El Niño–induced variability in the carbon cycle has been attributed mainly to the tropical continents. However, owing to a dearth of observations in the tropics, tropical carbon fluxes are poorly quantified, and considerable debate exists over the dominant mechanisms (e.g., plant growth, respiration, fire) and regions (e.g., humid versus semiarid tropics) on the net carbon balance.
+
+
+RATIONALE
+The launch of the Orbiting Carbon Observatory-2 (OCO-2) shortly before the 2015–2016 El Niño, the second strongest since the 1950s, has provided an opportunity to understand how tropical land carbon fluxes respond to the warm and dry climate characteristics of El Niño conditions. The El Niño events may also provide a natural experiment to study the response of tropical land carbon fluxes to future climate changes, because anomalously warm and dry tropical environments typical of El Niño are expected to be more frequent under most emission scenarios.
+
+
+RESULTS
+
+The tropical regions of three continents (South America, Asia, and Africa) had heterogeneous responses to the 2015–2016 El Niño, in terms of both climate drivers and the carbon cycle. The annual mean precipitation over tropical South America and tropical Asia was lower by 3.0σ and 2.8σ, respectively, in 2015 relative to the 2011 La Niña year. Tropical Africa, on the other hand, had near equal precipitation and the same number of dry months between 2015 and 2011; however, surface temperatures were higher by 1.6σ, dominated by the positive anomaly over its eastern and southern regions. In response to the warmer and drier climate anomaly in 2015, the pantropical biosphere released 2.5 ± 0.34 gigatons more carbon into the atmosphere than in 2011, which accounts for 83.3% of the global total 3.0–gigatons of carbon (gigatons C) net biosphere flux differences and 92.6% of the atmospheric CO
+2
+growth-rate differences between 2015 and 2011. It indicates that the tropical land biosphere flux anomaly was the driver of the highest atmospheric CO
+2
+growth rate in 2015. The three tropical continents had an approximately even contribution to the pantropical net carbon flux anomaly in 2015, but had diverse dominant processes: gross primary production (GPP) reduced carbon uptake (0.9 ± 0.96 gigatons C) in tropical South America, fire increased carbon release (0.4 ± 0.08 gigatons C) in tropical Asia, and respiration increased carbon release (0.6 ± 1.01 gigatons C) in Africa. We found that most of the excess carbon release in 2015 was associated with either extremely low precipitation or high temperatures, or both.
+
+
+
+CONCLUSION
+Our results indicate that the global El Niño effect is a superposition of regionally specific effects. The heterogeneous climate forcing and carbon response over the three tropical continents to the 2015–2016 El Niño challenges previous studies that suggested that a single dominant process determines carbon cycle interannual variability, which could also be due to previous disturbance and soil and vegetation structure. The similarity between the 2015 tropical climate anomaly and the projected climate changes imply that the role of the tropical land as a buffer for fossil fuel emissions may be reduced in the future. The heterogeneous response may reflect differences in temperature and rainfall anomalies, but intrinsic differences in vegetation species, soils, and prior disturbance may contribute as well. A synergistic use of multiple satellite observations and a long time series of spatially resolved fluxes derived from sustained satellite observations will enable tests of these hypotheses, allow for a more process-based understanding, and, ultimately, aid improved carbon-climate model projections.
+
+
+Diverse climate driver anomalies and carbon cycle responses to the 2015–2016 El Niño over the three tropical continents.
+Schematic of climate anomaly patterns over the three tropical continents and the anomalies of the net carbon flux and its dominant constituent flux (i.e., GPP, respiration, and fire) relative to the 2011 La Niña during the 2015–2016 El Niño. GtC, gigatons C.

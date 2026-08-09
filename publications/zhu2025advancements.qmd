@@ -1,0 +1,17 @@
+---
+title: 'Advancements and opportunities to improve bottom–up estimates of global wetland methane emissions'
+author: 'Zhu, Qing and Jacob, Daniel J and Yuan, Kunxiaojia and Li, Fa and Runkle, Benjamin R K and Chen, Min and Bloom, A Anthony and Poulter, Benjamin and East, James D and Riley, William J and McNicol, Gavin and Worden, John and Frankenberg, Christian and Halabisky, Meghan'
+type: 'journal-article'
+year: 2025
+publication: 'Environmental Research Letters'
+doi: '10.1088/1748-9326/adad02'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+Wetlands are the single largest natural source of atmospheric methane (CH<sub>4</sub>), contributing approximately 30% of total surface CH<sub>4</sub> emissions, and they have been identified as the largest source of uncertainty in the global CH<sub>4</sub> budget based on the most recent Global Carbon Project CH<sub>4</sub> report. High uncertainties in the bottom–up estimates of wetland CH<sub>4</sub> emissions pose significant challenges for accurately understanding their spatiotemporal variations, and for the scientific community to monitor wetland CH<sub>4</sub> emissions from space. In fact, there are large disagreements between bottom–up estimates versus top–down estimates inferred from inversion of atmospheric CH<sub>4</sub> concentrations. To address these critical gaps, we review recent development, validation, and applications of bottom–up estimates of global wetland CH<sub>4</sub> emissions, as well as how they are used in top–down inversions. These bottom–up estimates, using (1) empirical biogeochemical modeling (e.g. WetCHARTs: 125–208 TgCH<sub>4</sub> yr−1); (2) process-based biogeochemical modeling (e.g. WETCHIMP: 190 ± 39 TgCH<sub>4</sub> yr−1); and (3) data-driven machine learning approach (e.g. UpCH<sub>4</sub>: 146 ± 43 TgCH<sub>4</sub> yr−1). Bottom–up estimates are subject to significant uncertainties (∼80 Tg CH<sub>4</sub> yr−1), and the ranges of different estimates do not overlap, further amplifying the overall uncertainty when combining multiple data products. These substantial uncertainties highlight gaps in our understanding of wetland CH<sub>4</sub> biogeochemistry and wetland inundation dynamics. Major tropical and arctic wetland complexes are regional hotspots of CH<sub>4</sub> emissions. However, the scarcity of satellite data over the tropics and northern high latitudes offer limited information for top–down inversions to improve bottom–up estimates. Recent advances in surface measurements of CH<sub>4</sub> fluxes (e.g. FLUXNET-CH<sub>4</sub>) across a wide range of ecosystems including bogs, fens, marshes, and forest swamps provide an unprecedented opportunity to improve existing bottom–up estimates of wetland CH<sub>4</sub> estimates. We suggest that continuous long-term surface measurements at representative wetlands, high fidelity wetland mapping, combined with an appropriate modeling framework, will be needed to significantly improve global estimates of wetland CH<sub>4</sub> emissions. There is also a pressing unmet need for fine-resolution and high-precision satellite CH<sub>4</sub> observations directed at wetlands.

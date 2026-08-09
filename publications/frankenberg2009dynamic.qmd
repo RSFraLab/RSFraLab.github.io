@@ -1,0 +1,27 @@
+---
+title: 'Dynamic Processes Governing Lower-Tropospheric HDO/H
+<sub>2</sub>
+O Ratios as Observed from Space and Ground'
+author: 'Frankenberg, Christian and Yoshimura, Kei and Warneke, Thorsten and Aben, Ilse and Butz, André and Deutscher, Nicholas and Griffith, David and Hase, Frank and Notholt, Justus and Schneider, Matthias and Schrijver, Hans and Röckmann, Thomas'
+type: 'journal-article'
+year: 2009
+publication: 'Science'
+doi: '10.1126/science.1173791'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Cycling Around
+
+Water vapor is the most important greenhouse gas, and clouds are one of the most important components of climate, but the global hydrological cycle is still poorly-enough understood that the atmospheric cycling of water and cloud formation are inadequately represented in global climate models. As the transformation from liquid into vapor tends to deplete water of the isotope deuterium,
+
+Frankenburg
+et al.
+
+(p.
+1374
+) were able to use satellite measurements of global “heavy” water abundances to provide a deeper understanding of atmospheric water dynamics.
