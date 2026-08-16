@@ -6,7 +6,7 @@ year: 2025
 publication: ''
 doi: '10.5194/egusphere-2025-5532'
 materials: ''
-supplement: ''
+supplement: 'https://doi.org/10.5194/egusphere-2025-5532-supplement'
 orcid_type: 'preprint'
 toc: false
 ---

@@ -1,0 +1,18 @@
+---
+title: 'Inverse modeling of pan-Arctic methane emissions at high spatial resolution:
+what can we learn from assimilating satellite retrievals and using different
+process-based wetland and lake biogeochemical models?'
+author: 'Tan, Zeli and Zhuang, Qianlai and Henze, Daven K. and Frankenberg, Christian and Dlugokencky, Ed and Sweeney, Colm and Turner, Alexander J. and Sasakawa, Motoki and Machida, Toshinobu'
+type: 'journal-article'
+year: 2016
+publication: 'Atmospheric Chemistry and Physics'
+doi: '10.5194/acp-16-12649-2016'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. Understanding methane emissions from the Arctic, a fast-warming carbon reservoir, is important for projecting future changes in the global methane cycle. Here we optimized methane emissions from north of 60° N (pan-Arctic) regions using a nested-grid high-resolution inverse model that assimilates both high-precision surface measurements and column-average SCanning Imaging Absorption spectroMeter for Atmospheric CHartogrphY (SCIAMACHY) satellite retrievals of methane mole fraction. For the first time, methane emissions from lakes were integrated into an atmospheric transport and inversion estimate, together with prior wetland emissions estimated with six biogeochemical models. In our estimates, in 2005, global methane emissions were in the range of 496.4–511.5 Tg yr−1, and pan-Arctic methane emissions were in the range of 11.9–28.5 Tg yr−1. Methane emissions from pan-Arctic wetlands and lakes were 5.5–14.2 and 2.4–14.2 Tg yr−1, respectively. Methane emissions from Siberian wetlands and lakes are the largest and also have the largest uncertainty. Our results indicate that the uncertainty introduced by different wetland models could be much larger than the uncertainty of each inversion. We also show that assimilating satellite retrievals can reduce the uncertainty of the nested-grid inversions. The significance of lake emissions cannot be identified across the pan-Arctic by high-resolution inversions, but it is possible to identify high lake emissions from some specific regions. In contrast to global inversions, high-resolution nested-grid inversions perform better in estimating near-surface methane concentrations.

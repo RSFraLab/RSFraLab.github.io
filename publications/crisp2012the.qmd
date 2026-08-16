@@ -1,0 +1,23 @@
+---
+title: 'The ACOS CO
+<sub>2</sub>
+retrieval algorithm – Part II: Global X
+<sub>
+CO
+<sub>2</sub>
+</sub>
+data characterization'
+author: 'Crisp, D. and Fisher, B. M. and O''Dell, C. and Frankenberg, C. and Basilio, R. and Bösch, H. and Brown, L. R. and Castano, R. and Connor, B. and Deutscher, N. M. and Eldering, A. and Griffith, D. and Gunson, M. and Kuze, A. and Mandrake, L. and McDuffie, J. and Messerschmidt, J. and Miller, C. E. and Morino, I. and Natraj, V. and Notholt, J. and O''Brien, D. M. and Oyafuso, F. and Polonsky, I. and Robinson, J. and Salawitch, R. and Sherlock, V. and Smyth, M. and Suto, H. and Taylor, T. E. and Thompson, D. R. and Wennberg, P. O. and Wunch, D. and Yung, Y. L.'
+type: 'journal-article'
+year: 2012
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-5-687-2012'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. Here, we report preliminary estimates of the column averaged carbon dioxide (CO<sub>2</sub>) dry air mole fraction, XCO<sub>2</sub>, retrieved from spectra recorded over land by the Greenhouse gases Observing Satellite, GOSAT (nicknamed "Ibuki"), using retrieval methods originally developed for the NASA Orbiting Carbon Observatory (OCO) mission. After screening for clouds and other known error sources, these retrievals reproduce much of the expected structure in the global XCO<sub>2</sub> field, including its variation with latitude and season. However, low yields of retrieved XCO<sub>2</sub> over persistently cloudy areas and ice covered surfaces at high latitudes limit the coverage of some geographic regions, even on seasonal time scales. Comparisons of early GOSAT XCO<sub>2</sub> retrievals with XCO<sub>2</sub> estimates from the Total Carbon Column Observing Network (TCCON) revealed a global, −2% (7–8 parts per million, ppm, with respect to dry air) XCO<sub>2</sub> bias and 2 to 3 times more variance in the GOSAT retrievals. About half of the global XCO<sub>2</sub> bias is associated with a systematic, 1% overestimate in the retrieved air mass, first identified as a global +10 hPa bias in the retrieved surface pressure. This error has been attributed to errors in the O<sub>2</sub> A-band absorption cross sections. Much of the remaining bias and spurious variance in the GOSAT XCO<sub>2</sub> retrievals has been traced to uncertainties in the instrument's calibration, oversimplified methods for generating O<sub>2</sub> and CO<sub>2</sub> absorption cross sections, and other subtle errors in the implementation of the retrieval algorithm. Many of these deficiencies have been addressed in the most recent version (Build 2.9) of the retrieval algorithm, which produces negligible bias in XCO<sub>2</sub> on global scales as well as a ~30% reduction in variance. Comparisons with TCCON measurements indicate that regional scale biases remain, but these could be reduced by applying empirical corrections like those described by Wunch et al. (2011b). We recommend that such corrections be applied before these data are used in source sink inversion studies to minimize spurious fluxes associated with known biases. These and other lessons learned from the analysis of GOSAT data are expected to accelerate the delivery of high quality data products from the Orbiting Carbon Observatory-2 (OCO-2), once that satellite is successfully launched and inserted into orbit.

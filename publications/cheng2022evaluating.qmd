@@ -1,0 +1,17 @@
+---
+title: 'Evaluating photosynthetic activity across Arctic-Boreal land cover types using solar-induced fluorescence'
+author: 'Cheng, Rui and Magney, Troy S and Orcutt, Erica L and Pierrat, Zoe and Köhler, Philipp and Bowling, David R and Bret-Harte, M Syndonia and Euskirchen, Eugénie S and Jung, Martin and Kobayashi, Hideki and Rocha, Adrian V and Sonnentag, Oliver and Stutz, Jochen and Walther, Sophia and Zona, Donatella and Frankenberg, Christian'
+type: 'journal-article'
+year: 2022
+publication: 'Environmental Research Letters'
+doi: '10.1088/1748-9326/ac9dae'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+Photosynthesis of terrestrial ecosystems in the Arctic-Boreal region is a critical part of the global carbon cycle. Solar-induced chlorophyll Fluorescence (SIF), a promising proxy for photosynthesis with physiological insight, has been used to track gross primary production (GPP) at regional scales. Recent studies have constructed empirical relationships between SIF and eddy covariance-derived GPP as a first step to predicting global GPP. However, high latitudes pose two specific challenges: (a) Unique plant species and land cover types in the Arctic–Boreal region are not included in the generalized SIF-GPP relationship from lower latitudes, and (b) the complex terrain and sub-pixel land cover further complicate the interpretation of the SIF-GPP relationship. In this study, we focused on the Arctic-Boreal vulnerability experiment (ABoVE) domain and evaluated the empirical relationships between SIF for high latitudes from the TROPOspheric Monitoring Instrument (TROPOMI) and a state-of-the-art machine learning GPP product (FluxCom). For the first time, we report the regression slope, linear correlation coefficient, and the goodness of the fit of SIF-GPP relationships for Arctic-Boreal land cover types with extensive spatial coverage. We found several potential issues specific to the Arctic-Boreal region that should be considered: (a) unrealistically high FluxCom GPP due to the presence of snow and water at the subpixel scale; (b) changing biomass distribution and SIF-GPP relationship along elevational gradients, and (c) limited perspective and misrepresentation of heterogeneous land cover across spatial resolutions. Taken together, our results will help improve the estimation of GPP using SIF in terrestrial biosphere models and cope with model-data uncertainties in the Arctic-Boreal region.

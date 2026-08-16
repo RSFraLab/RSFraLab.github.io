@@ -1,0 +1,18 @@
+---
+title: 'The ACOS CO
+<sub>2</sub>
+retrieval algorithm – Part 1: Description and validation against synthetic observations'
+author: 'O''Dell, C. W. and Connor, B. and Bösch, H. and O''Brien, D. and Frankenberg, C. and Castano, R. and Christi, M. and Eldering, D. and Fisher, B. and Gunson, M. and McDuffie, J. and Miller, C. E. and Natraj, V. and Oyafuso, F. and Polonsky, I. and Smyth, M. and Taylor, T. and Toon, G. C. and Wennberg, P. O. and Wunch, D.'
+type: 'journal-article'
+year: 2012
+publication: 'Atmospheric Measurement Techniques'
+doi: '10.5194/amt-5-99-2012'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract. This work describes the NASA Atmospheric CO<sub>2</sub> Observations from Space (ACOS) XCO<sub>2</sub> retrieval algorithm, and its performance on highly realistic, simulated observations. These tests, restricted to observations over land, are used to evaluate retrieval errors in the face of realistic clouds and aerosols, polarized non-Lambertian surfaces, imperfect meteorology, and uncorrelated instrument noise. We find that post-retrieval filters are essential to eliminate the poorest retrievals, which arise primarily due to imperfect cloud screening. The remaining retrievals have RMS errors of approximately 1 ppm. Modeled instrument noise, based on the Greenhouse Gases Observing SATellite (GOSAT) in-flight performance, accounts for less than half the total error in these retrievals. A small fraction of unfiltered clouds, particularly thin cirrus, lead to a small positive bias of ~0.3 ppm. Overall, systematic errors due to imperfect characterization of clouds and aerosols dominate the error budget, while errors due to other simplifying assumptions, in particular those related to the prior meteorological fields, appear small.

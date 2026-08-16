@@ -1,0 +1,15 @@
+---
+title: 'The 2ν3 band of CH<sub>4</sub> revisited with line mixing: Consequences for spectroscopy and atmospheric retrievals at 1.67μm'
+author: 'Tran, H. and Hartmann, J.-M. and Toon, G. and Brown, L.R. and Frankenberg, C. and Warneke, T. and Spietz, P. and Hase, F.'
+type: 'journal-article'
+year: 2010
+publication: 'Journal of Quantitative Spectroscopy and Radiative Transfer'
+doi: '10.1016/j.jqsrt.2010.02.015'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

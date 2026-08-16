@@ -1,0 +1,16 @@
+---
+title: 'Multisatellite Imaging of a Gas Well Blowout Enables Quantification of Total Methane Emissions'
+author: 'Cusworth, Daniel H. and Duren, Riley M. and Thorpe, Andrew K. and Pandey, Sudhanshu and Maasakkers, Joannes D. and Aben, Ilse and Jervis, Dylan and Varon, Daniel J. and Jacob, Daniel J. and Randles, Cynthia A. and Gautam, Ritesh and Omara, Mark and Schade, Gunnar W. and Dennison, Philip E. and Frankenberg, Christian and Gordon, Deborah and Lopinto, Ettore and Miller, Charles E.'
+type: 'journal-article'
+year: 2021
+publication: 'Geophysical Research Letters'
+doi: '10.1029/2020gl090864'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractIncidents involving loss of control of oil/gas wells can result in large but variable emissions whose impact on the global methane budget is currently unknown. On November 1, 2019, a gas well blowout was reported in the Eagle Ford Shale. By combining satellite observations at different spatial and temporal scales, we quantified emissions 10 times during the 20‐day event. Our multisatellite synthesis captures both the short‐term dynamics and total integrated emissions of the blowout. Such detailed event characterization was previously not possible from space and difficult to do with surface measurements. We present 30‐m methane and carbon dioxide plumes from the PRISMA satellite, which let us estimate flare combustion efficiency (87%). Integrating emissions across all satellites, we estimate 4,800 ± 980 metric tons lost methane. Blowouts occur across the globe and multisatellite observations can help to determine their pervasiveness, enable corrective action, and quantify their contribution to global methane budgets.

@@ -1,0 +1,16 @@
+---
+title: 'Satellite-based solar-induced fluorescence tracks seasonal and elevational patterns of photosynthesis in California’s Sierra Nevada mountains'
+author: 'Kunik, Lewis and Bowling, David R and Raczka, Brett and Frankenberg, Christian and Köhler, Philipp and Cheng, Rui and Smith, Kenneth R and Goulden, Michael and Jung, Martin and Lin, John C'
+type: 'journal-article'
+year: 2023
+publication: 'Environmental Research Letters'
+doi: '10.1088/1748-9326/ad07b4'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+AbstractRobust carbon monitoring systems are needed for land managers to assess and mitigate the changing effects of ecosystem stress on western United States forests, where most aboveground carbon is stored in mountainous areas. Atmospheric carbon uptake via gross primary productivity (GPP) is an important indicator of ecosystem function and is particularly relevant to carbon monitoring systems. However, limited ground-based observations in remote areas with complex topography represent a significant challenge for tracking regional-scale GPP. Satellite observations can help bridge these monitoring gaps, but the accuracy of remote sensing methods for inferring GPP is still limited in montane evergreen needleleaf biomes, where (a) photosynthetic activity is largely decoupled from canopy structure and chlorophyll content, and (b) strong heterogeneity in phenology and atmospheric conditions is difficult to resolve in space and time. Using monthly solar-induced chlorophyll fluorescence (SIF) sampled at ∼4 km from the TROPOspheric Monitoring Instrument (TROPOMI), we show that high-resolution satellite-observed SIF followed ecological expectations of seasonal and elevational patterns of GPP across a 3000 m elevation gradient in the Sierra Nevada mountains of California. After accounting for the effects of high reflected radiance in TROPOMI SIF due to snow cover, the seasonal and elevational patterns of SIF were well correlated with GPP estimates from a machine-learning model (FLUXCOM) and a land surface model (CLM<sub>5</sub>.0-SP), outperforming other spectral vegetation indices. Differences in the seasonality of TROPOMI SIF and GPP estimates were likely attributed to misrepresentation of moisture limitation and winter photosynthetic activity in FLUXCOM and CLM<sub>5</sub>.0 respectively, as indicated by discrepancies with GPP derived from eddy covariance observations in the southern Sierra Nevada. These results suggest that satellite-observed SIF can serve as a useful diagnostic and constraint to improve upon estimates of GPP toward multiscale carbon monitoring systems in montane, evergreen conifer biomes at regional scales.

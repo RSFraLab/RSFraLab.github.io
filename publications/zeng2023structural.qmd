@@ -1,0 +1,15 @@
+---
+title: 'Structural complexity biases vegetation greenness measures'
+author: 'Zeng, Yelu and Hao, Dalei and Park, Taejin and Zhu, Peng and Huete, Alfredo and Myneni, Ranga and Knyazikhin, Yuri and Qi, Jianbo and Nemani, Ramakrishna R. and Li, Fa and Huang, Jianxi and Gao, Yongyuan and Li, Baoguo and Ji, Fujiang and Köhler, Philipp and Frankenberg, Christian and Berry, Joseph A. and Chen, Min'
+type: 'journal-article'
+year: 2023
+publication: 'Nature Ecology &amp; Evolution'
+doi: '10.1038/s41559-023-02187-6'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+

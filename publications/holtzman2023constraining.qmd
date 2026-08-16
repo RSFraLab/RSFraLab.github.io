@@ -1,0 +1,17 @@
+---
+title: 'Constraining Plant Hydraulics With Microwave Radiometry in a Land Surface Model: Impacts of Temporal Resolution'
+author: 'Holtzman, Nataniel and Wang, Yujie and Wood, Jeffrey D. and Frankenberg, Christian and Konings, Alexandra G.'
+type: 'journal-article'
+year: 2023
+publication: 'Water Resources Research'
+doi: '10.1029/2023wr035481'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+Vegetation water content (VWC) plays a key role in transpiration, plant mortality, and wildfire risk. Although land surface models now often contain plant hydraulics schemes, there are few direct VWC measurements to constrain these models at global scale. One proposed solution to this data gap is passive microwave remote sensing, which is sensitive to temporal changes in VWC. Here, we test that approach by using synthetic microwave observations to constrain VWC and surface soil moisture within the Climate Modeling Alliance Land model. We further investigate the possible utility of sub‐daily observations of VWC, which could be obtained through a satellite in geostationary orbit or combinations of multiple satellites. These high‐temporal‐resolution observations could allow for improved determination of ecosystem parameters, carbon and water fluxes, and subsurface hydraulics, relative to the currently available twice‐daily sun‐synchronous observational patterns. We find that incorporating observations at four different times in the diurnal cycle (such as could be available from two sun‐synchronous satellites) provides a significantly better constraint on water and carbon fluxes than twice‐daily observations do. For example, the root mean square error of projected evapotranspiration and gross primary productivity during drought periods was reduced by approximately 40%, when using four‐times‐daily relative to twice‐daily observations. Adding hourly observations of the entire diurnal cycle did not further improve the inferred parameters and fluxes. Our comparison of observational strategies may be informative in the design of future satellite missions to study plant hydraulics, as well as when using existing remotely sensed data to study vegetation water stress response.

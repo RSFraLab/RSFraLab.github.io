@@ -1,0 +1,20 @@
+---
+title: 'Noise Reduction for Solar-Induced Fluorescence Retrievals Using Machine Learning and Principal Component Analysis: Simulations and Applications to GOME-2 Satellite Retrievals'
+author: 'Joiner, Joanna and Yoshida, Yasuko and Guanter, Luis and Lamsal, Lok and Li, Can and Fasnacht, Zachary and Köhler, Philipp and Frankenberg, Christian and Sun, Ying and Parazoo, Nicholas'
+type: 'journal-article'
+year: 2024
+publication: 'Artificial Intelligence for the Earth Systems'
+doi: '10.1175/aies-d-23-0085.1'
+materials: ''
+supplement: ''
+orcid_type: 'journal-article'
+toc: false
+---
+
+## Abstract
+
+Abstract
+We use a spectral-based approach that employs principal component analysis along with a relatively shallow artificial neural network (NN) to substantially reduce noise and other artifacts in terrestrial chlorophyll solar-induced fluorescence (SIF) retrievals. SIF is a very small emission at red and far-red wavelengths that is difficult to measure and is highly sensitive to random errors and systematic artifacts. Our approach relies upon an assumption that a trained NN can effectively reconstruct the total SIF signal from a relatively small number of leading principal components of the satellite-observed far-red radiance spectra without using information from the trailing modes that contain most of the random errors. We test the approach with simulated reflectance spectra produced with a full atmospheric and surface radiative transfer model using different observing and geophysical parameters and various noise levels. The resulting noisy and noise-reduced retrieved SIF values are compared with true values to assess performance. We then apply our noise reduction approach to SIF derived from two different satellite spectrometers. For evaluation, since the truth in this case is unknown, we compare SIF retrievals from two independent sensors with each other. We also compare the noise-reduced SIF temporal variations with those from an independent gross primary product (GPP) product that should display similar variations. Results show that our noise reduction approach improves the capture of SIF seasonal and interannual variability. Our approach should be applicable to many noisy data products derived from spectral measurements. Our methodology does not replace the original retrieval algorithms; rather, the original noisy retrievals are needed as the target for the NN training process.
+
+Significance Statement
+The purpose of this study is to document and demonstrate a machine learning algorithm that is used to effectively reduce noise and artifacts in a satellite data product, solar-induced fluorescence (SIF) from chlorophyll. This is important because SIF retrievals are typically noisy, and the noise limits their ability to be used for diagnosing plant health and productivity. Our results show substantial improvement in SIF retrievals that may lead to new applications. Our approach can be similarly applied to other noisy satellite data products.
