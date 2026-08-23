@@ -13,4 +13,17 @@ toc: false
 
 ## Abstract
 
-AbstractLegislation in the State of California mandates reductions in emissions of short‐lived climate pollutants of 40% from 2013 levels by 2030 for CH<sub>4</sub>. Identification of the sector(s) responsible for these emissions and their temporal and spatial variability is a key step in achieving these goals. Here, we determine the emissions of CH<sub>4</sub> in Los Angeles from 2011–2017 using a mountaintop remote sensing mapping spectrometer. We show that the pattern of CH<sub>4</sub> emissions contains both seasonal and nonseasonal contributions. We find that the seasonal component peaks in the winter and is correlated (R<sub>2</sub> = 0.58) with utility natural gas consumption from the residential and commercial sectors and not from the industrial and gas‐fired power plant sectors. The nonseasonal component is (22.9 ± 1.4) Gg CH<sub>4</sub>/month. If the seasonal correlation is causal, about (1.4 ± 0.1)% of the commercial and residential natural gas consumption in Los Angeles is released into the atmosphere.
+Abstract
+
+Legislation in the State of California mandates reductions in emissions of short‐lived climate pollutants of 40% from 2013 levels by 2030 for CH
+4
+. Identification of the sector(s) responsible for these emissions and their temporal and spatial variability is a key step in achieving these goals. Here, we determine the emissions of CH
+4
+in Los Angeles from 2011–2017 using a mountaintop remote sensing mapping spectrometer. We show that the pattern of CH
+4
+emissions contains both seasonal and nonseasonal contributions. We find that the seasonal component peaks in the winter and is correlated (
+R
+2
+= 0.58) with utility natural gas consumption from the residential and commercial sectors and not from the industrial and gas‐fired power plant sectors. The nonseasonal component is (22.9 ± 1.4) Gg CH
+4
+/month. If the seasonal correlation is causal, about (1.4 ± 0.1)% of the commercial and residential natural gas consumption in Los Angeles is released into the atmosphere.
