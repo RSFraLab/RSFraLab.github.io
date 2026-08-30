@@ -1,69 +1,5 @@
 [
   {
-    "listing": "/people.html",
-    "items": [
-      "/people/staff/frankenberg.html",
-      "/people/staff/Eva.html",
-      "/people/staff/renato.html",
-      "/people/staff/Qiren.html",
-      "/people/staff/keliu.html",
-      "/people/staff/emma.html",
-      "/people/alumni/Alexis.html",
-      "/people/alumni/Liyin.html",
-      "/people/alumni/Newton.html",
-      "/people/alumni/Philipp.html",
-      "/people/alumni/Rui.html",
-      "/people/alumni/Troy.html",
-      "/people/alumni/Vincent.html",
-      "/people/alumni/Ying.html",
-      "/people/alumni/anamika.html",
-      "/people/alumni/debsunder.html",
-      "/people/alumni/siraput.html",
-      "/people/alumni/yi.html",
-      "/people/alumni/yinon.html",
-      "/people/alumni/yujie.html",
-      "/people/alumni/yyao.html"
-    ]
-  },
-  {
-    "listing": "/preprints.html",
-    "items": [
-      "/publications/preprints/ort2026airborne.html",
-      "/publications/preprints/pascolini-campbell2026application.html",
-      "/publications/preprints/plewa2026a.html",
-      "/publications/preprints/shreevastava2026leveraging.html",
-      "/publications/preprints/yin2026natural.html",
-      "/publications/preprints/frankenberg2025on.html",
-      "/publications/preprints/yao2025improved.html",
-      "/publications/preprints/yoon2025inferring.html",
-      "/publications/preprints/frankenberg2024data.html",
-      "/publications/preprints/cao2023understanding.html",
-      "/publications/preprints/holtzman2023constraining.html",
-      "/publications/preprints/madsen2022investigation.html",
-      "/publications/preprints/wang2022modeling.html",
-      "/publications/preprints/liu2020thermal.html",
-      "/publications/preprints/turner2020extreme.html",
-      "/publications/preprints/turner2020observed.html",
-      "/publications/preprints/raczka2019sustained.html"
-    ]
-  },
-  {
-    "listing": "/tutorials.html",
-    "items": [
-      "/Tutorials/sif-retrieval.html"
-    ]
-  },
-  {
-    "listing": "/blogs.html",
-    "items": [
-      "/BlogPosts/BeyondVisible.html",
-      "/BlogPosts/MoveHyperspectral.html",
-      "/BlogPosts/vod_blog_March19.html",
-      "/BlogPosts/Carbon-I.html",
-      "/BlogPosts/BlogQuarto.html"
-    ]
-  },
-  {
     "listing": "/publications.html",
     "items": [
       "/publications/deck2026climaland.html",
@@ -184,6 +120,7 @@
       "/publications/sanghavi2020aerosols.html",
       "/publications/saunois2020the.html",
       "/publications/seyednasrollah2020seasonal.html",
+      "/publications/taylor2020oco-3.html",
       "/publications/thorpe2020methane.html",
       "/publications/turner2020a.html",
       "/publications/turner2020observed.html",
@@ -238,6 +175,7 @@
       "/publications/sun2017oco-2.html",
       "/publications/thorpe2017airborne.html",
       "/publications/verma2017effect.html",
+      "/publications/wood2017multiscale.html",
       "/publications/worden2017evaluation.html",
       "/publications/connor2016quantification.html",
       "/publications/frankenberg2016using.html",
@@ -252,8 +190,10 @@
       "/publications/thompson2016space-based.html",
       "/publications/thorpe2016mapping.html",
       "/publications/alexe2015inverse.html",
+      "/publications/bloom2015remote-sensing.html",
       "/publications/buchwitz2015the.html",
       "/publications/frankenberg2015the.html",
+      "/publications/guanter2015potential.html",
       "/publications/he2015impact.html",
       "/publications/koffi2015investigating.html",
       "/publications/kohler2015simplified.html",
@@ -264,6 +204,9 @@
       "/publications/schimel2015observing.html",
       "/publications/sun2015drought.html",
       "/publications/thompson2015real-time.html",
+      "/publications/worden2015quantifying.html",
+      "/publications/work2015corrigendum.html",
+      "/publications/xu2015satellite.html",
       "/publications/basu2014the.html",
       "/publications/butzin2014variations.html",
       "/publications/cressot2014on.html",
@@ -342,6 +285,70 @@
       "/publications/frankenberg2005retrieval.html",
       "/publications/khokhar2005satellite.html",
       "/publications/k-hl2004stratospheric.html"
+    ]
+  },
+  {
+    "listing": "/blogs.html",
+    "items": [
+      "/BlogPosts/BeyondVisible.html",
+      "/BlogPosts/MoveHyperspectral.html",
+      "/BlogPosts/vod_blog_March19.html",
+      "/BlogPosts/Carbon-I.html",
+      "/BlogPosts/BlogQuarto.html"
+    ]
+  },
+  {
+    "listing": "/tutorials.html",
+    "items": [
+      "/Tutorials/sif-retrieval.html"
+    ]
+  },
+  {
+    "listing": "/preprints.html",
+    "items": [
+      "/publications/preprints/ort2026airborne.html",
+      "/publications/preprints/pascolini-campbell2026application.html",
+      "/publications/preprints/plewa2026a.html",
+      "/publications/preprints/shreevastava2026leveraging.html",
+      "/publications/preprints/yin2026natural.html",
+      "/publications/preprints/frankenberg2025on.html",
+      "/publications/preprints/yao2025improved.html",
+      "/publications/preprints/yoon2025inferring.html",
+      "/publications/preprints/frankenberg2024data.html",
+      "/publications/preprints/cao2023understanding.html",
+      "/publications/preprints/holtzman2023constraining.html",
+      "/publications/preprints/madsen2022investigation.html",
+      "/publications/preprints/wang2022modeling.html",
+      "/publications/preprints/liu2020thermal.html",
+      "/publications/preprints/turner2020extreme.html",
+      "/publications/preprints/turner2020observed.html",
+      "/publications/preprints/raczka2019sustained.html"
+    ]
+  },
+  {
+    "listing": "/people.html",
+    "items": [
+      "/people/staff/frankenberg.html",
+      "/people/staff/Eva.html",
+      "/people/staff/renato.html",
+      "/people/staff/Qiren.html",
+      "/people/staff/keliu.html",
+      "/people/staff/emma.html",
+      "/people/alumni/Alexis.html",
+      "/people/alumni/Liyin.html",
+      "/people/alumni/Newton.html",
+      "/people/alumni/Philipp.html",
+      "/people/alumni/Rui.html",
+      "/people/alumni/Troy.html",
+      "/people/alumni/Vincent.html",
+      "/people/alumni/Ying.html",
+      "/people/alumni/anamika.html",
+      "/people/alumni/debsunder.html",
+      "/people/alumni/siraput.html",
+      "/people/alumni/yi.html",
+      "/people/alumni/yinon.html",
+      "/people/alumni/yujie.html",
+      "/people/alumni/yyao.html"
     ]
   }
 ]
