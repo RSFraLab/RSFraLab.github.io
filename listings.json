@@ -1,5 +1,37 @@
 [
   {
+    "listing": "/blogs.html",
+    "items": [
+      "/BlogPosts/BeyondVisible.html",
+      "/BlogPosts/MoveHyperspectral.html",
+      "/BlogPosts/vod_blog_March19.html",
+      "/BlogPosts/Carbon-I.html",
+      "/BlogPosts/BlogQuarto.html"
+    ]
+  },
+  {
+    "listing": "/preprints.html",
+    "items": [
+      "/publications/preprints/ort2026airborne.html",
+      "/publications/preprints/pascolini-campbell2026application.html",
+      "/publications/preprints/plewa2026a.html",
+      "/publications/preprints/shreevastava2026leveraging.html",
+      "/publications/preprints/yin2026natural.html",
+      "/publications/preprints/frankenberg2025on.html",
+      "/publications/preprints/yao2025improved.html",
+      "/publications/preprints/yoon2025inferring.html",
+      "/publications/preprints/frankenberg2024data.html",
+      "/publications/preprints/cao2023understanding.html",
+      "/publications/preprints/holtzman2023constraining.html",
+      "/publications/preprints/madsen2022investigation.html",
+      "/publications/preprints/wang2022modeling.html",
+      "/publications/preprints/liu2020thermal.html",
+      "/publications/preprints/turner2020extreme.html",
+      "/publications/preprints/turner2020observed.html",
+      "/publications/preprints/raczka2019sustained.html"
+    ]
+  },
+  {
     "listing": "/publications.html",
     "items": [
       "/publications/deck2026climaland.html",
@@ -288,41 +320,9 @@
     ]
   },
   {
-    "listing": "/blogs.html",
-    "items": [
-      "/BlogPosts/BeyondVisible.html",
-      "/BlogPosts/MoveHyperspectral.html",
-      "/BlogPosts/vod_blog_March19.html",
-      "/BlogPosts/Carbon-I.html",
-      "/BlogPosts/BlogQuarto.html"
-    ]
-  },
-  {
     "listing": "/tutorials.html",
     "items": [
       "/Tutorials/sif-retrieval.html"
-    ]
-  },
-  {
-    "listing": "/preprints.html",
-    "items": [
-      "/publications/preprints/ort2026airborne.html",
-      "/publications/preprints/pascolini-campbell2026application.html",
-      "/publications/preprints/plewa2026a.html",
-      "/publications/preprints/shreevastava2026leveraging.html",
-      "/publications/preprints/yin2026natural.html",
-      "/publications/preprints/frankenberg2025on.html",
-      "/publications/preprints/yao2025improved.html",
-      "/publications/preprints/yoon2025inferring.html",
-      "/publications/preprints/frankenberg2024data.html",
-      "/publications/preprints/cao2023understanding.html",
-      "/publications/preprints/holtzman2023constraining.html",
-      "/publications/preprints/madsen2022investigation.html",
-      "/publications/preprints/wang2022modeling.html",
-      "/publications/preprints/liu2020thermal.html",
-      "/publications/preprints/turner2020extreme.html",
-      "/publications/preprints/turner2020observed.html",
-      "/publications/preprints/raczka2019sustained.html"
     ]
   },
   {
