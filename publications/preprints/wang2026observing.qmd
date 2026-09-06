@@ -1,0 +1,16 @@
+---
+title: 'Observing the Seasonality of Amazon Forest Greenness at Fixed Phase Angles Using a Geostationary Satellite'
+author: 'Wang, Qiren and Morton, Douglas  C. and Liu, Ke and Frankenberg, Christian'
+type: 'preprint'
+year: 2026
+publication: ''
+doi: '10.2139/ssrn.7372479'
+materials: ''
+supplement: ''
+orcid_type: 'preprint'
+toc: false
+---
+
+## Abstract
+
+Observing the seasonality of Amazon forest greenness, especially the dry season change, is essential for understanding how Amazon forests respond to water stress. Yet, the small seasonal changes in greenness observed by satellites are affected by the relative direction of solar illumination and satellite observation, namely the sun-sensor geometry effect. Currently, most sun-sensor geometry corrections for Amazon studies rely on a semi-empirical model fitted with Moderate Resolution Imaging Spectroradiometer (MODIS) observations, which may be limited by the number of clear-sky observations over the cloudy Amazon. Compared to sun-synchronous sensors such as MODIS, geostationary satellites have much higher temporal resolution, providing more observations under a wide range of sun-sensor geometries to correct for these artefacts. Here, we leverage data from the Geostationary Operational Environmental Satellite-16 (GOES-16), to correct the seasonality of vegetation indices in Amazon forests to fixed sun-sensor angles (phase angles). Our correction method more directly depends on the observations rather than on a semi-empirical model. We first show that, before correction, two commonly used vegetation indices, EVI and NDVI, exhibit contrasting seasonality. We attribute this contrasting seasonality to the sun-sensor geometry effects using both observational and theoretical evidence. After applying our correction, we show that the consistency between EVI and NDVI seasonality in GOES-16 improves. We also compare our corrected results with the MODIS Multi-Angle Implementation of Atmospheric Correction (MAIAC) products, which correct the sun-sensor geometry effects based on a semi-empirical model. The dry season changes (June to October) in EVI generally show increasing patterns in the two corrected datasets, yet dry season changes in EVI differ from changes in NDVI, especially in MODIS MAIAC products. Further work is needed to thoroughly compare the two datasets with ground-based observations to reconcile these differences. Though we cannot provide a definitive conclusion about the small residual dry season changes in Amazon forest greenness in the corrected datasets, we recommend always examining the consistency among vegetation indices in studies of the Amazon forest greenness change and emphasize that contrasting changes between EVI and NDVI can serve as an indicator of sun-sensor geometry effects.
