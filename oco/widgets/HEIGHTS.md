@@ -27,3 +27,13 @@ canvases; the OCO widgets re-render the chart offscreen).
 
 Reproduce: `python3 -m http.server 8765` in the site root, then
 `node test_widgets.js <screenshot dir>` (see `oco/scripts/measure_heights.js`).
+
+## Control test (2026-09-16)
+
+`oco/scripts/test_widget_controls.js` clicks every button/chip/tab, drives every slider to both
+ends, opens every `<details>`, and triggers the PNG export in all ten widgets (headless Chromium,
+local `http.server`). Result: no console or page errors in any widget; every PNG button produced a
+download; every button that is meant to change the plot redrew the canvas (spectra 5/6 buttons —
+the sixth is the sounding toggle, which also redraws once data is loaded; footprint 4/5; photon 1/1;
+resolution 5/5; spectral 7/8; albedo 4/5; canopy 4/5; fluorescence 1/1; fraunhofer and sif-map
+have sliders/legend only).
