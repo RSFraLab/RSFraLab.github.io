@@ -76,7 +76,7 @@ snow 0.955/0.156/0.052, conifer 0.652/0.261/0.112, dry grass 0.517/0.597/0.452.
 
 `img/xco2_hero.jpg` (2400 × 1080, 148 kB): per-cell **median** XCO₂ of all good-quality OCO-2
 Lite v11.2 soundings of 2023 on a 3° grid (29.0 M soundings, 5855 cells), nearest-neighbour
-gap-filled, σ = 0.7 cell smoothing, drawn over land only (ocean left dark), Antarctica masked,
+gap-filled, σ = 0.7 cell smoothing, drawn over land only (ocean left dark), Antarctica removed entirely for now,
 bold light coastlines, Robinson projection, colour range 413.4–420.8 ppm. There is no OCO L3
 product on disk, so this is our own composite; annual medians at high latitudes are biased low by
 summer-only sampling (the blue Siberia).

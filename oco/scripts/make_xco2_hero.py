@@ -24,5 +24,8 @@ lon = np.arange(-180, 180 + res/2, res); lat = np.arange(-90, 90 + res/2, res)
 pm = ax.pcolormesh(lon, lat, np.ma.masked_invalid(Xs), transform=ccrs.PlateCarree(), cmap=cmap, vmin=lo, vmax=hi, shading="flat", zorder=2)
 ax.add_feature(cfeature.OCEAN.with_scale("110m"), facecolor="#0b1420", edgecolor="none", zorder=3)   # ocean stays dark
 ax.add_feature(cfeature.COASTLINE.with_scale("50m"), edgecolor="#e8edf2", linewidth=1.8, zorder=4)   # bold light outlines
+# Antarctica removed for now (no data there and the polar edge of the projection distracts): paint it as ocean
+import matplotlib.patches as mpatches
+ax.add_patch(mpatches.Rectangle((-180, -90), 360, 30, transform=ccrs.PlateCarree(), facecolor="#0b1420", edgecolor="none", zorder=5))
 fig.savefig(out, dpi=100, pil_kwargs={"quality": 62, "optimize": True, "progressive": True})
 print("wrote", out, f"{os.path.getsize(out)/1e3:.0f} kB")
