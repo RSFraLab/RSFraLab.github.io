@@ -1,0 +1,50 @@
+{
+ "attribution": "\u00a9 OpenStreetMap contributors (openstreetmap.org standard tiles, stitched offline; ODbL)",
+ "projection": "Web Mercator (EPSG:3857)",
+ "views": {
+  "orbit": {
+   "file": "basemap_orbit.jpg",
+   "zoom": 2,
+   "width": 1024,
+   "height": 640,
+   "lon_w": -300.0,
+   "lon_e": 60.0,
+   "lat_s": -71.0066687221385,
+   "lat_n": 76.5650934721466,
+   "m_per_px_at_centre": 38541.198373502346
+  },
+  "200km": {
+   "file": "basemap_200km.jpg",
+   "zoom": 9,
+   "width": 1100,
+   "height": 760,
+   "lon_w": -119.5606201171875,
+   "lon_e": -116.5393798828125,
+   "lat_s": 33.18085035125618,
+   "lat_n": 34.91033035928778,
+   "m_per_px_at_centre": 253.3273756670442
+  },
+  "12km": {
+   "file": "basemap_12km.jpg",
+   "zoom": 13,
+   "width": 1100,
+   "height": 760,
+   "lon_w": -117.99441375732422,
+   "lon_e": -117.80558624267579,
+   "lat_s": 34.06598005850462,
+   "lat_n": 34.17398545444684,
+   "m_per_px_at_centre": 15.819877160833856
+  },
+  "12km_oco3": {
+   "file": "basemap_12km_oco3.jpg",
+   "zoom": 13,
+   "width": 1100,
+   "height": 760,
+   "lon_w": -118.54002673704163,
+   "lon_e": -118.35119922239319,
+   "lat_s": 34.248423913283034,
+   "lat_n": 34.35619588832512,
+   "m_per_px_at_centre": 15.785687275092133
+  }
+ }
+}

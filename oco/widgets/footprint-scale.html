@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCO Footprint Scale — from one orbit to one sounding</title>
+<style>
+  :root{--bg:transparent;--panel:#ffffff;--hairline:#d9dee3;--text:#1d2530;--muted:#5b6773;--faint:#8a97a5;
+    --track:#1f6fb2;--fp:#c92a5a;--fp-fill:rgba(201,42,90,0.28);--fp2:#7a5cc4;--fp2-fill:rgba(122,92,196,0.30);--chip-on-bg:#1d2530;--chip-on-fg:#ffffff}
+  [data-theme="dark"][data-standalone]{--bg:#171c22}
+  [data-theme="dark"]{--panel:#212831;--hairline:#1e2733;--text:#e8edf2;--muted:#8a97a5;--faint:#5b6773;--track:#5aa9e6;--fp:#ff5c8a;--fp-fill:rgba(255,92,138,0.32);--fp2:#a48ae0;--fp2-fill:rgba(164,138,224,0.34);--chip-on-bg:#e8edf2;--chip-on-fg:#0b0f14}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg)}
+  body{color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5}
+  .widget{background:var(--panel);border:1px solid var(--hairline);border-radius:8px;overflow:hidden;max-width:960px;margin:0 auto}
+  .head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--hairline)}
+  .grp{display:flex;gap:6px}
+  .tab,.chip,.btn{font:12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;border:1px solid var(--hairline);border-radius:999px;padding:4px 11px;background:transparent;color:var(--text);cursor:pointer}
+  .tab.on,.chip.on{background:var(--chip-on-bg);color:var(--chip-on-fg);border-color:var(--chip-on-bg)}
+  .spacer{margin-left:auto}
+  .body{position:relative;padding:8px 6px 0}
+  canvas{display:block;width:100%}
+  .readouts{display:flex;flex-wrap:wrap;gap:6px 18px;padding:8px 16px;border-top:1px solid var(--hairline);font:12px ui-monospace,Menlo,monospace;color:var(--muted)}
+  .readouts b{color:var(--text);font-weight:600}
+  .caption{padding:8px 16px 10px;color:var(--muted);font-size:13px;max-width:80ch}
+  .attrib{font:10px ui-monospace,Menlo,monospace;color:var(--faint);padding:0 16px 10px}
+</style>
+</head>
+<body>
+<div class="widget">
+  <div class="head">
+    <div class="grp" id="sat"><button class="tab on" data-sat="oco2">OCO-2 (nadir)</button><button class="tab" data-sat="oco3">OCO-3 (snapshot map)</button></div>
+    <div class="grp" id="zoom"><button class="chip" data-z="orbit">whole orbit</button><button class="chip on" data-z="200km">200 km</button><button class="chip" data-z="12km">12 km</button></div>
+    <button class="btn spacer" id="exportBtn" title="Download this view as a PNG (2×)">PNG ↓</button>
+  </div>
+  <div class="body"><canvas id="cv" aria-label="Map of OCO footprints at the selected scale"></canvas></div>
+  <div class="readouts" id="ro"></div>
+  <p class="caption" id="cap">Each OCO-2 sounding is a sliver about 1 km along the spectrometer slit and 2 km along the orbit (the smear during one third of a second); eight sit end to end along the slit, only ~9 km in total, three frames every second. Footprint pitch is 1.29 km but the sampled width is 1.09 km (20 of 24 detector rows are summed per footprint), which is why small gaps show between the polygons — they are drawn as the L1b vertices describe them. The satellite rotates its slit along the orbit, so over Los Angeles the eight footprints happen to line up almost along the track instead of across it. A single 99-minute orbit traces one thin line around the Earth, so global maps are built from thousands of such lines over sixteen days. OCO-3 on the Space Station instead sweeps its pointing mirror to lay adjacent swaths over a city, a "snapshot area map".</p>
+  <p class="attrib" id="attrib">Basemap © OpenStreetMap contributors</p>
+</div>
+<script>
+"use strict";
+const Q=new URLSearchParams(location.search); const THEME_PARAM=Q.get("theme");
+function pageIsDark(){ try{ if(window.parent===window) return null; const d=window.parent.document; if(d.body.classList.contains("quarto-dark")) return true; if(d.body.classList.contains("quarto-light")) return false; const bs=d.documentElement.getAttribute("data-bs-theme"); return bs?bs==="dark":null; }catch(e){ return null; } }
+(function(){ const h=pageIsDark(); const dark=THEME_PARAM?THEME_PARAM==="dark":(h===null?false:h); document.documentElement.setAttribute("data-theme",dark?"dark":"light"); if(window.parent===window) document.documentElement.setAttribute("data-standalone",""); })();
+if (Q.get("caption")==="0") document.querySelectorAll(".caption").forEach(e=>e.remove());
+const css=getComputedStyle(document.documentElement), col=k=>css.getPropertyValue(k).trim();
+const C={hair:col("--hairline"),text:col("--text"),muted:col("--muted"),faint:col("--faint"),track:col("--track"),fp:col("--fp"),fpFill:col("--fp-fill"),fp2:col("--fp2"),fp2Fill:col("--fp2-fill"),panel:col("--panel")};
+
+const DATA=(Q.get("data")||"../data").replace(/\/$/,""); const IMG=(Q.get("img")||"../img").replace(/\/$/,"");
+const state={sat:"oco2", z:"200km"}; const H=440;
+let BM=null, TRACK=null, FP2=null, FP3=null; const imgs={};
+const load=n=>fetch(`${DATA}/${n}`).then(r=>r.json());
+Promise.all([load("basemaps.json"), load("track_oco2_orbit.json"), load("footprints_oco2_la.json"), load("footprints_oco3_sam_la.json").catch(()=>null)])
+  .then(([b,t,f2,f3])=>{ BM=b; TRACK=t; FP2=f2; FP3=f3; for (const k in b.views){ const im=new Image(); im.onload=()=>draw(); im.src=`${IMG}/${b.views[k].file}`; imgs[k]=im; } draw(); })
+  .catch(e=>{ const ctx=cv.getContext("2d"); ctx.font="13px system-ui"; ctx.fillStyle=C.muted; ctx.fillText("data not found — pass ?data=<dir>&img=<dir>", 20, 40); });
+
+/* Web-Mercator helpers: the basemaps are plain Mercator crops with known lon/lat bounds */
+const mercY=lat=>Math.log(Math.tan(Math.PI/4+lat*Math.PI/360));
+function projector(view, W, Hpx){
+  // fit the basemap into the canvas preserving its aspect (letterbox on the panel colour)
+  const s=Math.min(W/view.width, Hpx/view.height), w=view.width*s, h=view.height*s, ox=(W-w)/2, oy=(Hpx-h)/2;
+  const yN=mercY(view.lat_n), yS=mercY(view.lat_s);
+  const wrap=lon=>{ while(lon<view.lon_w) lon+=360; while(lon>view.lon_e) lon-=360; return lon; };
+  return { ox, oy, w, h, s,
+    x:lon=>ox+(wrap(lon)-view.lon_w)/(view.lon_e-view.lon_w)*w,
+    y:lat=>oy+(yN-mercY(lat))/(yN-yS)*h,
+    mPerPx:(lat)=>40075016.686*Math.cos(lat*Math.PI/180)/(256*Math.pow(2,view.zoom))/s };
+}
+function centreOf(frames){ // centroid of all valid footprints
+  let sx=0,sy=0,n=0; for (const f of frames) for (const fp of f.fp){ if(!fp) continue; for (const [lo,la] of fp){ sx+=lo; sy+=la; n++; } } return [sx/n, sy/n];
+}
+const cv=document.getElementById("cv");
+function render(ctx, W, scale){
+  const dpr=(window.devicePixelRatio||1)*scale; ctx.canvas.width=Math.round(W*dpr); ctx.canvas.height=Math.round(H*dpr); ctx.canvas.style.height=H+"px"; ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.fillStyle=C.panel; ctx.fillRect(0,0,W,H);
+  if (!BM) return;
+  const vkey=(state.sat==="oco3" && state.z==="12km" && BM.views["12km_oco3"]) ? "12km_oco3" : state.z;
+  const view=BM.views[vkey], P=projector(view, W, H);
+  const im=imgs[vkey]; if (im && im.complete && im.naturalWidth) ctx.drawImage(im, P.ox, P.oy, P.w, P.h);
+  ctx.save(); ctx.beginPath(); ctx.rect(P.ox,P.oy,P.w,P.h); ctx.clip();
+  const ro=[];
+  if (state.sat==="oco2"){
+    // orbit track
+    if (TRACK){ ctx.strokeStyle=C.track; ctx.lineWidth=state.z==="orbit"?2.2:6; ctx.globalAlpha=state.z==="orbit"?1:0.25; ctx.beginPath(); let pen=false, px0=null;
+      for (const [lo,la] of TRACK.lonlat){ if (la<view.lat_s || la>view.lat_n){ pen=false; continue; }   // outside the basemap: lift the pen
+        const x=P.x(lo), y=P.y(la); if (pen && Math.abs(x-px0)>P.w/2) pen=false; pen?ctx.lineTo(x,y):ctx.moveTo(x,y); pen=true; px0=x; } ctx.stroke(); ctx.globalAlpha=1; }
+    if (FP2){
+      const poly=(fp)=>{ ctx.beginPath(); fp.forEach(([lo,la],i)=> i?ctx.lineTo(P.x(lo),P.y(la)):ctx.moveTo(P.x(lo),P.y(la))); ctx.closePath(); };
+      // all frames, light fill (at 12 km only the frames inside the view matter)
+      for (const f of FP2.frames) for (const fp of f.fp){ if(!fp) continue; poly(fp); ctx.fillStyle=C.fpFill; ctx.globalAlpha=state.z==="12km"?0.35:1; ctx.fill(); ctx.globalAlpha=1; }
+      if (state.z==="12km"){
+        // ONE frame drawn explicitly: the frame whose centroid is nearest the map centre, with its eight footprints outlined and numbered
+        const cx=(view.lon_w+view.lon_e)/2, cy=(view.lat_s+view.lat_n)/2; let best=null, bd=1e9;
+        for (const f of FP2.frames){ const c=centreOf([f]); const d=Math.hypot((c[0]-cx)*Math.cos(cy*Math.PI/180), c[1]-cy); if (d<bd){ bd=d; best=f; } }
+        if (best){ best.fp.forEach((fp,k)=>{ if(!fp) return; poly(fp); ctx.fillStyle=C.fpFill; ctx.fill(); ctx.strokeStyle=C.fp; ctx.lineWidth=1.6; ctx.stroke();
+            const c=centreOf([{fp:[fp]}]); ctx.fillStyle=C.fp; ctx.font="bold 11px ui-monospace, Menlo, monospace"; ctx.textAlign="center"; ctx.textBaseline="middle"; ctx.fillText(String(k+1), P.x(c[0]), P.y(c[1])); });
+          const l1=`one frame (⅓ s), footprints 1–8, ${best.t.slice(0,8)} UTC`, l2=`slit ${Math.abs(FP2.meta.slit_angle_from_track_deg_median).toFixed(0)}° from the ground track here`;
+          ctx.font="11px ui-monospace, Menlo, monospace"; const bw=Math.max(ctx.measureText(l1).width, ctx.measureText(l2).width)+14;
+          ctx.fillStyle="rgba(255,255,255,0.88)"; ctx.fillRect(P.ox+P.w-bw-8,P.oy+8,bw,34); ctx.fillStyle="#1d2530"; ctx.textAlign="left"; ctx.textBaseline="top";
+          ctx.fillText(l1, P.ox+P.w-bw-1, P.oy+12); ctx.fillText(l2, P.ox+P.w-bw-1, P.oy+26); }
+      }
+      const m=FP2.meta; ro.push(["footprint", `${m.footprint_along_slit_km_median.toFixed(2)} km sampled width along the slit (pitch 1.29 km, 20 of 24 detector rows) × ${m.footprint_along_track_km_median.toFixed(2)} km along track (medians of ${m.n_footprints} vertex sets)`]);
+      ro.push(["8 footprints", `${m.swath_along_slit_km_median.toFixed(1)} km end to end along the slit, which is rotated ${Math.abs(m.slit_angle_from_track_deg_median).toFixed(0)}° from the ground track over LA (≈ 85° near the equator)`]); ro.push(["shown", `${m.n_frames} frames = ${(m.n_frames/m.frame_rate_hz).toFixed(0)} s of flight, ${m.date} ${FP2.frames[0].t.slice(0,8)} UTC, orbit ${m.orbit}`]);
+      if (TRACK) ro.push(["orbit track", `${TRACK.meta.n_points} points, 10 s apart, ${TRACK.meta.date} (daytime half of one orbit)`]); }
+  } else if (FP3){
+    for (const f of FP3.frames) for (const fp of f.fp){ if(!fp) continue; ctx.beginPath(); fp.forEach(([lo,la],i)=> i?ctx.lineTo(P.x(lo),P.y(la)):ctx.moveTo(P.x(lo),P.y(la))); ctx.closePath(); ctx.fillStyle=C.fp2Fill; ctx.fill(); if (state.z==="12km"){ ctx.strokeStyle=C.fp2; ctx.lineWidth=1; ctx.stroke(); } }
+    const m=FP3.meta; ro.push(["SAM", `${m.target_name.replace(/_/g," ")} (${m.sam_id}), ${m.date}, ${m.n_swaths} swaths, ${m.n_footprints} soundings`]);
+    ro.push(["footprint", `${m.crosstrack_km_median.toFixed(2)} × ${m.alongtrack_km_median.toFixed(2)} km (medians; off-nadir pointing enlarges them)`]);
+    ro.push(["quality", `${m.n_good_quality} passed the XCO₂ quality filter, median ${m.xco2_median_good_ppm.toFixed(1)} ppm`]);
+  }
+  ctx.restore();
+  // scale bar (always visible): pick a round length ~1/5 of the width at the map centre latitude
+  const latC=(view.lat_n+view.lat_s)/2, mpp=P.mPerPx(latC), target=W*0.18*mpp; const nice=[1e3,2e3,5e3,1e4,2e4,5e4,1e5,2e5,5e5,1e6,2e6,5e6].reduce((a,v)=>Math.abs(v-target)<Math.abs(a-target)?v:a);
+  const bw=nice/mpp, bx=P.ox+14, by=P.oy+P.h-18;
+  ctx.fillStyle="rgba(255,255,255,0.85)"; ctx.fillRect(bx-6,by-16,bw+12,26); ctx.strokeStyle="#1d2530"; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(bx,by); ctx.lineTo(bx+bw,by); ctx.moveTo(bx,by-5); ctx.lineTo(bx,by+5); ctx.moveTo(bx+bw,by-5); ctx.lineTo(bx+bw,by+5); ctx.stroke();
+  ctx.fillStyle="#1d2530"; ctx.font="11px ui-monospace, Menlo, monospace"; ctx.textAlign="center"; ctx.textBaseline="bottom"; ctx.fillText(nice>=1e3?(nice/1e3)+" km":nice+" m", bx+bw/2, by-3);
+  // map frame
+  ctx.strokeStyle=C.hair; ctx.lineWidth=1; ctx.strokeRect(P.ox+0.5,P.oy+0.5,P.w-1,P.h-1);
+  document.getElementById("ro").innerHTML=ro.map(([k,v])=>`<span>${k} <b>${v}</b></span>`).join("");
+}
+function draw(){ render(cv.getContext("2d"), cv.clientWidth||800, 1); }
+document.getElementById("sat").addEventListener("click", e=>{ const t=e.target.closest(".tab"); if(!t) return; state.sat=t.dataset.sat; document.querySelectorAll("#sat .tab").forEach(x=>x.classList.toggle("on",x===t)); if (state.sat==="oco3" && state.z==="orbit") setZoom("200km"); draw(); });
+function setZoom(z){ state.z=z; document.querySelectorAll("#zoom .chip").forEach(x=>x.classList.toggle("on",x.dataset.z===z)); }
+document.getElementById("zoom").addEventListener("click", e=>{ const t=e.target.closest(".chip"); if(!t) return; setZoom(t.dataset.z); draw(); });
+window.addEventListener("resize", draw);
+document.getElementById("exportBtn").addEventListener("click", ()=>{ const off=document.createElement("canvas"); render(off.getContext("2d"), cv.clientWidth||800, 2/(window.devicePixelRatio||1));
+  off.toBlob(b=>{ const a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download=`oco_footprints_${state.sat}_${state.z}.png`; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000); },"image/png"); });
+draw();
+</script>
+</body>
+</html>
