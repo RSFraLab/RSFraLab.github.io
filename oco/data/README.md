@@ -45,16 +45,21 @@ polarization**, so the L1b radiance is ≈ ½ of the total intensity of an unpol
 | file | contents | check |
 |---|---|---|
 | `track_oco2_orbit.json` (6 kB) | orbit 53380, 2024-07-14, nadir; sub-satellite point every 10 s | 280 points, 20:39:55–21:26:25 UTC, lon −176.6…176.4 (crosses the dateline), lat −58.3…81.8 |
-| `footprints_oco2_la.json` (71 kB) | 100 consecutive nadir frames over the LA basin (centre 34.125 N, 117.898 W), 8 footprints × 4 O₂-band vertices | 755 of 800 footprints have vertices (45 are fill values in the L1b file → `null`); **medians: cross-track 1.085 km, along-track 2.276 km, swath 8.67 km** |
+| `footprints_oco2_la.json` (72 kB) | 100 consecutive nadir frames over the LA basin (centre 34.125 N, 117.898 W), 8 footprints × 4 O₂-band vertices | 755 of 800 footprints have vertices (45 are fill values in the L1b file → `null`); **medians: 1.085 km along the slit × 2.276 km along track, 8.67 km for the eight footprints end to end; slit 11.7° from the ground track** |
 | `footprints_oco3_sam_la.json` (209 kB) | OCO-3 SAM `fossil0005` "fossil_Los_Angeles_USA", 2022-02-18, all Lite soundings grouped by frame and swath | 305 frames, 2199 footprints, 8 swaths, 1641 good-quality, median XCO₂ 419.4 ppm; medians 2.25 × 2.34 km |
 | `basemaps.json` + `img/basemap_{orbit,200km,12km,12km_oco3}.jpg` | stitched OpenStreetMap standard raster tiles (Web Mercator), bounds in the JSON | orbit z2 1024×800 (lon −300…60), 200 km z9 1100×760 (253 m/px), 12 km z13 1100×760 (15.8 m/px); © OpenStreetMap contributors (ODbL) |
 
-The footprint sizes are geodesic side lengths of the L1b vertex parallelograms (short pair =
-across track, long pair = along track); swath = separation of footprint 1 and 8 centroids + one
-footprint width. **They come out at 1.09 / 2.28 / 8.7 km, not the often-quoted 1.29 / 2.25 /
-10.3 km** — the along-track size agrees, the across-track width from the vertices is ~15 %
-smaller; reported as measured, not adjusted. The OCO-3 file carries only the soundings that
-passed L2 pre-screening (the Lite product), not every L1b sounding of the SAM.
+**Geometry finding (2026-09-16).** OCO-2 does not keep its slit across the ground track: the
+slit direction rotates along the orbit (measured on three granules: ~85° from the track near the
+equator, ~70° at 28°S, only ~10° at 34°N, ~35° at 62°N), so over Los Angeles the eight footprints of
+a frame are stacked nearly **along** the track and the 8.7 km "swath" lies along the slit. Footprint
+dimensions are geodesic side lengths of the L1b vertex parallelograms: the short side is the pitch
+along the slit (1.09 km, nominal 1.29 km), the long side the along-track smear per ⅓-s frame
+(2.28 km, nominal 2.25 km); each footprint is only ~0.6 km wide across the slit. The along-slit
+values are ~15 % below the often-quoted 1.29 / 10.3 km; reported as measured, not adjusted. The
+widget draws one frame explicitly with its eight numbered footprints and states the slit angle. The
+OCO-3 file carries only the soundings that passed L2 pre-screening (the Lite product), not every L1b
+sounding of the SAM.
 
 ## 3. Surface albedo
 

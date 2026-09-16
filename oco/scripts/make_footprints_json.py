@@ -37,9 +37,14 @@ def poly_dims(vlo, vla):
     # vertices ordered around the footprint: sides 0-1, 1-2, 2-3, 3-0; along/cross from the two side pairs
     s = [g.inv(vlo[i], vla[i], vlo[(i+1) % 4], vla[(i+1) % 4])[2] / 1e3 for i in range(4)]
     return sorted([np.mean([s[0], s[2]]), np.mean([s[1], s[3]])])   # (short, long)
-short, long_, swath = [], [], []
+short, long_, swath, slit_ang = [], [], [], []
+def ang_diff(a, b): return (a - b + 90) % 180 - 90          # signed angle between two lines, -90..90
 fr = []
 for f in frames:
+    # slit direction (fp1 -> fp8 centres) relative to the ground-track heading (footprint 4, this frame -> next)
+    if f + 1 < lat.shape[0] and np.all(np.isfinite([lat[f, 0], lat[f, 7], lat[f + 1, 3]])):
+        az_t = g.inv(lon[f, 3], lat[f, 3], lon[f + 1, 3], lat[f + 1, 3])[0]; az_s = g.inv(lon[f, 0], lat[f, 0], lon[f, 7], lat[f, 7])[0]
+        slit_ang.append(ang_diff(az_s, az_t))
     fps = []
     for k in range(8):
         vlo, vla = vlon[f, k, :], vlat[f, k, :]
@@ -53,10 +58,12 @@ for f in frames:
     fr.append({"t": hms(t[f, 3]), "fp": fps})
 meta = {"file": os.path.basename(l1b), "date": date, "orbit": orbit, "mode": mode, "n_frames": NF, "n_footprints": int(sum(fp is not None for x in fr for fp in x["fp"])),
         "frame_rate_hz": 3, "centre_frame_lat": r5(nadir_lat[c]), "centre_frame_lon": r5(nadir_lon[c]),
-        "crosstrack_km_median": r5(np.nanmedian(short)), "alongtrack_km_median": r5(np.nanmedian(long_)), "swath_km_median": r5(np.nanmedian(swath)),
+        "footprint_along_slit_km_median": r5(np.nanmedian(short)), "footprint_along_track_km_median": r5(np.nanmedian(long_)), "swath_along_slit_km_median": r5(np.nanmedian(swath)),
+        "slit_angle_from_track_deg_median": r5(np.median(slit_ang)) if slit_ang else None,
+        "geometry_note": "OCO-2 rotates its slit along the orbit (about 85 deg from the track near the equator, only ~10 deg from it over Los Angeles at 34 N), so here the eight footprints of a frame are stacked nearly ALONG the ground track and the 'swath' lies along the slit, not across the track. Footprint dims are geodesic side lengths of the L1b vertex parallelograms: short side = pitch along the slit (nominal 1.29 km), long side = along-track smear per 1/3 s frame (nominal 2.25 km).",
         "vertices": "O2 A-band footprint vertices from L1b FootprintGeometry (geodetic, topography-corrected), [lon, lat]",
         "created": datetime.date.today().isoformat(),
-        "missing_note": "footprints with fill-value vertices in the L1b file are null (see n_footprints)", "description": f"{NF} consecutive nadir frames over ({lat0}, {lon0}), window chosen with the fewest fill-value footprints; footprint dims are geodesic side lengths (short = across track, long = along track); swath = outer footprint centroid separation + one footprint width"}
+        "missing_note": "footprints with fill-value vertices in the L1b file are null (see n_footprints)", "description": f"{NF} consecutive nadir frames over ({lat0}, {lon0}), window chosen with the fewest fill-value footprints; swath = separation of footprint 1 and 8 centroids + one footprint pitch"}
 json.dump({"meta": meta, "frames": fr}, open(f"{out}/footprints_oco2_la.json", "w"), separators=(",", ":"))
 print("track:", len(idx), "points", track["meta"]["time_utc_first"], "->", track["meta"]["time_utc_last"], f"{os.path.getsize(out+'/track_oco2_orbit.json')/1e3:.0f} kB")
-print("footprints:", meta["n_footprints"], "footprints, centre", meta["centre_frame_lat"], meta["centre_frame_lon"], "medians cross/along/swath km:", meta["crosstrack_km_median"], meta["alongtrack_km_median"], meta["swath_km_median"], f"{os.path.getsize(out+'/footprints_oco2_la.json')/1e3:.0f} kB")
+print("footprints:", meta["n_footprints"], "footprints, centre", meta["centre_frame_lat"], meta["centre_frame_lon"], "medians along-slit/along-track/swath km:", meta["footprint_along_slit_km_median"], meta["footprint_along_track_km_median"], meta["swath_along_slit_km_median"], "slit angle from track", meta["slit_angle_from_track_deg_median"], f"{os.path.getsize(out+'/footprints_oco2_la.json')/1e3:.0f} kB")

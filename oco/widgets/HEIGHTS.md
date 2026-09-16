@@ -8,8 +8,8 @@ keep them closed on the Caltech page or add ~150 px. No widget reported a consol
 
 | widget | 890 px | 890 px, no caption | 650 px | 650 px, no caption | suggested iframe height (no caption) |
 |---|---|---|---|---|---|
-| oco/widgets/spectra-explorer.html | 726 | 609 | 881 | 763 | 620 (890) / 780 (650) |
-| oco/widgets/footprint-scale.html | 703 | 587 | 723 | 607 | 600 / 620 |
+| oco/widgets/spectra-explorer.html (three stacked bands, 2026-09-16 rev.) | 865 | 795 | 987 | 929 | 810 (890) / 945 (650) |
+| oco/widgets/footprint-scale.html (2026-09-16 rev., longer readouts) | ~740 | 621 | ~745 | 621 | 635 / 635 |
 | oco/widgets/photon-path.html | 672 | 535 | 750 | 613 | 550 / 630 |
 | sif/widgets/fraunhofer-explorer.html (`?data=/sif/data/solar_757_771nm.json`) | 691 | 603 | 719 | 631 | 620 / 650 |
 | sif/widgets/sif-map.html | 717 | 558 | 629 | 470 | 570 / 480 |

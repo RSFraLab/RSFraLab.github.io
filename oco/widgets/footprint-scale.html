@@ -35,7 +35,7 @@
   </div>
   <div class="body"><canvas id="cv" aria-label="Map of OCO footprints at the selected scale"></canvas></div>
   <div class="readouts" id="ro"></div>
-  <p class="caption" id="cap">Each OCO-2 sounding is a parallelogram about 1 km across and 2 km along the orbit; eight sit side by side across a swath only ~9 km wide, three frames every second. A single 99-minute orbit traces one thin line around the Earth, so the map is built from thousands of such lines over sixteen days. OCO-3 on the Space Station instead sweeps its pointing mirror to lay adjacent swaths over a city, a "snapshot area map".</p>
+  <p class="caption" id="cap">Each OCO-2 sounding is a sliver about 1 km along the spectrometer slit and 2 km along the orbit (the smear during one third of a second); eight sit end to end along the slit, only ~9 km in total, three frames every second. The satellite rotates its slit along the orbit, so over Los Angeles the eight footprints happen to line up almost along the track instead of across it. A single 99-minute orbit traces one thin line around the Earth, so global maps are built from thousands of such lines over sixteen days. OCO-3 on the Space Station instead sweeps its pointing mirror to lay adjacent swaths over a city, a "snapshot area map".</p>
   <p class="attrib" id="attrib">Basemap © OpenStreetMap contributors</p>
 </div>
 <script>
@@ -85,10 +85,23 @@ function render(ctx, W, scale){
     if (TRACK){ ctx.strokeStyle=C.track; ctx.lineWidth=state.z==="orbit"?2.2:6; ctx.globalAlpha=state.z==="orbit"?1:0.25; ctx.beginPath(); let pen=false, px0=null;
       for (const [lo,la] of TRACK.lonlat){ if (la<view.lat_s || la>view.lat_n){ pen=false; continue; }   // outside the basemap: lift the pen
         const x=P.x(lo), y=P.y(la); if (pen && Math.abs(x-px0)>P.w/2) pen=false; pen?ctx.lineTo(x,y):ctx.moveTo(x,y); pen=true; px0=x; } ctx.stroke(); ctx.globalAlpha=1; }
-    if (FP2){ let n=0; for (const f of FP2.frames) for (const fp of f.fp){ if(!fp) continue; n++; ctx.beginPath(); fp.forEach(([lo,la],i)=> i?ctx.lineTo(P.x(lo),P.y(la)):ctx.moveTo(P.x(lo),P.y(la))); ctx.closePath();
-        ctx.fillStyle=C.fpFill; ctx.fill(); if (state.z==="12km"){ ctx.strokeStyle=C.fp; ctx.lineWidth=1; ctx.stroke(); } }
-      const m=FP2.meta; ro.push(["footprint", `${m.crosstrack_km_median.toFixed(2)} × ${m.alongtrack_km_median.toFixed(2)} km (across × along track, medians of ${m.n_footprints} vertices sets)`]);
-      ro.push(["swath", `${m.swath_km_median.toFixed(1)} km, 8 footprints`]); ro.push(["shown", `${m.n_frames} frames = ${(m.n_frames/m.frame_rate_hz).toFixed(0)} s of flight, ${m.date} ${FP2.frames[0].t.slice(0,8)} UTC, orbit ${m.orbit}`]);
+    if (FP2){
+      const poly=(fp)=>{ ctx.beginPath(); fp.forEach(([lo,la],i)=> i?ctx.lineTo(P.x(lo),P.y(la)):ctx.moveTo(P.x(lo),P.y(la))); ctx.closePath(); };
+      // all frames, light fill (at 12 km only the frames inside the view matter)
+      for (const f of FP2.frames) for (const fp of f.fp){ if(!fp) continue; poly(fp); ctx.fillStyle=C.fpFill; ctx.globalAlpha=state.z==="12km"?0.35:1; ctx.fill(); ctx.globalAlpha=1; }
+      if (state.z==="12km"){
+        // ONE frame drawn explicitly: the frame whose centroid is nearest the map centre, with its eight footprints outlined and numbered
+        const cx=(view.lon_w+view.lon_e)/2, cy=(view.lat_s+view.lat_n)/2; let best=null, bd=1e9;
+        for (const f of FP2.frames){ const c=centreOf([f]); const d=Math.hypot((c[0]-cx)*Math.cos(cy*Math.PI/180), c[1]-cy); if (d<bd){ bd=d; best=f; } }
+        if (best){ best.fp.forEach((fp,k)=>{ if(!fp) return; poly(fp); ctx.fillStyle=C.fpFill; ctx.fill(); ctx.strokeStyle=C.fp; ctx.lineWidth=1.6; ctx.stroke();
+            const c=centreOf([{fp:[fp]}]); ctx.fillStyle=C.fp; ctx.font="bold 11px ui-monospace, Menlo, monospace"; ctx.textAlign="center"; ctx.textBaseline="middle"; ctx.fillText(String(k+1), P.x(c[0]), P.y(c[1])); });
+          const l1=`one frame (⅓ s), footprints 1–8, ${best.t.slice(0,8)} UTC`, l2=`slit ${Math.abs(FP2.meta.slit_angle_from_track_deg_median).toFixed(0)}° from the ground track here`;
+          ctx.font="11px ui-monospace, Menlo, monospace"; const bw=Math.max(ctx.measureText(l1).width, ctx.measureText(l2).width)+14;
+          ctx.fillStyle="rgba(255,255,255,0.88)"; ctx.fillRect(P.ox+P.w-bw-8,P.oy+8,bw,34); ctx.fillStyle="#1d2530"; ctx.textAlign="left"; ctx.textBaseline="top";
+          ctx.fillText(l1, P.ox+P.w-bw-1, P.oy+12); ctx.fillText(l2, P.ox+P.w-bw-1, P.oy+26); }
+      }
+      const m=FP2.meta; ro.push(["footprint", `${m.footprint_along_slit_km_median.toFixed(2)} km along the slit × ${m.footprint_along_track_km_median.toFixed(2)} km along track (medians of ${m.n_footprints} vertex sets)`]);
+      ro.push(["8 footprints", `${m.swath_along_slit_km_median.toFixed(1)} km end to end along the slit, which is rotated ${Math.abs(m.slit_angle_from_track_deg_median).toFixed(0)}° from the ground track over LA (≈ 85° near the equator)`]); ro.push(["shown", `${m.n_frames} frames = ${(m.n_frames/m.frame_rate_hz).toFixed(0)} s of flight, ${m.date} ${FP2.frames[0].t.slice(0,8)} UTC, orbit ${m.orbit}`]);
       if (TRACK) ro.push(["orbit track", `${TRACK.meta.n_points} points, 10 s apart, ${TRACK.meta.date} (daytime half of one orbit)`]); }
   } else if (FP3){
     for (const f of FP3.frames) for (const fp of f.fp){ if(!fp) continue; ctx.beginPath(); fp.forEach(([lo,la],i)=> i?ctx.lineTo(P.x(lo),P.y(la)):ctx.moveTo(P.x(lo),P.y(la))); ctx.closePath(); ctx.fillStyle=C.fp2Fill; ctx.fill(); if (state.z==="12km"){ ctx.strokeStyle=C.fp2; ctx.lineWidth=1; ctx.stroke(); } }
