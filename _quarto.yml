@@ -5,6 +5,7 @@ project:
   resources:
     - /publications
     - /sif
+    - /oco
 
 website:
   title: "FraLab"

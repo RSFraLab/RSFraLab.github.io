@@ -29,7 +29,7 @@
   .body{position:relative;padding:8px 6px 0}
   canvas{display:block;width:100%}
   .hover{position:absolute;pointer-events:none;display:none;background:var(--panel);border:1px solid var(--hairline);border-radius:6px;padding:4px 8px;font:11px ui-monospace,Menlo,monospace;color:var(--text);white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-  .controls{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;padding:8px 16px 6px}
+  .controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px 18px;padding:8px 16px 6px}
   .ctl label{display:flex;justify-content:space-between;font:12px ui-monospace,Menlo,monospace;color:var(--muted)}
   .ctl output{color:var(--text);font-weight:600}
   input[type=range]{width:100%;accent-color:var(--model)}
@@ -39,7 +39,7 @@
   .readouts b{color:var(--text);font-weight:600}
   .caption{padding:8px 16px 12px;color:var(--muted);font-size:13px;max-width:80ch}
   .note{font:11px ui-monospace,Menlo,monospace;color:var(--faint);padding:0 16px 10px}
-  @media (max-width:700px){.controls{grid-template-columns:1fr}}
+  @media (max-width:700px){.controls{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -62,6 +62,8 @@
       <input type="range" id="xco2" min="380" max="440" step="0.5" value="420" aria-label="Column-averaged CO2 in ppm"></div>
     <div class="ctl"><label>Solar zenith angle <output id="sOut">30°</output></label>
       <input type="range" id="sza" min="0" max="70" step="0.5" value="30" aria-label="Solar zenith angle in degrees"></div>
+    <div class="ctl"><label>Surface pressure <output id="pOut">1013 hPa</output></label>
+      <input type="range" id="psurf" min="700" max="1030" step="1" value="1013" aria-label="Surface pressure in hPa"></div>
   </div>
   <div class="row">
     <span class="lbl">surface</span>
@@ -70,6 +72,7 @@
   </div>
   <div class="readouts">
     <span>airmass factor <b id="roM">—</b></span>
+    <span>surface pressure <b id="roP">—</b></span>
     <span>band albedos <b id="roA">—</b></span>
     <span>continuum radiances <b id="roC">—</b></span>
     <span id="roFitWrap" style="display:none">rms residual (sounding − model) <b id="roFit">—</b></span>
@@ -104,7 +107,7 @@ const BANDS = {
   wco2: {label:"weak CO₂",  ymax:50,  key:"wco2"},
   sco2: {label:"strong CO₂",ymax:22,  key:"sco2"},
 };
-const state={xco2:420, sza:30, vza:0, surface:"dry_grass", obs:false}; const ORDER=["aband","wco2","sco2"];
+const state={xco2:420, sza:30, vza:0, psurf:1013.25, surface:"dry_grass", obs:false}; const ORDER=["aband","wco2","sco2"];
 const cache={};
 async function getJSON(name){ if(!cache[name]) cache[name]=fetch(`${DATA}/${name}`).then(r=>{ if(!r.ok) throw new Error(name); return r.json(); }); return cache[name]; }
 let ALB=null, SND=null;
@@ -113,7 +116,7 @@ getJSON("sounding_oco2.json").then(j=>{ SND=j; document.getElementById("obsChip"
 
 function buildSurfaces(){
   const box=document.getElementById("surfaces"); box.innerHTML="";
-  const names={ocean:"ocean",desert:"desert",snow:"snow",conifer:"conifer forest",dry_grass:"dry grass"};
+  const names={ocean:"water (no glint)",desert:"desert",snow:"snow",conifer:"conifer forest",dry_grass:"dry grass"};
   for (const k of ["dry_grass","desert","conifer","snow","ocean"]){
     if (!ALB[k]) continue;
     const b=document.createElement("button"); b.className="chip"+(state.surface===k?" on":""); b.textContent=names[k]||k;
@@ -121,7 +124,7 @@ function buildSurfaces(){
   }
 }
 function syncChips(){
-  document.querySelectorAll("#surfaces .chip").forEach(b=>b.classList.toggle("on", !state.obs && (b.textContent===({ocean:"ocean",desert:"desert",snow:"snow",conifer:"conifer forest",dry_grass:"dry grass"})[state.surface])));
+  document.querySelectorAll("#surfaces .chip").forEach(b=>b.classList.toggle("on", !state.obs && (b.textContent===({ocean:"water (no glint)",desert:"desert",snow:"snow",conifer:"conifer forest",dry_grass:"dry grass"})[state.surface])));
   document.getElementById("obsChip").classList.toggle("on", state.obs);
   document.getElementById("keyObs").style.display = state.obs ? "" : "none";
   document.getElementById("roFitWrap").style.display = state.obs ? "" : "none";
@@ -131,17 +134,26 @@ function bandAlbedo(band){
   if (ALB && ALB.band_means && ALB.band_means[state.surface]) return ALB.band_means[state.surface][band];
   return 0.3;
 }
-/* ---- forward model on the tau grid ---- */
-function model(tau, sol, band){
+/* ---- forward model at line-by-line resolution, then ILS convolution ----
+   T_hr = exp(-m * [psurf/1013.25 * (XCO2/420 * tau_co2 + tau_o2) + tau_h2o])
+   L_hr = E0_hr * cos(SZA) * a / pi * T_hr ;  L = L_hr (*) ILS  (unit-sum kernel on the same grid);
+   the plot samples L every DRAW_STEP points. Grids are uniform: wl = wl_start + i*wl_step. ---- */
+const P0=1013.25, DRAW_STEP=4;
+function gridOf(meta){ const n=meta.n_points, w=new Float64Array(n); for (let i=0;i<n;i++) w[i]=meta.wl_start_nm+i*meta.wl_step_nm; return w; }
+function convolveSame(x, k){                       // 'same' convolution with a unit-sum kernel, edge-normalized
+  const n=x.length, m=k.length, h=(m-1)>>1, y=new Float64Array(n);
+  for (let i=0;i<n;i++){ let acc=0, wsum=0; const j0=Math.max(0,i-h), j1=Math.min(n-1,i+h);
+    for (let j=j0;j<=j1;j++){ const w=k[j-i+h]; acc+=x[j]*w; wsum+=w; } y[i]=acc/wsum; }
+  return y;
+}
+function model(tau, sol, ils, band){
   const m = 1/Math.cos(state.sza*Math.PI/180) + 1/Math.cos(state.vza*Math.PI/180);
-  const a = bandAlbedo(band), mu0=Math.cos(state.sza*Math.PI/180), n=tau.wl.length;
+  const a = bandAlbedo(band), mu0=Math.cos(state.sza*Math.PI/180), n=tau.meta.n_points, ps=state.psurf/P0, sx=state.xco2/420;
+  const co2=tau.tau_co2, o2=tau.tau_o2, h2o=tau.tau_h2o, e0=sol.e0;
   const L=new Float64Array(n), Lc=new Float64Array(n);
-  const co2=tau.tau_co2, o2=tau.tau_o2, h2o=tau.tau_h2o, ch4=tau.tau_ch4||null, s=state.xco2/420;
-  for (let i=0;i<n;i++){
-    let t = co2[i]*s + o2[i] + h2o[i]; if (ch4) t += ch4[i];
-    Lc[i] = sol.e0[i]*mu0*a/Math.PI; L[i] = Lc[i]*Math.exp(-m*t);
-  }
-  return {L, Lc, m, a};
+  for (let i=0;i<n;i++){ const t=ps*(sx*co2[i]+o2[i])+h2o[i]; Lc[i]=e0[i]*mu0*a/Math.PI; L[i]=Lc[i]*Math.exp(-m*t); }
+  const kern=Float64Array.from(ils.response);
+  return {L:convolveSame(L,kern), Lc:convolveSame(Lc,kern), m, a, wl:tau._wl||(tau._wl=gridOf(tau.meta))};
 }
 
 /* ---- drawing: three stacked panels (one per band), each with its own fixed y-axis; renders into any
@@ -154,7 +166,7 @@ let hoverX=null, cur={};
 function ticks(min,max,n){ const s0=(max-min)/n, mag=Math.pow(10,Math.floor(Math.log10(s0))); let st=mag;
   for (const s of [1,2,2.5,5,10]) if (s0<=s*mag){ st=s*mag; break; } const o=[]; for (let v=Math.ceil(min/st)*st; v<=max+1e-9; v+=st) o.push(v); return o; }
 async function draw(){
-  try { for (const b of ORDER){ const [tau, sol]=await Promise.all([getJSON(`tau_${b}.json`), getJSON(`solar_${b}.json`)]); cur[b]={tau, sol, ...model(tau, sol, b)}; } } catch(e){ noData(); return; }
+  try { for (const b of ORDER){ const [tau, sol, ils]=await Promise.all([getJSON(`tau_${b}.json`), getJSON(`solar_${b}.json`), getJSON(`ils_${b}.json`)]); cur[b]={tau, sol, ils, ...model(tau, sol, ils, b)}; } } catch(e){ noData(); return; }
   render(cv.getContext("2d"), cv.clientWidth || 800, 1); readouts();
 }
 function render(ctx, W, scale){
@@ -164,7 +176,7 @@ function render(ctx, W, scale){
   ctx.font="11px ui-monospace, Menlo, monospace";
   const fits=[]; let hoverTxt=null;
   ORDER.forEach((band, ib)=>{
-    const c=cur[band]; if(!c) return; const b=BANDS[band], wl=c.tau.wl, x0=wl[0], x1=wl[wl.length-1];
+    const c=cur[band]; if(!c) return; const b=BANDS[band], wl=c.wl, x0=wl[0], x1=wl[wl.length-1], S=DRAW_STEP;
     const top=ib*(PH+HR+GAP), bot=top+PH;                      // panel band
     const px=x=>PADL+(x-x0)/(x1-x0)*(W-PADL-PADR), py=v=>top+PADT+(1-v/b.ymax)*(PH-PADT-PADB);
     ctx.strokeStyle=C.hair; ctx.fillStyle=C.faint; ctx.lineWidth=1;
@@ -174,12 +186,12 @@ function render(ctx, W, scale){
     if (ib===1){ ctx.save(); ctx.translate(13,top+PH/2); ctx.rotate(-Math.PI/2); ctx.textAlign="center"; ctx.textBaseline="middle"; ctx.fillText("radiance  W m⁻² µm⁻¹ sr⁻¹",0,0); ctx.restore(); }
     // continuum (no absorption)
     ctx.setLineDash([5,4]); ctx.strokeStyle=C.cont; ctx.lineWidth=1.1; ctx.beginPath();
-    for (let i=0;i<wl.length;i++){ const y=py(Math.min(c.Lc[i],b.ymax)); i?ctx.lineTo(px(wl[i]),y):ctx.moveTo(px(wl[i]),y); } ctx.stroke(); ctx.setLineDash([]);
+    for (let i=0;i<wl.length;i+=S){ const y=py(Math.min(c.Lc[i],b.ymax)); i?ctx.lineTo(px(wl[i]),y):ctx.moveTo(px(wl[i]),y); } ctx.stroke(); ctx.setLineDash([]);
     // model
     ctx.fillStyle=C.modelFill; ctx.beginPath(); ctx.moveTo(px(wl[0]),py(0));
-    for (let i=0;i<wl.length;i++) ctx.lineTo(px(wl[i]),py(Math.min(c.L[i],b.ymax))); ctx.lineTo(px(wl[wl.length-1]),py(0)); ctx.closePath(); ctx.fill();
+    for (let i=0;i<wl.length;i+=S) ctx.lineTo(px(wl[i]),py(Math.min(c.L[i],b.ymax))); ctx.lineTo(px(wl[wl.length-1]),py(0)); ctx.closePath(); ctx.fill();
     ctx.strokeStyle=C.model; ctx.lineWidth=1; ctx.beginPath();
-    for (let i=0;i<wl.length;i++){ const y=py(Math.min(c.L[i],b.ymax)); i?ctx.lineTo(px(wl[i]),y):ctx.moveTo(px(wl[i]),y); } ctx.stroke();
+    for (let i=0;i<wl.length;i+=S){ const y=py(Math.min(c.L[i],b.ymax)); i?ctx.lineTo(px(wl[i]),y):ctx.moveTo(px(wl[i]),y); } ctx.stroke();
     // residual strip
     const rt=bot+2, rb=bot+HR-4, rmid=(rt+rb)/2;
     ctx.strokeStyle=C.hair; ctx.beginPath(); ctx.moveTo(PADL,rmid); ctx.lineTo(W-PADR,rmid); ctx.stroke();
@@ -219,15 +231,17 @@ function readouts(){
   document.getElementById("roM").textContent=c.m.toFixed(2)+" (1/cos SZA + 1/cos VZA)";
   document.getElementById("roA").textContent=ORDER.map(b=>cur[b]?cur[b].a.toFixed(2):"—").join(" / ")+(state.obs?" (L2 retrieved)":"")+"  [A-band / weak / strong]";
   document.getElementById("roC").textContent=ORDER.map(b=>cur[b]?Math.max(...cur[b].Lc).toFixed(0):"—").join(" / ")+" W m⁻² µm⁻¹ sr⁻¹";
-  document.getElementById("xOut").textContent=state.xco2.toFixed(1)+" ppm"; document.getElementById("sOut").textContent=state.sza.toFixed(1)+"°";
+  document.getElementById("xOut").textContent=state.xco2.toFixed(1)+" ppm"; document.getElementById("sOut").textContent=state.sza.toFixed(1)+"°"; document.getElementById("pOut").textContent=state.psurf.toFixed(0)+" hPa";
+  document.getElementById("roP").textContent=state.psurf.toFixed(0)+" hPa (O₂ and CO₂ columns scale with it)"+(state.obs?" — L2 retrieved":"");
   const t=c.tau.meta;
-  document.getElementById("note").textContent = `${t.line_list.split(";")[0]}; ${t.ils.split(";")[0]}; ${t.atmosphere.split(";")[0]}. Model L = E₀·cos(SZA)·a/π·exp(−m·τ); fixed y-axes 0–300 / 0–50 / 0–22 (snow at high sun clips in the A-band).` + (state.obs && SND ? ` Sounding ${SND.meta.sounding_id} (${SND.meta.surface}, ${SND.meta.time_utc.slice(0,10)}), shown ×${(1/(SND.meta.polarization_factor||0.5)).toFixed(0)} because OCO-2 measures one polarization; XCO₂ and albedos set to the L2 retrieval.` : "");
+  document.getElementById("note").textContent = `${t.line_list}; ${t.atmosphere.split(";")[0]}. Line-by-line model L = E₀·cos(SZA)·a/π·exp(−m·τ) at ${t.spacing_nm} nm, then convolved with the OCO-2 ILS (FWHM ${cur.aband?cur.aband.ils.fwhm_nm.toFixed(3):"—"} / ${cur.wco2?cur.wco2.ils.fwhm_nm.toFixed(3):"—"} / ${cur.sco2?cur.sco2.ils.fwhm_nm.toFixed(3):"—"} nm); solar continuum TSIS-1 HSRS × Toon lines; fixed y-axes 0–300 / 0–50 / 0–22 (snow at high sun clips in the A-band).` + (state.obs && SND ? ` Sounding ${SND.meta.sounding_id} (${SND.meta.surface}, ${SND.meta.time_utc.slice(0,10)}), shown ×${(1/(SND.meta.polarization_factor||0.5)).toFixed(0)} because OCO-2 measures one polarization; XCO₂ and albedos set to the L2 retrieval.` : "");
 }
 /* ---- controls ---- */
 document.getElementById("xco2").addEventListener("input", e=>{ state.xco2=+e.target.value; if (state.obs){ state.obs=false; syncChips(); } draw(); });
 document.getElementById("sza").addEventListener("input", e=>{ state.sza=+e.target.value; if (state.obs){ state.obs=false; syncChips(); } draw(); });
+document.getElementById("psurf").addEventListener("input", e=>{ state.psurf=+e.target.value; if (state.obs){ state.obs=false; syncChips(); } draw(); });
 document.getElementById("obsChip").addEventListener("click", ()=>{ if(!SND) return; state.obs=!state.obs;
-  if (state.obs){ state.xco2=SND.meta.xco2_l2_ppm; state.sza=SND.meta.sza; state.vza=SND.meta.vza; document.getElementById("xco2").value=state.xco2; document.getElementById("sza").value=state.sza; } else state.vza=0;
+  if (state.obs){ state.xco2=SND.meta.xco2_l2_ppm; state.sza=SND.meta.sza; state.vza=SND.meta.vza; state.psurf=SND.meta.surface_pressure_hpa; document.getElementById("xco2").value=state.xco2; document.getElementById("sza").value=state.sza; document.getElementById("psurf").value=Math.round(state.psurf); } else state.vza=0;
   syncChips(); draw(); });
 cv.addEventListener("mousemove", e=>{ const r=cv.getBoundingClientRect(); hoverX=e.clientX-r.left; if (cur.aband) render(cv.getContext("2d"), cv.clientWidth, 1); });
 cv.addEventListener("mouseleave", ()=>{ hoverX=null; if (cur.aband) render(cv.getContext("2d"), cv.clientWidth, 1); });
@@ -235,7 +249,7 @@ window.addEventListener("resize", ()=>{ if (cur.aband) render(cv.getContext("2d"
 /* ---- PNG export at 2x ---- */
 document.getElementById("exportBtn").addEventListener("click", ()=>{ if(!cur.aband) return; const off=document.createElement("canvas"); const W=cv.clientWidth||800; const hx=hoverX; hoverX=null;
   render(off.getContext("2d"), W, 2 / (window.devicePixelRatio||1)); hoverX=hx;
-  off.toBlob(b=>{ const a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download=`oco_spectra_xco2${state.xco2}_sza${state.sza}.png`; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000); },"image/png"); });
+  off.toBlob(b=>{ const a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download=`oco_spectra_xco2${state.xco2}_sza${state.sza}_p${state.psurf}.png`; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000); },"image/png"); });
 draw();
 </script>
 </body>

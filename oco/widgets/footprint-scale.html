@@ -35,7 +35,7 @@
   </div>
   <div class="body"><canvas id="cv" aria-label="Map of OCO footprints at the selected scale"></canvas></div>
   <div class="readouts" id="ro"></div>
-  <p class="caption" id="cap">Each OCO-2 sounding is a sliver about 1 km along the spectrometer slit and 2 km along the orbit (the smear during one third of a second); eight sit end to end along the slit, only ~9 km in total, three frames every second. The satellite rotates its slit along the orbit, so over Los Angeles the eight footprints happen to line up almost along the track instead of across it. A single 99-minute orbit traces one thin line around the Earth, so global maps are built from thousands of such lines over sixteen days. OCO-3 on the Space Station instead sweeps its pointing mirror to lay adjacent swaths over a city, a "snapshot area map".</p>
+  <p class="caption" id="cap">Each OCO-2 sounding is a sliver about 1 km along the spectrometer slit and 2 km along the orbit (the smear during one third of a second); eight sit end to end along the slit, only ~9 km in total, three frames every second. Footprint pitch is 1.29 km but the sampled width is 1.09 km (20 of 24 detector rows are summed per footprint), which is why small gaps show between the polygons — they are drawn as the L1b vertices describe them. The satellite rotates its slit along the orbit, so over Los Angeles the eight footprints happen to line up almost along the track instead of across it. A single 99-minute orbit traces one thin line around the Earth, so global maps are built from thousands of such lines over sixteen days. OCO-3 on the Space Station instead sweeps its pointing mirror to lay adjacent swaths over a city, a "snapshot area map".</p>
   <p class="attrib" id="attrib">Basemap © OpenStreetMap contributors</p>
 </div>
 <script>
@@ -100,7 +100,7 @@ function render(ctx, W, scale){
           ctx.fillStyle="rgba(255,255,255,0.88)"; ctx.fillRect(P.ox+P.w-bw-8,P.oy+8,bw,34); ctx.fillStyle="#1d2530"; ctx.textAlign="left"; ctx.textBaseline="top";
           ctx.fillText(l1, P.ox+P.w-bw-1, P.oy+12); ctx.fillText(l2, P.ox+P.w-bw-1, P.oy+26); }
       }
-      const m=FP2.meta; ro.push(["footprint", `${m.footprint_along_slit_km_median.toFixed(2)} km along the slit × ${m.footprint_along_track_km_median.toFixed(2)} km along track (medians of ${m.n_footprints} vertex sets)`]);
+      const m=FP2.meta; ro.push(["footprint", `${m.footprint_along_slit_km_median.toFixed(2)} km sampled width along the slit (pitch 1.29 km, 20 of 24 detector rows) × ${m.footprint_along_track_km_median.toFixed(2)} km along track (medians of ${m.n_footprints} vertex sets)`]);
       ro.push(["8 footprints", `${m.swath_along_slit_km_median.toFixed(1)} km end to end along the slit, which is rotated ${Math.abs(m.slit_angle_from_track_deg_median).toFixed(0)}° from the ground track over LA (≈ 85° near the equator)`]); ro.push(["shown", `${m.n_frames} frames = ${(m.n_frames/m.frame_rate_hz).toFixed(0)} s of flight, ${m.date} ${FP2.frames[0].t.slice(0,8)} UTC, orbit ${m.orbit}`]);
       if (TRACK) ro.push(["orbit track", `${TRACK.meta.n_points} points, 10 s apart, ${TRACK.meta.date} (daytime half of one orbit)`]); }
   } else if (FP3){

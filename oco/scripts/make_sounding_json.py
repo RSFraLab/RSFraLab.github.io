@@ -27,7 +27,7 @@ meta = {"sounding_id": str(sid), "time_utc": t.strftime("%Y-%m-%dT%H:%M:%S.%f")[
         "operation_mode": "nadir", "xco2_l2_ppm": float(L["xco2"][k]), "xco2_uncertainty_ppm": float(L["xco2_uncertainty"][k]),
         "albedo_l2": {"aband": float(L["Retrieval/albedo_o2a"][k]), "wco2": float(L["Retrieval/albedo_wco2"][k]), "sco2": float(L["Retrieval/albedo_sco2"][k])},
         "albedo_slope_l2_per_wn": {"aband": float(L["Retrieval/albedo_slope_o2a"][k]), "wco2": float(L["Retrieval/albedo_slope_wco2"][k]), "sco2": float(L["Retrieval/albedo_slope_sco2"][k])},
-        "surface_pressure_hpa": float(L["Retrieval/psurf"][k]), "aod_total_l2": float(L["Retrieval/aod_total"][k]), "xco2_quality_flag": int(L["xco2_quality_flag"][k]),
+        "surface_pressure_hpa": float(L["Retrieval/psurf"][k]), "aod_total_l2": float(L["Retrieval/aod_total"][k]), "aod_l2": float(L["Retrieval/aod_total"][k]), "xco2_quality_flag": int(L["xco2_quality_flag"][k]), "quality_flag": int(L["xco2_quality_flag"][k]),
         "radiance_units": "W m-2 sr-1 um-1 (L1b photon radiance x hc/lambda)", "polarization_note": "OCO-2 measures one linear polarization: the L1b radiance is that component, about half of the total intensity for an unpolarized scene. Compare with an unpolarized forward model L as polarization_factor * L.", "polarization_factor": 0.5, "wl_note": "L1b dispersion polynomial in the 1-based sample index, footprint-specific",
         "good_note": "good = L1b bad_sample_list == 0 and finite radiance", "created": datetime.date.today().isoformat(), "source": f"{os.path.basename(l1b)}, {os.path.basename(lite)}"}
 json.dump({"meta": meta, **d}, open(out, "w"), separators=(",", ":"))
