@@ -107,7 +107,7 @@ const BANDS = {
   wco2: {label:"weak CO₂",  ymax:50,  key:"wco2"},
   sco2: {label:"strong CO₂",ymax:22,  key:"sco2"},
 };
-const state={xco2:420, sza:30, vza:0, psurf:1013.25, surface:"dry_grass", obs:false}; const ORDER=["aband","wco2","sco2"];
+const state={xco2:420, sza:30, vza:0, psurf:1013.25, surface:"dry_grass", obs:false, albL2:false}; const ORDER=["aband","wco2","sco2"];
 const cache={};
 async function getJSON(name){ if(!cache[name]) cache[name]=fetch(`${DATA}/${name}`).then(r=>{ if(!r.ok) throw new Error(name); return r.json(); }); return cache[name]; }
 let ALB=null, SND=null;
@@ -120,17 +120,17 @@ function buildSurfaces(){
   for (const k of ["dry_grass","desert","conifer","snow","ocean"]){
     if (!ALB[k]) continue;
     const b=document.createElement("button"); b.className="chip"+(state.surface===k?" on":""); b.textContent=names[k]||k;
-    b.onclick=()=>{ state.surface=k; state.obs=false; syncChips(); readouts(); draw(); }; box.appendChild(b);
+    b.onclick=()=>{ state.surface=k; state.albL2=false; syncChips(); readouts(); draw(); }; box.appendChild(b);
   }
 }
 function syncChips(){
-  document.querySelectorAll("#surfaces .chip").forEach(b=>b.classList.toggle("on", !state.obs && (b.textContent===({ocean:"water (no glint)",desert:"desert",snow:"snow",conifer:"conifer forest",dry_grass:"dry grass"})[state.surface])));
+  document.querySelectorAll("#surfaces .chip").forEach(b=>b.classList.toggle("on", !state.albL2 && (b.textContent===({ocean:"water (no glint)",desert:"desert",snow:"snow",conifer:"conifer forest",dry_grass:"dry grass"})[state.surface])));
   document.getElementById("obsChip").classList.toggle("on", state.obs);
   document.getElementById("keyObs").style.display = state.obs ? "" : "none";
   document.getElementById("roFitWrap").style.display = state.obs ? "" : "none";
 }
 function bandAlbedo(band){
-  if (state.obs && SND) return SND.meta.albedo_l2[band];
+  if (state.albL2 && SND) return SND.meta.albedo_l2[band];
   if (ALB && ALB.band_means && ALB.band_means[state.surface]) return ALB.band_means[state.surface][band];
   return 0.3;
 }
@@ -229,19 +229,19 @@ function noData(){ const ctx=cv.getContext("2d"), W=cv.clientWidth||800, dpr=win
 function readouts(){
   const c=cur.wco2||cur.aband; if (!c) return;
   document.getElementById("roM").textContent=c.m.toFixed(2)+" (1/cos SZA + 1/cos VZA)";
-  document.getElementById("roA").textContent=ORDER.map(b=>cur[b]?cur[b].a.toFixed(2):"—").join(" / ")+(state.obs?" (L2 retrieved)":"")+"  [A-band / weak / strong]";
+  document.getElementById("roA").textContent=ORDER.map(b=>cur[b]?cur[b].a.toFixed(2):"—").join(" / ")+(state.albL2?" (L2 retrieved)":" ("+state.surface.replace("_"," ")+")")+"  [A-band / weak / strong]";
   document.getElementById("roC").textContent=ORDER.map(b=>cur[b]?Math.max(...cur[b].Lc).toFixed(0):"—").join(" / ")+" W m⁻² µm⁻¹ sr⁻¹";
   document.getElementById("xOut").textContent=state.xco2.toFixed(1)+" ppm"; document.getElementById("sOut").textContent=state.sza.toFixed(1)+"°"; document.getElementById("pOut").textContent=state.psurf.toFixed(0)+" hPa";
-  document.getElementById("roP").textContent=state.psurf.toFixed(0)+" hPa (O₂ and CO₂ columns scale with it)"+(state.obs?" — L2 retrieved":"");
+  document.getElementById("roP").textContent=state.psurf.toFixed(0)+" hPa (O₂ and CO₂ columns scale with it)"+(state.obs && Math.abs(state.psurf-SND.meta.surface_pressure_hpa)<0.6?" — L2 retrieved":"");
   const t=c.tau.meta;
-  document.getElementById("note").textContent = `${t.line_list}; ${t.atmosphere.split(";")[0]}. Line-by-line model L = E₀·cos(SZA)·a/π·exp(−m·τ) at ${t.spacing_nm} nm, then convolved with the OCO-2 ILS (FWHM ${cur.aband?cur.aband.ils.fwhm_nm.toFixed(3):"—"} / ${cur.wco2?cur.wco2.ils.fwhm_nm.toFixed(3):"—"} / ${cur.sco2?cur.sco2.ils.fwhm_nm.toFixed(3):"—"} nm); solar continuum TSIS-1 HSRS × Toon lines; fixed y-axes 0–300 / 0–50 / 0–22 (snow at high sun clips in the A-band).` + (state.obs && SND ? ` Sounding ${SND.meta.sounding_id} (${SND.meta.surface}, ${SND.meta.time_utc.slice(0,10)}), shown ×${(1/(SND.meta.polarization_factor||0.5)).toFixed(0)} because OCO-2 measures one polarization; XCO₂ and albedos set to the L2 retrieval.` : "");
+  document.getElementById("note").textContent = `${t.line_list}; ${t.atmosphere.split(";")[0]}. Line-by-line model L = E₀·cos(SZA)·a/π·exp(−m·τ) at ${t.spacing_nm} nm, then convolved with the OCO-2 ILS (FWHM ${cur.aband?cur.aband.ils.fwhm_nm.toFixed(3):"—"} / ${cur.wco2?cur.wco2.ils.fwhm_nm.toFixed(3):"—"} / ${cur.sco2?cur.sco2.ils.fwhm_nm.toFixed(3):"—"} nm); solar continuum TSIS-1 HSRS × Toon lines; fixed y-axes 0–300 / 0–50 / 0–22 (snow at high sun clips in the A-band).` + (state.obs && SND ? ` Sounding ${SND.meta.sounding_id} (${SND.meta.surface}, ${SND.meta.time_utc.slice(0,10)}), shown ×${(1/(SND.meta.polarization_factor||0.5)).toFixed(0)} because OCO-2 measures one polarization; sliders start at the L2 retrieval — move them and watch the residual grow.` : "");
 }
 /* ---- controls ---- */
-document.getElementById("xco2").addEventListener("input", e=>{ state.xco2=+e.target.value; if (state.obs){ state.obs=false; syncChips(); } draw(); });
-document.getElementById("sza").addEventListener("input", e=>{ state.sza=+e.target.value; if (state.obs){ state.obs=false; syncChips(); } draw(); });
-document.getElementById("psurf").addEventListener("input", e=>{ state.psurf=+e.target.value; if (state.obs){ state.obs=false; syncChips(); } draw(); });
+document.getElementById("xco2").addEventListener("input", e=>{ state.xco2=+e.target.value; draw(); });   // overlay stays on: move the sliders to see the fit degrade
+document.getElementById("sza").addEventListener("input", e=>{ state.sza=+e.target.value; draw(); });   // overlay stays on: move the sliders to see the fit degrade
+document.getElementById("psurf").addEventListener("input", e=>{ state.psurf=+e.target.value; draw(); });   // overlay stays on: move the sliders to see the fit degrade
 document.getElementById("obsChip").addEventListener("click", ()=>{ if(!SND) return; state.obs=!state.obs;
-  if (state.obs){ state.xco2=SND.meta.xco2_l2_ppm; state.sza=SND.meta.sza; state.vza=SND.meta.vza; state.psurf=SND.meta.surface_pressure_hpa; document.getElementById("xco2").value=state.xco2; document.getElementById("sza").value=state.sza; document.getElementById("psurf").value=Math.round(state.psurf); } else state.vza=0;
+  if (state.obs){ state.albL2=true; state.xco2=SND.meta.xco2_l2_ppm; state.sza=SND.meta.sza; state.vza=SND.meta.vza; state.psurf=SND.meta.surface_pressure_hpa; document.getElementById("xco2").value=state.xco2; document.getElementById("sza").value=state.sza; document.getElementById("psurf").value=Math.round(state.psurf); } else { state.albL2=false; state.vza=0; }
   syncChips(); draw(); });
 cv.addEventListener("mousemove", e=>{ const r=cv.getBoundingClientRect(); hoverX=e.clientX-r.left; if (cur.aband) render(cv.getContext("2d"), cv.clientWidth, 1); });
 cv.addEventListener("mouseleave", ()=>{ hoverX=null; if (cur.aband) render(cv.getContext("2d"), cv.clientWidth, 1); });

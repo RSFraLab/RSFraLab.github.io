@@ -91,8 +91,8 @@ snow 0.955/0.156/0.052, conifer 0.652/0.261/0.112, dry grass 0.517/0.597/0.452.
 
 `img/xco2_hero.jpg` (2400 × 1080, dark background, < 400 kB): **JJA 2019 mean XCO₂ from the AtmosTransport CATRINE
 C90 run** (`co2_natural`, dry-air-mass-weighted column, 8 snapshots/day × 92 days, nearest-cell regridded to 0.25°,
-σ = 1 cell smoothing, dark-blue → gold ramp, subtle coastlines, no axes/labels). `img/xco2_hero_jja2019.gif` is the
-same field day by day at 12 UTC (92 frames). An observation-based alternative is produced by
+σ = 1 cell smoothing, dark-blue → gold ramp, subtle coastlines, no axes/labels). `img/xco2_hero_jja2019.gif` (5.6 MB, 1000 × 450, 46 frames) is the
+same field every second day at 12 UTC. An observation-based alternative is produced by
 `make_xco2_composite.py` + `make_xco2_hero.py` (OCO-2 Lite v11.2, JJA 2021–2024, 1° medians incl. ocean glint,
 σ = 2 cells, Antarctica removed) — smoother than round 1 but still streaky from the glint sampling, which is why the
 model field is used.
