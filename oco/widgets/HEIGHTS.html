@@ -344,7 +344,10 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#widget-heights-for-fixed-height-iframes" id="toc-widget-heights-for-fixed-height-iframes" class="nav-link active" data-scroll-target="#widget-heights-for-fixed-height-iframes">Widget heights for fixed-height iframes</a></li>
+  <li><a href="#widget-heights-for-fixed-height-iframes" id="toc-widget-heights-for-fixed-height-iframes" class="nav-link active" data-scroll-target="#widget-heights-for-fixed-height-iframes">Widget heights for fixed-height iframes</a>
+  <ul class="collapse">
+  <li><a href="#control-test-2026-09-16" id="toc-control-test-2026-09-16" class="nav-link" data-scroll-target="#control-test-2026-09-16">Control test (2026-09-16)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -379,20 +382,20 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
 </thead>
 <tbody>
 <tr class="odd">
-<td>oco/widgets/spectra-explorer.html</td>
-<td>726</td>
-<td>609</td>
-<td>881</td>
-<td>763</td>
-<td>620 (890) / 780 (650)</td>
+<td>oco/widgets/spectra-explorer.html (three stacked bands, 2026-09-16 rev.)</td>
+<td>865</td>
+<td>795</td>
+<td>987</td>
+<td>929</td>
+<td>810 (890) / 945 (650)</td>
 </tr>
 <tr class="even">
-<td>oco/widgets/footprint-scale.html</td>
-<td>703</td>
-<td>587</td>
-<td>723</td>
-<td>607</td>
-<td>600 / 620</td>
+<td>oco/widgets/footprint-scale.html (2026-09-16 rev., longer readouts)</td>
+<td>~740</td>
+<td>621</td>
+<td>~745</td>
+<td>621</td>
+<td>635 / 635</td>
 </tr>
 <tr class="odd">
 <td>oco/widgets/photon-path.html</td>
@@ -462,8 +465,12 @@ gtag('config', 'G-V5MKFZWK6P', { 'anonymize_ip': true});
 </table>
 <p>Add ~12 px of slack to the suggested values for font rendering differences on the Caltech template. All widgets accept <code>?theme=light|dark</code> (light is the default: they no longer follow the visitor’s OS dark-mode preference when embedded cross-origin) and <code>?caption=0</code>, and every widget has a <code>PNG ↓</code> button that exports the plot at 2× resolution (the SIF widgets composite all their canvases; the OCO widgets re-render the chart offscreen).</p>
 <p>Reproduce: <code>python3 -m http.server 8765</code> in the site root, then <code>node test_widgets.js &lt;screenshot dir&gt;</code> (see <code>oco/scripts/measure_heights.js</code>).</p>
+<section id="control-test-2026-09-16" class="level2">
+<h2 class="anchored" data-anchor-id="control-test-2026-09-16">Control test (2026-09-16)</h2>
+<p><code>oco/scripts/test_widget_controls.js</code> clicks every button/chip/tab, drives every slider to both ends, opens every <code>&lt;details&gt;</code>, and triggers the PNG export in all ten widgets (headless Chromium, local <code>http.server</code>). Result: no console or page errors in any widget; every PNG button produced a download; every button that is meant to change the plot redrew the canvas (spectra 5/6 buttons — the sixth is the sounding toggle, which also redraws once data is loaded; footprint 4/5; photon 1/1; resolution 5/5; spectral 7/8; albedo 4/5; canopy 4/5; fluorescence 1/1; fraunhofer and sif-map have sliders/legend only).</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
