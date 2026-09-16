@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photon Path — why the O₂ band is the ruler for the CO₂ bands</title>
+<style>
+  :root{--bg:transparent;--panel:#ffffff;--hairline:#d9dee3;--text:#1d2530;--muted:#5b6773;--faint:#8a97a5;
+    --sun:#e0a020;--direct:#1f6fb2;--scat:#c92a5a;--ground:#8a6d3b;--sky:#e9f2fb;--aer:#b8c4d0;--chip-on-bg:#1d2530;--chip-on-fg:#ffffff}
+  [data-theme="dark"][data-standalone]{--bg:#171c22}
+  [data-theme="dark"]{--panel:#212831;--hairline:#1e2733;--text:#e8edf2;--muted:#8a97a5;--faint:#5b6773;--sun:#f0c050;--direct:#5aa9e6;--scat:#ff5c8a;--ground:#a8895a;--sky:#1a2a3a;--aer:#3a4a5a;--chip-on-bg:#e8edf2;--chip-on-fg:#0b0f14}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg)}
+  body{color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5}
+  .widget{background:var(--panel);border:1px solid var(--hairline);border-radius:8px;overflow:hidden;max-width:960px;margin:0 auto}
+  .head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--hairline)}
+  .key{display:flex;gap:12px;flex-wrap:wrap;font:12px ui-monospace,Menlo,monospace;color:var(--muted)}
+  .key span{display:flex;align-items:center;gap:6px;white-space:nowrap}
+  .key i{width:16px;height:0;border-top-width:2px;border-top-style:solid;display:inline-block}
+  .chip,.btn{font:12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;border:1px solid var(--hairline);border-radius:999px;padding:4px 11px;background:transparent;color:var(--text);cursor:pointer}
+  .chip.on{background:var(--chip-on-bg);color:var(--chip-on-fg);border-color:var(--chip-on-bg)}
+  .spacer{margin-left:auto}
+  .body{padding:8px 6px 0}
+  canvas{display:block;width:100%}
+  .controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px 18px;padding:8px 16px 6px}
+  .ctl label{display:flex;justify-content:space-between;font:12px ui-monospace,Menlo,monospace;color:var(--muted)}
+  .ctl output{color:var(--text);font-weight:600}
+  input[type=range]{width:100%;accent-color:var(--direct)}
+  .readouts{display:flex;flex-wrap:wrap;gap:6px 18px;padding:6px 16px 8px;border-top:1px solid var(--hairline);font:12px ui-monospace,Menlo,monospace;color:var(--muted)}
+  .readouts b{color:var(--text);font-weight:600}
+  .caption{padding:8px 16px 12px;color:var(--muted);font-size:13px;max-width:80ch}
+  @media (max-width:700px){.controls{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="widget">
+  <div class="head">
+    <div class="key">
+      <span><i style="border-color:var(--direct)"></i>direct path (surface reflection)</span>
+      <span><i style="border-color:var(--scat);border-top-style:dashed"></i>scattered by aerosol</span>
+    </div>
+    <button class="chip spacer" id="aerChip">show aerosol paths</button>
+    <button class="btn" id="exportBtn" title="Download this view as a PNG (2×)">PNG ↓</button>
+  </div>
+  <div class="body"><canvas id="cv" aria-label="Geometry of sunlight travelling through the atmosphere to the surface and up to the satellite"></canvas></div>
+  <div class="controls">
+    <div class="ctl"><label>Solar zenith angle <output id="sOut">40°</output></label><input type="range" id="sza" min="0" max="75" step="1" value="40"></div>
+    <div class="ctl"><label>Viewing zenith angle <output id="vOut">0°</output></label><input type="range" id="vza" min="0" max="60" step="1" value="0"></div>
+    <div class="ctl"><label>Aerosol layer height <output id="hOut">2 km</output></label><input type="range" id="haer" min="0.5" max="8" step="0.5" value="2"></div>
+  </div>
+  <div class="readouts">
+    <span>airmass factor <b id="roM">—</b></span>
+    <span>CO₂ absorption seen <b id="roT">—</b></span>
+    <span id="roScatWrap" style="display:none">path through the aerosol shortcut <b id="roS">—</b></span>
+  </div>
+  <p class="caption" id="cap">The absorption a satellite sees depends on how far the light travelled through the atmosphere, not only on how much CO₂ is there. A low sun or a slanted view lengthens the path, by the airmass factor m = 1/cos(SZA) + 1/cos(VZA). Light scattered back by aerosol or thin cloud never reaches the ground, so it crosses less CO₂ and makes the column look too small. Oxygen has a known, constant amount, so the O₂ A-band reveals the true path length; dividing it out is what makes XCO₂ accurate to a fraction of a percent.</p>
+</div>
+<script>
+"use strict";
+const Q=new URLSearchParams(location.search); const THEME_PARAM=Q.get("theme");
+function pageIsDark(){ try{ if(window.parent===window) return null; const d=window.parent.document; if(d.body.classList.contains("quarto-dark")) return true; if(d.body.classList.contains("quarto-light")) return false; const bs=d.documentElement.getAttribute("data-bs-theme"); return bs?bs==="dark":null; }catch(e){ return null; } }
+(function(){ const h=pageIsDark(); const dark=THEME_PARAM?THEME_PARAM==="dark":(h===null?false:h); document.documentElement.setAttribute("data-theme",dark?"dark":"light"); if(window.parent===window) document.documentElement.setAttribute("data-standalone",""); })();
+if (Q.get("caption")==="0") document.querySelectorAll(".caption").forEach(e=>e.remove());
+const css=getComputedStyle(document.documentElement), col=k=>css.getPropertyValue(k).trim();
+const C={hair:col("--hairline"),text:col("--text"),muted:col("--muted"),faint:col("--faint"),sun:col("--sun"),direct:col("--direct"),scat:col("--scat"),ground:col("--ground"),sky:col("--sky"),aer:col("--aer"),panel:col("--panel")};
+const state={sza:40, vza:0, haer:2, aer:false}; const H=380, TOA=60;   // TOA at 60 km on the drawing scale (km per px set from the canvas height)
+const cv=document.getElementById("cv");
+const TAU_CO2=0.5;  // illustrative vertical CO2 optical depth for the readout ("absorption seen" = 1 - exp(-m*tau))
+function render(ctx, W, scale){
+  const dpr=(window.devicePixelRatio||1)*scale; ctx.canvas.width=Math.round(W*dpr); ctx.canvas.height=Math.round(H*dpr); ctx.canvas.style.height=H+"px"; ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.fillStyle=C.panel; ctx.fillRect(0,0,W,H);
+  const gy=H-46, top=26, kmpx=(gy-top)/TOA;          // ground line and the top of the drawn atmosphere
+  const cx=W*0.55;                                    // where the sunlight hits the ground
+  // atmosphere with a density gradient (scale height ~8 km)
+  for (let y=top;y<gy;y++){ const z=(gy-y)/kmpx; const a=Math.exp(-z/8); ctx.fillStyle=C.sky; ctx.globalAlpha=0.25+0.75*a; ctx.fillRect(0,y,W,1); } ctx.globalAlpha=1;
+  // aerosol layer
+  const yA=gy-state.haer*kmpx; if (state.aer){ ctx.fillStyle=C.aer; ctx.globalAlpha=0.55; ctx.fillRect(0,yA-6,W,12); ctx.globalAlpha=1; ctx.fillStyle=C.muted; ctx.font="11px ui-monospace, Menlo, monospace"; ctx.textAlign="left"; ctx.textBaseline="bottom"; ctx.fillText(`aerosol / thin cloud at ${state.haer} km`, 10, yA-8); }
+  // ground
+  ctx.fillStyle=C.ground; ctx.fillRect(0,gy,W,H-gy); ctx.fillStyle="#fff"; ctx.globalAlpha=0.8; ctx.font="11px ui-monospace, Menlo, monospace"; ctx.textAlign="left"; ctx.textBaseline="top"; ctx.fillText("surface", 10, gy+6); ctx.globalAlpha=1;
+  ctx.fillStyle=C.faint; ctx.textBaseline="bottom"; ctx.fillText("top of atmosphere (60 km)", 10, top-4); ctx.strokeStyle=C.hair; ctx.setLineDash([3,4]); ctx.beginPath(); ctx.moveTo(0,top); ctx.lineTo(W,top); ctx.stroke(); ctx.setLineDash([]);
+  const s=state.sza*Math.PI/180, v=state.vza*Math.PI/180;
+  // sun ray: comes from the upper-left at angle SZA from vertical, hits ground at cx
+  const L=(gy-top)/Math.cos(Math.min(s,1.48)); const sx=cx-L*Math.sin(s), sy=gy-L*Math.cos(s);
+  // satellite: upper-right at angle VZA from vertical
+  const Lv=(gy-top)/Math.cos(v); const vx=cx+Lv*Math.sin(v), vy=gy-Lv*Math.cos(v);
+  // sun disk & satellite
+  ctx.fillStyle=C.sun; ctx.beginPath(); ctx.arc(sx,sy,9,0,2*Math.PI); ctx.fill();
+  ctx.fillStyle=C.text; ctx.fillRect(vx-7,vy-5,14,10); ctx.fillRect(vx-18,vy-2,36,4);
+  // direct path
+  ctx.strokeStyle=C.direct; ctx.lineWidth=2.2; ctx.beginPath(); ctx.moveTo(sx,sy); ctx.lineTo(cx,gy); ctx.lineTo(vx,vy); ctx.stroke();
+  // photon dots animate along the path
+  const t=(performance.now()/1800)%1, seg1=Math.hypot(cx-sx,gy-sy), seg2=Math.hypot(vx-cx,vy-gy), tot=seg1+seg2;
+  for (let k=0;k<3;k++){ const u=((t+k/3)%1)*tot; let x,y; if (u<seg1){ x=sx+(cx-sx)*u/seg1; y=sy+(gy-sy)*u/seg1; } else { const w=(u-seg1)/seg2; x=cx+(vx-cx)*w; y=gy+(vy-gy)*w; }
+    ctx.fillStyle=C.direct; ctx.beginPath(); ctx.arc(x,y,3.2,0,2*Math.PI); ctx.fill(); }
+  // scattered path: sun ray → aerosol layer → satellite, shortcutting the layers below
+  let frac=null;
+  if (state.aer){ const ax=cx-(gy-yA)*Math.tan(s); ctx.strokeStyle=C.scat; ctx.setLineDash([6,5]); ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(sx,sy); ctx.lineTo(ax,yA); ctx.lineTo(ax+(yA-vy)*Math.tan(v),vy); ctx.stroke(); ctx.setLineDash([]);
+    // fraction of the CO2 column (scale height 8 km, well mixed → pressure fraction) crossed on the short path: exp(-h/8)
+    frac=Math.exp(-state.haer/8); }
+  // labels
+  ctx.fillStyle=C.muted; ctx.font="12px ui-monospace, Menlo, monospace"; ctx.textAlign="center"; ctx.textBaseline="top";
+  ctx.fillText(`SZA ${state.sza}°`, (sx+cx)/2-18, Math.max(top+6,(sy+gy)/2)); ctx.fillText(`VZA ${state.vza}°`, (vx+cx)/2+18, Math.max(top+6,(vy+gy)/2));
+  return frac;
+}
+function draw(){ const frac=render(cv.getContext("2d"), cv.clientWidth||800, 1);
+  const m=1/Math.cos(state.sza*Math.PI/180)+1/Math.cos(state.vza*Math.PI/180);
+  document.getElementById("roM").textContent=m.toFixed(2)+"  (2.00 at nadir, overhead sun)";
+  document.getElementById("roT").textContent=(100*(1-Math.exp(-m*TAU_CO2))).toFixed(0)+" % of the light absorbed in a CO₂ line with τ = "+TAU_CO2;
+  document.getElementById("roScatWrap").style.display=state.aer?"":"none";
+  if (frac!==null) document.getElementById("roS").textContent=(100*(1-frac)).toFixed(0)+" % of the CO₂ column is skipped → looks like "+(100*frac).toFixed(0)+" % of the true XCO₂ unless the O₂ band catches it";
+  document.getElementById("sOut").textContent=state.sza+"°"; document.getElementById("vOut").textContent=state.vza+"°"; document.getElementById("hOut").textContent=state.haer+" km"; }
+for (const [id,k] of [["sza","sza"],["vza","vza"],["haer","haer"]]) document.getElementById(id).addEventListener("input", e=>{ state[k]=+e.target.value; draw(); });
+document.getElementById("aerChip").addEventListener("click", e=>{ state.aer=!state.aer; e.target.classList.toggle("on",state.aer); draw(); });
+document.getElementById("exportBtn").addEventListener("click", ()=>{ const off=document.createElement("canvas"); render(off.getContext("2d"), cv.clientWidth||800, 2/(window.devicePixelRatio||1));
+  off.toBlob(b=>{ const a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download=`oco_photon_path_sza${state.sza}_vza${state.vza}.png`; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000); },"image/png"); });
+window.addEventListener("resize", draw);
+(function loop(){ draw(); requestAnimationFrame(loop); })();
+</script>
+</body>
+</html>

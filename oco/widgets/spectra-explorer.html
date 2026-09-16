@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCO-2 Spectra Explorer — what the three bands see</title>
+<style>
+  :root{
+    --bg:transparent; --panel:#ffffff; --hairline:#d9dee3;
+    --text:#1d2530; --muted:#5b6773; --faint:#8a97a5;
+    --model:#1f6fb2; --model-fill:rgba(31,111,178,0.10);
+    --obs:#c92a5a; --resid:#6b7d8f; --cont:#a9791f;
+    --chip-on-bg:#1d2530; --chip-on-fg:#ffffff;
+  }
+  [data-theme="dark"][data-standalone]{--bg:#171c22}
+  [data-theme="dark"]{--panel:#212831;--hairline:#1e2733;--text:#e8edf2;--muted:#8a97a5;--faint:#5b6773;
+    --model:#5aa9e6;--model-fill:rgba(90,169,230,0.14);--obs:#ff5c8a;--resid:#9fb0c0;--cont:#e0b64a;--chip-on-bg:#e8edf2;--chip-on-fg:#0b0f14}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg)}
+  body{color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .widget{background:var(--panel);border:1px solid var(--hairline);border-radius:8px;overflow:hidden;max-width:960px;margin:0 auto}
+  .head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--hairline)}
+  .tabs{display:flex;gap:6px}
+  .tab,.chip,.btn{font:12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;border:1px solid var(--hairline);border-radius:999px;padding:4px 11px;background:transparent;color:var(--text);cursor:pointer}
+  .tab.on,.chip.on{background:var(--chip-on-bg);color:var(--chip-on-fg);border-color:var(--chip-on-bg)}
+  .key{display:flex;gap:12px;flex-wrap:wrap;font:12px ui-monospace,Menlo,monospace;color:var(--muted);margin-left:auto}
+  .key span{display:flex;align-items:center;gap:6px;white-space:nowrap}
+  .key i{width:16px;height:0;border-top-width:2px;border-top-style:solid;display:inline-block}
+  .body{position:relative;padding:8px 6px 0}
+  canvas{display:block;width:100%}
+  .hover{position:absolute;pointer-events:none;display:none;background:var(--panel);border:1px solid var(--hairline);border-radius:6px;padding:4px 8px;font:11px ui-monospace,Menlo,monospace;color:var(--text);white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+  .controls{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;padding:8px 16px 6px}
+  .ctl label{display:flex;justify-content:space-between;font:12px ui-monospace,Menlo,monospace;color:var(--muted)}
+  .ctl output{color:var(--text);font-weight:600}
+  input[type=range]{width:100%;accent-color:var(--model)}
+  .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:4px 16px 8px}
+  .row .lbl{font:12px ui-monospace,Menlo,monospace;color:var(--muted);margin-right:4px}
+  .readouts{display:flex;flex-wrap:wrap;gap:6px 18px;padding:6px 16px;border-top:1px solid var(--hairline);font:12px ui-monospace,Menlo,monospace;color:var(--muted)}
+  .readouts b{color:var(--text);font-weight:600}
+  .caption{padding:8px 16px 12px;color:var(--muted);font-size:13px;max-width:80ch}
+  .note{font:11px ui-monospace,Menlo,monospace;color:var(--faint);padding:0 16px 10px}
+  @media (max-width:700px){.controls{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="widget" id="widget">
+  <div class="head">
+    <div class="tabs" id="tabs">
+      <button class="tab on" data-band="aband">O₂ A-band 0.76 µm</button>
+      <button class="tab" data-band="wco2">weak CO₂ 1.61 µm</button>
+      <button class="tab" data-band="sco2">strong CO₂ 2.06 µm</button>
+    </div>
+    <div class="key">
+      <span><i style="border-color:var(--cont);border-top-style:dashed"></i>no absorption</span>
+      <span><i style="border-color:var(--model)"></i>model</span>
+      <span id="keyObs" style="display:none"><i style="border-color:var(--obs)"></i>OCO-2 sounding</span>
+    </div>
+    <button class="btn" id="exportBtn" title="Download this view as a PNG (2×)">PNG ↓</button>
+  </div>
+  <div class="body">
+    <canvas id="cv" aria-label="Top-of-atmosphere radiance spectrum for the selected OCO-2 band"></canvas>
+    <div class="hover" id="hv"></div>
+  </div>
+  <div class="controls">
+    <div class="ctl"><label>XCO₂ <output id="xOut">420 ppm</output></label>
+      <input type="range" id="xco2" min="380" max="440" step="0.5" value="420" aria-label="Column-averaged CO2 in ppm"></div>
+    <div class="ctl"><label>Solar zenith angle <output id="sOut">30°</output></label>
+      <input type="range" id="sza" min="0" max="70" step="0.5" value="30" aria-label="Solar zenith angle in degrees"></div>
+  </div>
+  <div class="row">
+    <span class="lbl">surface</span>
+    <span id="surfaces"></span>
+    <button class="chip" id="obsChip" style="display:none">overlay OCO-2 sounding</button>
+  </div>
+  <div class="readouts">
+    <span>airmass factor <b id="roM">—</b></span>
+    <span>band albedo <b id="roA">—</b></span>
+    <span>continuum radiance <b id="roC">—</b></span>
+    <span id="roFitWrap" style="display:none">rms residual (sounding − model) <b id="roFit">—</b></span>
+  </div>
+  <p class="caption" id="cap">Sunlight crosses the atmosphere twice before reaching the satellite. In the O₂ A-band the absorber amount is known, so the band measures the light path (surface pressure, clouds, aerosols); in the two CO₂ bands the same path reveals how much CO₂ it crossed. Move XCO₂ and watch the CO₂ lines deepen while the O₂ band stays put. The dashed line is the reflected sunlight without any absorption.</p>
+  <p class="note" id="note"></p>
+</div>
+
+<script>
+"use strict";
+/* ---- theme: light by default; ?theme=dark forces dark; a same-origin Quarto host toggle is followed ---- */
+const Q = new URLSearchParams(location.search);
+const THEME_PARAM = Q.get("theme");
+function pageIsDark(){ try{ if (window.parent===window) return null; const d=window.parent.document;
+  if (d.body.classList.contains("quarto-dark")) return true; if (d.body.classList.contains("quarto-light")) return false;
+  const bs=d.documentElement.getAttribute("data-bs-theme"); return bs? bs==="dark" : null; }catch(e){ return null; } }
+function resolveTheme(){ const hosted=pageIsDark(); const dark = THEME_PARAM ? THEME_PARAM==="dark" : (hosted===null ? false : hosted);
+  document.documentElement.setAttribute("data-theme", dark?"dark":"light");
+  if (window.parent===window) document.documentElement.setAttribute("data-standalone",""); }
+resolveTheme();
+if (Q.get("caption")==="0") document.querySelectorAll(".caption").forEach(e=>e.remove());
+
+const css=getComputedStyle(document.documentElement), col=k=>css.getPropertyValue(k).trim();
+let C; function readPalette(){ C={hair:col("--hairline"),text:col("--text"),muted:col("--muted"),faint:col("--faint"),
+  model:col("--model"),modelFill:col("--model-fill"),obs:col("--obs"),resid:col("--resid"),cont:col("--cont"),panel:col("--panel")}; } readPalette();
+
+/* ---- data: ?data=<dir> holding tau_*.json, solar_*.json, albedo_surfaces.json, sounding_oco2.json ---- */
+const DATA = (Q.get("data") || "../data").replace(/\/$/,"");
+const BANDS = {
+  aband:{label:"O₂ A-band", ymax:400, key:"aband"},
+  wco2: {label:"weak CO₂",  ymax:70,  key:"wco2"},
+  sco2: {label:"strong CO₂",ymax:30,  key:"sco2"},
+};
+const state={band:"aband", xco2:420, sza:30, vza:0, surface:"dry_grass", albedo:null, obs:false};
+const cache={};
+async function getJSON(name){ if(!cache[name]) cache[name]=fetch(`${DATA}/${name}`).then(r=>{ if(!r.ok) throw new Error(name); return r.json(); }); return cache[name]; }
+let ALB=null, SND=null;
+getJSON("albedo_surfaces.json").then(j=>{ ALB=j; buildSurfaces(); readouts(); draw(); }).catch(()=>{});
+getJSON("sounding_oco2.json").then(j=>{ SND=j; document.getElementById("obsChip").style.display=""; }).catch(()=>{});
+
+function buildSurfaces(){
+  const box=document.getElementById("surfaces"); box.innerHTML="";
+  const names={ocean:"ocean",desert:"desert",snow:"snow",conifer:"conifer forest",dry_grass:"dry grass"};
+  for (const k of ["dry_grass","desert","conifer","snow","ocean"]){
+    if (!ALB[k]) continue;
+    const b=document.createElement("button"); b.className="chip"+(state.surface===k?" on":""); b.textContent=names[k]||k;
+    b.onclick=()=>{ state.surface=k; state.obs=false; syncChips(); readouts(); draw(); }; box.appendChild(b);
+  }
+}
+function syncChips(){
+  document.querySelectorAll("#surfaces .chip").forEach(b=>b.classList.toggle("on", !state.obs && (b.textContent===({ocean:"ocean",desert:"desert",snow:"snow",conifer:"conifer forest",dry_grass:"dry grass"})[state.surface])));
+  document.getElementById("obsChip").classList.toggle("on", state.obs);
+  document.getElementById("keyObs").style.display = state.obs ? "" : "none";
+  document.getElementById("roFitWrap").style.display = state.obs ? "" : "none";
+}
+function bandAlbedo(){
+  if (state.obs && SND) return SND.meta.albedo_l2[state.band];
+  if (ALB && ALB.band_means && ALB.band_means[state.surface]) return ALB.band_means[state.surface][state.band];
+  return 0.3;
+}
+/* ---- forward model on the tau grid ---- */
+function model(tau, sol){
+  const m = 1/Math.cos(state.sza*Math.PI/180) + 1/Math.cos(state.vza*Math.PI/180);
+  const a = bandAlbedo(), mu0=Math.cos(state.sza*Math.PI/180), n=tau.wl.length;
+  const L=new Float64Array(n), Lc=new Float64Array(n);
+  const co2=tau.tau_co2, o2=tau.tau_o2, h2o=tau.tau_h2o, ch4=tau.tau_ch4||null, s=state.xco2/420;
+  for (let i=0;i<n;i++){
+    let t = co2[i]*s + o2[i] + h2o[i]; if (ch4) t += ch4[i];
+    Lc[i] = sol.e0[i]*mu0*a/Math.PI; L[i] = Lc[i]*Math.exp(-m*t);
+  }
+  return {L, Lc, m, a};
+}
+
+/* ---- drawing (renders into any 2D context so the PNG export can run at 2x) ---- */
+const cv=document.getElementById("cv"), hv=document.getElementById("hv");
+const PADL=60,PADR=14,PADT=14,PADB=34,H=340,HR=64;   // main plot + residual strip (always reserved: fixed height)
+let hoverX=null, cur=null;
+function ticks(min,max,n){ const s0=(max-min)/n, mag=Math.pow(10,Math.floor(Math.log10(s0))); let st=mag;
+  for (const s of [1,2,2.5,5,10]) if (s0<=s*mag){ st=s*mag; break; } const o=[]; for (let v=Math.ceil(min/st)*st; v<=max+1e-9; v+=st) o.push(v); return o; }
+async function draw(){
+  const b=BANDS[state.band]; let tau, sol;
+  try { [tau, sol] = await Promise.all([getJSON(`tau_${b.key}.json`), getJSON(`solar_${b.key}.json`)]); } catch(e){ noData(); return; }
+  cur = {tau, sol, ...model(tau, sol)};
+  render(cv.getContext("2d"), cv.clientWidth || 800, 1);
+  readouts();
+}
+function render(ctx, W, scale){
+  const dpr=(window.devicePixelRatio||1)*scale, canvas=ctx.canvas; const HT=H+HR;
+  canvas.width=Math.round(W*dpr); canvas.height=Math.round(HT*dpr); canvas.style.height=HT+"px"; ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.fillStyle=C.panel; ctx.fillRect(0,0,W,HT);
+  const b=BANDS[state.band], wl=cur.tau.wl, x0=wl[0], x1=wl[wl.length-1];
+  const px=x=>PADL+(x-x0)/(x1-x0)*(W-PADL-PADR), py=v=>PADT+(1-v/b.ymax)*(H-PADT-PADB);
+  ctx.font="11px ui-monospace, Menlo, monospace";
+  ctx.strokeStyle=C.hair; ctx.fillStyle=C.faint; ctx.lineWidth=1;
+  for (const t of ticks(0,b.ymax,4)){ const y=py(t); ctx.beginPath(); ctx.moveTo(PADL,y); ctx.lineTo(W-PADR,y); ctx.stroke(); ctx.textAlign="right"; ctx.textBaseline="middle"; ctx.fillText(t.toFixed(0),PADL-7,y); }
+  for (const t of ticks(x0,x1,6)){ const X=px(t); ctx.textBaseline="top"; ctx.textAlign=X>W-PADR-16?"right":(X<PADL+16?"left":"center"); ctx.fillText(t.toFixed(0),X,H-PADB+6); }
+  ctx.save(); ctx.translate(14,(PADT+H-PADB)/2); ctx.rotate(-Math.PI/2); ctx.textAlign="center"; ctx.textBaseline="middle"; ctx.fillStyle=C.muted; ctx.fillText("radiance  W m⁻² µm⁻¹ sr⁻¹",0,0); ctx.restore();
+  ctx.fillStyle=C.muted; ctx.textAlign="center"; ctx.textBaseline="top"; ctx.fillText("wavelength  nm",(PADL+W-PADR)/2,H-PADB+19);
+  // no-absorption continuum
+  ctx.setLineDash([5,4]); ctx.strokeStyle=C.cont; ctx.lineWidth=1.2; ctx.beginPath();
+  for (let i=0;i<wl.length;i++){ const y=py(Math.min(cur.Lc[i],b.ymax)); i?ctx.lineTo(px(wl[i]),y):ctx.moveTo(px(wl[i]),y); } ctx.stroke(); ctx.setLineDash([]);
+  // model
+  ctx.fillStyle=C.modelFill; ctx.beginPath(); ctx.moveTo(px(wl[0]),py(0));
+  for (let i=0;i<wl.length;i++) ctx.lineTo(px(wl[i]),py(Math.min(cur.L[i],b.ymax))); ctx.lineTo(px(wl[wl.length-1]),py(0)); ctx.closePath(); ctx.fill();
+  ctx.strokeStyle=C.model; ctx.lineWidth=1.1; ctx.beginPath();
+  for (let i=0;i<wl.length;i++){ const y=py(Math.min(cur.L[i],b.ymax)); i?ctx.lineTo(px(wl[i]),y):ctx.moveTo(px(wl[i]),y); } ctx.stroke();
+  // residual strip frame
+  const rt=H+6, rb=H+HR-8, rmid=(rt+rb)/2;
+  ctx.strokeStyle=C.hair; ctx.beginPath(); ctx.moveTo(PADL,rmid); ctx.lineTo(W-PADR,rmid); ctx.stroke();
+  ctx.fillStyle=C.faint; ctx.textAlign="right"; ctx.textBaseline="middle"; ctx.fillText("resid.",PADL-7,rmid);
+  let fitTxt="—";
+  if (state.obs && SND){
+    const s=SND[state.band], pf=SND.meta.polarization_factor||0.5;         // one polarization measured → ×1/pf to compare with total intensity
+    ctx.strokeStyle=C.obs; ctx.lineWidth=1; ctx.beginPath(); let pen=false;
+    for (let i=0;i<s.wl.length;i++){ if(!s.good[i]){pen=false;continue;} const y=py(Math.min(s.radiance[i]/pf,b.ymax)); pen?ctx.lineTo(px(s.wl[i]),y):ctx.moveTo(px(s.wl[i]),y); pen=true; } ctx.stroke();
+    // residual: sounding (total-intensity equivalent) − model interpolated to the sounding grid
+    let se=0,n=0; const res=[]; let rmax=0;
+    for (let i=0;i<s.wl.length;i++){ if(!s.good[i]||s.wl[i]<x0||s.wl[i]>x1){res.push(null);continue;}
+      const f=(s.wl[i]-x0)/(x1-x0)*(wl.length-1), k=Math.max(0,Math.min(wl.length-2,Math.floor(f))), t=f-k;
+      const r=s.radiance[i]/pf-(cur.L[k]*(1-t)+cur.L[k+1]*t); res.push(r); se+=r*r; n++; rmax=Math.max(rmax,Math.abs(r)); }
+    const rs=Math.max(rmax,1e-9), ry=v=>rmid-(v/rs)*((rb-rt)/2);
+    ctx.strokeStyle=C.resid; ctx.beginPath(); pen=false;
+    for (let i=0;i<s.wl.length;i++){ if(res[i]===null){pen=false;continue;} pen?ctx.lineTo(px(s.wl[i]),ry(res[i])):ctx.moveTo(px(s.wl[i]),ry(res[i])); pen=true; } ctx.stroke();
+    ctx.fillStyle=C.faint; ctx.textAlign="left"; ctx.textBaseline="top"; ctx.fillText("±"+rs.toFixed(rs<1?2:1),PADL+4,rt);
+    fitTxt = n? (Math.sqrt(se/n)).toFixed(2)+" W m⁻² µm⁻¹ sr⁻¹ ("+(100*Math.sqrt(se/n)/Math.max(1e-9,cur.Lc.reduce((a,v)=>Math.max(a,v),0))).toFixed(1)+" % of continuum)" : "—";
+  } else { ctx.fillStyle=C.faint; ctx.textAlign="left"; ctx.textBaseline="middle"; ctx.fillText("turn on the OCO-2 sounding overlay to see the fit residual",PADL+6,rmid); }
+  document.getElementById("roFit").textContent=fitTxt;
+  // hover crosshair
+  if (hoverX!==null && scale===1){
+    const xw=x0+(hoverX-PADL)/(W-PADL-PADR)*(x1-x0);
+    if (xw>=x0 && xw<=x1){ const f=(xw-x0)/(x1-x0)*(wl.length-1), k=Math.max(0,Math.min(wl.length-2,Math.floor(f))), t=f-k, L=cur.L[k]*(1-t)+cur.L[k+1]*t;
+      ctx.strokeStyle=C.faint; ctx.setLineDash([3,3]); ctx.beginPath(); ctx.moveTo(hoverX,PADT); ctx.lineTo(hoverX,H-PADB); ctx.stroke(); ctx.setLineDash([]);
+      ctx.beginPath(); ctx.arc(hoverX,py(Math.min(L,b.ymax)),3.5,0,2*Math.PI); ctx.fillStyle=C.model; ctx.fill(); ctx.lineWidth=1.5; ctx.strokeStyle=C.panel; ctx.stroke();
+      let txt=`${xw.toFixed(3)} nm   model ${L.toFixed(2)}`;
+      if (state.obs && SND){ const s=SND[state.band]; let j=0,best=1e9; for(let i=0;i<s.wl.length;i++){ const d=Math.abs(s.wl[i]-xw); if(d<best){best=d;j=i;} } if (s.good[j]) txt+=`   sounding ${(s.radiance[j]/(SND.meta.polarization_factor||0.5)).toFixed(2)}`; }
+      hv.textContent=txt; hv.style.display="block"; hv.style.left=Math.min(hoverX+12, W-hv.offsetWidth-10)+"px"; hv.style.top=(PADT+8)+"px"; }
+    else hv.style.display="none";
+  } else if (scale===1) hv.style.display="none";
+}
+function noData(){ const ctx=cv.getContext("2d"), W=cv.clientWidth||800, dpr=window.devicePixelRatio||1; cv.width=W*dpr; cv.height=(H+HR)*dpr; cv.style.height=(H+HR)+"px"; ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.fillStyle=C.muted; ctx.font="13px system-ui"; ctx.textAlign="center"; ctx.fillText("data files not found — pass ?data=<dir with tau_*.json and solar_*.json>", W/2, (H+HR)/2); }
+function readouts(){
+  if (!cur) return;
+  document.getElementById("roM").textContent=cur.m.toFixed(2)+" (1/cos SZA + 1/cos VZA)";
+  document.getElementById("roA").textContent=cur.a.toFixed(3)+(state.obs?" (L2 retrieved)":"");
+  document.getElementById("roC").textContent=Math.max(...cur.Lc).toFixed(1)+" W m⁻² µm⁻¹ sr⁻¹";
+  document.getElementById("xOut").textContent=state.xco2.toFixed(1)+" ppm"; document.getElementById("sOut").textContent=state.sza.toFixed(1)+"°";
+  const b=BANDS[state.band]; const t=cur.tau.meta;
+  document.getElementById("note").textContent = `${b.label}: ${t.line_list.split(";")[0]}, ${t.ils.split(";")[0]}, ${t.atmosphere.split(";")[0]}. Model L = E₀·cos(SZA)·a/π·exp(−m·τ)` + (state.obs && SND ? `; sounding ${SND.meta.sounding_id} (${SND.meta.surface}, ${SND.meta.time_utc.slice(0,10)}), shown ×${(1/(SND.meta.polarization_factor||0.5)).toFixed(0)} because OCO-2 measures one polarization; XCO₂ and albedo set to the L2 retrieval.` : ".");
+}
+/* ---- controls ---- */
+document.getElementById("tabs").addEventListener("click", e=>{ const t=e.target.closest(".tab"); if(!t) return; state.band=t.dataset.band; document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t)); draw(); });
+document.getElementById("xco2").addEventListener("input", e=>{ state.xco2=+e.target.value; if (state.obs){ state.obs=false; syncChips(); } draw(); });
+document.getElementById("sza").addEventListener("input", e=>{ state.sza=+e.target.value; if (state.obs){ state.obs=false; syncChips(); } draw(); });
+document.getElementById("obsChip").addEventListener("click", ()=>{ if(!SND) return; state.obs=!state.obs;
+  if (state.obs){ state.xco2=SND.meta.xco2_l2_ppm; state.sza=SND.meta.sza; state.vza=SND.meta.vza; document.getElementById("xco2").value=state.xco2; document.getElementById("sza").value=state.sza; } else state.vza=0;
+  syncChips(); draw(); });
+cv.addEventListener("mousemove", e=>{ const r=cv.getBoundingClientRect(); hoverX=e.clientX-r.left; if (cur) render(cv.getContext("2d"), cv.clientWidth, 1); });
+cv.addEventListener("mouseleave", ()=>{ hoverX=null; if (cur) render(cv.getContext("2d"), cv.clientWidth, 1); });
+window.addEventListener("resize", ()=>{ if (cur) render(cv.getContext("2d"), cv.clientWidth, 1); });
+/* ---- PNG export at 2x ---- */
+document.getElementById("exportBtn").addEventListener("click", ()=>{ if(!cur) return; const off=document.createElement("canvas"); const W=cv.clientWidth||800; const hx=hoverX; hoverX=null;
+  render(off.getContext("2d"), W, 2 / (window.devicePixelRatio||1)); hoverX=hx;
+  off.toBlob(b=>{ const a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download=`oco_spectra_${state.band}_xco2${state.xco2}_sza${state.sza}.png`; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000); },"image/png"); });
+draw();
+</script>
+</body>
+</html>

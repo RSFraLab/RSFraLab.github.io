@@ -95,7 +95,7 @@ function pageIsDark(){
 }
 function resolveTheme(){
   const hosted = pageIsDark();
-  const dark = THEME_PARAM ? THEME_PARAM === "dark" : (hosted === null ? DARK_MQ.matches : hosted);
+  const dark = THEME_PARAM ? THEME_PARAM === "dark" : (hosted === null ? false : hosted);   // light by default when embedded cross-origin; ?theme=dark to force
   const root = document.documentElement;
   root.setAttribute("data-theme", dark ? "dark" : "light");
   /* Sit on the host page's own background rather than inventing one, so the card
@@ -274,6 +274,29 @@ cv.addEventListener("pointerleave",()=>{ hoverWl=null; hv.style.display="none"; 
 let rt; window.addEventListener("resize",()=>{ clearTimeout(rt); rt=setTimeout(draw,80); });
 
 sync(); draw();
+</script>
+
+<script>
+/* ---- embed helpers (2026-09-16): ?caption=0 hides the in-widget caption (the CMS writes its own);
+   the PNG button composites every canvas of the widget at 2x for a static fallback image. ---- */
+(function(){
+  const q = new URLSearchParams(location.search);
+  if (q.get("caption") === "0") document.querySelectorAll(".caption").forEach(e => e.remove());
+  const head = document.querySelector(".head") || document.querySelector(".widget");
+  if (!head) return;
+  const b = document.createElement("button"); b.textContent = "PNG ↓"; b.title = "Download the plot as a PNG (2×)";
+  b.style.cssText = "font:12px ui-monospace,Menlo,monospace;border:1px solid var(--hairline,#d9dee3);border-radius:999px;padding:3px 10px;background:transparent;color:inherit;cursor:pointer;margin-left:auto";
+  b.onclick = () => {
+    const cs = Array.from(document.querySelectorAll("canvas")).filter(c => c.width > 0 && c.clientWidth > 0);
+    if (!cs.length) return;
+    const W = Math.max(...cs.map(c => c.clientWidth)), Hs = cs.map(c => c.clientHeight), H = Hs.reduce((a, v) => a + v, 0);
+    const off = document.createElement("canvas"); off.width = W * 2; off.height = H * 2; const ctx = off.getContext("2d");
+    ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--panel").trim() || "#fff"; ctx.fillRect(0, 0, off.width, off.height);
+    let y = 0; cs.forEach((c, i) => { ctx.drawImage(c, 0, y, c.clientWidth * 2, Hs[i] * 2); y += Hs[i] * 2; });
+    off.toBlob(bl => { const a = document.createElement("a"); a.href = URL.createObjectURL(bl); a.download = (document.title || "widget").replace(/[^a-z0-9]+/gi, "_").toLowerCase() + ".png"; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); }, "image/png");
+  };
+  head.appendChild(b);
+})();
 </script>
 </body>
 </html>
